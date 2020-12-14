@@ -176,10 +176,11 @@ span	{
 	margin-right: 20%;
 }
 
-#difference {
+.difference {
 	width: 450px;
 	height: 320px;
-	margin-left: 40%;
+	margin-right: 2vw;
+	margin-left: 2vw;	
 }
 .motivation {
 	margin-right: 16vw;
