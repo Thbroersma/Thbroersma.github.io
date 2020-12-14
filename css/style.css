@@ -58,13 +58,14 @@ p {
 li a, .dropbtn {
 	display: inline-block;
 	text-align: center;
-	padding: 8vh 2vw;
+	padding: 8vh 6vw;
 	text-decoration: none;
 	text-align: right;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
 	background-color: #1E90FF;
+
 }
 
 li.dropdown {
