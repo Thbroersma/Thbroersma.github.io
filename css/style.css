@@ -8,8 +8,6 @@ h2 {
 	margin: 2vh 18vw 1vh 18vw;
 	color: black;
 	font-size: 35px;
-	
-
 }
 h3 {
 	font-family: Courier New;
@@ -178,6 +176,7 @@ span	{
 	font-size: 2em;
 	margin-right: 35vw;
 	margin-top: 2vh;
+	line-height: 1.5em;
 }
 
 
