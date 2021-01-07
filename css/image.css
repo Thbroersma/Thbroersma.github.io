@@ -4,12 +4,12 @@ body {
 .vierkant {
 	width: 30vw;
 	height: 50vh;
-	padding: 0.5vw;
+	margin: 0.5vw;
 	}
 .high { 
 	width: 30vw;
 	height: 65vh;
-	padding: 0.5vw;
+	margin: 0.5vw;
 }
 button {
 	width: 3vw;
@@ -17,15 +17,15 @@ button {
 .land {
 	width: 40vw;
 	height: 45vh;
-	padding: 0.5vw;
+	margin: 0.5vw;
 }
 .landscape {
 	width: 45vw;
 	height: 60vh;
-	padding: 0.5vw;
+	margin: 0.5vw;
 }
 #forest {
-	width: 20vw;
+	width: 21vw;
 	height: 65vh;
-	padding: 0.5vw;
+	margin: 0.5vw;
 }
