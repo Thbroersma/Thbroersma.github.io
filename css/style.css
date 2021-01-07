@@ -2,15 +2,17 @@ h1 {
 	color: black;
 	margin: 2vh 15vw 2vh 15vw;
 	size: 2em;
+	font-weight: bold;
 		
 }
 h2 {
 	margin: 2vh 18vw 1vh 18vw;
 	color: black;
 	font-size: 35px;
+
 }
 h3 {
-	font-family: Courier New;
+	font-family: cursive;
 }
 p {
 	color: black;
@@ -106,6 +108,7 @@ body {
 * {
 	box-sizing: border-box;
 	margin:0;
+	font-family: cursive;
 }
 header {
 	grid-column: 1/3;
@@ -215,8 +218,9 @@ span	{
 	margin-left: 12vw;
 }
 .jumbotron {
-	height: 15vw;
+	height: 5vh;
 	width: 100%;
 	background-color: #E9F2E6
+	margin: 0vw;
 
 }
