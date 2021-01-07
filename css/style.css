@@ -1,8 +1,11 @@
 h1 {
 	color: black;
-	margin: 2vh 15vw 2vh 15vw;
+	margin-left: 13.5vw;
+	margin-top: 1vh;
 	size: 2em;
 	font-weight: bold;
+	background-color: 
+
 		
 }
 h2 {
@@ -218,9 +221,8 @@ span	{
 	margin-left: 12vw;
 }
 .jumbotron {
-	height: 5vh;
-	width: 100%;
-	background-color: #E9F2E6
-	margin: 0vw;
+
+	background-color: #E9F2E6;
+	margin-top: 2vw;
 
 }
