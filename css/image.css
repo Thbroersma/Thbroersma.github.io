@@ -29,3 +29,6 @@ button {
 	height: 65vh;
 	margin: 0.5vw;
 }
+.carousel.img {
+	width: 30vw;
+}
