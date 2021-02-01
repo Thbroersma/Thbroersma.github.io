@@ -32,3 +32,7 @@ button {
 .carousel.img {
 	width: 30vw;
 }
+.pagination{
+	padding-right: 2vw;
+	float: right;
+}

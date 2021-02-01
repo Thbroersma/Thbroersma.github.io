@@ -127,3 +127,8 @@ img	{
 	width: 30vw;
 	margin-right: 15vw;
 }
+.pagination{
+	padding-top: 32vh;
+	padding-right: 2vw;
+	float: right;
+}

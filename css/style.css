@@ -226,3 +226,8 @@ span	{
 	margin:0vw;
 
 }
+.pagination{
+	padding-top: 14vh;
+	padding-right: 2vw;
+	float: right;
+}
