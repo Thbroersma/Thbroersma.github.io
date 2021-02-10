@@ -184,7 +184,9 @@ span	{
 	margin-top: 2vh;
 	line-height: 1.5em;
 }
-
+#gelijk {
+	width: 35vw;
+}
 
 
 .motivatie {
