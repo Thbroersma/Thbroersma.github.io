@@ -101,9 +101,6 @@ li.dropdown {
 }
 
 body {
-	display: grid;
-	grid-template-columns: 15vw 85vw;
-	grid-template-rows: 10vh 8vh 75vh 7vh;
 	background-color: #E9F2E6;
 	color: black;
 }
@@ -184,25 +181,17 @@ span	{
 	margin-top: 2vh;
 	line-height: 1.5em;
 }
-#gelijk {
-	width: 35vw;
-}
-
-
 .motivatie {
 	margin-right: 20%;
 }
 
 .difference {
-	width: 450px;
-	height: 320px;
-	margin-right: 2vw;
-	margin-left: 2vw;	
+	width: 35vw;
+	height: 40vh;
+	margin: 2vw;	
 }
 .motivation {
-	margin-right: 16vw;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
+	padding-left: 16.5vw;
 }
 
 
@@ -229,7 +218,13 @@ span	{
 
 }
 .pagination{
-	padding-top: 30vh;
 	padding-right: 2vw;
 	float: right;
+}
+#second {
+	padding-top: 20vh;
+}
+#change {
+	margin-left: 16.5vw;
+	width: 30vw;
 }
