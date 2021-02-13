@@ -130,3 +130,17 @@ img	{
 	padding-right: 2vw;
 	float: right;
 }
+.pagination > li > a
+{
+    background-color: #F3C678;
+    color: black;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #A8DADC;
+    border-color: #ddd;
+}
