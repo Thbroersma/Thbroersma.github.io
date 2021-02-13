@@ -2,7 +2,7 @@ body {
 	display: grid;
 	grid-template-columns: 10vw 45vw 45vw;
 	grid-template-rows: 10vh 8vh 75vh 7vh;
-	background-color: #E9F2E6;
+	background-color: #C8F8C6;
 	color: black;
 }
 

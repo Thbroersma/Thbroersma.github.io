@@ -11,7 +11,8 @@ h1 {
 h2 {
 	margin: 2vh 18vw 1vh 12.5vw;
 	color: black;
-	font-size: 40px;
+	font-size: 35px;
+	font-size: bold;
 
 }
 h3 {
@@ -101,7 +102,7 @@ li.dropdown {
 }
 
 body {
-	background-color: #E9F2E6;
+	background-color: #C8F8C6;
 	color: black;
 }
 
@@ -213,7 +214,7 @@ span	{
 }
 .jumbotron {
 
-	background-color: #E9F2E6;
+	background-color:#C8F8C6;
 	margin:0vw;
 
 }
