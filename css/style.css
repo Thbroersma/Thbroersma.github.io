@@ -258,3 +258,6 @@ span	{
 .card-body a:hover{
 	color: black;
 }
+.img-fluid {
+	width: 80vw;
+}

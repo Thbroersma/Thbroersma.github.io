@@ -1,33 +1,23 @@
 body {
-	background-color: #F1FAEE;
-	}
-.vierkant {
-	width: 30vw;
-	height: 50vh;
-	margin: 0.5vw;
+	background-color: #C8F8C6;
 	}
 .high { 
 	width: 30vw;
 	height: 65vh;
-	margin: 0.5vw;
+	margin: 0.8vw;
+	text-align: center;
 }
 button {
 	width: 3vw;
 }
 .land {
-	width: 40vw;
-	height: 45vh;
-	margin: 0.5vw;
-}
-.landscape {
-	width: 45vw;
-	height: 60vh;
-	margin: 0.5vw;
+	margin-left: 2vw;
 }
 #forest {
 	width: 21vw;
 	height: 65vh;
 	margin: 0.5vw;
+	margin-left: 3vw;
 }
 .carousel.img {
 	width: 30vw;
@@ -35,4 +25,28 @@ button {
 .pagination{
 	padding-right: 2vw;
 	float: right;
+	padding-top: 60vh;
+}
+.pagination > li > a
+{
+    background-color: #F3C678;
+    color: black;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #A8DADC;
+    border-color: #ddd;
+}
+.img-fluid {
+	width: 93.7vw;
+	height: 95vh;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+.navbar {
+	background-color: #A8DADC;
 }
