@@ -9,9 +9,9 @@ h1 {
 		
 }
 h2 {
-	margin: 2vh 18vw 1vh 18vw;
+	margin: 2vh 18vw 1vh 12.5vw;
 	color: black;
-	font-size: 35px;
+	font-size: 40px;
 
 }
 h3 {
@@ -232,10 +232,17 @@ span	{
 	margin-left: 13vw;
  }
 .card{
-	width: 400px;
+	width: 22vw;
 	margin: 2vw;
-	margin-left: 20vw;
+	margin-left: 15vw;
+	color: black;
 }
 .card-img {
-	margin: 0;
+	margin: 0
+}
+.card-body a{
+	color: blue;
+}
+.card-body a:hover{
+	color: black;
 }

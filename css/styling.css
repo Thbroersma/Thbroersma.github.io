@@ -1,5 +1,5 @@
 .card{
-	width: 400px;
+	width: 18vw;
 	margin: 2vw;
 }
 a {
@@ -14,7 +14,4 @@ img	{
 nav {
 	background-color: #A8DADC;
 
-}
-.carousel-slide {
-		width: 30vw;
 }
