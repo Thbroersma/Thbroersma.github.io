@@ -2,7 +2,7 @@ body {
 	display: grid;
 	grid-template-columns: 10vw 45vw 45vw;
 	grid-template-rows: 10vh 8vh 75vh 7vh;
-	background-color: #C8F8C6;
+	background-color: #D4F2CF;
 	color: black;
 }
 
@@ -13,6 +13,7 @@ body {
 p {
 	color: black;
 	padding: 1vw;
+	margin-right: 2vw;
 }
 h2 {
 	padding-top: 1vw;
@@ -32,7 +33,7 @@ h2 {
     padding-left: 8vw;
     border-bottom: none;
     width:100vw;
- 	margin-top: 11vh;
+ 	margin-top: 0vh;
  	margin-bottom: 3vh;
 
 }
@@ -124,11 +125,13 @@ footer {
 img	{
 	width: 30vw;
 	margin-right: 15vw;
+	margin-left: 1vw;
 }
 .pagination{
-	padding-top: 32vh;
+	margin-top: 87vh;
 	padding-right: 2vw;
 	float: right;
+	padding-bottom: 1vw;
 }
 .pagination > li > a
 {
@@ -143,4 +146,8 @@ img	{
     color: #5a5a5a;
     background-color: #A8DADC;
     border-color: #ddd;
+}
+.high {
+	height: 70vh;
+	width: 22vw;
 }
