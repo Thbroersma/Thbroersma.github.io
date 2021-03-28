@@ -1,17 +1,28 @@
-.card{
-	width: 18vw;
-	margin: 2vw;
-}
-a {
+body {
+	background-color: #D4F2CF;
 	color: black;
 }
-body {
-	background-color: #E9F2E6;
-}
-img	{
-	width: 10vw;
-}
-nav {
-	background-color: #A8DADC;
 
+.me {
+	width: 60%;
+	margin-left: 10%;
+	margin-top: 12%;
+}
+.head {
+	margin-left: 17%;
+}
+.lower-head {
+	margin-top: 3%;
+}
+.contact {	
+	background-color: #F3C678;
+}
+.contact a {
+	color: black;
+}
+.project {
+	margin-left: 16%;
+}
+.about {
+	width: 90%;
 }

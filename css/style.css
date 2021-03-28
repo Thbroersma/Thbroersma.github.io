@@ -3,9 +3,6 @@ h1 {
 	margin-left: 13.5vw;
 	margin-top: 10vh;
 	size: 2em;
-	background-color: 
-
-		
 }
 h2 {
 	margin: 2vh 18vw 1vh 12.5vw;
@@ -90,7 +87,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-	background-color: ##1E90FF;
+	background-color: #1E90FF;
 }
 
 .dropdown:hover .dropdown-content {
@@ -152,9 +149,6 @@ button a:hover {
 	text-decoration: none;
 }
 
-span	{
-
-}
 
 #different {
 	margin: 1vh 28vw 1vh 28vw;

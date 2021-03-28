@@ -88,12 +88,11 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-	background-color: ##1E90FF;
+	background-color: #1E90FF;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
 }
 header {
 	grid-column: 1/4;
