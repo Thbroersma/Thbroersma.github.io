@@ -121,7 +121,13 @@ button a:hover {
 .motivation {
 	padding-left: 16.5vw;
 }
-
+span {
+	margin-left: 9vw;
+	padding: 1.45vw 4vw 1.45vw 4vw;
+}
+span:hover {
+	background-color: rgb(89, 111, 233);
+}
 
 #first {
 	grid-column: 1/2;
@@ -145,9 +151,7 @@ button a:hover {
 	margin:0vw;
 
 }
-#second {
-	padding-top: 20vh;
-}
+
 #change {
 	margin-left: 16.5vw;
 	width: 35vw;
