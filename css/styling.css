@@ -22,6 +22,14 @@
 .game {
 	text-align: center;
 }
+.gameButton {
+	width: 12%;
+	height: 6vh;
+	background-color: rgb(20, 155, 2);
+	color: black;
+	font-family: bold;
+	margin-top: 1vh;
+}
 .head {
 	margin-left: 17%;
 	font-size: 2.6vw;
