@@ -89,11 +89,17 @@ nav {
 	margin-left: 16%;
 }
 span {
-	margin-left: 9vw;
+	margin-left: 6vw;
 	padding: 1.45vw 4vw 1.45vw 4vw;
 }
 span:hover {
 	background-color: rgb(89, 111, 233);
+}
+.switchButton {
+	background-color: #A8DADC;
+	border-color: #A8DADC;
+	margin-left: 2vw;
+	font-family: bold;
 }
 /* Gedeelte om het verdelen van de pagina */
 header {
