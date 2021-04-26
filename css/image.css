@@ -1,19 +1,14 @@
-body {
-	background-color: #D4F2CF;
-	}
+
 .high { 
 	width: 30vw;
 	height: 65vh;
 	margin: 0.8vw;
 	text-align: center;
 }
-button {
-	width: 3vw;
-}
 .land {
 	margin-left: 2vw;
 }
-#forest {
+.forest {
 	width: 21vw;
 	height: 65vh;
 	margin: 0.5vw;
@@ -22,31 +17,10 @@ button {
 .carousel.img {
 	width: 30vw;
 }
-.pagination{
-	padding-right: 2vw;
-	float: right;
-	padding-top: 60vh;
-}
-.pagination > li > a
-{
-    background-color: #F3C678;
-    color: black;
-}
-.pagination > li > a:focus,
-.pagination > li > a:hover,
-.pagination > li > span:focus,
-.pagination > li > span:hover
-{
-    color: #5a5a5a;
-    background-color: #A8DADC;
-    border-color: #ddd;
-}
+
 .img-fluid {
 	width: 93.7vw;
 	height: 95vh;
 	margin-left: 2vw;
 	margin-right: 2vw;
-}
-.navbar {
-	background-color: #A8DADC;
 }

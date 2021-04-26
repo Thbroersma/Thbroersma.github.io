@@ -22,77 +22,23 @@ h2 {
     width:100vw;
     text-align: center;
 }
-
-#nav {
-	
-    background-color: #A8DADC;
-    position:fixed;
-    left:0vw;
-    top:0vh;
-    margin: 0px;
-    padding-left: 8vw;
-    border-bottom: none;
-    width:100vw;
- 	margin-top: 0vh;
- 	margin-bottom: 3vh;
-
+nav {
+	background-color: #A8DADC;
 }
-
-#nav li a, #nav li {
-    text-align: center;
-    display: inline-block;
+.nav {
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+	margin-right: 2vw;
+	display: inherit;	
 }
-
-#nav li {
-    list-style: none;
-
+.nav-right {
+	padding: 1.45vw 3vw 1.45vw 3vw;
 }
-
-#nav li a {
-    padding: 2.2vh 5vw;
-    text-decoration: none;
-    color: black;
+.nav-right:hover {
+	background-color: rgb(89, 111, 233);
 }
-
-li a, .dropbtn {
-	display: inline-block;
-	text-align: center;
-	padding: 8vh 2vw;
-	text-decoration: none;
-	text-align: right;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-	background-color: #1E90FF;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-.dropdown{
+.navigation {
 	float: right;
-}
-
-.dropdown-content {
-  display: none;
-  position: fixed;
-  background-color: #A8DADC;
-  min-width: 4vw;
-}
-.dropdown-content a {
-  color: black;
-  padding: 8vh 2vw;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-	background-color: #1E90FF;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 header {
 	grid-column: 1/4;
