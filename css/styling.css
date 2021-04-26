@@ -1,6 +1,9 @@
 .about {
 	font-size: 1.04vw;
 }
+.card-link {
+	color: blue;
+}
 .carousel.img {
 	width: 30vw;
 }
@@ -16,7 +19,9 @@
 	margin: 0.5vw;
 	margin-left: 3vw;
 }
-
+.game {
+	text-align: center;
+}
 .head {
 	margin-left: 17%;
 	font-size: 2.6vw;
@@ -26,6 +31,9 @@
 	height: 65vh;
 	margin: 0.8vw;
 	text-align: center;
+}
+.intro {
+	margin-left: 2vw;
 }
 .img-fluid {
 	width: 93.7vw;
@@ -42,6 +50,7 @@
 .myBody {
 	background-color: #D4F2CF;
 	color: black;
+	font-size: 1vw;
 }
 
 .me {
@@ -63,6 +72,7 @@ nav {
 }
 .nav-right:hover {
 	background-color: rgb(89, 111, 233);
+	text-decoration: none;
 }
 .navigation {
 	float: right;

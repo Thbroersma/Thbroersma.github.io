@@ -28,6 +28,7 @@ nav {
 }
 .nav-right:hover {
 	background-color: rgb(89, 111, 233);
+	text-decoration: none;
 }
 .navigation {
 	float: right;
