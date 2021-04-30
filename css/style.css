@@ -19,6 +19,10 @@ nav {
 }
 nav button {
 	font-size: 1.2vw;
+	background-color: #A8DADC;
+	border-color: #A8DADC;
+	margin: 0vw;
+	margin-left: 2vw;
 }
 nav a {
 	font-size: 1.2vw;
@@ -91,8 +95,6 @@ img	{
 button {
 	background-color: #F3C678;
 	font-family: bold;
-	width: 120px;
-	height: 30px;
 	margin-left: 50px;
 	margin-top: 3vh;
 
@@ -142,7 +144,7 @@ button a:hover {
 	padding-left: 16.5vw;
 }
 span {
-	margin-left: 9vw;
+	margin-left: 6vw;
 	padding: 1.45vw 4vw 1.45vw 4vw;
 }
 span:hover {
