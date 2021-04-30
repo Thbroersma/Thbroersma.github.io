@@ -118,6 +118,9 @@ span:hover {
 	margin-left: 2vw;
 	font-family: bold;
 }
+.row {
+	margin-right: 0vw;
+}
 /* Gedeelte om het verdelen van de pagina */
 header {
 	grid-column: 1/3;
