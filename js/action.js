@@ -8,7 +8,14 @@ let gameQuestions = [
     'What do you must come in Javascript to make a button do something?', 
     //'What is the longest distance that the web-developer had'
 ];
+if (switchButton) {
+    switchButton.addEventListener('click', function() {
+        const navbar = document.querySelector('nav');
 
+
+        navbar.classList.toggle('nav-switch');
+    })
+}
 if (gameButton) {
     gameButton.addEventListener('click', function () {
         gameQuest.innerHTML = gameQuestions;
