@@ -3,6 +3,22 @@ let gameQuest = document.querySelector('.gamePlay');
 const checkButton = document.querySelector('.gameCheck');
 const inputAnswer = document.querySelector('.answers');
 const switchButton = document.querySelector('.switchButton');
+const motivationButton = document.querySelector('.motivation-button');
+
+let motivationQuotes = [ 
+    'You can do it, believe in yourself!', 
+    'Education is the most powerful weapon which you can use to change the world',
+    'Take the attitude of a student, never be too big to <br> ask questions, never know too much to learn something new'
+];
+/*
+if (motivationButton) {
+    motivationButton.addEventListener('click', function () {
+        const text = document.querySelector('.motivation-text');
+        const random = Math.floor(Math.random() * motivationQuotes.length);
+        text.innerHTML = random, motivationQuotes[random];
+        console.log(random, motivationQuotes[random]);
+    })
+}*/
 
 let gameQuestions = [ 
     'What do you must come in Javascript to make a button do something?', 
