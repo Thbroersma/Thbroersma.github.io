@@ -9,6 +9,11 @@
     background-color: rgb(155, 216, 158);
     font-size: 1vw;
 }
+.bodyStyle {
+	background-color: #D4F2CF;
+	color: black;
+	font-size: 1vw;
+}
 .card-link {
 	color: blue;
 }
