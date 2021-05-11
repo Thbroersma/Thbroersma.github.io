@@ -4,6 +4,10 @@
 .card-link {
 	color: blue;
 }
+.card-columns .card {
+    display: inline-block;
+    width: 20vw;
+}
 .carousel.img {
 	width: 30vw;
 }
