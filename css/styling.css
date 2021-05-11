@@ -1,6 +1,14 @@
 .about {
 	font-size: 1.04vw;
 }
+.buttons {
+    width: 7.5vw;
+    height: 7vh;
+    margin: 0vw;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgb(155, 216, 158);
+    font-size: 1vw;
+}
 .card-link {
 	color: blue;
 }
@@ -16,6 +24,19 @@
 }
 .contact a {
 	color: black;
+}
+.computingBlock {
+    padding: 1.5vw;
+    margin: 0vw;
+    width: 22.5vw;
+    float: left;
+}
+.displayValue {
+    width: 37.5vw;
+    height: 3vw;
+    text-align: right;
+    background-color: rgb(68, 154, 235);
+    font-size: 1.7vw;
 }
 .forest {
 	width: 21vw;
@@ -125,6 +146,9 @@ span:hover {
 }
 .row {
 	margin-right: 0vw;
+}
+.row {
+    flex-wrap:nowrap
 }
 /* Gedeelte om het verdelen van de pagina */
 header {
