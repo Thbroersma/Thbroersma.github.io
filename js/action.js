@@ -8,7 +8,14 @@ const motivationButton = document.querySelector('.motivation-button');
 let motivationQuotes = [ 
     'You can do it, believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
-    'Take the attitude of a student, never be too big to <br> ask questions, never know too much to learn something new'
+    'Take the attitude of a student, never be too big to <br> ask questions, never know too much to learn something new',
+    'All we have to decide is what to do with the time that is given to us',
+    'It is not our abilities that show what we truly are… it is our choices',
+    'It’s what you do right now that makes a difference',
+    'It’s only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer.',
+    'You know how everyone’s always saying, ‘Seize the moment’? I don’t know, I’m kinda thinkin’ it’s the other way. Like the moment seizes us',
+    'You control your destiny – you don’t need magic to do it. And there are no magical shortcuts to solving your problems',
+    'Today is a good day to try something new'
 ];
 const display = document.querySelector('.displayValue');
 let chosenNumberOne = null;
