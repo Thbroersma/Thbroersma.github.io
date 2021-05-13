@@ -4,7 +4,6 @@ const checkButton = document.querySelector('.gameCheck');
 const inputAnswer = document.querySelector('.answers');
 const switchButton = document.querySelector('.switchButton');
 const motivationButton = document.querySelector('.motivation-button');
-
 let motivationQuotes = [ 
     'You can do it, believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
@@ -26,6 +25,8 @@ let operator = null;
 const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
+
+let timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
 
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -69,6 +70,12 @@ if (checkButton) {
         }
         
     })
+}
+function myFunction() {
+    timer;
+  }
+function timerOut() {
+    clearTimeout(timer);
 }
 // rekenmachine functie
 calcButtons.forEach(function(element) {
