@@ -32,6 +32,7 @@ let gameQuestions = [
     'What is the longest distance that the web-developer had?',
     'What can you use to select all elements or classes?',
 ];
+let timer;
 
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -43,8 +44,6 @@ if (motivationButton) {
 if (switchButton) {
     switchButton.addEventListener('click', function() {
         const navbar = document.querySelector('nav');
-
-
         navbar.classList.toggle('nav-switch');
     })
 }
@@ -52,37 +51,53 @@ if (nextButton) {
     nextButton.addEventListener('click', function() {
         let randomNumber = Math.floor(Math.random() * gameQuestions.length);
         gameQuest.innerHTML = gameQuestions[randomNumber];
+        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
     })
 }
 if (gameButton) {
     gameButton.addEventListener('click', function () {
-        let timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
-        
+        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
         gameQuest.innerHTML = gameQuestions[0];
         //gameQuest.innerHTML = gameQuestions[Math.floor(Math.gameQuest() * gameQuestions.length)];
         checkButton.classList.toggle('gameButton');
         nextButton.classList.toggle('gameButton');
         checkButton.innerHTML = 'Check your answer';
         nextButton.innerHTML = 'Next question';
-        if (checkButton) {
-            checkButton.addEventListener('click', function() {
+    })
+}
+if (checkButton) {
+    checkButton.addEventListener('click', function() {
+        
+        if (gameQuest.innerHTML.includes('button')) {
+            if (inputAnswer.value.includes('addEventListener')) {
+                alert('You got it right!');
                 clearTimeout(timer);
-                if (gameQuest.innerHTML.includes('button')) {
-                    if (inputAnswer.value.includes('addEventListener')) {
-                        alert('You got it right!');
-                    }
-                    else {
-                        alert("No you didn't got it right, sorry try again");
-                    }
-                    console.log(inputAnswer.innerHTML);
-                }
-                
-            })
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+            console.log(inputAnswer.innerHTML);
+        }
+        else if (gameQuest.innerHTML.includes('distance')) {
+            if (inputAnswer.value.includes('150 km')) {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
+        else if (gameQuest.innerHTML.includes('classes')) {
+            if (inputAnswer.value.includes('querySelectorAll')) {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
         }
     })
-
 }
-
 
     
 
