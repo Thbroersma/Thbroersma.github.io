@@ -31,6 +31,10 @@ let gameQuestions = [
     'What do you must come in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had?',
     'What can you use to select all elements or classes?',
+    'What is the line of code to change style class?',
+    'Which 3 functions can you use with an array?', 
+    'Write 2 of the 3 ways to know what is inside an element?',
+
 ];
 let timer;
 
@@ -58,7 +62,6 @@ if (gameButton) {
     gameButton.addEventListener('click', function () {
         timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
         gameQuest.innerHTML = gameQuestions[0];
-        //gameQuest.innerHTML = gameQuestions[Math.floor(Math.gameQuest() * gameQuestions.length)];
         checkButton.classList.toggle('gameButton');
         nextButton.classList.toggle('gameButton');
         checkButton.innerHTML = 'Check your answer';
@@ -96,6 +99,37 @@ if (checkButton) {
                 alert("No you didn't got it right, sorry try again");
             }
         }
+        else if (gameQuest.innerHTML.includes('style')) {
+            if (inputAnswer.value.includes('classList.toggle')) {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
+        else if (gameQuest.innerHTML.includes('array')) {
+            if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
+        else if (gameQuest.innerHTML.includes('inside')) {
+            
+            if ((inputAnswer.value.includes('value') && inputAnswer.value.includes('innerHTML')) || 
+            (inputAnswer.value.includes('textContent') && inputAnswer.value.includes('innerHTML')) || 
+            (inputAnswer.value.includes('value') && inputAnswer.value.includes('textContent')))
+            {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
     })
 }
 
@@ -107,7 +141,6 @@ calcButtons.forEach(function(element) {
         let elNumber = null;
 
         if (element.hasAttribute("data-action")) {
-            console.log('Hallo');
             checkOperator = element.dataset.action;
             console.log(checkOperator);
             if (checkOperator === "solution") {
