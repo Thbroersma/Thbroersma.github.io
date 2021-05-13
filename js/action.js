@@ -4,6 +4,7 @@ const checkButton = document.querySelector('.gameCheck');
 const inputAnswer = document.querySelector('.answers');
 const switchButton = document.querySelector('.switchButton');
 const motivationButton = document.querySelector('.motivation-button');
+const nextButton = document.querySelector('.nextButton');
 let motivationQuotes = [ 
     'You can do it, believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
@@ -26,6 +27,11 @@ const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
 
+let gameQuestions = [ 
+    'What do you must come in Javascript to make a button do something?', 
+    'What is the longest distance that the web-developer had?',
+    'What can you use to select all elements or classes?',
+];
 
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -34,11 +40,6 @@ if (motivationButton) {
         text.innerHTML = random, motivationQuotes[random]
     })
 }
-
-let gameQuestions = [ 
-    'What do you must come in Javascript to make a button do something?', 
-    //'What is the longest distance that the web-developer had'
-];
 if (switchButton) {
     switchButton.addEventListener('click', function() {
         const navbar = document.querySelector('nav');
@@ -47,13 +48,22 @@ if (switchButton) {
         navbar.classList.toggle('nav-switch');
     })
 }
+if (nextButton) {
+    nextButton.addEventListener('click', function() {
+        let randomNumber = Math.floor(Math.random() * gameQuestions.length);
+        gameQuest.innerHTML = gameQuestions[randomNumber];
+    })
+}
 if (gameButton) {
     gameButton.addEventListener('click', function () {
         let timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
-        gameQuest.innerHTML = gameQuestions;
+        
+        gameQuest.innerHTML = gameQuestions[0];
         //gameQuest.innerHTML = gameQuestions[Math.floor(Math.gameQuest() * gameQuestions.length)];
         checkButton.classList.toggle('gameButton');
+        nextButton.classList.toggle('gameButton');
         checkButton.innerHTML = 'Check your answer';
+        nextButton.innerHTML = 'Next question';
         if (checkButton) {
             checkButton.addEventListener('click', function() {
                 clearTimeout(timer);
