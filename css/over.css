@@ -5,7 +5,18 @@ body {
 	background-color: #D4F2CF;
 	color: black;
 }
-
+.game {
+	text-align: center;
+}
+.gameButton {
+	width: 25%;
+	height: 7vh;
+	background-color: rgb(20, 155, 2);
+	color: black;
+	font-family: bold;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
 * {
 	box-sizing: border-box;
 	margin:0;
