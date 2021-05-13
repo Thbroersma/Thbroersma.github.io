@@ -26,7 +26,6 @@ const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
 
-let timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
 
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -50,33 +49,33 @@ if (switchButton) {
 }
 if (gameButton) {
     gameButton.addEventListener('click', function () {
+        let timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
         gameQuest.innerHTML = gameQuestions;
         //gameQuest.innerHTML = gameQuestions[Math.floor(Math.gameQuest() * gameQuestions.length)];
         checkButton.classList.toggle('gameButton');
-        checkButton.innerHTML = 'Check your answer'
+        checkButton.innerHTML = 'Check your answer';
+        if (checkButton) {
+            checkButton.addEventListener('click', function() {
+                clearTimeout(timer);
+                if (gameQuest.innerHTML.includes('button')) {
+                    if (inputAnswer.value.includes('addEventListener')) {
+                        alert('You got it right!');
+                    }
+                    else {
+                        alert("No you didn't got it right, sorry try again");
+                    }
+                    console.log(inputAnswer.innerHTML);
+                }
+                
+            })
+        }
     })
 
 }
-if (checkButton) {
-    checkButton.addEventListener('click', function() {
-        if (gameQuest.innerHTML.includes('button')) {
-            if (inputAnswer.value.includes('addEventListener')) {
-                alert('You got it right!');
-            }
-            else {
-                alert("No you didn't got it right, sorry try again");
-            }
-            console.log(inputAnswer.innerHTML);
-        }
-        
-    })
-}
-function myFunction() {
-    timer;
-  }
-function timerOut() {
-    clearTimeout(timer);
-}
+
+
+    
+
 // rekenmachine functie
 calcButtons.forEach(function(element) {
     element.addEventListener('click', function() {            
