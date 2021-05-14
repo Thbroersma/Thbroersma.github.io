@@ -53,6 +53,7 @@
 .head {
 	margin-left: 10%;
 	font-size: 2.6vw;
+	margin-top: 2vh;
 }
 .headingThree {
 	font-size: 1.9vw;
@@ -84,7 +85,7 @@
 .myBody {
 	display: grid;
 	grid-template-columns: 10vw 90vw;
-	grid-template-rows: 10vh 5vh 85vh;
+	grid-template-rows: 10vh 9vh 81vh;
 	background-color: #D4F2CF;
 	color: black;
 	font-size: 1vw;

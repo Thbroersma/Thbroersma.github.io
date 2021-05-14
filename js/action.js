@@ -22,12 +22,10 @@ const display = document.querySelector('.displayValue');
 let chosenNumberOne = null;
 let chosenNumberTwo = null;
 let operator = null;
-
 // De functies voor de rekenmachine
 const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
-
 let gameQuestions = [ 
     'What do you must come in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had?',
@@ -36,7 +34,9 @@ let gameQuestions = [
     'Which 3 functions can you use with an array?', 
     'Write 2 of the 3 ways to know what is inside an element?',
     'What is the maximum time adviced to change between the kind of project you work at a company?',
-    'What four kind of animals can you find on my website?'
+    'What four kind of animals can you find on my website?',
+    'How can you make something disappear on a website?',
+    'What is something you should never you on an element?'
 
 ];
 let timer;
@@ -47,7 +47,7 @@ function scoreButtonSwitch() {
     scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
 }
 function youLostTheGame() {
-    scoreButton.classList.add('score-button-theme');
+    scoreButton.classList.add('lost-button-theme');
     scoreButton.innerHTML = 'You lost the game, try again';
 }
 if (motivationButton) {
@@ -88,6 +88,7 @@ if (checkButton) {
                 scoreButtonSwitch();
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
             console.log(inputAnswer.innerHTML);
@@ -98,6 +99,7 @@ if (checkButton) {
                 scoreButtonSwitch();
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
@@ -107,6 +109,7 @@ if (checkButton) {
                 scoreButtonSwitch();
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
@@ -114,9 +117,9 @@ if (checkButton) {
             if (inputAnswer.value.includes('classList.toggle')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
-
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
@@ -124,9 +127,9 @@ if (checkButton) {
             if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
-                
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
@@ -139,44 +142,60 @@ if (checkButton) {
                 clearTimeout(timer);
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('maximum')) {
-            
             if ((inputAnswer.value.includes('2 years')))
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
-                
             }
             else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('inside')) {
-            
-            if (inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty')) && 
+            if ((inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty'))) && 
             inputAnswer.value.includes('dog') && inputAnswer.value.includes('cow') && inputAnswer.value.includes('rat'))
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
-                
             }
             else {
+                clearTimeout(timer);
+                youLostTheGame();
+            }
+        }
+        else if (gameQuest.innerHTML.includes('disappear')) {
+            if (inputAnswer.value.includes('display') &&  (inputAnswer.value.includes('none')))
+            {
+                scoreButtonSwitch();
+                clearTimeout(timer);
+            }
+            else {
+                clearTimeout(timer);
+                youLostTheGame();
+            }
+        }else if (gameQuest.innerHTML.includes('never')) {
+            if (inputAnswer.value.includes('id'))
+            {
+                scoreButtonSwitch();
+                clearTimeout(timer);
+            }
+            else {
+                clearTimeout(timer);
                 youLostTheGame();
             }
         }
     })
 }
-
-    
-
 // rekenmachine functie
 calcButtons.forEach(function(element) {
     element.addEventListener('click', function() {            
         let elNumber = null;
-
         if (element.hasAttribute("data-action")) {
             checkOperator = element.dataset.action;
             console.log(checkOperator);
@@ -275,7 +294,6 @@ function addToDisplay(addWhat) {
         oldDisplay = '';
     showInDisplay(oldDisplay + addWhat);
 }
-
 /** MIA :: Toon iets op het display en scroll display */
 function showInDisplay(showWhat) {
     /** MIA :: display variabele doet een innerHTML, 

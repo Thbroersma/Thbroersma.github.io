@@ -107,7 +107,15 @@ section {
 	width: 32%;
 	height: 7vh;
 	font-size: 1.3vw;
-
+}
+.lost-button-theme {
+	margin-left: 14.8vw;
+	display: block;
+	font-family: bold, inherit;	
+	background-color: orange;
+	width: 32%;
+	height: 9vh;
+	font-size: 1.3vw;
 }
 footer {
 	grid-column: 1/4;
