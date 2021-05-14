@@ -5,6 +5,7 @@ const inputAnswer = document.querySelector('.answers');
 const switchButton = document.querySelector('.switchButton');
 const motivationButton = document.querySelector('.motivation-button');
 const nextButton = document.querySelector('.nextButton');
+const scoreButton = document.querySelector('.score-button');
 let motivationQuotes = [ 
     'You can do it, believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
@@ -39,7 +40,11 @@ let gameQuestions = [
 
 ];
 let timer;
-
+let scorePoints = 0;
+function scoreButtonSwitch() {
+    scoreButton.classList.add('score-button-theme');
+    scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
+}
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
         let text = document.querySelector('.motivation-text');
@@ -64,19 +69,20 @@ if (gameButton) {
     gameButton.addEventListener('click', function () {
         timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
         gameQuest.innerHTML = gameQuestions[0];
-        checkButton.classList.toggle('gameButton');
-        nextButton.classList.toggle('gameButton');
+        checkButton.classList.add('gameButton');
+        nextButton.classList.add('gameButton');
         checkButton.innerHTML = 'Check your answer';
         nextButton.innerHTML = 'Next question';
     })
 }
 if (checkButton) {
     checkButton.addEventListener('click', function() {
-        
         if (gameQuest.innerHTML.includes('button')) {
             if (inputAnswer.value.includes('addEventListener')) {
                 alert('You got it right!');
-                clearTimeout(timer);
+                clearTimeout(   );
+                scorePoints =  scorePoints + 10;
+                scoreButtonSwitch();
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -87,6 +93,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('150 km')) {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -96,6 +103,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('querySelectorAll')) {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -105,6 +113,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('classList.toggle')) {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -114,6 +123,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -127,6 +137,7 @@ if (checkButton) {
             {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -138,6 +149,7 @@ if (checkButton) {
             {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");
@@ -150,6 +162,7 @@ if (checkButton) {
             {
                 alert('You got it right!');
                 clearTimeout(timer);
+                scorePoints =  scorePoints + 10;
             }
             else {
                 alert("No you didn't got it right, sorry try again");

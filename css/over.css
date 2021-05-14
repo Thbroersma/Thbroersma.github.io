@@ -96,7 +96,18 @@ section {
 	grid-column: 3/4;
 	grid-row: 3/4;
 }
+.score-button {
+	display: none;
+}
+.score-button-theme {
+	margin-left: 16.4vw;
+	display: flex;
+	text-align: center;
+	background-color: rgb(20, 155, 2);
+	width: 25%;
+	height: 7vh;
 
+}
 footer {
 	grid-column: 1/4;
 	grid-row: 4/5;
