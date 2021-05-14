@@ -28,7 +28,7 @@ const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':'
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
 let gameQuestions = [ 
     'What do you must come in Javascript to make a button do something?', 
-    'What is the longest distance that the web-developer had?',
+    'What is the longest distance that the web-developer had cycled?',
     'What can you use to select all elements or classes?',
     'What is the line of code to change style class?',
     'Which 3 functions can you use with an array?', 
@@ -49,6 +49,12 @@ function scoreButtonSwitch() {
 function youLostTheGame() {
     scoreButton.classList.add('lost-button-theme');
     scoreButton.innerHTML = 'You lost the game, try again';
+}
+function highscore() {
+    if (scorePoints == 100) {
+        scoreButton.classList.add('highScore-button');
+        scoreButton.innerHTML = 'You have the highscore, you won!';
+    }
 }
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -86,6 +92,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('addEventListener')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -97,6 +104,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('150 km')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -107,6 +115,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('querySelectorAll')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -117,6 +126,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('classList.toggle')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -127,6 +137,7 @@ if (checkButton) {
             if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -134,12 +145,12 @@ if (checkButton) {
             }
         }
         else if (gameQuest.innerHTML.includes('inside')) {
-            
             if ((inputAnswer.value.includes('value') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('textContent') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('value') && inputAnswer.value.includes('textContent'))) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -151,18 +162,20 @@ if (checkButton) {
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
         }
-        else if (gameQuest.innerHTML.includes('inside')) {
+        else if (gameQuest.innerHTML.includes('animals')) {
             if ((inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty'))) && 
             inputAnswer.value.includes('dog') && inputAnswer.value.includes('cow') && inputAnswer.value.includes('rat'))
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -174,6 +187,7 @@ if (checkButton) {
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
@@ -184,6 +198,7 @@ if (checkButton) {
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
+                highscore();
             }
             else {
                 clearTimeout(timer);
