@@ -34,6 +34,8 @@ let gameQuestions = [
     'What is the line of code to change style class?',
     'Which 3 functions can you use with an array?', 
     'Write 2 of the 3 ways to know what is inside an element?',
+    'What is the maximum time adviced to change between the kind of project you work at a company?',
+    'What four kind of animals can you find on my website?'
 
 ];
 let timer;
@@ -122,6 +124,29 @@ if (checkButton) {
             if ((inputAnswer.value.includes('value') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('textContent') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('value') && inputAnswer.value.includes('textContent')))
+            {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
+        else if (gameQuest.innerHTML.includes('maximum')) {
+            
+            if ((inputAnswer.value.includes('2 years')))
+            {
+                alert('You got it right!');
+                clearTimeout(timer);
+            }
+            else {
+                alert("No you didn't got it right, sorry try again");
+            }
+        }
+        else if (gameQuest.innerHTML.includes('inside')) {
+            
+            if ((inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty')) && 
+            inputAnswer.value.includes('dog') && inputAnswer.value.includes('cow') && inputAnswer.value.includes('rat')))
             {
                 alert('You got it right!');
                 clearTimeout(timer);
