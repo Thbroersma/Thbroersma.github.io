@@ -43,7 +43,12 @@ let timer;
 let scorePoints = 0;
 function scoreButtonSwitch() {
     scoreButton.classList.add('score-button-theme');
+    scorePoints = scorePoints + 10;
     scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
+}
+function youLostTheGame() {
+    scoreButton.classList.add('score-button-theme');
+    scoreButton.innerHTML = 'You lost the game, try again';
 }
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
@@ -79,64 +84,50 @@ if (checkButton) {
     checkButton.addEventListener('click', function() {
         if (gameQuest.innerHTML.includes('button')) {
             if (inputAnswer.value.includes('addEventListener')) {
-                alert('You got it right!');
                 clearTimeout(timer);
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
                 scoreButtonSwitch();
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
             console.log(inputAnswer.innerHTML);
         }
         else if (gameQuest.innerHTML.includes('distance')) {
             if (inputAnswer.value.includes('150 km')) {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
-                scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
-                
+                scoreButtonSwitch();
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('classes')) {
             if (inputAnswer.value.includes('querySelectorAll')) {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
-                scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
-                
+                scoreButtonSwitch();
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('style')) {
             if (inputAnswer.value.includes('classList.toggle')) {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
-                alert('You got it right!');
+                scoreButtonSwitch();
                 clearTimeout(timer);
+
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('array')) {
             if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
                 scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
+                
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('inside')) {
@@ -144,29 +135,23 @@ if (checkButton) {
             if ((inputAnswer.value.includes('value') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('textContent') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('value') && inputAnswer.value.includes('textContent'))) {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
                 scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('maximum')) {
             
             if ((inputAnswer.value.includes('2 years')))
             {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
                 scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
                 
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
         else if (gameQuest.innerHTML.includes('inside')) {
@@ -174,15 +159,12 @@ if (checkButton) {
             if (inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty')) && 
             inputAnswer.value.includes('dog') && inputAnswer.value.includes('cow') && inputAnswer.value.includes('rat'))
             {
-                scorePoints = scorePoints + 10;
-                scorePoints.innerHTML = scorePoints;
                 scoreButtonSwitch();
-                alert('You got it right!');
                 clearTimeout(timer);
                 
             }
             else {
-                alert("No you didn't got it right, sorry try again");
+                youLostTheGame();
             }
         }
     })
