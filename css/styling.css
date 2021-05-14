@@ -169,9 +169,49 @@ aside {
 	grid-column: 1/2;
 	grid-row: 3/4;
 }
-
-
-
+/* De game styling*/
+.game {
+	text-align: center;
+}
+.gameButton {
+	width: 25%;
+	height: 7vh;
+	background-color: rgb(20, 155, 2);
+	color: black;
+	font-family: bold;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+.score-button {
+	display: none;
+}
+.score-button-theme {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 7vh;
+	font-size: 1.3vw;
+}
+.lost-button-theme {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 9vh;
+	font-size: 1.3vw;
+}
+.highScore-button {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 11vh;
+	font-size: 1.3vw;
+}
 
 
 
