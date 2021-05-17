@@ -1,6 +1,10 @@
 .about {
 	font-size: 1.04vw;
 }
+aside {
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
 .buttons {
     width: 7.5vw;
     height: 7vh;
@@ -49,11 +53,26 @@
 	margin: 0.5vw;
 	margin-left: 3vw;
 }
-
+.game {
+	text-align: center;
+}
+.gameButton {
+	width: 25%;
+	height: 7vh;
+	background-color: rgb(20, 155, 2);
+	color: black;
+	font-family: bold;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
 .head {
 	margin-left: 10%;
 	font-size: 2.6vw;
 	margin-top: 2vh;
+}
+header {
+	grid-column: 1/3;
+	grid-row: 2/3;
 }
 .headingThree {
 	font-size: 1.9vw;
@@ -63,6 +82,15 @@
 	height: 65vh;
 	margin: 0.8vw;
 	text-align: center;
+}
+.highScore-button {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 11vh;
+	font-size: 1.3vw;
 }
 .higherLower {
 	margin-top: 24vh;
@@ -79,8 +107,26 @@
 .land {
 	margin-left: 2vw;
 }
+.lost-button-theme {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 9vh;
+	font-size: 1.3vw;
+}
 .lower-head {
 	margin-top: 3%;
+}
+main {
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
+.me {
+	width: 60%;
+	margin-left: 10%;
+	margin-top: 12%;
 }
 .myBody {
 	display: grid;
@@ -90,11 +136,9 @@
 	color: black;
 	font-size: 1vw;
 }
-
-.me {
-	width: 60%;
-	margin-left: 10%;
-	margin-top: 12%;
+nav {
+	grid-column: 1/3;
+	grid-row: 1/2;
 }
 nav {
 	background-color: #A8DADC;
@@ -132,6 +176,18 @@ nav a {
 .navigation {
 	float: right;
 }
+.score-button {
+	display: none;
+}
+.score-button-theme {
+	margin-left: 19.8vw;
+	display: block;
+	font-family: bold;	
+	background-color: orange;
+	width: 32%;
+	height: 7vh;
+	font-size: 1.3vw;
+}
 span {
 	margin-left: 6vw;
 	padding: 1.45vw 4vw 1.45vw 4vw;
@@ -151,68 +207,3 @@ span:hover {
 .row {
     flex-wrap:nowrap
 }
-/* Gedeelte om het verdelen van de pagina */
-header {
-	grid-column: 1/3;
-	grid-row: 2/3;
-}
-
-nav {
-	grid-column: 1/3;
-	grid-row: 1/2;
-}
-main {
-	grid-column: 2/3;
-	grid-row: 3/4;
-}
-aside {
-	grid-column: 1/2;
-	grid-row: 3/4;
-}
-/* De game styling*/
-.game {
-	text-align: center;
-}
-.gameButton {
-	width: 25%;
-	height: 7vh;
-	background-color: rgb(20, 155, 2);
-	color: black;
-	font-family: bold;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
-}
-.score-button {
-	display: none;
-}
-.score-button-theme {
-	margin-left: 19.8vw;
-	display: block;
-	font-family: bold;	
-	background-color: orange;
-	width: 32%;
-	height: 7vh;
-	font-size: 1.3vw;
-}
-.lost-button-theme {
-	margin-left: 19.8vw;
-	display: block;
-	font-family: bold;	
-	background-color: orange;
-	width: 32%;
-	height: 9vh;
-	font-size: 1.3vw;
-}
-.highScore-button {
-	margin-left: 19.8vw;
-	display: block;
-	font-family: bold;	
-	background-color: orange;
-	width: 32%;
-	height: 11vh;
-	font-size: 1.3vw;
-}
-
-
-
-
