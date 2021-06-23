@@ -2,8 +2,8 @@ import Ghost from "./Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
+
 const width = 22; //10*10 = 100 squares
-const pacmanElement = document.querySelector('.pac-man');
 let score = 0;
 let coins = 68;
 let powerPellets = 2;
@@ -73,7 +73,7 @@ function createBoard() {
 }
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
-//move pacman
+//movement of pacman
 function movePacman(e) {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
@@ -117,7 +117,7 @@ function movePacman(e) {
       break;
   }
   squares[pacmanCurrentIndex].classList.add('pac-man');
-
+  // the function of the game
   pacDotEaten();
   powerPelletEaten();
   checkForGameOver();
@@ -125,6 +125,7 @@ function movePacman(e) {
 }
 document.addEventListener('keyup', movePacman);
 
+// How the pac-dots are eaten and how that works with the score
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
     let i = 0;
@@ -246,6 +247,7 @@ function moveGhost(ghost) {
     }
   }, 300)
 }
+// Game over function when it is and when it is not
 function checkForGameOver() {
   if ((squares[pacmanCurrentIndex].classList.contains('ghost')) &&
     !squares[pacmanCurrentIndex].classList.contains('scared-ghost')
