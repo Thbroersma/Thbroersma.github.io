@@ -79,6 +79,10 @@ body {
 .control {
 	font-size: 1.5vw;
 }
+.controls {
+	font-size: 1.7vw;
+    font-weight: bold;
+}
 .down {
     transform: rotate(90deg);
 }
