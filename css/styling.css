@@ -107,6 +107,13 @@ header {
 .land {
 	margin-left: 2vw;
 }
+.last-site {
+    text-align: center;
+	margin-left: 10vw;
+}
+.last-site-head {
+	margin-left: 13vw;
+}
 .lost-button-theme {
 	margin-left: 19.8vw;
 	display: block;

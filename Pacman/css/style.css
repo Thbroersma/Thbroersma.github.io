@@ -224,6 +224,7 @@ img {
     width: 3vw;
     height: 3vw;
 }
+
 .left {
     transform: rotate(180deg);
 }

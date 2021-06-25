@@ -2,7 +2,6 @@ import Ghost from "./Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
-
 const width = 22; //10*10 = 100 squares
 let score = 0;
 let coins = 68;
