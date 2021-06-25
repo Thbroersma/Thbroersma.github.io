@@ -27,7 +27,7 @@ const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
 let gameQuestions = [ 
-    'What do you must come in Javascript to make a button do something?', 
+    'What do you must have in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had cycled?',
     'What can you use to select all elements or classes?',
     'What is the line of code to change style class?',
@@ -37,7 +37,6 @@ let gameQuestions = [
     'What four kind of animals can you find on my website?',
     'How can you make something disappear on a website?',
     'What is something you should never you on an element?'
-
 ];
 let timer;
 let scorePoints = 0;
@@ -59,7 +58,7 @@ function highscore() {
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
         let text = document.querySelector('.motivation-text');
-        let random = motivationQuotes[Math.floor(Math.random() * motivationQuotes.length)];
+        const random = motivationQuotes[Math.floor(Math.random() * motivationQuotes.length)];
         text.innerHTML = random, motivationQuotes[random]
     })
 }
@@ -71,7 +70,7 @@ if (switchButton) {
 }
 if (nextButton) {
     nextButton.addEventListener('click', function() {
-        let randomNumber = Math.floor(Math.random() * gameQuestions.length);
+        const randomNumber = Math.floor(Math.random() * gameQuestions.length);
         gameQuest.innerHTML = gameQuestions[randomNumber];
         timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
     })
