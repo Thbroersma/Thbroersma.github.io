@@ -64,8 +64,10 @@ if (motivationButton) {
 }
 if (switchButton) {
     switchButton.addEventListener('click', function() {
-        const navbar = document.querySelector('nav');
+        const navbar = document.querySelector('.navbar-style');
+        const body = document.querySelector('.myBody');
         navbar.classList.toggle('nav-switch');
+        body.classList.toggle('bodyStyle');
     })
 }
 if (nextButton) {

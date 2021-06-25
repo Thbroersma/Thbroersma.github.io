@@ -13,11 +13,7 @@ aside {
     background-color: rgb(155, 216, 158);
     font-size: 1vw;
 }
-.bodyStyle {
-	background-color: #D4F2CF;
-	color: black;
-	font-size: 1vw;
-}
+
 .card-link {
 	color: blue;
 }
@@ -135,11 +131,20 @@ main {
 	margin-left: 10%;
 	margin-top: 12%;
 }
+/* Body classes*/
 .myBody {
 	display: grid;
 	grid-template-columns: 10vw 90vw;
 	grid-template-rows: 10vh 9vh 81vh;
 	background-color: #D4F2CF;
+	color: black;
+	font-size: 1vw;
+}
+.bodyStyle {
+	display: grid;
+	grid-template-columns: 10vw 90vw;
+	grid-template-rows: 10vh 9vh 81vh;
+	background-color: #c197f3;
 	color: black;
 	font-size: 1vw;
 }
@@ -157,7 +162,7 @@ nav a {
 	font-size: 1.2vw;
 }
 .nav-switch {
-	background-color: rgb(173, 21, 34);
+	background-color: rgb(202, 84, 94);
 	color: black;
 }
 .nav-switch a {
