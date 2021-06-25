@@ -183,6 +183,12 @@ nav a {
 .navigation {
 	float: right;
 }
+.projects-aside {
+	margin-left: 3vw;
+}
+.projects-aside-head {
+	margin-left: 6vw;
+}
 .score-button {
 	display: none;
 }
