@@ -67,7 +67,7 @@ if (switchButton) {
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
         navbar.classList.toggle('nav-switch');
-        body.classList.toggle('bodyStyle');
+        body.classList.toggle('myBody-switch');
     })
 }
 if (nextButton) {

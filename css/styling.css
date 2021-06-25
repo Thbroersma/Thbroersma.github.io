@@ -5,6 +5,11 @@ aside {
 	grid-column: 1/2;
 	grid-row: 3/4;
 }
+.bodyStyle {
+	background-color: #D4F2CF;
+	color: black;
+	font-size: 1vw;
+}
 .buttons {
     width: 7.5vw;
     height: 7vh;
@@ -140,7 +145,7 @@ main {
 	color: black;
 	font-size: 1vw;
 }
-.bodyStyle {
+.myBody-switch {
 	display: grid;
 	grid-template-columns: 10vw 90vw;
 	grid-template-rows: 10vh 9vh 81vh;
