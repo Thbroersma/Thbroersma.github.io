@@ -2,9 +2,9 @@ import Ghost from "./Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
-const width = 22; //10*10 = 100 squares
+const width = 24; //10*10 = 100 squares
 let score = 0;
-let coins = 67;
+let coins = 68;
 let powerPellets = 2;
 let pacman2CurrentIndex = 167;
 let pacmanCurrentIndex = 178;
@@ -345,9 +345,6 @@ if (reload) {
 // When you have won the game
 function chechForWin() {
   if (coins == 0 && powerPellets == 0) {
-    alert('You won!');
-    setTimeout(function () {
-      location.replace("")
-    }, 200)
+    alert('You won the game!');
   }
 }
