@@ -189,7 +189,7 @@ function movePacman(e) {
 
   pacDotEaten();
   powerPelletEaten();
-  //checkForGameOver();
+  checkForGameOver();
   chechForWin();
 }
 
@@ -341,14 +341,20 @@ function moveGhost(ghost) {
 
 // Game over function when it is and when it is not
 
-/*function checkForGameOver() {
-  if (squares[pacman2CurrentIndex].classList.contains('pac-man')) {
+function checkForGameOver() {
+
+  if (((squares[pacmanCurrentIndex].classList.contains('ghost')) || (squares[pacman2CurrentIndex].classList.contains('ghost'))) &&
+    !squares[pacmanCurrentIndex].classList.contains('scared-ghost')
+  ) {
+    ghosts.forEach(ghost => clearInterval(ghost.timerId))
     document.removeEventListener('keyup', movePacman)
-    setTimeout(function(){
+    setTimeout(function () {
       endImage.classList.remove('hidden');
+
     }, 200)
   }
-}*/
+
+}
 
 if (reload) {
   reload.addEventListener('click', function () {
@@ -365,5 +371,5 @@ function chechForWin() {
     alert('You won the game!');
 
   }
-  
+
 }
