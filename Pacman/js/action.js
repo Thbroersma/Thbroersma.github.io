@@ -2,6 +2,7 @@ import Ghost from "./Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
+
 const width = 22; 
 let score = 0;
 let coins = 68;
@@ -9,6 +10,7 @@ let powerPellets = 2;
 let pacmanCurrentIndex = 163;
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
+
 // The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
@@ -25,7 +27,9 @@ const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17
 ];
 const squares = [];
+
 function createBoard() {
+  
   for (let i = 0; i < layout.length; i++) {
     const square = document.createElement('div');
     // Here is the grid filed with div how get after there own styling
@@ -72,10 +76,12 @@ function createBoard() {
     }
   }
 }
+
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
 //movement of pacman
 function movePacman(e) {
+
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
     case 37:
@@ -86,9 +92,11 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
         && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
         pacmanCurrentIndex -= 1;
+
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
       }
+
       break;
     case 38:
       // The move for a div upwards   
@@ -107,9 +115,11 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-left')
         && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right'))
         pacmanCurrentIndex += 1;
+
       if ((pacmanCurrentIndex) === 130) {
         pacmanCurrentIndex = 111;
       }
+
       break;
     case 40:
       // The move for a div down 
@@ -119,6 +129,7 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
         pacmanCurrentIndex += 22;
+
       break;
   }
   squares[pacmanCurrentIndex].classList.add('pac-man');
@@ -132,6 +143,7 @@ document.addEventListener('keyup', movePacman);
 
 // How the pac-dots are eaten and how that works with the score
 function pacDotEaten() {
+  
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
     let i = 0;
     i++;
@@ -139,11 +151,12 @@ function pacDotEaten() {
     scoreDisplay.innerHTML = score;
     squares[pacmanCurrentIndex].classList.remove('pac-dot');
     score = score + (i * 10);
-
   }
+
 }
 // What happens when you eat a power-pellet
 function powerPelletEaten() {
+
   if (squares[pacmanCurrentIndex].classList.contains('power-pellet')) {
     score = score + 40;
     powerPellets--;
@@ -153,10 +166,14 @@ function powerPelletEaten() {
     setTimeout(unScaredGhosts, 10000);
     squares[pacmanCurrentIndex].classList.remove('power-pellet');
   }
+
 }
+
 function unScaredGhosts() {
+
   ghosts.forEach(ghost => ghost.isScared = false)
 }
+
 // The startposition of the ghost and the speed
 let ghosts = [
   new Ghost('blinky', 96, 300),
@@ -164,6 +181,7 @@ let ghosts = [
   new Ghost('crispy', 101, 300),
   new Ghost('winky', 94, 300),
 ]
+
 ghosts.forEach(ghost => {
   squares[ghost.currentIndex].classList.add(ghost.className);
   squares[ghost.currentIndex].classList.add('ghost');
@@ -237,12 +255,14 @@ function moveGhost(ghost) {
     if (ghost.isScared) {
       squares[ghost.currentIndex].classList.add('scared-ghost');
     }
+
     if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')) {
       squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost');
       score += 100;
       ghost.currentIndex = ghost.startIndex;
       squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
     }
+
     if (squares[ghost.currentIndex].classList.contains('pac-man')) {
       ghosts.forEach(ghost => clearInterval(ghost.timerId))
       document.removeEventListener('keyup', movePacman)
@@ -252,9 +272,12 @@ function moveGhost(ghost) {
       }, 200)
     }
   }, 300)
+  
 }
+
 // Game over function when it is and when it is not
 function checkForGameOver() {
+
   if ((squares[pacmanCurrentIndex].classList.contains('ghost')) &&
     !squares[pacmanCurrentIndex].classList.contains('scared-ghost')
   ) {
@@ -265,18 +288,24 @@ function checkForGameOver() {
 
     }, 200)
   }
+
 }
+
 // When you have won the game
 function chechForWin() {
+
   if (coins == 0 && powerPellets == 0) {
     alert('You won! You go to level 2');
     setTimeout(function () {
       location.replace("level2.html");
     }, 200)
   }
+
 }
+
 if (reload) {
   reload.addEventListener('click', function () {
+
     location.replace("players1.html");
   })
 }

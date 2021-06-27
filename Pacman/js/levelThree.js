@@ -3,14 +3,16 @@ console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
 const width = 22; //10*10 = 100 squares
-const pacmanElement = document.querySelector('.pac-man');
+
 let pacman2CurrentIndex = 159;
 let pacmanCurrentIndex = 169;
 let score = 0;
 let coins = 67;
 let powerPellets = 2;
+
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
+
 // The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
@@ -27,7 +29,9 @@ const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17
 ];
 const squares = [];
+
 function createBoard() {
+
   for (let i = 0; i < layout.length; i++) {
     const square = document.createElement('div');
     // Here is the grid filed with div how get after there own styling
@@ -74,12 +78,14 @@ function createBoard() {
     }
   }
 }
+
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
 squares[pacman2CurrentIndex].classList.add('player');
 
 //movement of pacman
 function movePacman(e) {
+
   squares[pacman2CurrentIndex].classList.remove('player');
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
@@ -95,21 +101,22 @@ function movePacman(e) {
         if ((pacmanCurrentIndex) === 111) {
           pacmanCurrentIndex = 130;
         }
+
       }
+
       break;
     case 87:
             // The move for a div upwards   
-
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('clear')) {
         pacmanCurrentIndex -= 22;
       }
+
       break;
     case 68:
             // The move for a div forward 
-
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
@@ -119,7 +126,9 @@ function movePacman(e) {
         if ((pacmanCurrentIndex) === 130) {
           pacmanCurrentIndex = 111;
         }
+
       }
+
       break;
     case 83:
       // The move for a div down 
@@ -129,6 +138,7 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')) {
         pacmanCurrentIndex += 22;
       }
+
       break;
     case 101:
       if (pacman2CurrentIndex + width < width * width && !squares[pacman2CurrentIndex + 22].classList.contains('field-box')
@@ -137,6 +147,7 @@ function movePacman(e) {
         && !squares[pacman2CurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacman2CurrentIndex + 22].classList.contains('clear')
         && !squares[pacman2CurrentIndex + 22].classList.contains('field-box-right'))
         pacman2CurrentIndex += 22;
+
       break;
     case 100:
       if (pacman2CurrentIndex % width !== 0 && !squares[pacman2CurrentIndex - 1].classList.contains('field-box')
@@ -145,9 +156,11 @@ function movePacman(e) {
         && !squares[pacman2CurrentIndex - 1].classList.contains('field-box-top') && !squares[pacman2CurrentIndex - 1].classList.contains('field-box-bottom')
         && !squares[pacman2CurrentIndex - 1].classList.contains('clear'))
         pacman2CurrentIndex -= 1;
+
       if ((pacman2CurrentIndex) === 111) {
         pacman2CurrentIndex = 130;
       }
+
       break;
     case 102:
       if (pacman2CurrentIndex % width < width - 1 && !squares[pacman2CurrentIndex + 1].classList.contains('field-box')
@@ -156,9 +169,11 @@ function movePacman(e) {
         && !squares[pacman2CurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacman2CurrentIndex + 1].classList.contains('field-box-left')
         && !squares[pacman2CurrentIndex + 1].classList.contains('clear') && !squares[pacman2CurrentIndex + 1].classList.contains('field-box-right'))
         pacman2CurrentIndex += 1;
+
       if ((pacman2CurrentIndex) === 130) {
         pacman2CurrentIndex = 111;
       }
+
       break;
     case 104:
       if (pacman2CurrentIndex - width >= 0 && !squares[pacman2CurrentIndex - 22].classList.contains('field-box')
@@ -166,6 +181,7 @@ function movePacman(e) {
         && !squares[pacman2CurrentIndex - 22].classList.contains('field-box-left') && !squares[pacman2CurrentIndex - 22].classList.contains('field-box-top')
         && !squares[pacman2CurrentIndex - 22].classList.contains('clear') && !squares[pacman2CurrentIndex - 22].classList.contains('field-box-right'))
         pacman2CurrentIndex -= 22;
+
       break;
   }
   squares[pacmanCurrentIndex].classList.add('pac-man');
@@ -176,10 +192,12 @@ function movePacman(e) {
   //checkForGameOver();
   chechForWin();
 }
+
 document.addEventListener('keyup', movePacman);
 // How the pac-dots are eaten and how that works with the score
 
 function pacDotEaten() {
+
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot') || squares[pacman2CurrentIndex].classList.contains('pac-dot')) {
     let i = 0;
     coins--;
@@ -189,11 +207,13 @@ function pacDotEaten() {
     squares[pacmanCurrentIndex].classList.remove('pac-dot');
     squares[pacman2CurrentIndex].classList.remove('pac-dot');
     score = score + (i * 10);
-
   }
+
 }
+
 // What happens when you eat a power-pellet
 function powerPelletEaten() {
+
   if (squares[pacmanCurrentIndex].classList.contains('power-pellet') || squares[pacman2CurrentIndex].classList.contains('power-pellet')) {
     score = score + 40;
     powerPellets--;
@@ -202,10 +222,14 @@ function powerPelletEaten() {
     squares[pacmanCurrentIndex].classList.remove('power-pellet');
     squares[pacman2CurrentIndex].classList.remove('power-pellet');
   }
+
 }
+
 function unScaredGhosts() {
+
   ghosts.forEach(ghost => ghost.isScared = false)
 }
+
 let ghosts = [
   new Ghost('blinky', 96, 300),
   new Ghost('pinky', 99, 500),
@@ -214,6 +238,7 @@ let ghosts = [
   new Ghost('flinky', 53, 200),
   new Ghost('drinky', 56, 500),
 ]
+
 ghosts.forEach(ghost => {
   squares[ghost.currentIndex].classList.add(ghost.className);
   squares[ghost.currentIndex].classList.add('ghost');
@@ -295,12 +320,14 @@ function moveGhost(ghost) {
     if (ghost.isScared) {
       squares[ghost.currentIndex].classList.add('scared-ghost');
     }
+
     if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')) {
       squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost');
       score += 100;
       ghost.currentIndex = ghost.startIndex;
       squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
     }
+
     if (squares[ghost.currentIndex].classList.contains('pac-man')) {
       ghosts.forEach(ghost => clearInterval(ghost.timerId))
       document.removeEventListener('keyup', movePacman)
@@ -311,6 +338,7 @@ function moveGhost(ghost) {
     }
   }, 300)
 }
+
 // Game over function when it is and when it is not
 
 /*function checkForGameOver() {
@@ -321,8 +349,10 @@ function moveGhost(ghost) {
     }, 200)
   }
 }*/
+
 if (reload) {
   reload.addEventListener('click', function () {
+
     location.replace("players1.html");
   })
 
@@ -330,8 +360,10 @@ if (reload) {
 // When you have won the game
 
 function chechForWin() {
+
   if (coins == 0 && powerPellets == 0) {
     alert('You won the game!');
 
   }
+  
 }

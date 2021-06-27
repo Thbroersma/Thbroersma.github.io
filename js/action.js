@@ -7,6 +7,7 @@ const switchButton = document.querySelector('.switchButton');
 const motivationButton = document.querySelector('.motivation-button');
 const nextButton = document.querySelector('.nextButton');
 const scoreButton = document.querySelector('.score-button');
+
 let motivationQuotes = [ 
     'You can do it, believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
@@ -19,6 +20,7 @@ let motivationQuotes = [
     'You control your destiny – you don’t need magic to do it. And there are no magical shortcuts to solving your problems',
     'Today is a good day to try something new'
 ];
+
 const display = document.querySelector('.displayValue');
 let chosenNumberOne = null;
 let chosenNumberTwo = null;
@@ -27,6 +29,7 @@ let operator = null;
 const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
+
 let gameQuestions = [ 
     'What do you must have in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had cycled?',
@@ -41,48 +44,64 @@ let gameQuestions = [
 ];
 let timer;
 let scorePoints = 0;
+
 // Motivation quote button and switchbutton
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
+
         let text = document.querySelector('.motivation-text');
         const random = motivationQuotes[Math.floor(Math.random() * motivationQuotes.length)];
+
         text.innerHTML = random, motivationQuotes[random]
     })
 }
+
 if (switchButton) {
     switchButton.addEventListener('click', function() {
+
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
+
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
     })
 }
+
 // Function for the quiz
 function scoreButtonSwitch() {
+
     scoreButton.classList.add('score-button-theme');
     scorePoints = scorePoints + 10;
     scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
 }
+
 function youLostTheGame() {
+
     scoreButton.classList.add('lost-button-theme');
     scoreButton.innerHTML = 'You lost the game, try again';
 }
+
 function highscore() {
+
     if (scorePoints == 100) {
         scoreButton.classList.add('highScore-button');
         scoreButton.innerHTML = 'You have the highscore, you won!';
     }
+
 }
 
 if (nextButton) {
     nextButton.addEventListener('click', function() {
+
         const randomNumber = Math.floor(Math.random() * gameQuestions.length);
         gameQuest.innerHTML = gameQuestions[randomNumber];
         timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
     })
 }
+
 if (gameButton) {
     gameButton.addEventListener('click', function () {
+
         timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
         gameQuest.innerHTML = gameQuestions[0];
         checkButton.classList.add('gameButton');
@@ -91,65 +110,81 @@ if (gameButton) {
         nextButton.innerHTML = 'Next question';
     })
 }
+
 // Function for checking the answer correctly
 if (checkButton) {
     checkButton.addEventListener('click', function() {
+
         if (gameQuest.innerHTML.includes('button')) {
             if (inputAnswer.value.includes('addEventListener')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
-            console.log(inputAnswer.innerHTML);
+
         }
+
         else if (gameQuest.innerHTML.includes('distance')) {
             if (inputAnswer.value.includes('150 km')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('classes')) {
             if (inputAnswer.value.includes('querySelectorAll')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('style')) {
             if (inputAnswer.value.includes('classList.toggle')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('array')) {
             if (inputAnswer.value.includes('push') && inputAnswer.value.includes('pop') && inputAnswer.value.includes('includes')) {
                 scoreButtonSwitch();
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('inside')) {
             if ((inputAnswer.value.includes('value') && inputAnswer.value.includes('innerHTML')) || 
             (inputAnswer.value.includes('textContent') && inputAnswer.value.includes('innerHTML')) || 
@@ -158,11 +193,14 @@ if (checkButton) {
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('maximum')) {
             if ((inputAnswer.value.includes('2 years')))
             {
@@ -170,12 +208,16 @@ if (checkButton) {
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('animals')) {
+
             if ((inputAnswer.value.includes('cat') ||  (inputAnswer.value.includes('kitty'))) && 
             inputAnswer.value.includes('dog') && inputAnswer.value.includes('cow') && inputAnswer.value.includes('rat'))
             {
@@ -183,11 +225,14 @@ if (checkButton) {
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
+
         else if (gameQuest.innerHTML.includes('disappear')) {
             if (inputAnswer.value.includes('display') &&  (inputAnswer.value.includes('none')))
             {
@@ -195,24 +240,30 @@ if (checkButton) {
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
-        }else if (gameQuest.innerHTML.includes('never')) {
+
+        } else if (gameQuest.innerHTML.includes('never')) {
             if (inputAnswer.value.includes('id'))
             {
                 scoreButtonSwitch();
                 clearTimeout(timer);
                 highscore();
             }
+
             else {
                 clearTimeout(timer);
                 youLostTheGame();
             }
+
         }
     })
+
 }
+
 // calculator function
 calcButtons.forEach(function(element) {
     element.addEventListener('click', function() {            
