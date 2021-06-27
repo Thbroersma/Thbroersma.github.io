@@ -1,3 +1,4 @@
+// The buttons 
 const gameButton = document.querySelector('.gameButton');
 let gameQuest = document.querySelector('.gamePlay');
 const checkButton = document.querySelector('.gameCheck');
@@ -40,21 +41,7 @@ let gameQuestions = [
 ];
 let timer;
 let scorePoints = 0;
-function scoreButtonSwitch() {
-    scoreButton.classList.add('score-button-theme');
-    scorePoints = scorePoints + 10;
-    scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
-}
-function youLostTheGame() {
-    scoreButton.classList.add('lost-button-theme');
-    scoreButton.innerHTML = 'You lost the game, try again';
-}
-function highscore() {
-    if (scorePoints == 100) {
-        scoreButton.classList.add('highScore-button');
-        scoreButton.innerHTML = 'You have the highscore, you won!';
-    }
-}
+// Motivation quote button and switchbutton
 if (motivationButton) {
     motivationButton.addEventListener('click', function () {
         let text = document.querySelector('.motivation-text');
@@ -70,6 +57,23 @@ if (switchButton) {
         body.classList.toggle('myBody-switch');
     })
 }
+// Function for the quiz
+function scoreButtonSwitch() {
+    scoreButton.classList.add('score-button-theme');
+    scorePoints = scorePoints + 10;
+    scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
+}
+function youLostTheGame() {
+    scoreButton.classList.add('lost-button-theme');
+    scoreButton.innerHTML = 'You lost the game, try again';
+}
+function highscore() {
+    if (scorePoints == 100) {
+        scoreButton.classList.add('highScore-button');
+        scoreButton.innerHTML = 'You have the highscore, you won!';
+    }
+}
+
 if (nextButton) {
     nextButton.addEventListener('click', function() {
         const randomNumber = Math.floor(Math.random() * gameQuestions.length);
@@ -87,6 +91,7 @@ if (gameButton) {
         nextButton.innerHTML = 'Next question';
     })
 }
+// Function for checking the answer correctly
 if (checkButton) {
     checkButton.addEventListener('click', function() {
         if (gameQuest.innerHTML.includes('button')) {
@@ -208,7 +213,7 @@ if (checkButton) {
         }
     })
 }
-// rekenmachine functie
+// calculator function
 calcButtons.forEach(function(element) {
     element.addEventListener('click', function() {            
         let elNumber = null;
@@ -219,39 +224,32 @@ calcButtons.forEach(function(element) {
                 if (operator && chosenNumberTwo && chosenNumberOne) {
                     let solution = '';
                     switch(operator) {
-                        // The functies in de rekenmachine waarbij de beide variabelen worden gebruikt
+                        // The functions where 2 values are used 
                         case 'count':
                             solution = (parseFloat(chosenNumberOne) + parseFloat(chosenNumberTwo));
-                            console.log('Er is op de + button geclickt in de rekenmachine');
                             break;
                         case 'minus':
                             solution = (parseFloat(chosenNumberOne) - parseFloat(chosenNumberTwo));
-                            console.log('Er is op de - button geclickt in de rekenmachine');
                             break;
                         case 'divide':
                             solution = (parseFloat(chosenNumberOne) / parseFloat(chosenNumberTwo));
-                            console.log('Er is op de / button geclickt in de rekenmachine');
                             break;
                         case 'multiply':
                             solution = (parseFloat(chosenNumberOne) * parseFloat(chosenNumberTwo));
-                            console.log('Er is op de x button geclickt in de rekenmachine');
                             break; 
                         case 'BMI':
                             solution = (parseFloat(chosenNumberOne) / parseFloat(chosenNumberTwo*chosenNumberTwo));
-                            console.log('Er is op de BMI button geclickt in de rekenmachine');
                             break; 
                         case 'BTW':
                             solution = parseFloat(chosenNumberOne) / parseFloat(100) * (parseFloat(parseFloat(100) + parseFloat(chosenNumberTwo)));
-                            console.log('Er is op de BTW-berekening button geclickt in de rekenmachine');
                             break;  
                         case 'N-BTW':
                             solution = parseFloat(chosenNumberOne) / (parseFloat(parseFloat(100) + parseFloat(chosenNumberTwo))) * parseFloat(100);
-                            console.log('Er is op de exclusief BTW-berekening button geclickt in de rekenmachine');
                             break;          
                     } 
                     addToDisplay('=' + solution);
                 }
-                // De functies in de rekenmachine waarbij 1 variabele nodig is
+                // The function where you only need 1 value
             } else if (checkOperator === "reset") {
                 chosenNumberOne = null;
                 chosenNumberTwo = null;
@@ -303,22 +301,16 @@ calcButtons.forEach(function(element) {
         }
     })
 });
-/* MIA :: voeg iets toe aan het display */
+/* MIA :: add something to the display */
 function addToDisplay(addWhat) {
     let oldDisplay = display.innerHTML;
     if (parseFloat(oldDisplay) === 0)
         oldDisplay = '';
     showInDisplay(oldDisplay + addWhat);
 }
-/** MIA :: Toon iets op het display en scroll display */
+/** MIA :: add and scrolls something to the display */
 function showInDisplay(showWhat) {
-    /** MIA :: display variabele doet een innerHTML, 
-     * maar het is nu een input element. 
-     * Je kan dit doen, maar dan gebruik je niet .innerHTML maar .value
-     * 
-     * Of je lost het op zoals (in mijn code) er een DIV element van te maken
-     * div's hebben HTML in de DIV zitten.
-     **/
+
     display.innerHTML = showWhat;
     display.scrollLeft = 1000000;
 }
