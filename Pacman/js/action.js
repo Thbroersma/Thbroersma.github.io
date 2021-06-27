@@ -2,13 +2,14 @@ import Ghost from "./Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
-const width = 22; //10*10 = 100 squares
+const width = 22; 
 let score = 0;
 let coins = 68;
 let powerPellets = 2;
 let pacmanCurrentIndex = 163;
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
+// The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
   17, 6, 3, 3, 3, 3, 3, 3, 3, 3, 13, 13, 3, 3, 3, 3, 3, 3, 3, 3, 9, 17,
@@ -27,6 +28,7 @@ const squares = [];
 function createBoard() {
   for (let i = 0; i < layout.length; i++) {
     const square = document.createElement('div');
+    // Here is the grid filed with div how get after there own styling
     grid.appendChild(square);
     squares.push(square);
     if (layout[i] === 0) {
@@ -77,6 +79,7 @@ function movePacman(e) {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
     case 37:
+      // The move for a div backwards
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
@@ -88,6 +91,7 @@ function movePacman(e) {
       }
       break;
     case 38:
+      // The move for a div upwards   
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
@@ -96,6 +100,7 @@ function movePacman(e) {
 
       break;
     case 39:
+      // The move for a div forward 
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
@@ -107,6 +112,7 @@ function movePacman(e) {
       }
       break;
     case 40:
+      // The move for a div down 
       if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
         && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
@@ -151,11 +157,12 @@ function powerPelletEaten() {
 function unScaredGhosts() {
   ghosts.forEach(ghost => ghost.isScared = false)
 }
+// The startposition of the ghost and the speed
 let ghosts = [
   new Ghost('blinky', 96, 300),
-  new Ghost('pinky', 99, 500),
-  new Ghost('crispy', 101, 200),
-  new Ghost('winky', 94, 500),
+  new Ghost('pinky', 99, 300),
+  new Ghost('crispy', 101, 300),
+  new Ghost('winky', 94, 300),
 ]
 ghosts.forEach(ghost => {
   squares[ghost.currentIndex].classList.add(ghost.className);

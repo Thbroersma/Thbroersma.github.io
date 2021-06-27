@@ -11,7 +11,7 @@ let pacmanCurrentIndex = 178;
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
 const levelDown = document.querySelector('.level');
-let backgroundSound = document.querySelector('.music');
+// The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,17, 17,
   17, 6, 3, 3, 3, 3, 3, 3, 3, 3, 13, 13, 3, 3, 3, 3, 3, 3, 3, 3, 9, 17,17, 17,
@@ -83,10 +83,7 @@ function movePacman(e) {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
     case 37:
-      setTimeout(function() {
-        backgroundSound.play();
-      }, 2000)
-      
+    
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
@@ -98,9 +95,6 @@ function movePacman(e) {
       }
       break;
     case 38:
-      setTimeout(function() {
-        backgroundSound.play();
-      }, 2000)
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 24].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 24].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 24].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 24].classList.contains('field-box-top')
@@ -108,9 +102,6 @@ function movePacman(e) {
         pacmanCurrentIndex -= 24;
       break;
     case 39:
-      setTimeout(function() {
-        backgroundSound.play();
-      }, 2000)
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
@@ -122,9 +113,7 @@ function movePacman(e) {
       }
       break;
     case 40:
-      setTimeout(function() {
-        backgroundSound.play();
-      }, 2000)
+
       if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 24].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 24].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
         && !squares[pacmanCurrentIndex + 24].classList.contains('border-top') && !squares[pacmanCurrentIndex + 24].classList.contains('field-box-left')
