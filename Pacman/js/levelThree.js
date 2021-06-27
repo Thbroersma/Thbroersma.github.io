@@ -11,6 +11,7 @@ let coins = 67;
 let powerPellets = 2;
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
+// The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
   17, 6, 3, 3, 3, 3, 3, 3, 3, 3, 13, 13, 3, 3, 3, 3, 3, 3, 3, 3, 9, 17,
@@ -29,6 +30,7 @@ const squares = [];
 function createBoard() {
   for (let i = 0; i < layout.length; i++) {
     const square = document.createElement('div');
+    // Here is the grid filed with div how get after there own styling
     grid.appendChild(square);
     squares.push(square);
     if (layout[i] === 0) {
@@ -76,12 +78,14 @@ createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
 squares[pacman2CurrentIndex].classList.add('player');
 
-//move pacman
+//movement of pacman
 function movePacman(e) {
   squares[pacman2CurrentIndex].classList.remove('player');
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
     case 65:
+            // The move for a div backwards
+
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
@@ -94,6 +98,8 @@ function movePacman(e) {
       }
       break;
     case 87:
+            // The move for a div upwards   
+
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
@@ -102,6 +108,8 @@ function movePacman(e) {
       }
       break;
     case 68:
+            // The move for a div forward 
+
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
@@ -114,6 +122,7 @@ function movePacman(e) {
       }
       break;
     case 83:
+      // The move for a div down 
       if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
         && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
@@ -168,6 +177,8 @@ function movePacman(e) {
   chechForWin();
 }
 document.addEventListener('keyup', movePacman);
+// How the pac-dots are eaten and how that works with the score
+
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot') || squares[pacman2CurrentIndex].classList.contains('pac-dot')) {
     let i = 0;
@@ -225,7 +236,6 @@ function moveGhost(ghost) {
       !squares[ghost.currentIndex + 1].classList.contains('border-left') &&
       !squares[ghost.currentIndex].classList.contains('border-right') &&
       !squares[ghost.currentIndex].classList.contains('border-top')) {
-      console.log("+1");
       //remove the ghosts classes
       squares[ghost.currentIndex].classList.remove(ghost.className)
       squares[ghost.currentIndex].classList.remove('ghost', 'scared-ghost')
@@ -301,6 +311,8 @@ function moveGhost(ghost) {
     }
   }, 300)
 }
+// Game over function when it is and when it is not
+
 /*function checkForGameOver() {
   if (squares[pacman2CurrentIndex].classList.contains('pac-man')) {
     document.removeEventListener('keyup', movePacman)
@@ -315,6 +327,8 @@ if (reload) {
   })
 
 }
+// When you have won the game
+
 function chechForWin() {
   if (coins == 0 && powerPellets == 0) {
     alert('You won the game!');

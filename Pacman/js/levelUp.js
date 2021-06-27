@@ -13,23 +13,24 @@ const reload = document.querySelector('.reload');
 const levelDown = document.querySelector('.level');
 // The layout of the playing field
 const layout = [
-  17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,17, 17,
-  17, 6, 3, 3, 3, 3, 3, 3, 3, 3, 13, 13, 3, 3, 3, 3, 3, 3, 3, 3, 9, 17,17, 17,
-  17, 2, 3, 16, 1, 3, 1, 0, 10, 0, 0, 0, 0, 10, 1, 0, 3, 2, 0, 3, 1, 17,17, 17,
-  17, 15, 0, 1, 3, 1, 3, 0, 10, 0, 0, 0, 0, 10, 0, 1, 0, 3, 2, 0, 18, 17,17, 17,
-  17, 2, 1, 3, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 1, 0, 1, 17,17, 17,
-  17, 12, 1, 0, 3, 1, 0, 10, 0, 5, 5, 5, 5, 0, 10, 0, 0, 2, 0, 0, 11, 17,17, 17,
-  17, 2, 1, 0, 1, 0, 0, 10, 0, 5, 5, 5, 5, 0, 10, 0, 0, 2, 3, 2, 1, 17,17, 17,
-  17, 2, 0, 1, 0, 3, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 17,17, 17,
-  17, 2, 10, 0, 1, 0, 0, 0, 1, 3, 0, 3, 0, 3, 2, 1, 0, 0, 0, 10, 1, 17,17, 17,
-  17, 2, 10, 10, 0, 3, 2, 1, 3, 0, 3, 2, 0, 0, 3, 2, 3, 16, 10, 10, 1, 17,17, 17,
-  17, 8, 4, 4, 4, 4, 4, 4, 4, 4, 14, 14, 4, 4, 4, 4, 4, 4, 4, 4, 7, 17,17, 17,
+  17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
+  17, 6, 3, 3, 3, 3, 3, 3, 3, 3, 13, 13, 3, 3, 3, 3, 3, 3, 3, 3, 9, 17, 17, 17,
+  17, 2, 3, 16, 1, 3, 1, 0, 10, 0, 0, 0, 0, 10, 1, 0, 3, 2, 0, 3, 1, 17, 17, 17,
+  17, 15, 0, 1, 3, 1, 3, 0, 10, 0, 0, 0, 0, 10, 0, 1, 0, 3, 2, 0, 18, 17, 17, 17,
+  17, 2, 1, 3, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 1, 0, 1, 17, 17, 17,
+  17, 12, 1, 0, 3, 1, 0, 10, 0, 5, 5, 5, 5, 0, 10, 0, 0, 2, 0, 0, 11, 17, 17, 17,
+  17, 2, 1, 0, 1, 0, 0, 10, 0, 5, 5, 5, 5, 0, 10, 0, 0, 2, 3, 2, 1, 17, 17, 17,
+  17, 2, 0, 1, 0, 3, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 17, 17, 17,
+  17, 2, 10, 0, 1, 0, 0, 0, 1, 3, 0, 3, 0, 3, 2, 1, 0, 0, 0, 10, 1, 17, 17, 17,
+  17, 2, 10, 10, 0, 3, 2, 1, 3, 0, 3, 2, 0, 0, 3, 2, 3, 16, 10, 10, 1, 17, 17, 17,
+  17, 8, 4, 4, 4, 4, 4, 4, 4, 4, 14, 14, 4, 4, 4, 4, 4, 4, 4, 4, 7, 17, 17, 17,
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17
 ];
 const squares = [];
 function createBoard() {
   for (let i = 0; i < layout.length; i++) {
     const square = document.createElement('div');
+    // Here is the grid filed with div how get after there own styling
     grid.appendChild(square);
     squares.push(square);
     if (layout[i] === 0) {
@@ -83,7 +84,7 @@ function movePacman(e) {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
     case 37:
-    
+      // The move for a div backwards
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
@@ -95,6 +96,7 @@ function movePacman(e) {
       }
       break;
     case 38:
+      // The move for a div upwards  
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 24].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 24].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 24].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 24].classList.contains('field-box-top')
@@ -102,6 +104,7 @@ function movePacman(e) {
         pacmanCurrentIndex -= 24;
       break;
     case 39:
+      // The move for a div forward 
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
@@ -113,7 +116,7 @@ function movePacman(e) {
       }
       break;
     case 40:
-
+// The move for a div down 
       if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 24].classList.contains('field-box')
         && !squares[pacmanCurrentIndex + 24].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
         && !squares[pacmanCurrentIndex + 24].classList.contains('border-top') && !squares[pacmanCurrentIndex + 24].classList.contains('field-box-left')
@@ -185,6 +188,8 @@ function movePacman(e) {
   chechForWin();
 }
 document.addEventListener('keyup', movePacman);
+// How the pac-dots are eaten and how that works with the score
+
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
     let i = 0;
@@ -198,9 +203,7 @@ function pacDotEaten() {
 }
 if (levelDown) {
   levelDown.addEventListener('click', function () {
-    console.log('check');
-    backgroundSound.play();
-    //location.replace("players1.html")
+    location.replace("players1.html")
   })
 }
 // What happens when you eat a power-pellet
@@ -215,6 +218,8 @@ function powerPelletEaten() {
 function unScaredGhosts() {
   ghosts.forEach(ghost => ghost.isScared = false)
 }
+// The startposition of the ghost and the speed
+
 let ghosts = [
   new Ghost('blinky', 105, 300),
   new Ghost('pinky', 108, 500),
@@ -284,7 +289,7 @@ function moveGhost(ghost) {
       //move into that space
       ghost.currentIndex -= 1
       squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
-      
+
       //else find a new random direction ot go in
     } else if (direction == -24 &&
       !squares[ghost.currentIndex - 24].classList.contains('clear') &&
@@ -322,6 +327,7 @@ function moveGhost(ghost) {
     }
   }, 300)
 }
+// Game over function when it is and when it is not
 function checkForGameOver() {
   if (squares[pacman2CurrentIndex].classList.contains('pac-man')) {
     document.removeEventListener('keyup', movePacman)
@@ -336,6 +342,7 @@ if (reload) {
   })
 
 }
+// When you have won the game
 function chechForWin() {
   if (coins == 0 && powerPellets == 0) {
     alert('You won!');

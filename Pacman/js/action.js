@@ -266,6 +266,7 @@ function checkForGameOver() {
     }, 200)
   }
 }
+// When you have won the game
 function chechForWin() {
   if (coins == 0 && powerPellets == 0) {
     alert('You won! You go to level 2');
