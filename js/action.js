@@ -102,7 +102,7 @@ if (nextButton) {
 if (gameButton) {
     gameButton.addEventListener('click', function () {
 
-        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 10000);
+        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
         gameQuest.innerHTML = gameQuestions[0];
         checkButton.classList.add('gameButton');
         nextButton.classList.add('gameButton');
