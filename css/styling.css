@@ -47,6 +47,7 @@ aside {
     text-align: right;
     background-color: rgb(68, 154, 235);
     font-size: 1.7vw;
+	border: 1px black solid;
 }
 .forest {
 	width: 21vw;
@@ -149,7 +150,7 @@ main {
 	display: grid;
 	grid-template-columns: 10vw 90vw;
 	grid-template-rows: 10vh 9vh 81vh;
-	background-color: #c197f3;
+	background-color: #7ad9e6;
 	color: black;
 	font-size: 1vw;
 }
@@ -167,7 +168,7 @@ nav a {
 	font-size: 1.2vw;
 }
 .nav-switch {
-	background-color: rgb(202, 84, 94);
+	background-color: rgb(107, 143, 235);
 	color: black;
 }
 .nav-switch a {
