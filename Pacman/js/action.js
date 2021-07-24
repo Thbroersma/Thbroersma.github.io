@@ -204,7 +204,6 @@ function moveGhost(ghost) {
       !squares[ghost.currentIndex + 1].classList.contains('border-left') &&
       !squares[ghost.currentIndex].classList.contains('border-right') &&
       !squares[ghost.currentIndex].classList.contains('border-top')) {
-      console.log("+1");
       //remove the ghosts classes
       squares[ghost.currentIndex].classList.remove(ghost.className)
       squares[ghost.currentIndex].classList.remove('ghost', 'scared-ghost')
