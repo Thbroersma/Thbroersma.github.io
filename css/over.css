@@ -81,6 +81,9 @@ main {
 	grid-column: 2/3;
 	grid-row: 3/4;
 }
+.over {
+	font-size: 2vw;
+}
 section {
 	grid-column: 3/4;
 	grid-row: 3/4;
@@ -102,6 +105,11 @@ span {
 }
 span:hover {
 	background-color: rgb(89, 111, 233);
+}
+.text {
+	color: black;
+	margin-right: 2vw;
+	font-size: 1vw;
 }
 .high {
 	height: 70vh;
