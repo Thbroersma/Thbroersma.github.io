@@ -11,8 +11,8 @@ aside {
 	font-size: 1vw;
 }
 .buttons {
-    width: 7.5vw;
-    height: 7vh;
+    width: 6.5vw;
+    height: 6.5vh;
     margin: 0vw;
     border: 1px solid rgba(0, 0, 0, 0.8);
     background-color: rgb(155, 216, 158);
@@ -42,7 +42,7 @@ aside {
     float: left;
 }
 .displayValue {
-    width: 37.5vw;
+    width: 32.5vw;
     height: 3vw;
     text-align: right;
     background-color: rgb(68, 154, 235);

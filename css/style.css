@@ -129,6 +129,9 @@ img	{
 	margin-bottom: 4vh;
 	margin-top: 2vh;
 }
+.jobDescription {
+	font-size: 1.1vw;
+}
 .row {
 	margin-right: 0vw;
 	display: inline-block;
