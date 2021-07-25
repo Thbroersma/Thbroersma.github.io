@@ -115,6 +115,7 @@ header {
 }
 .last-site-head {
 	margin-left: 13vw;
+	font-size: 1.5vw;
 }
 .lost-button-theme {
 	margin-left: 19.8vw;
@@ -197,8 +198,13 @@ nav a {
 .projects-aside {
 	margin-left: 3vw;
 }
+.projects-aside-title {
+	margin-left: 10vw;
+	font-size: 1.5rem;
+}
 .projects-aside-head {
 	margin-left: 6vw;
+	font-size: 1.5rem;
 }
 .score-button {
 	display: none;
