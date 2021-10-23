@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>Intro</title>
@@ -16,18 +15,7 @@
 -->
 </head>
 <body class="myBody ">
-<?php
-    try {
-        $db = new PDO("mysql:host=localhost;dbname=test", "root", "");
-    $query = $db->prepare("SELECT * FROM project");
-    $query->execute();
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    foreach($result as &$data) {
-        echo $data["id"] . ": ";
-        echo $data["title"] . "<br>";
-        echo $data["github-link"] . "<br>";
-    }
-?>
+
 
     <nav class="navbar-style">
         <div class="row">
@@ -59,229 +47,42 @@
     <aside>
     </aside>
     <main>
-        <!--
-        <section class="part-one">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2 class="lower-head headingThree">This is me</h2>
-                    <p class="about">
-                        Hello, my name is Thierry, I am 24 years old. I am an enthousiast webdesigner who works with HTML,
-                        CSS, Javascript and C#. I am still in school and learning more (programming) languages. I am now
-                        working on
-                        front-end developing as you can see. So far I worked on this website and some applications (in C#
-                        and Javascript).
-                        Please look around and if you like it, please press the contact button.
-                    </p>
-                    <button class="contact" type="active">
-                        <a href="mailto:thierry.broersma@gmail.com">Contact me</a>
-                    </button>
-                </div>
-                <div class="col-sm-4">
-                    <img src="img/me.jpg" class="rounded me">
-                </div>
-            </div>
-        </section>
-        <section class="part-two">
-            <div class="row project">
-                <div class="col-sm-6">
-                    <h3 class="headingThree">My projects</h3>
-                    <p>
-                        Here is a calculator that I have made out of the design from a teacher, where it made my own version
-                        of a calculator,
-                        with the function that I found usefull and the style that fits with the website style. I am proud of
-                        the functions and the
-                        style that I have giving the calculator. It is a nice working thing and I learned what all the codes
-                        do also those who where
-                        giving to me.
-                    </p>-->
-                    <!--Rekenmachine-->
-                    <!--
-                    <div class="container computingBlock">
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="displayValue">0</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="BMI">BMI - W/L</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="tax">Loan tax scale</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="bruto">Taxable income M</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="BTW">Inclusive BTW</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="N-BTW">Exclusive BTW</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="1">1</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="2">2</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="3">3</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="count">+</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="power">&sup2;</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="4">4</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="5">5</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="6">6</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="minus">-</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-action="root">&#8730;</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="7">7</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="8">8</button>
-                            </div>
-                            <div class="col-xs-1 ">
-                                <button class="buttons calculator_item" data-number="9">9</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-action="multiply">x</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-number=".">.</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item ac-button" data-action="reset">C</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-number="0">0</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-action="solution">=</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-action="divide">/</button>
-                            </div>
-                            <div class="col-xs-1">
-                                <button class="buttons calculator_item" data-action="plusmin">+/-</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-                <!--Overige projecten--><!--
-                <div class="col-sm-6 higherLower">
-                    <div class="card-columns projects-aside">
-                        <div class="card bg-success">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Here is a game we did with school and this is a example of my
-                                    programming on C#.
-                                    It the higher lower game, it is a basic thing but I did some extra work in it to make it
-                                    a little bit more fun.</p>
-                                <a href="https://github.com/ROCMondriaanTIN/sd20-csharp-card-assignment-Thbroersma/tree/advanced"
-                                    class="card-link">C# H/L game</a>
-                                <img class="card-img" src="img/high.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <h4 class="projects-aside-title">Interaction design</h4>
-                    <div class="card-columns last-site">
-                        <div class="card bg-success">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    This is one of my last projects, were we had to look at problems from
-                                    student in the COVID times.
-                                    We thought of the motivation of the students, so we created a version of Instragram.
-                                    Were you can click on pictures
-                                    and swipe through some more pictures. ALso a page with a several forms of motivation so
-                                    you can get out for a bit of fun
-                                    and get motivated to do stuff again.
-                                </p>
-                                <a href="https://github.com/ROCMondriaanTIN/sd20-kd5029-interactiondesign-w-o-r-c"
-                                    class="card-link">Motivation Website</a>
-                                <img class="card-img" src="img/site.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <h4 class="projects-aside-head">Bootstrap project</h4>
-                    <div class="card-columns projects-aside">
-                        <div class="card bg-success">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    This is a website for a Snackbar company that we had mad a school. It was a hard project since the was a time
-                                    set where in we have had in mad. But I am still happy of the result of it and I am proud to show what I can 
-                                    make in a short time.
-                                </p>
-                                <a href="https://github.com/ROCMondriaanTIN/sd20-kd5029-interactiondesign-w-o-r-c"
-                                    class="card-link">Snackbar</a>
-                                <img class="card-img" src="img/snack.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!--Overige opdracht (een quiz)-->
-        <section class="part-one">
-            <div class="row">
-                <div class="col-12">
-                    <div class="game">
-                        <h4 class="projects-aside-head">But there are more things</h4>
-                        <p>
-                            I like to give myself a little challenge to put more in my website. Here is a little game that I
-                            have made,
-                            since this is programm work we do, it will be based <br> on program knowledge and things that you can
-                            find on
-                            this website (so check the site first). Just remember there is a timer on the questions.
-                        </p>
-                        <button class="score-button">
+    <?php
+    try {try {
+        $db = new PDO("mysql:host=localhost;dbname=project-films", "root", "");
+        if (isset($_POST['inloggen'])) {
+            $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
+            $password = $_POST['password'];
+            $query = $db->prepare("SELECT * FROM gebruikers WHERE username = :user");
+            $query->bindParam("user", $username);
+            $query->execute();
+        if ($query->rowCount() == 1) {
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            if (password_verify($password, $result["password"])) {
+                echo "Juiste gegevens!";
+            } else {
+                echo "Onjuiste gegevens!";
+            }
+        } else {
+            echo "Onjuiste gegevens!";
+        }
+        echo "<br>";
+        }
+    }
+    catch (PDOException $e) {
+        die ("Error!: " . $e->getMessage());
+    }
+    ?>
+    <form method="post" action="set.php">
+        <label>Username</label>
+        <input type="text" name="username"><br>
+
+        <label>Password</label>
+        <input type="password" name="password"><br>
+
+        <input type="submit" name="inloggen" value="Inloggen">
+    </form>
     
-                        </button>
-                        <button class="gameButton"">
-                            Let the games begin!
-                        </button>
-                        <p class=" gamePlay">
-    
-                            </p>
-                            <input type="text" class="answers"><br>
-                            <button class="gameCheck button">
-    
-                            </button>
-                            <button class="nextButton button">
-    
-                            </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
     </main>
     <footer></footer>
     <!-- 
