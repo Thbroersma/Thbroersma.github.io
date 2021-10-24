@@ -67,6 +67,7 @@ aside {
 }
 .game {
 	text-align: center;
+	margin-right: 12vw;
 }
 .gameButton {
 	width: 25%;
@@ -229,8 +230,8 @@ nav a {
 	font-size: 1.5rem;
 }
 .projects-aside-head {
-	margin-left: 6vw;
 	font-size: 1.5rem;
+	margin-left: 35%;
 }
 .score-button {
 	display: none;

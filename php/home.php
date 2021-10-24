@@ -151,8 +151,9 @@
         <section class="part-one">
             <div class="row">
                 <div class="col-12">
+                <h4 class="projects-aside-head">But there are more things</h4>
+
                     <div class="game">
-                        <h4 class="projects-aside-head">But there are more things</h4>
                         <p>
                             I like to give myself a little challenge to put more in my website. Here is a little game that I
                             have made,
