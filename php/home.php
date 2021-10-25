@@ -41,7 +41,7 @@
     <header>
         <div class="row">
             <div class="col-sm">
-                <h1 class="head">Hello, what nice of you to have a look at my website!</h1>
+                <h1 class="head">Hello, how nice of you looking at my website!</h1>
             </div>
         </div>
     </header>
@@ -54,12 +54,13 @@
                 <div class="col-sm-6 intro-info">
                     <h2 class="lower-head headingThree">This is me</h2>
                     <p class="about">
-                        Hello, my name is Thierry, I am 24 years old. I am an enthousiast webdesigner who works with HTML,
-                        CSS, Javascript and C#. I am still in school and learning more (programming) languages. I am now
+                        Hello, my name is Thierry, I am 25 years old. I am an enthousiastic webdesigner who works with HTML,
+                        CSS, Javascript, PHP and C#. I am still in school and learning more (programming) languages. I am now
                         working on
-                        front-end developing as you can see. So far I worked on this website (also PHP) and some applications (in C#
-                        and Javascript).
-                        Please look around and if you like it. If you would like to contact me please press the contact button or
+                        front-end developing as you can see. So far, I worked on this website and some applications (with a little back-end Javascript,
+                        PHP and C#). <br> <br>
+                        
+                        If you would like to contact me, please press the contact button or
                         write a message with your contact information below.
                     </p>
                     <button class="contact" type="active">
@@ -89,9 +90,9 @@
                     
                     if ($query->execute()) {
                         echo "
-                        <p class='registration'>U bericht is naar mij verzonden</p>";
+                        <p class='registration'>Your message has been send to me!</p>";
                     } else {
-                        echo "De versturing van u bericht is niet gelukt";
+                        echo "The message has not been send, there is een error.";
                     }
                     mail($ontvanger, $onderwerp, $bericht, $header);
                 }
@@ -132,7 +133,7 @@
             foreach($result as &$data) {
             
                 echo "
-                        <div class='col-md-2'>
+                        <div class='col-md-2.'>
                             <div class='card-body'>
                             <h4>" . $data["title"] .  "</h4>
                             <p> " . $data["description"] . "</p>
@@ -151,15 +152,13 @@
         <section class="part-one">
             <div class="row">
                 <div class="col-12">
-                <h4 class="projects-aside-head">But there are more things</h4>
+                <h4 class="projects-aside-head">But, there are more things</h4>
 
                     <div class="game">
                         <p>
-                            I like to give myself a little challenge to put more in my website. Here is a little game that I
-                            have made,
-                            since this is programm work we do, it will be based <br> on program knowledge and things that you can
-                            find on
-                            this website (so check the site first). Just remember there is a timer on the questions.
+                            Here is a little game that I have made. It is a question game about a programming languages and things you can find 
+                            on this website. Look around first and check then if you really paid attention to my website and check how much you know about 
+                            some programming languages. There is a timer, so be quick enough.
                         </p>
                         <button class="score-button">
     
