@@ -1,4 +1,5 @@
 import Ghost from "./Ghost.js";
+
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
