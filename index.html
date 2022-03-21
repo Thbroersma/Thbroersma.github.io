@@ -28,7 +28,7 @@
                         <a href="index.html" class="nav-right">Home</a>
                         <a href="mot.html" class="nav-right">Motivation</a>
                         <a href="over.html" class="nav-right">About myself</a>
-                        <a href="Pacman/index.html" class="nav-right">Games</a>
+                        <a href="Games/index.html" class="nav-right">Games</a>
                     </div>
             </div>
             </ul>
@@ -43,15 +43,13 @@
             </div>
         </div>
     </header>
-    <aside>
-    </aside>
     <main>
         <section class="part-one">
             <div class="row">
                 <div class="col-sm-6">
                     <h2 class="lower-head headingThree">This is me</h2>
                     <p class="about">
-                        Hello, my name is Thierry, I am 24 years old. I am an enthousiast webdesigner who works with HTML,
+                        Hello, my name is Thierry, I am 25 years old. I am an enthousiast webdesigner who works with HTML,
                         CSS, Javascript and C#. I am still in school and learning more (programming) languages. I am now
                         working on
                         front-end developing as you can see. So far I worked on this website and some applications (in C#
@@ -87,7 +85,7 @@
                                 <div class="displayValue">0</div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row calculator-row">
                             <div class="col-xs-1 ">
                                 <button class="buttons calculator_item" data-action="BMI">BMI - W/L</button>
                             </div>
@@ -104,7 +102,7 @@
                                 <button class="buttons calculator_item" data-action="N-BTW">Exclusive BTW</button>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row calculator-row">
                             <div class="col-xs-1 ">
                                 <button class="buttons calculator_item" data-number="1">1</button>
                             </div>
@@ -121,7 +119,7 @@
                                 <button class="buttons calculator_item" data-action="power">&sup2;</button>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row calculator-row">
                             <div class="col-xs-1 ">
                                 <button class="buttons calculator_item" data-number="4">4</button>
                             </div>
@@ -138,7 +136,7 @@
                                 <button class="buttons calculator_item" data-action="root">&#8730;</button>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row calculator-row">
                             <div class="col-xs-1 ">
                                 <button class="buttons calculator_item" data-number="7">7</button>
                             </div>
@@ -155,7 +153,7 @@
                                 <button class="buttons calculator_item" data-number=".">.</button>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row calculator-row">
                             <div class="col-xs-1">
                                 <button class="buttons calculator_item ac-button" data-action="reset">C</button>
                             </div>
@@ -266,9 +264,98 @@
                 </div>
             </div>
         </section>
+        <div class="row carousel-row">
+            <div id="photoshoot" class="carousel " data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#photoshoot" data-slide-to="0" class="active"></li>
+            <li data-target="#photoshoot" data-slide-to="1"></li>
+            <li data-target="#photoshoot" data-slide-to="2"></li>
+            <li data-target="#photoshoot" data-slide-to="3"></li>
+            <li data-target="#photoshoot" data-slide-to="4"></li>
+        </ul>
+        <div class='carousel-inner'>
+        <div class='carousel-item active'>
+                <img src="img/high.jpg" alt="" class="img-car">
+                <div class='carousel-caption'>
+                <div class='carousel-info'>
+                        <h3>Higher lower game</h3>
+                        <p>This was my first project. it is the higher lower game made in C#. 
+                            It was a basic school project, where I made a few extra options in the game to see what I was 
+                            capable of at that 
+                        </p>
+                    </div>
+                </div>
+            </div>
         
+                    <div class='carousel-item'>
+                        <img src='". $data['image'] . "' class='rounded projectCoursel'>
+                        <div class='carousel-caption'>
+                            <div class='carousel-info'>
+                                <h3>" . $data["title"] .  "</h3>
+                                <p> " . $data["description"] . "</p>
+                                <a href=". $data["github-link"] .">Github</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <a class="carousel-control-prev" href="#photoshoot" data-slide="prev"><span class="carousel-control-prev-icon"></span>	
+            </a>
+            <a class="carousel-control-next" href="#photoshoot" data-slide="next"> <span class="carousel-control-next-icon"></span>	
+            </a>
+            </div>
+            </div>
+        </div>
+        
+           <h3 class="headingTwo">My other kind of projects</h3>
+    
+            <div class="row">
+                <div class="col-5">
+                </div>
+            </div>
+            <!--Overige opdracht (een quiz)-->
+                <div class="row">
+                    <div class="col-7">
+                    <h3 class="projects-aside-head headingThree">My own quiz</h3>
+                        <div class="game">
+                            <p>
+                                Here is a little game that I have made. It is a question game about a programming languages and things you can find 
+                                on this website. Look around first and check then if you really paid attention to my website and check how much you know about 
+                                some programming languages. There is a timer, so be quick enough.
+                            </p>
+                            <button class="score-button">
+        
+                            </button>
+                            <button class="gameButton">
+                                Let the games begin!
+                            </button>
+                            <p class=" gamePlay">
+        
+                                </p>
+                                <input type="text" class="answers"><br>
+                                <button class="gameCheck button">
+        
+                                </button>
+                                <button class="nextButton button">
+        
+                                </button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="row">
+            <div class="col-12">
+                <h6>Contact</6>
+                <p>
+                    <a href="https://www.linkedin.com/in/thierry-broersma-588174201/">Linkedin</a><br>
+                    <a href="https://www.facebook.com/thierry.broersma">Facebook</a><br>
+                    <a href="https://www.instagram.com/ThierryBroersma/?hl=nl">Instagram</a><br>
+                    <a href="img/CV.pdf">CV</a><br>
+                </p>
+            </div>
+        </div>
+    </footer>
     <!-- 
 <a href="https://getbootstrap.com/docs/3.4/css/" class="btn btn-primary btn-lg active" role="button">Contact me</a>
 -->
