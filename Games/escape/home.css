@@ -1,0 +1,109 @@
+.bodyclass{
+    background-image: url("https://image.freepik.com/free-vector/halloween-background-flat-design_52683-43845.jpg");
+}
+
+.centering {
+  margin-left: 40%;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    margin: 0 0 1em;
+    padding: 1em;
+    border: 1px solid rgb(206, 94, 2);
+    background: rgb(206, 94, 2);
+    resize: none;
+    outline: none;
+    
+  }
+  
+  input[type="text"][required]:focus {
+    border-color: rgb(255, 144, 53);
+  }
+  input[type="text"][required]:focus + label[placeholder]:before {
+    color: rgb(255, 255, 255);
+  }
+  input[type="text"][required]:focus + label[placeholder]:before,
+  input[type="text"][required]:valid + label[placeholder]:before {
+    transition-duration: .2s;
+    transform: translate(0, -1.5em) scale(0.9, 0.9);
+  }
+  
+  input[type="text"][required]:invalid + label[placeholder][alt]:before {
+    content: attr(alt);
+  }
+  
+  input[type="text"][required] + label[placeholder] {
+    display: block;
+    pointer-events: none;
+    line-height: 1em;
+    margin-top: calc(-3em - 2px);
+    margin-bottom: calc((3em - 1em) + 2px);
+  }
+.intro {
+    text-align: center;
+    border: 1px;
+    border-radius:1px;
+    background-color: rgb(206, 94, 2);
+    margin-left: 18%;
+    width: 70%;
+    height: 7.5%;
+    font-size:2.3vw;
+  }
+  input[type="text"][required] + label[placeholder]:before {
+    content: attr(placeholder);
+    display: inline-block;
+    margin: 0 calc(1em + 2px);
+    padding: 0 2px;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
+    /* background-image: linear-gradient(to bottom, #fff, #fff); */
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.namebox {
+  text-align: center;
+  border: 1px;
+  border-radius:1px;
+  background-color: rgb(206, 94, 2);
+  margin-left: 39%;
+  margin-right: auto;
+  width: 30%;
+  height:7%;
+  font-size:1.8vw;
+
+}
+.start {
+  margin-left: 2%;
+  border: 1px black solid;
+  border-radius:4px;
+  background-color: rgb(206, 94, 2);
+  padding: 2%;
+  font-size:1.3vw;
+  font-weight: bold;
+}
+.text{
+  text-align: center;
+  font-size: 2vw;
+  border: 1px;
+  border-radius:1px;
+  background-color: rgb(206, 94, 2);
+  width:30%;
+  height:4%;
+  margin-left: 34%;
+  padding: 1%;
+}
+
+.textbox{
+  text-align: center;
+  border: 1px;
+  border-radius:1px;
+  background-color: rgb(206, 94, 2);
+  margin-left: 39%;
+  margin-right: auto;
+  width: 20%;
+  height:20%;
+  font-size:2.3vw;
+}
