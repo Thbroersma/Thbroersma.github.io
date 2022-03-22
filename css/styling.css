@@ -45,6 +45,7 @@ h6 {
 }
 .carousel-row {
 	height: 40vw;
+	padding: 3vh;
 }
 .col-calculator {
 	flex-shrink: 2;
@@ -80,6 +81,10 @@ h6 {
 footer {
 	background-color: #272446;
 	border-top: 2px solid white;
+	padding-left: 3vw
+}
+footer a {
+	word-spacing: 2vh;
 }
 .forest {
 	width: 21vw;
