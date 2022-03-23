@@ -127,6 +127,9 @@ function gameOne () {
       textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-gemaakt.png'></img>";
       numberOfPuzzle = 2;
       gameTwo();
+      boneOne.disabled = true;
+      boneTwo.disabled = true;
+      skeleton.disabled = true;
       puzzleOne.classList.toggle('hide');
     })
   }
