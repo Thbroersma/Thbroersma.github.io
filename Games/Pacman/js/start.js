@@ -21,6 +21,6 @@ if (startPlay) {
 }
 if (escaperoom) {
     escaperoom.addEventListener('click', function() {
-        location.replace('escaperoom/home.html');
+        location.replace('escape/home.html');
     })
 }
