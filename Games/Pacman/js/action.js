@@ -1,4 +1,4 @@
-import Ghost from "./Ghost.js";
+import Ghost from "../js/Ghost.js";
 
 console.log("File loaded");
 const grid = document.querySelector('.grid');

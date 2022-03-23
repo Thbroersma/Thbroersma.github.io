@@ -66,8 +66,8 @@ h6 {
     float: left;
 }
 .difference {
-	width: 35vw;
-	height: 40vh;
+	width: 40%;
+	height: 60%;
 }
 
 .displayValue {
@@ -108,6 +108,10 @@ footer a {
 	margin-left: 10%;
 	font-size: 2.6vw;
 	margin-top: 2vh;
+}
+.heading-projects {
+	display: flex;
+	align-items: center;
 }
 .headingThree {
 	font-size: 1.9vw;
@@ -190,8 +194,11 @@ main {
 	margin-left: 3vh;
 }
 .me {
-	width: 20%;
+	width: 40%;
 	right: 3vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+
 }
 .motivatie {
 	margin-right: 20%;
@@ -289,9 +296,7 @@ p {
 	margin-left: 10vw;
 	font-size: 1.5rem;
 }
-.projects-aside-head {
-	margin-left: 22vw;
-}
+
 .projectCoursel {
 	width: 50%;
 	height: 30%;
