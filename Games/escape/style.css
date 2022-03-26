@@ -320,6 +320,8 @@ img {
 .codeslot{
     height: 600px;
     width: 750px;
+    top: 20%;
+    position: absolute;
 }
 
 .showScroll{

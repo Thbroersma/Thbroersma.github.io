@@ -26,6 +26,8 @@ const submitTranslation = document.querySelector('.submit-translation');
 const inputCodeThree = document.querySelector('.inputCodeThree');
 const inputButtonThree = document.querySelector('.inputButtonThree');
 const showScroll = document.querySelector('.showScroll');
+const lastAnswer = document.querySelector('.lastGame');
+const lastQues = document.querySelector('.lastButton');
 const minutesTime = 15;
 let time = minutesTime * 60;
 const countdownEl = document.querySelector('.countdown');
@@ -199,22 +201,20 @@ function gameTwo () {
             const actualTranslation = "halloween feest uitnodiging";
             const personTranslation = box.value;
             if (personTranslation.toLowerCase() == actualTranslation){
-              box.classList.add('hide');
-              submitTranslation.innerHTML = " ";
-              strangeCode.classList.add('hide');
-              
+              box.classList.add('hide');        
+              strangeCode.classList.add('hide');      
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
-              numberOfPuzzle = 3;
-              gameThree();
+              submitTranslation.classList.add('hide');
+              codeCase.disabled = true;
+              safe.disabled = true;
+              numberOfPuzzle = 3;     
+              gameThree();   
             } else {
               alert("De tekst is onjuist!");
             }
           })
-  
           strangeCode.addEventListener('click', function(){
             strangeCode.innerHTML = " ";
-  
-          
           })
           })
         })
@@ -231,21 +231,19 @@ function gameTwo () {
 function gameThree () {
   if (numberOfPuzzle == 3){
     lock.addEventListener('click', function(){
-      textbox.innerHTML =  "<img class='showingtextimage'src='img/textfoto/puzzel3-codeslot.png'></img>";
-      textbox.addEventListener('click', function(){
-        textbox.innerHTML = " ";
-        strangeCode.innerHTML = "<img class='codeslot' src='img/codeslot-plus-raadsel.png'></img>";
-        const lastCodeAnswer = 74658
-        inputCodeThree.classList.toggle('hide');
-        inputButtonThree.classList.toggle('hide');
-        inputButtonThree.addEventListener('click', function(){
-          const lastCodeGuess = inputCodeThree.value;
+      textbox.innerHTML =  "<img class='codeslot' src='img/codeslot-plus-raadsel.png'></img>";
+        
+        const lastCodeAnswer = 74658;
+        lastAnswer.classList.remove('hide');
+        lastQues.classList.remove('hide');
+        lastQues.addEventListener('click', function(){
+          const lastCodeGuess = lastAnswer.value;
           if (lastCodeGuess == lastCodeAnswer){
+            lastAnswer.classList.add('hide');
+            lastQues.classList.add('hide');
+            
             strangeCode.innerHTML = " ";
             doorOpen = true;
-            lock.addEventListener('click', function(){
-  
-            })
             if (doorOpen == false){
               exit.addEventListener('click', function(){
                 textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
@@ -258,8 +256,11 @@ function gameThree () {
             strangeCode.classList.add('hide');
   
             exit.addEventListener('click', function(){
-              body.classList.toggle('body-end');
-              showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>"
+              body.classList.add('body-end');
+              textbox.innerHTML="";
+              showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>";
+              submitTranslation.classList.add('hide');
+              box.classList.add('hide');
               showScroll.addEventListener('click', function(){
                 showScroll.innerHTML = " ";
               })
@@ -269,7 +270,7 @@ function gameThree () {
             alert('Code is onjuist!');
           }
         })
-      })
+      
     })
   }
 } 
