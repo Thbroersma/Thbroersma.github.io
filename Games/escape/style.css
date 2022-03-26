@@ -269,6 +269,19 @@ img {
     color: transparent;
     
 }
+.stop {
+    background-color: transparent;
+    border: solid 2px red;
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    position: fixed;
+    top: 3%;
+    right: 10%;
+}
+.stop a {
+    color: green;
+}
 .submit-translation  {
     left: 42%;
     top: 72%;
@@ -338,4 +351,10 @@ img {
     top: 65%;
     width: 12%;
     height: 6%;
+}
+.youWon {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 30%;
 }

@@ -28,6 +28,7 @@ const inputButtonThree = document.querySelector('.inputButtonThree');
 const showScroll = document.querySelector('.showScroll');
 const lastAnswer = document.querySelector('.lastGame');
 const lastQues = document.querySelector('.lastButton');
+const winning = document.querySelector('.youWon');
 const minutesTime = 15;
 let time = minutesTime * 60;
 const countdownEl = document.querySelector('.countdown');
@@ -37,7 +38,20 @@ let bonesCollected = 0;
 let keyReceived = false;
 let doorOpen = false;
 const gameover = document.querySelector('.gameover');
+const introGame = document.querySelector('.startintro');
+const show = document.querySelector('.showScroll');
 
+function play(){
+    
+  const audio = document.querySelector(".startGame");
+  const music = document.querySelector('.music');
+  audio.play();
+  music.play();
+  show.innerHTML = "<img class='showingtextimage'src='img/textfoto/intro.png'></img>";
+  show.addEventListener('click', function(){
+      show.innerHTML = " ";
+      })
+  }
 
 setInterval(updateCountdown, 1000);
 function updateCountdown() {
@@ -116,12 +130,15 @@ function gameOne () {
     })
     skeleton.addEventListener('click', function(){
       if (bonesCollected <2){
+        play();
+
         textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel1-skelet-geenbot.png'></img>";
         textbox.addEventListener('click', function(){
           textbox.innerHTML = " ";
         })
       } else {
         shuffle();
+        
         puzzleOne.classList.toggle('hide');
       }
     })
@@ -201,7 +218,7 @@ function gameTwo () {
             const actualTranslation = "halloween feest uitnodiging";
             const personTranslation = box.value;
             if (personTranslation.toLowerCase() == actualTranslation){
-              box.classList.add('hide');        
+              box.classList.add('hide');   
               strangeCode.classList.add('hide');      
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel2-nadecoding.png'></img>";
               submitTranslation.classList.add('hide');
@@ -236,32 +253,34 @@ function gameThree () {
         const lastCodeAnswer = 74658;
         lastAnswer.classList.remove('hide');
         lastQues.classList.remove('hide');
-        lastQues.addEventListener('click', function(){
+        lastQues.addEventListener('click', function() {
           const lastCodeGuess = lastAnswer.value;
-          if (lastCodeGuess == lastCodeAnswer){
+          if (lastCodeGuess == lastCodeAnswer) {
             lastAnswer.classList.add('hide');
             lastQues.classList.add('hide');
             
             strangeCode.innerHTML = " ";
             doorOpen = true;
             if (doorOpen == false){
-              exit.addEventListener('click', function(){
+              exit.addEventListener('click', function() {
                 textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel-1-deur.png'></img>";
-                textbox.addEventListener('click', function(){
+                textbox.addEventListener('click', function() {
                   textbox.innerHTML = " ";
                 })
               })
-            } else{
+            } else {
               textbox.innerHTML = "<img class='showingtextimage'src='img/textfoto/puzzel3-geslaagd.png'></img>";
             strangeCode.classList.add('hide');
   
-            exit.addEventListener('click', function(){
+            exit.addEventListener('click', function() {
               body.classList.add('body-end');
               textbox.innerHTML="";
+              winning.classList.remove('hide');     
+
               showScroll.innerHTML = "<img class='showScroll'src='img/textfoto/outro.png'></img>";
               submitTranslation.classList.add('hide');
               box.classList.add('hide');
-              showScroll.addEventListener('click', function(){
+              showScroll.addEventListener('click', function() {
                 showScroll.innerHTML = " ";
               })
             })
