@@ -45,7 +45,9 @@ h6 {
 }
 .carousel-row {
 	height: 40vw;
-	padding: 3vh;
+	padding-left: 3vh;
+	padding-right: 3vh;
+	padding-top: 3vh;
 }
 .col-calculator {
 	flex-shrink: 2;
@@ -112,6 +114,7 @@ footer a {
 .heading-projects {
 	display: flex;
 	align-items: center;
+	margin-left: 7vh;
 }
 .headingThree {
 	font-size: 1.9vw;
@@ -160,9 +163,17 @@ footer a {
 	margin-left: 2vw;
 	margin-right: 2vw;
 }
+.img-zuzu {
+	width: 55%;
+	height: 80%;
+}
 .imageRow {
 	margin-bottom: 4vh;
 	margin-top: 2vh;
+}
+.info-zuzu {
+	width: 40%;
+	float: right;
 }
 .jobDescription {
 	font-size: 1.1vw;
@@ -191,7 +202,7 @@ footer a {
 	margin-top: 3%;
 }
 main {
-	margin-left: 3vh;
+	margin-left: 5vh;
 }
 .me {
 	width: 40%;

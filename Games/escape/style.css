@@ -144,6 +144,12 @@ button.startIntro:hover {
 img {
     width: 10%;
 }
+.img-zuzu {
+    width: 110%;
+}
+.info-zuzu {
+    margin-left: 60%;
+}
 .inputButtonOne {
     position: absolute;
     left: 42%;
