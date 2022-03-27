@@ -44,7 +44,7 @@ h6 {
 	right: 10vh;
 }
 .carousel-row {
-	height: 40vw;
+	height: 33vw;
 	padding-left: 3vh;
 	padding-right: 3vh;
 	padding-top: 3vh;
@@ -178,6 +178,9 @@ footer a {
 .jobDescription {
 	font-size: 1.1vw;
 }
+.last {
+	margin-bottom: 5vh;
+}
 .land {
 	margin-left: 2vw;
 }
@@ -223,7 +226,8 @@ main {
 .motivation-text {
 	margin-left: 1vw;
 	margin-top: 2vw;
-	font-size: 1.2vw;
+	font-size: 1.3vw;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /* Body classes*/
 .myBody {
@@ -313,6 +317,7 @@ p {
 	height: 30%;
 	margin-right: 0vw;
 }
+
 .score-button {
 	display: none;
 }

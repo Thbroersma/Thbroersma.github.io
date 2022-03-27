@@ -9,7 +9,7 @@ const nextButton = document.querySelector('.nextButton');
 const scoreButton = document.querySelector('.score-button');
 
 let motivationQuotes = [ 
-    'You can do it, believe in yourself!', 
+    'You can do it, you just have to believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
     'Take the attitude of a student, never be too big to <br> ask questions, never know too much to learn something new',
     'All we have to decide is what to do with the time that is given to us',
