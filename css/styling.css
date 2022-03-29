@@ -25,6 +25,10 @@ h6 {
 .calculator-row {
 	flex-wrap: nowrap;
 }
+
+.calculator_item {
+	font-weight: bold;
+}
 .card-link {
 	color: blue;
 }
@@ -80,6 +84,7 @@ h6 {
     font-size: 1.7vw;
 	border: 0.4px black solid;
 }
+
 footer {
 	background-color: #272446;
 	border-top: 2px solid white;
@@ -93,6 +98,9 @@ footer a {
 	height: 65vh;
 	margin: 0.5vw;
 	margin-left: 3vw;
+}
+.formules {
+	height: 10vh;
 }
 .game {
 	text-align: center;
@@ -246,7 +254,7 @@ main {
 }
 .navigation-footer {
 	float: right;
-	padding-right: 5%;
+	padding-right: 10%;
 }
 .navbar-style {
 	padding-top: 3vh;
