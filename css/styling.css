@@ -112,9 +112,10 @@ footer {
 	background-color: #272446;
 	border-top: 2px solid white;
 	padding-left: 3vw;
-	width: 100%;
 	position: absolute;
 	bottom: 0;
+	width: 100%;
+	
 }
 .forest {
 	width: 21vw;
@@ -270,7 +271,8 @@ main {
 	background-color: #413b86;
 	color: rgb(255, 255, 255);
 	font-size: 1vw;
-	
+	height: 100%;
+	padding-bottom: 8vh;
 }
 .myBody-switch {
 	background-color: #7ad9e6;

@@ -18,7 +18,8 @@ let motivationQuotes = [
     'It’s only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer.',
     'You know how everyone’s always saying, ‘Seize the moment’? I don’t know, I’m kinda thinkin’ it’s the other way. Like the moment seizes us',
     'You control your destiny – you don’t need magic to do it. And there are no magical shortcuts to solving your problems',
-    'Today is a good day to try something new'
+    'Today is a good day to try something new',
+    ''
 ];
 
 const display = document.querySelector('.displayValue');
