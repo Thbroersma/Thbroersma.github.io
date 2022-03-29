@@ -26,6 +26,10 @@ h6 {
     background-color: rgb(155, 216, 158);
     font-size: 1vw;
 }
+.cal-intro {
+	width: 80%;
+	text-align: center;
+}
 .calculator-row {
 	flex-wrap: nowrap;
 }
@@ -72,6 +76,7 @@ h6 {
 .computingBlock {
     padding: 1.5vw;
     margin: 0vw;
+	margin-left: 9vh;
     width: 22.5vw;
     float: left;
 }
@@ -126,7 +131,7 @@ footer a {
 .heading-projects {
 	display: flex;
 	align-items: center;
-	margin-left: 7vh;
+	margin-left: 3vh;
 }
 .headingThree {
 	font-size: 1.9vw;
@@ -316,9 +321,6 @@ nav a {
 
 p {
 	font-size: 1.1vw;
-}
-.project {
-	margin-left: 5vh;
 }
 .projects-aside {
 	margin-left: 3vw;
