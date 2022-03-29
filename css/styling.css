@@ -76,7 +76,7 @@ h6 {
 .computingBlock {
     padding: 1.5vw;
     margin: 0vw;
-	margin-left: 9vh;
+	margin-left: 5vh;
     width: 22.5vw;
     float: left;
 }
@@ -93,15 +93,23 @@ h6 {
     font-size: 1.7vw;
 	border: 0.4px black solid;
 }
-
+.first-link {
+	margin-left: 7vh;
+	margin-right: 3.5vh;
+}
+.middle-link {
+	margin: 3.5vh;
+}
+.last-link {
+	margin-left: 3vh;
+}
 footer {
 	background-color: #272446;
 	border-top: 2px solid white;
 	padding-left: 3vw;
 }
-footer a {
-	word-spacing: 2vh;
-}
+
+
 .forest {
 	width: 21vw;
 	height: 65vh;
@@ -335,7 +343,9 @@ p {
 	height: 30%;
 	margin-right: 0vw;
 }
-
+.quiz {
+	margin-right: 17%;
+}
 .score-button {
 	display: none;
 }
