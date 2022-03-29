@@ -83,7 +83,7 @@ h6 {
 footer {
 	background-color: #272446;
 	border-top: 2px solid white;
-	padding-left: 3vw
+	padding-left: 3vw;
 }
 footer a {
 	word-spacing: 2vh;
@@ -243,6 +243,10 @@ main {
 }
 .nature {
 	width: 30vw;
+}
+.navigation-footer {
+	float: right;
+	padding-right: 5%;
 }
 .navbar-style {
 	padding-top: 3vh;
