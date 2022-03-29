@@ -47,6 +47,11 @@ h6 {
 .carousel.img {
 	width: 30vw;
 }
+.carousel-indicators li {
+	background-color: white;
+	border: 2px solid black;
+	height: 8px;
+}
 .carousel-info {
 	width: 40%;
 	float: right;
@@ -107,9 +112,10 @@ footer {
 	background-color: #272446;
 	border-top: 2px solid white;
 	padding-left: 3vw;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
-
-
 .forest {
 	width: 21vw;
 	height: 65vh;
@@ -231,6 +237,10 @@ footer {
 }
 main {
 	margin-left: 5vh;
+	padding-bottom: 5vh;
+}
+.mains {
+	padding-bottom: 11vh;
 }
 .me {
 	width: 40%;
@@ -256,10 +266,11 @@ main {
 }
 /* Body classes*/
 .myBody {
-	
+	position: relative;
 	background-color: #413b86;
 	color: rgb(255, 255, 255);
 	font-size: 1vw;
+	
 }
 .myBody-switch {
 	background-color: #7ad9e6;
