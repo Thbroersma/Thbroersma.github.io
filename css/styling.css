@@ -13,7 +13,11 @@ h6 {
 .about {
 	font-size: 1.04vw;
 }
-
+@media only screen and (max-width: 600px) {
+	body {
+	  background-color: lightblue;
+	}
+  }
 .buttons {
     width: 6.5vw;
     height: 6.5vh;
