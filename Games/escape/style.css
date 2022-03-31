@@ -97,6 +97,11 @@ button.startIntro:hover {
     font-size: 30px;
     color: red;
 }
+.eindePuzzelEen {
+    position: absolute;
+    right: 5%;
+    top: 70%;
+}
 .empty {
     background-color: transparent;
     border: transparent;
@@ -121,6 +126,10 @@ button.startIntro:hover {
     background-image: url("img/theme.jfif");
     color: rgb(11, 153, 11);
     padding-left: 1%;
+}
+.gameOne {
+    position: absolute;
+    top: 10%;
 }
 .gameover {
     color: green;
@@ -199,7 +208,7 @@ img {
 }
 .puzzle1 {
     text-align: center;
-
+    
 }
 
 .puzzle {
