@@ -166,6 +166,9 @@ footer {
 	margin-left: 10vh;
 	font-size: 1.1vw;
 }
+.hide {
+	display: none;
+}
 .high {
 	height: 70vh;
 	width: 22vw;
@@ -274,6 +277,9 @@ main {
 .motivation-button {
 	font-size: 1.1vw;
 }
+.motivation-footer {
+	position: fixed;
+}
 .motivation-text {
 	margin-left: 1vw;
 	margin-top: 2vw;
@@ -292,8 +298,8 @@ main {
 	padding: 0;
 }
 .myBody-switch {
-	background-color: #7ad9e6;
-	color: black;
+	background-color: #000000;
+	color: white;
 	font-size: 1vw;
 
 }
@@ -329,7 +335,7 @@ nav a {
 	grid-column: 1/4;
 }
 .nav-switch {
-	background-color: rgb(107, 143, 235);
+	background-color: rgb(34, 65, 143);
 	color: black;
 }
 .nav-switch a {
@@ -357,7 +363,10 @@ nav a {
 .over {
 	font-size: 2vw;
 }
-
+.pacman {
+	width: 10%;
+	float: right;
+}
 p {
 	font-size: 1.1vw;
 }

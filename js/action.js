@@ -62,9 +62,11 @@ if (switchButton) {
 
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
-
+        const pacman = document.querySelector('.pacman');
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
+       // pacman.classList.toggle('hide');
+
     })
 }
 
