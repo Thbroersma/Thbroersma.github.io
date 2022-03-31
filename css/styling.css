@@ -98,6 +98,14 @@ h6 {
     font-size: 1.7vw;
 	border: 0.4px black solid;
 }
+.escape {
+	margin-top: 5%;
+	margin-left: 33%;
+}
+.escapeImage {
+	width: 60%;
+	margin-left: 20%;
+}
 .first-link {
 	margin-left: 7vh;
 	margin-right: 3.5vh;
@@ -138,6 +146,9 @@ footer {
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }
+.game-heading {
+	text-align: center;
+}
 .head {
 	margin-left: 10%;
 	font-size: 2.6vw;
@@ -173,6 +184,10 @@ footer {
 }
 .homePage {
 	text-align: center;
+}
+.homeImage {
+	margin-left: 35%;
+	width: 30%;
 }
 .intro {
 	margin-left: 2vw;
@@ -273,11 +288,14 @@ main {
 	font-size: 1vw;
 	height: 100%;
 	padding-bottom: 8vh;
+	margin: 0;
+	padding: 0;
 }
 .myBody-switch {
 	background-color: #7ad9e6;
 	color: black;
 	font-size: 1vw;
+
 }
 .nature {
 	width: 30vw;
@@ -380,6 +398,10 @@ span {
 }
 span:hover {
 	background-color: rgb(89, 111, 233);
+}
+.start {
+	margin-top: 5%;
+	margin-left: 40%;
 }
 .switchButton {
 	background-color: #A8DADC;
