@@ -177,6 +177,17 @@ img {
     left: 63%;
     top: 55%;
 }
+.lastgame {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+.lastButton {
+    position: absolute;
+    background-color: orange;
+    top: 80%;
+    left: 40%;
+}
 .leg {
     background-color: transparent;
     border: transparent;
@@ -348,7 +359,7 @@ img {
 .codeslot{
     height: 600px;
     width: 750px;
-    top: 20%;
+    top: 10%;
     position: absolute;
 }
 
@@ -368,8 +379,12 @@ img {
     height: 6%;
 }
 .youWon {
+    width: 40%;
     color: white;
+    background-color: orange;
     font-size: 2rem;
     position: absolute;
-    top: 30%;
+    top: 20%;
+    right: 3%;
+    padding-left: 3vh;  
 }
