@@ -18,6 +18,10 @@ h6 {
 	  background-color: lightblue;
 	}
   }
+.row {
+	margin-right: 0%;
+	margin-left: 0%;
+}
 .buttons {
     width: 6.5vw;
     height: 6.5vh;
@@ -77,6 +81,11 @@ h6 {
 }
 .contact a {
 	color: black;
+}
+.container-fluid {
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 .computingBlock {
     padding: 1.5vw;

@@ -61,10 +61,10 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
-    /*if (seconds<1) {
+    if (countdownEl<1) {
       gameover.classList.remove('hide');
       countdownEl.classList.add('hide');
-    }   */
+    }   
 }
 gameOne();
 function gameOne () {
