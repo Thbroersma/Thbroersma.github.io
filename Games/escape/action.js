@@ -61,10 +61,18 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;   
     countdownEl.innerHTML = `${minutes}: ${seconds}`;
     time--;
-    if (countdownEl<1) {
+    setTimeout(function () {
       gameover.classList.remove('hide');
       countdownEl.classList.add('hide');
-    }   
+      skeleton.disabled = true;
+      boneOne.disabled = true;
+      boneTwo.disabled = true;
+      codeCase.disabled = true;
+      safe.disabled = true;
+      exit.disabled = true;
+      lock.disabled = true;
+      introGame.disabled = true;
+    },900000);
 }
 gameOne();
 function gameOne () {
