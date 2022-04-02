@@ -1,15 +1,17 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Spooky Scary Escaperoom</title>
-  </head>
-  <body class="dead-body">
-    <p id="countdown" class="countdown"></p>
-    <p class="gameover hide">Je was niet snel genoeg... Game over <br> <a href="index.html">Start opnieuw</a></p>
-    <!-- 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Spooky Scary Escaperoom</title>
+</head>
+
+<body class="dead-body">
+  <p id="countdown" class="countdown"></p>
+  <p class="gameover hide">Je was niet snel genoeg... Game over <br> <a href="index.html">Start opnieuw</a></p>
+  <!-- 
       De code voor de timer 
       const gameover = document.QS('.gameover')
       if (gameover) {
@@ -19,82 +21,73 @@
         })
       }
     -->
-    <p class="showScroll"></p>
-    <button class="language" id="language"></button>
-    <button class="stop"><a href="../../index.html">Stop het spel</a></button>
-    <button class="language" id="language"></button>
-    <button class="no-language"></button>
-    <p class="strangeCode"></p>
-    <br />
-    <br />
-    <input
-      type="text"
-      class="answer-box showingtextimage hide position-absolute"
-    />
-    <input
-      type="submit"
-      class="submit-button empty"
-      value="Check je antwoord"
-    />
-    <button class="submit-translation hide position-absolute">
-      Ik weet wat er staat!
-    </button>
-    <p class="message hide">
-      Oh, dus dit is een Halloween feest? Dat verklaart een hoop. Maar ik wil
-      hier weg! Ik word gek van dat gebons!
-    </p>
-    <p class="wrong hide">Probeer opnieuw</p>
-    <button class="leg"></button>
-    <button class="head"></button>
-    <button class="skelet"></button>
-    <button class="exit"></button>
-    <button class="case"></button>
-    <button class="lock"></button>
-    <button class="safe"></button>
-    <p class="textbox-area"></p>
-    <img src="img/puzzle.png" alt="" class="hulpafbeelding hide" />
-    <div class="puzzel1 hide">
-      <div id="table" class="skeletpuzzel gameOne" style="display: table">
-        <div id="row1" style="display: table-row">
-          <div id="cell11" class="tile1" onClick="clickTile(1,1);"></div>
-          <div id="cell12" class="tile2" onClick="clickTile(1,2);"></div>
-          <div id="cell13" class="tile3" onClick="clickTile(1,3);"></div>
-        </div>
-        <div id="row2" style="display: table-row">
-          <div id="cell21" class="tile4" onClick="clickTile(2,1);"></div>
-          <div id="cell22" class="tile5" onClick="clickTile(2,2);"></div>
-          <div id="cell23" class="tile6" onClick="clickTile(2,3);"></div>
-        </div>
-        <div id="row3" style="display: table-row">
-          <div id="cell31" class="tile7" onClick="clickTile(3,1);"></div>
-          <div id="cell32" class="tile8" onClick="clickTile(3,2);"></div>
-          <div id="cell33" class="tile9" onClick="clickTile(3,3);"></div>
-        </div>
+  <p class="showScroll"></p>
+  <button class="language" id="language"></button>
+  <button class="stop"><a href="../../index.html">Stop het spel</a></button>
+  <button class="language" id="language"></button>
+  <button class="no-language"></button>
+  <p class="strangeCode"></p>
+  <br />
+  <br />
+  <input type="text" class="answer-box showingtextimage hide position-absolute" />
+  <input type="submit" class="submit-button empty" value="Check je antwoord" />
+  <button class="submit-translation hide position-absolute">
+    Ik weet wat er staat!
+  </button>
+  <p class="message hide">
+    Oh, dus dit is een Halloween feest? Dat verklaart een hoop. Maar ik wil
+    hier weg! Ik word gek van dat gebons!
+  </p>
+  <p class="wrong hide">Probeer opnieuw</p>
+  <button class="leg"></button>
+  <button class="head"></button>
+  <button class="skelet"></button>
+  <button class="exit"></button>
+  <button class="case"></button>
+  <button class="lock"></button>
+  <button class="safe"></button>
+  <p class="textbox-area"></p>
+  <img src="img/puzzle.png" alt="" class="hulpafbeelding hide" />
+  <div class="puzzel1 hide">
+    <div id="table" class="skeletpuzzel gameOne" style="display: table">
+      <div id="row1" style="display: table-row">
+        <div id="cell11" class="tile1" onClick="clickTile(1,1);"></div>
+        <div id="cell12" class="tile2" onClick="clickTile(1,2);"></div>
+        <div id="cell13" class="tile3" onClick="clickTile(1,3);"></div>
       </div>
-      <button class="eindePuzzelEen">Ik weet de code!</button>
+      <div id="row2" style="display: table-row">
+        <div id="cell21" class="tile4" onClick="clickTile(2,1);"></div>
+        <div id="cell22" class="tile5" onClick="clickTile(2,2);"></div>
+        <div id="cell23" class="tile6" onClick="clickTile(2,3);"></div>
+      </div>
+      <div id="row3" style="display: table-row">
+        <div id="cell31" class="tile7" onClick="clickTile(3,1);"></div>
+        <div id="cell32" class="tile8" onClick="clickTile(3,2);"></div>
+        <div id="cell33" class="tile9" onClick="clickTile(3,3);"></div>
+      </div>
     </div>
-    <input type="text" class="inputCodeOne showingtextimage hide" />
-    <button class="buttonstyling hide inputButtonOne">Ik weet de code!</button>
-    <input type="text" class="inputCodeThree hide" />
-    <button class="buttonstyling hide inputButtonThree">
-      Ik weet de code!
-    </button>
-    <div class="youWon hide">
-      <p>Je hebt de game gewonnen! Je kunt de game afsluiten door op deze <a href="../../index.html">link</a> te klikken <br>
-      en dan ga je terug naar de home pagina van het portfolio. Of als je nog pacman wilt spelen kun je met deze <a href="../Pacman/index.html">link daar het spel spelen.</a></p>
-    </div>
-    <input type="text" class="lastGame hide">
-    <button class="lastButton hide">Ik weet de laastste code!</button>
-    <audio src="audio/pennywise.mp3" class="startGame" autoplay="autoplay"></audio>
-    <audio
-      src="audio/pennywise.mp3"
-      class="music"
-      autoplay="autoplay"
-      loop="loop"
-    ></audio>
-    <button class="startIntro" onclick="play()">Waar ben ik?</button>
-    <script src="action.js"></script>
-    <script src="http://use.edgefonts.net/creepster.js"></script>
-    <div class="puzzel1"></div>
-  </body>
+    <button class="eindePuzzelEen">Ik weet de code!</button>
+  </div>
+  <input type="text" class="inputCodeOne showingtextimage hide" />
+  <button class="buttonstyling hide inputButtonOne">Ik weet de code!</button>
+  <input type="text" class="inputCodeThree hide" />
+  <button class="buttonstyling hide inputButtonThree">
+    Ik weet de code!
+  </button>
+  <div class="youWon hide">
+    <p>Je hebt de game gewonnen! Je kunt de game afsluiten door op deze <a href="../../index.html">link</a> te klikken
+      <br>
+      en dan ga je terug naar de home pagina van het portfolio. Of als je nog pacman wilt spelen kun je met deze <a
+        href="../Pacman/index.html">link daar het spel spelen.</a></p>
+  </div>
+  <input type="text" class="lastGame hide">
+  <button class="lastButton hide">Ik weet de laastste code!</button>
+  <audio src="audio/pennywise.mp3" class="startGame" autoplay="autoplay"></audio>
+  <audio src="audio/pennywise.mp3" class="music" autoplay="autoplay" loop="loop"></audio>
+  <button class="startIntro" onclick="play()">Waar ben ik?</button>
+  <script src="action.js"></script>
+  <script src="http://use.edgefonts.net/creepster.js"></script>
+  <div class="puzzel1"></div>
+</body>
+
 </html>
