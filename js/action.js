@@ -59,13 +59,88 @@ if (motivationButton) {
 
 if (switchButton) {
     switchButton.addEventListener('click', function() {
-
+    
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
         const pacman = document.querySelector('.pacman');
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
-       // pacman.classList.toggle('hide');
+        pacman.classList.toggle('hide');
+        window.addEventListener('keydown', (e)=> {
+            console.log(e);
+            switch(e.keyCode) {
+                case 37:
+                    pacman.classList.add('newBlock-left');
+                    /*
+                 let newElement = document.createElement('div');
+                 newElement.classList.add('newBlock-left');
+                 pacman.appendChild(newElement);
+                 */
+                    break;
+                case 38:
+                    pacman.classList.add('newBlock-up');
+                     break;
+                case 39:
+                    pacman.classList.add('newBlock-right');
+                    break;
+                case 40:
+                    pacman.classList.add('newBlock-down');
+                    break;
+            }
+        })
+       
+    // Pacman movement code 
+    /*
+    switch (e.keyCode) {
+        case 37:
+          // The move for a div backwards
+          if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
+            && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
+            && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
+            && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
+            && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
+            pacmanCurrentIndex -= 1;
+    
+          if ((pacmanCurrentIndex) === 111) {
+            pacmanCurrentIndex = 130;
+          }
+    
+          break;
+        case 38:
+          // The move for a div upwards   
+          if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
+            && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
+            && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
+            && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
+            pacmanCurrentIndex -= 22;
+    
+          break;
+        case 39:
+          // The move for a div forward 
+          if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
+            && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
+            && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
+            && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-left')
+            && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right'))
+            pacmanCurrentIndex += 1;
+    
+          if ((pacmanCurrentIndex) === 130) {
+            pacmanCurrentIndex = 111;
+          }
+    
+          break;
+        case 40:
+          // The move for a div down 
+          if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
+            && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
+            && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
+            && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
+            && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
+            pacmanCurrentIndex += 22;
+    
+          break;
+      }*/
+
 
     })
 }

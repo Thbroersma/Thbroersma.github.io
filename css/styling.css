@@ -383,12 +383,20 @@ nav a {
 .navigation {
 	float: right;
 }
+.newBlock {
+	width: 8vw;
+	height: 8vw;
+	background-color: blue;
+	float: right;
+}
+
 .over {
 	font-size: 2vw;
 }
 .pacman {
-	width: 10%;
-	float: right;
+	width: 8vw;
+	position: absolute;
+	right: 1vw;
 }
 p {
 	font-size: 1.1vw;
@@ -450,4 +458,12 @@ span:hover {
 }
 .displayRow {
 	margin-right: 1vw;
+}
+/* Pacman blocks for the home page*/
+.newBlock-left {
+	width: 8vw;
+	height: 8vw;
+	position: absolute;
+	right: 9vw;
+	transform: scaleX(-1);
 }
