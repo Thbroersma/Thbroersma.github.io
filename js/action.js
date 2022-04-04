@@ -67,27 +67,40 @@ if (switchButton) {
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
         pacmanRight = 1;
-        let i = 0;
+        let l = 0;
+        let r = 0;
+        let d = 0;
+        let u = 0;
         window.addEventListener('keydown', (e)=> {
             console.log(e);
             switch(e.keyCode) {
                 case 37:
-                    //pacman.classList.add('newBlock-left');
-                    let movingLeft = pacmanRight + (i * 8);
+                    let movingLeft = pacmanRight + (l * 8);
                     let newElement = document.createElement('div');
-                    newElement.classList.add('newBlock-left');
+                    newElement.classList.add('newBlock');
                     newElement.style.backgroundColor = "black";
-                    newElement.style.right = movingLeft - 9 + "vw";
+                    if (newElement.right <= 0 + 'vw') {
+                        newElement.style.right = 0 + "vw";
+                    } else {
+                        newElement.style.right = movingLeft - 8 + "vw";
+                    }
                     pacman.style.transform = "scaleX(-1)";
                     pacman.style.right = movingLeft + 'vw';
                     body.appendChild(newElement);
-                    i++;
+                    l++;
                     break;
                 case 38:
-                    pacman.classList.add('newBlock-up');
+                    
                      break;
                 case 39:
-                    pacman.classList.add('newBlock-right');
+                    let movingRight = pacmanRight - (r * 8);
+                    let newRight = document.createElement('div');
+                    newRight.classList.add('newBlock');
+                    newRight.style.backgroundColor = "black";
+                    newRight.style.right = movingRight - 8 + "vw";
+                    pacman.style.right = movingRight + 'vw';
+                    body.appendChild(newRight);
+                    r++;
                     break;
                 case 40:
                     pacman.classList.add('newBlock-down');
