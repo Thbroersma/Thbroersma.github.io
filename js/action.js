@@ -76,6 +76,8 @@ if (switchButton) {
                     let movingLeft = pacmanRight + (i * 8);
                     let newElement = document.createElement('div');
                     newElement.classList.add('newBlock-left');
+                    newElement.style.backgroundColor = "black";
+                    newElement.style.right = movingLeft - 9 + "vw";
                     pacman.style.transform = "scaleX(-1)";
                     pacman.style.right = movingLeft + 'vw';
                     body.appendChild(newElement);
