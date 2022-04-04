@@ -66,16 +66,20 @@ if (switchButton) {
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
+        pacmanRight = 1;
+        let i = 0;
         window.addEventListener('keydown', (e)=> {
             console.log(e);
             switch(e.keyCode) {
                 case 37:
-                    pacman.classList.add('newBlock-left');
-                    /*
-                 let newElement = document.createElement('div');
-                 newElement.classList.add('newBlock-left');
-                 pacman.appendChild(newElement);
-                 */
+                    //pacman.classList.add('newBlock-left');
+                    let movingLeft = pacmanRight + (i * 8);
+                    let newElement = document.createElement('div');
+                    newElement.classList.add('newBlock-left');
+                    pacman.style.transform = "scaleX(-1)";
+                    pacman.style.right = movingLeft + 'vw';
+                    body.appendChild(newElement);
+                    i++;
                     break;
                 case 38:
                     pacman.classList.add('newBlock-up');
@@ -88,7 +92,6 @@ if (switchButton) {
                     break;
             }
         })
-       
     // Pacman movement code 
     /*
     switch (e.keyCode) {
