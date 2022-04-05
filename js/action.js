@@ -73,6 +73,7 @@ if (switchButton) {
         let u = 0;
         window.addEventListener('keydown', (e)=> {
             console.log(e);
+            /* moving left */
             switch(e.keyCode) {
                 case 37:
                     let movingLeft = pacmanRight + (l * 8);
@@ -84,23 +85,27 @@ if (switchButton) {
                     } else {
                         newElement.style.right = movingLeft - 8 + "vw";
                     }
+                    /*let newPacman = document.createElement('div');
+                    newPacman.classList.add('pacman-new');*/
                     pacman.style.transform = "scaleX(-1)";
                     pacman.style.right = movingLeft + 'vw';
                     body.appendChild(newElement);
+                    //body.appendChild(newPacman);
                     l++;
                     break;
                 case 38:
                     
                      break;
                 case 39:
-                    let movingRight = pacmanRight - (r * 8);
+                    let movingRight = pacmanRight + (l * 8);
                     let newRight = document.createElement('div');
                     newRight.classList.add('newBlock');
                     newRight.style.backgroundColor = "black";
                     newRight.style.right = movingRight - 8 + "vw";
+                    pacman.style.transform = "scaleX(1)";
                     pacman.style.right = movingRight + 'vw';
                     body.appendChild(newRight);
-                    r++;
+                    l--;
                     break;
                 case 40:
                     pacman.classList.add('newBlock-down');

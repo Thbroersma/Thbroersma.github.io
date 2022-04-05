@@ -396,7 +396,15 @@ nav a {
 .pacman {
 	width: 8vw;
 	position: absolute;
+	right: 1%;
+}
+.pacman-new {
+	height: 8vw;
+	width: 8vw;
+	position: absolute;
 	right: 1vw;
+	top: 9.61vw;
+	background-image: url('../Games/Pacman/img/pacman.gif');
 }
 p {
 	font-size: 1.1vw;
