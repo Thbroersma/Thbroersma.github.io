@@ -73,7 +73,7 @@ if (switchButton) {
         let i = 0;
         let e = 0;
 /*  Kijk het lukt op pacman te verplaatsen door het toevoegen van elementen div - img of alleen img ipv met achtergrond image*/
-        
+       /* 
 
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
@@ -154,7 +154,7 @@ if (switchButton) {
                     console.log(e + " e");
                     break;
             }      
-        })
+        })*/
     })
     
 }
