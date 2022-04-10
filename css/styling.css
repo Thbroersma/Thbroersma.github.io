@@ -384,8 +384,8 @@ nav a {
 	float: right;
 }
 .newBlock {
-	width: 8vw;
-	height: 8vw;
+	width: 4vw;
+	height: 4vw;
 	background-color: blue;
 	float: right;
 }
@@ -394,17 +394,16 @@ nav a {
 	font-size: 2vw;
 }
 .pacman {
-	width: 8vw;
+	width: 4vw;
 	position: absolute;
 	right: 1%;
 }
 .pacman-new {
-	height: 8vw;
-	width: 8vw;
+	height: 4vw;
+	width: 4vw;
 	position: absolute;
 	right: 1vw;
 	top: 9.61vw;
-	background-image: url('../Games/Pacman/img/pacman.gif');
 }
 p {
 	font-size: 1.1vw;
@@ -469,8 +468,8 @@ span:hover {
 }
 /* Pacman blocks for the home page*/
 .newBlock {
-	width: 8vw;
-	height: 8vw;
+	width: 4vw;
+	height: 4vw;
 	top: 9.61vw;
 	position: absolute;
 	right: 9vw;

@@ -63,55 +63,71 @@ if (switchButton) {
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
         const pacman = document.querySelector('.pacman');
+        let pacmanUp = 9.61;
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
         pacmanRight = 1;
         let l = 0;
-        let r = 0;
-        let d = 0;
-        let u = 0;
+        let h = 0;
+        let i = 0;
+
         window.addEventListener('keydown', (e)=> {
-            console.log(e);
-            /* moving left */
             switch(e.keyCode) {
+                /* moving left */
                 case 37:
-                    let movingLeft = pacmanRight + (l * 8);
-                    let newElement = document.createElement('div');
-                    newElement.classList.add('newBlock');
+                    let movingLeft = pacmanRight + (l * 4);
+                    let newElement = document.createElement('div')
+                    if (i < l) {
+                        newElement.classList.add('new', 'newBlock', i);
+                        i++;
+                    } 
                     newElement.style.backgroundColor = "black";
-                    if (newElement.right <= 0 + 'vw') {
-                        newElement.style.right = 0 + "vw";
-                    } else {
-                        newElement.style.right = movingLeft - 8 + "vw";
-                    }
-                    /*let newPacman = document.createElement('div');
-                    newPacman.classList.add('pacman-new');*/
+                    newElement.style.right = movingLeft - 4 + "vw";
+                    let newPacman = document.createElement('div');
+                    newPacman.classList.add('pacman-new');
                     pacman.style.transform = "scaleX(-1)";
                     pacman.style.right = movingLeft + 'vw';
                     body.appendChild(newElement);
-                    //body.appendChild(newPacman);
                     l++;
+                    console.log(l + " l");
+                    console.log(i + " i");
+
                     break;
                 case 38:
+                    /* Moving up */
+                    let movingUp = pacmanUp;
                     
                      break;
                 case 39:
-                    let movingRight = pacmanRight + (l * 8);
+                    /* Moving right */
+                    let movingRight = pacmanRight + (l * 4);
+
                     let newRight = document.createElement('div');
-                    newRight.classList.add('newBlock');
+                    if (i < l) {
+                        newRight.classList.add('new', 'newBlock', i);
+                        i++;
+                    } else {
+                        console.log(newRight);
+                    }
                     newRight.style.backgroundColor = "black";
-                    newRight.style.right = movingRight - 8 + "vw";
+                    newRight.style.right = movingRight - 4 + "vw";
                     pacman.style.transform = "scaleX(1)";
                     pacman.style.right = movingRight + 'vw';
                     body.appendChild(newRight);
+                    body.classList.remove(5)
                     l--;
+                    console.log(l + " l");
+                    console.log(i + " i");
                     break;
                 case 40:
+                    /* Moving down */
                     pacman.classList.add('newBlock-down');
                     break;
             }
+            
         })
+           
     // Pacman movement code 
     /*
     switch (e.keyCode) {
@@ -166,6 +182,7 @@ if (switchButton) {
 
 
     })
+    
 }
 
 // Function for the quiz
