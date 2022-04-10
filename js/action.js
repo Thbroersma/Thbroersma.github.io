@@ -71,10 +71,12 @@ if (switchButton) {
         let l = 0;
         let h = 0;
         let i = 0;
+        let e = 0;
+/*  Kijk het lukt op pacman te verplaatsen door het toevoegen van elementen div - img of alleen img ipv met achtergrond image*/
+        
 
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
-                /* moving left */
                 case 37:
                     let movingLeft = pacmanRight + (l * 4);
                     let newElement = document.createElement('div')
@@ -95,12 +97,28 @@ if (switchButton) {
 
                     break;
                 case 38:
-                    /* Moving up */
-                    let movingUp = pacmanUp;
-                    
-                     break;
+                    let movingup = pacmanRight + (h * 4);
+                    let newUp = document.createElement('div');
+                    if (i < l) {
+                        newUp.classList.add('new', 'newBlock', i);
+                        if (h < 0) {
+                            newUp.style.top = 0 + "vw";
+                            pacman.style.top = 0 + 'vw';
+                        } else {
+                            newUp.style.top = movingup - 4 + "vw";
+                            newUp.style.backgroundColor = "black";
+                            pacman.style.transform = "scaleX(0)";
+                            pacman.style.top = movingup + 'vw';
+                        }
+                        i++;
+                    }
+                    body.appendChild(newUp);
+                    body.classList.remove(5)
+                    h--;
+                    console.log(h + " h");
+                    console.log(e + " e");
+                    break;
                 case 39:
-                    /* Moving right */
                     let movingRight = pacmanRight + (l * 4);
 
                     let newRight = document.createElement('div');
@@ -115,72 +133,28 @@ if (switchButton) {
                     pacman.style.transform = "scaleX(1)";
                     pacman.style.right = movingRight + 'vw';
                     body.appendChild(newRight);
-                    body.classList.remove(5)
                     l--;
                     console.log(l + " l");
                     console.log(i + " i");
                     break;
                 case 40:
-                    /* Moving down */
-                    pacman.classList.add('newBlock-down');
+                    let movingdown = pacmanRight + (h * 4);
+                    let newDown = document.createElement('div');
+                    if (i < l) {
+                        newDown.classList.add('new', 'newBlock', i);
+                        newDown.style.backgroundColor = "black";
+                        newDown.style.top = movingdown - 4 + "vw";
+                        pacman.style.transform = "scaleX(1)";
+                        pacman.style.top = movingdown + 'vw';
+                        i++;
+                    }
+                    body.appendChild(newDown);
+                    h++;
+                    console.log(movingdown + " down");
+                    console.log(e + " e");
                     break;
-            }
-            
+            }      
         })
-           
-    // Pacman movement code 
-    /*
-    switch (e.keyCode) {
-        case 37:
-          // The move for a div backwards
-          if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
-            && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
-            && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
-            && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
-            && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
-            pacmanCurrentIndex -= 1;
-    
-          if ((pacmanCurrentIndex) === 111) {
-            pacmanCurrentIndex = 130;
-          }
-    
-          break;
-        case 38:
-          // The move for a div upwards   
-          if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
-            && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
-            && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
-            && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
-            pacmanCurrentIndex -= 22;
-    
-          break;
-        case 39:
-          // The move for a div forward 
-          if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
-            && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
-            && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
-            && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-left')
-            && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right'))
-            pacmanCurrentIndex += 1;
-    
-          if ((pacmanCurrentIndex) === 130) {
-            pacmanCurrentIndex = 111;
-          }
-    
-          break;
-        case 40:
-          // The move for a div down 
-          if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
-            && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
-            && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
-            && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
-            && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
-            pacmanCurrentIndex += 22;
-    
-          break;
-      }*/
-
-
     })
     
 }
