@@ -101,10 +101,10 @@ if (switchButton) {
                             pacman.style.right = movingWidth + 'vw';
                             i++;
                         
-                        }
+                       }
                         l++;*/
 /*  Kijk het lukt op pacman te verplaatsen door het toevoegen van elementen div - img of alleen img ipv met achtergrond image*/
-/*
+
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
                 case 37:
@@ -120,7 +120,7 @@ if (switchButton) {
                         } 
                         else {
                             newElement.style.right = movingWidth - 4 + "vw";
-                            
+                            newElement.style.top = pacmanUp + (h * 4) + "vw";
                             newElement.style.backgroundColor = "red";
                             pacman.style.transform = "scaleX(-1)";
                             pacman.style.right = movingWidth + 'vw';
@@ -191,16 +191,17 @@ if (switchButton) {
                     break;
                 case 40:
                     
-                    movingUp = pacmanUp - 4;
+                    movingUp = pacmanUp + h * 4;
                     let newDown = document.createElement('div');
                     if (j >= h) {
                         newDown.classList.add('new', 'newBlock', i);
-                        if (h > 150) {
-                            newDown.style.top = 143 + "vw";
-                            pacman.style.top = 147 + "vw";
+                        if (h > 22) {
+                            newDown.style.top = 94 + "vw";
+                            pacman.style.top = 98 + "vw";
                         } else {
                             newDown.style.backgroundColor = "red";
-                            newDown.style.top = movingUp - 4 + "vw";
+                            newDown.style.top = movingUp  + "vw";
+                            newDown.style.right = ((l + 1) * 4) + 1 + "vw";
                             pacman.style.transform = "scaleX(1)";
                             pacman.style.top = movingUp + 'vw';
                             j++;
@@ -216,7 +217,7 @@ if (switchButton) {
                     console.log("VW Hoogte is " + movingUp);
                     break;
             }      
-        })*/
+        })
     })
     
 }
