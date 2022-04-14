@@ -74,8 +74,37 @@ if (switchButton) {
         let j = 0;
         let movingWidth = 0;
         let movingUp = 0;
+        /*  case 37
+                        else if (newElement.style.right < 0) {
+                            newElement.style.backgroundColor = "transparant";
+                            newElement.style.right = "1vw";
+                            pacman.style.right = "1vw";
+                        }*/
+                        /*if (i) {
+                                let override = document.querySelector(i);
+                                override.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman hide" alt="">';
+                            }*/
+        /*if    case 40 
+            (l > 23) {
+                            newElement.style.right = 91 + "vw";
+                            pacman.style.right = 95 + 'vw';
+                            l = 24;
+                        } /*else if (newElement.style.right < 0) {
+                            newElement.style.backgroundColor = "transparant";
+                            newElement.style.right = "1vw";
+                            pacman.style.right = "1vw";
+                        }
+                        else {
+                            newElement.style.right = movingWidth - 4 + "vw";
+                            newElement.style.backgroundColor = "black";
+                            pacman.style.transform = "scaleX(-1)";
+                            pacman.style.right = movingWidth + 'vw';
+                            i++;
+                        
+                        }
+                        l++;*/
 /*  Kijk het lukt op pacman te verplaatsen door het toevoegen van elementen div - img of alleen img ipv met achtergrond image*/
-
+/*
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
                 case 37:
@@ -88,11 +117,7 @@ if (switchButton) {
                             newElement.style.right = 91 + "vw";
                             pacman.style.right = 95 + 'vw';
                             l = 23;
-                        } /*else if (newElement.style.right < 0) {
-                            newElement.style.backgroundColor = "transparant";
-                            newElement.style.right = "1vw";
-                            pacman.style.right = "1vw";
-                        }*/
+                        } 
                         else {
                             newElement.style.right = movingWidth - 4 + "vw";
                             
@@ -100,10 +125,7 @@ if (switchButton) {
                             pacman.style.transform = "scaleX(-1)";
                             pacman.style.right = movingWidth + 'vw';
                             i++;
-                            /*if (i) {
-                                let override = document.querySelector(i);
-                                override.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman hide" alt="">';
-                            }*/
+                            
                         }
                         l++;
                     } 
@@ -141,24 +163,8 @@ if (switchButton) {
                     console.log("VW Hoogte is " + movingUp);
                     break;
                 case 39:
-                    movingWidth = pacmanRight + ((l + 1) * 4);/*
-                    if (i <= l) {
-                        newElement.classList.add('new', 'newBlock');
-                        
-                        if (l > 23) {
-                            newElement.style.right = 91 + "vw";
-                            pacman.style.right = 95 + 'vw';
-                            l = 24;
-                        } else {
-                            newElement.style.right = movingWidth - 4 + "vw";
-                            newElement.style.backgroundColor = "black";
-                            pacman.style.transform = "scaleX(-1)";
-                            pacman.style.right = movingWidth + 'vw';
-                            i++;
-                        
-                        }
-                        l++;
-                    } */
+                    movingWidth = pacmanRight + ((l + 1) * 4);
+
                     let newRight = document.createElement('div');
                     if (i <= l) {
                         if (l < 2) {
@@ -184,24 +190,7 @@ if (switchButton) {
                     console.log("VW Hoogte is " + movingUp);
                     break;
                 case 40:
-                    /*if (l > 23) {
-                            newElement.style.right = 91 + "vw";
-                            pacman.style.right = 95 + 'vw';
-                            l = 24;
-                        } /*else if (newElement.style.right < 0) {
-                            newElement.style.backgroundColor = "transparant";
-                            newElement.style.right = "1vw";
-                            pacman.style.right = "1vw";
-                        }
-                        else {
-                            newElement.style.right = movingWidth - 4 + "vw";
-                            newElement.style.backgroundColor = "black";
-                            pacman.style.transform = "scaleX(-1)";
-                            pacman.style.right = movingWidth + 'vw';
-                            i++;
-                        
-                        }
-                        l++;*/
+                    
                     movingUp = pacmanUp - 4;
                     let newDown = document.createElement('div');
                     if (j >= h) {
@@ -227,7 +216,7 @@ if (switchButton) {
                     console.log("VW Hoogte is " + movingUp);
                     break;
             }      
-        })
+        })*/
     })
     
 }
