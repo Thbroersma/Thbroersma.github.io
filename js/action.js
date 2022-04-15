@@ -108,19 +108,20 @@ if (switchButton) {
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
                 case 37:
-                    movingWidth = pacmanRight + ((l + 1) * 4);
+                    movingWidth = pacmanRight + ((l + 1) * 6);
                     let newElement = document.createElement('div')
                     if (i >= l) {
                         newElement.classList.add('new', 'newBlock', i);
                         
-                        if (l > 23) {
+                        if (l > 14) {
                             newElement.style.right = 91 + "vw";
-                            pacman.style.right = 95 + 'vw';
-                            l = 23;
+                            newElement.style.top = pacmanUp + (h * 6) + "vw";
+                            pacman.style.right = 91 + 'vw';
+                            l = 14;
                         } 
                         else {
-                            newElement.style.right = movingWidth - 4 + "vw";
-                            newElement.style.top = pacmanUp + (h * 4) + "vw";
+                            newElement.style.right = movingWidth - 6 + "vw";
+                            newElement.style.top = pacmanUp + (h * 6) + "vw";
                             newElement.style.backgroundColor = "red";
                             pacman.style.transform = "scaleX(-1)";
                             pacman.style.right = movingWidth + 'vw';
@@ -139,21 +140,23 @@ if (switchButton) {
 
                     break;
                 case 38:
-                    movingUp= pacmanRight + h * 4 + 4;
+                    movingUp= pacmanRight + h * 6 + 6;
                     let newUp = document.createElement('div');
                     if (j >= h) {
                         newUp.classList.add('new', 'newBlock', i);
                         if (h <= 0) {
-                            newUp.style.top = 0 + "vw";
-                            pacman.style.top = 0 + 'vw';
+                            newUp.style.top = 9.6 + "vw";
+                            pacman.style.top = -3 + 'vw';
+                            newUp.style.right = ((l) * 6) + 1 + "vw";
+
                             h = 0;
                         } else {
-                            newUp.style.top = movingUp + 4.6  + "vw";
+                            newUp.style.top = movingUp + 2.6  + "vw";
                             newUp.style.backgroundColor = "red";
-                            newUp.style.right = ((l) * 4) + 1 + "vw";
+                            newUp.style.right = ((l) * 6) + 1 + "vw";
                             pacman.style.transform = "scaleX(1)";
-                            pacman.style.top = (movingUp - 6) + 'vw';
-                            j--;
+                            pacman.style.top = (movingUp - 10) + 'vw';
+                            j--
                         }
                         h--;
                     }
@@ -168,26 +171,25 @@ if (switchButton) {
                     console.log("VW Hoogte is " + movingUp);
                     break;
                 case 39:
-                    movingWidth = pacmanRight + ((l + 1) * 4);
+                    movingWidth = pacmanRight + ((l + 1) * 6);
 
                     let newRight = document.createElement('div');
                     if (i >= l) {
                         newRight.classList.add('new', 'newBlock', i);
 
-                        if (l < 2) {
-                            newRight.style.right = 5 + "vw";
+                        if (l < 1) {
+                            newRight.style.right = 1 + "vw";
                             pacman.style.right = 1 + 'vw';
-                            l = 2;
+                            l = 1;
                         } else {
-                            newRight.style.right = movingWidth - 4 + "vw";
+                            newRight.style.right = movingWidth - 6 + "vw";
                             newRight.style.backgroundColor = "red";
-                            newRight.style.top = pacmanUp + (h * 4) + "vw";
+                            newRight.style.top = pacmanUp + (h * 6) + "vw";
 
                             //pacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif"  alt="">';
-                            pacman.style.right = movingWidth + 'vw';
+                            pacman.style.right = movingWidth - 12 + 'vw';
                             pacman.style.transform = "scaleX(1)";
                             i--;
-                        
                         }
                         l--;
                     }
@@ -200,20 +202,21 @@ if (switchButton) {
                     break;
                 case 40:
                     
-                    movingUp = pacmanUp + h * 4;
+                    movingUp = pacmanUp + h * 6;
                     let newDown = document.createElement('div');
                     if (j >= h) {
                         newDown.classList.add('new', 'newBlock', i);
-                        if (h > 23) {
+                        if (h > 15) {
                             newDown.style.top = 98 + "vw";
-                            pacman.style.top = 102 + "vw";
-                            h = 23;
+                            newDown.style.right = 91 + "vw";
+                            pacman.style.top = 98 + "vw";
+                            h = 15;
                         } else {
                             newDown.style.backgroundColor = "red";
                             newDown.style.top = movingUp  + "vw";
-                            newDown.style.right = ((l) * 4) + 1 + "vw";
+                            newDown.style.right = ((l) * 6) + 1 + "vw";
                             pacman.style.transform = "scaleX(1)";
-                            pacman.style.top = (movingUp - 2)+ 'vw';
+                            pacman.style.top = (movingUp) + 'vw';
                             j++;
                         }   
                         h++;
