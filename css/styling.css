@@ -397,14 +397,13 @@ nav a {
 	width: 6vw;
 	position: absolute;
 	right: 1%;
-	top: 4vw;
+	top: 3vw;
 }
 .pacman-new {
-	height: 4vw;
-	width: 4vw;
+	height: 6vw;
+	width: 6vw;
 	position: absolute;
-	right: 1vw;
-	top: 9.61vw;
+
 }
 p {
 	font-size: 1.1vw;
