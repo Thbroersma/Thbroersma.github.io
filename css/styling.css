@@ -384,9 +384,9 @@ nav a {
 	float: right;
 }
 .newBlock {
-	width: 4vw;
-	height: 4vw;
-	background-color: blue;
+	width: 6vw;
+	height: 6vw;
+	background-color: red;
 	float: right;
 }
 
@@ -394,7 +394,7 @@ nav a {
 	font-size: 2vw;
 }
 .pacman {
-	width: 4vw;
+	width: 6vw;
 	position: absolute;
 	right: 1%;
 	top: 4vw;
@@ -469,8 +469,8 @@ span:hover {
 }
 /* Pacman blocks for the home page*/
 .newBlock {
-	width: 4vw;
-	height: 4vw;
+	width: 6vw;
+	height: 6vw;
 	top: 9.61vw;
 	position: absolute;
 	right: 9vw;
