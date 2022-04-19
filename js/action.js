@@ -247,7 +247,7 @@ if (switchButton) {
                         newElement.classList.add('new', 'newBlock', i);
                         leftPacman.classList.add('pacman-new');
                         if (l > 14) {
-                            newElement.style.right =  + "vw";
+                            newElement.style.right = 85 + "vw";
                             newElement.style.top = pacmanUp + (h * 6) + "vw";
                             pacman.style.right = 91 + 'vw';
                             l = 14;
@@ -335,6 +335,7 @@ if (switchButton) {
                             newPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                             newPacman.style.right = movingWidth - 12 + 'vw';
                             newPacman.style.top = pacmanUp + (h * 6) + "vw";
+                            newPacman.style.transform = "rotate(0deg)";
                             /*
                             pacman.style.right = movingWidth - 12 + 'vw';
                             pacman.style.transform = "scaleX(1)";*/
