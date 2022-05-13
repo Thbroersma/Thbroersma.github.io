@@ -3,7 +3,6 @@ import Ghost from "../js/Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
-console.log(squares[pacmanCurrentIndex]);
 const width = 22; 
 let score = 0;
 let coins = 68;
