@@ -321,8 +321,10 @@ img {
 .pinky {
     height: 4vw;
     width: 4vw;
-    background-color: pink;
-    border: solid pink 0.4vw;
+    background-image: url('../img/pinky.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .winky {
     height: 4vw;
