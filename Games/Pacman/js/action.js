@@ -100,7 +100,7 @@ function movePacman(e) {
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
       }
-      console.log(squares[pacmanCurrentIndex]);
+      console.log(pacmanCurrentIndex);
 
       break;
     case 38:
@@ -110,8 +110,8 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
         pacmanCurrentIndex -= 22;
-        console.log(squares[pacmanCurrentIndex]);
-      break;
+        console.log(pacmanCurrentIndex);
+        break;
     case 39:
       // The move for a div forward 
       if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
@@ -124,7 +124,7 @@ function movePacman(e) {
       if ((pacmanCurrentIndex) === 130) {
         pacmanCurrentIndex = 111;
       }
-      console.log(squares[pacmanCurrentIndex]);
+      console.log(pacmanCurrentIndex);
 
       break;
     case 40:
@@ -135,7 +135,8 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
         pacmanCurrentIndex += 22;
-        
+        console.log(pacmanCurrentIndex);
+
 
       break;
   }
