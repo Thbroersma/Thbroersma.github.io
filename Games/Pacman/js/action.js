@@ -80,6 +80,7 @@ function createBoard() {
 
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
+pacmanStyle = document.querySelector('.pac-man');
 //movement of pacman
 function movePacman(e) {
 
@@ -93,6 +94,7 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
         && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
         pacmanCurrentIndex -= 1;
+        pacmanStyle.style.transform = "rotate(180deg)";
 
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
@@ -106,7 +108,7 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
         pacmanCurrentIndex -= 22;
-
+        squares[pacmanCurrentIndex].
       break;
     case 39:
       // The move for a div forward 
