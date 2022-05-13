@@ -239,8 +239,10 @@ img {
 }
 
 .pac-dot {
-    background-color: white;
-    border-width: 1.6vw;
+    background-image: url('../img/coin.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 
 }
 .pac-man {
