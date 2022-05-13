@@ -3,7 +3,7 @@ import Ghost from "../js/Ghost.js";
 console.log("File loaded");
 const grid = document.querySelector('.grid');
 const scoreDisplay = document.querySelector('.score');
-
+console.log(squares[pacmanCurrentIndex]);
 const width = 22; 
 let score = 0;
 let coins = 68;
@@ -87,6 +87,7 @@ function movePacman(e) {
 
   squares[pacmanCurrentIndex].classList.remove('pac-man');
   switch (e.keyCode) {
+    
     case 37:
       // The move for a div backwards
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
@@ -109,7 +110,6 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
         pacmanCurrentIndex -= 22;
-        squares[pacmanCurrentIndex].
         console.log(squares[pacmanCurrentIndex]);
       break;
     case 39:
@@ -135,7 +135,7 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
         pacmanCurrentIndex += 22;
-        console.log(squares[pacmanCurrentIndex]);
+        
 
       break;
   }
