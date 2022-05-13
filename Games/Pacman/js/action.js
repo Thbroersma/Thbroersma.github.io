@@ -80,7 +80,10 @@ function createBoard() {
 
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
-pacmanStyle = document.querySelector('.pac-man');
+let newThing = document.createElement('div');
+newThing.classList.add('pacm-man');
+squares[10].classList.add(newThing);
+//pacmanStyle = document.querySelector('.pac-man');
 //movement of pacman
 function movePacman(e) {
 
