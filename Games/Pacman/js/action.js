@@ -80,8 +80,7 @@ function createBoard() {
 
 createBoard();
 squares[pacmanCurrentIndex].classList.add('pac-man');
-let newThing = document.createElement('div');
-newThing.classList.add('pacm-man');
+
 //pacmanStyle = document.querySelector('.pac-man');
 //movement of pacman
 function movePacman(e) {
@@ -96,7 +95,6 @@ function movePacman(e) {
         && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
         && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
         pacmanCurrentIndex -= 1;
-        newThing.style.transform = "rotate(180deg)";
 
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
