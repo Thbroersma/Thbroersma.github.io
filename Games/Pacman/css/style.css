@@ -240,7 +240,6 @@ img {
 
 .pac-dot {
     background-color: white;
-
     border-width: 1.6vw;
 
 }
@@ -306,8 +305,10 @@ img {
 .blinky {
     height: 4vw;
     width: 4vw;
-    background-color: rgba(255, 0, 0, 0.904);
-    border: solid rgba(255, 0, 0, 0.904) 0.4vw;
+    background-image: url('../img/blinky.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .crispy {
     height: 4vw;
