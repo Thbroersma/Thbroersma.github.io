@@ -70,9 +70,7 @@ if (switchButton) {
         let randomNumber = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                             2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
-                            3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
-
-        
+                            3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3];
         let pacmanUp = 9.61;
         pacmanRight = 1;
         let l = 0;
@@ -85,7 +83,7 @@ if (switchButton) {
         while(k < randomNumber.length) {
             setTimeout(function () {
             let random = randomNumber[Math.floor(Math.random() * randomNumber.length)];
-            switch(random) {
+            switch(random[k]) {
                 case 0:
                     movingWidth = pacmanRight + ((l + 1) * 6);
                     let newElement = document.createElement('div');
@@ -182,9 +180,7 @@ if (switchButton) {
                             newPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                             newPacman.style.right = movingWidth - 12 + 'vw';
                             newPacman.style.top = pacmanUp + (h * 6) + "vw";
-                            /*
-                            pacman.style.right = movingWidth - 12 + 'vw';
-                            pacman.style.transform = "scaleX(1)";*//*
+                           
     
                             i--;
                         }
@@ -268,16 +264,9 @@ if (switchButton) {
                     } 
                     body.appendChild(newElement);
                     body.appendChild(leftPacman);
-
-                    console.log("Breedte L is " + l);
-                    console.log("Hoogte is " + h);
-                    console.log("i is " + i);
-                    console.log("VW Breedte is " + movingWidth);
-                    console.log("VW Hoogte is " + movingUp);
-
                     break;
                 case 38:
-                    movingUp= pacmanRight + h * 6 + 6;
+                    movingUp = pacmanRight + h * 6 + 6;
                     let newUp = document.createElement('div');
                     let UpPacman = document.createElement('div');
                     if (j >= h) {
@@ -300,20 +289,13 @@ if (switchButton) {
                             UpPacman.style.right = ((l) * 6) + 1 + "vw";
 
                             UpPacman.style.transform = "rotate(270deg)";
-                            UpPacman.style.top = (movingUp - 4) + 'vw';
+                            UpPacman.style.top = (movingUp - 3.4) + 'vw';
                             j--
                         }
                         h--;
                     }
                     body.appendChild(newUp);
                     body.appendChild(UpPacman);
-                    
-                    console.log("j is " + j);
-
-                    console.log("Breedte L is " + l);
-                    console.log("Hoogte is " + h);
-                    console.log("VW Breedte is " + movingWidth);
-                    console.log("VW Hoogte is " + movingUp);
                     break;
                 case 39:
                     movingWidth = pacmanRight + ((l + 1) * 6);
@@ -380,16 +362,9 @@ if (switchButton) {
                     }
                     body.appendChild(newDown);
                     body.appendChild(downPacman);
-
-                    console.log("j is " + j);
-
-                    console.log("Breedte L is " + l);
-                    console.log("Hoogte is " + h);
-                    console.log("VW Breedte is " + movingWidth);
-                    console.log("VW Hoogte is " + movingUp);
                     break;
             }      
-        })
+        })/*
         switch(random) {
             case 0:
                 movingWidth = pacmanRight + ((l + 1) * 6);
@@ -487,9 +462,7 @@ if (switchButton) {
                         newPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                         newPacman.style.right = movingWidth - 12 + 'vw';
                         newPacman.style.top = pacmanUp + (h * 6) + "vw";
-                        /*
-                        pacman.style.right = movingWidth - 12 + 'vw';
-                        pacman.style.transform = "scaleX(1)";*/
+                
 
                         i--;
                     }
@@ -538,7 +511,7 @@ if (switchButton) {
                 console.log("VW Breedte is " + movingWidth);
                 console.log("VW Hoogte is " + movingUp);
                 break;
-        }
+        }*/
     })
     
 }

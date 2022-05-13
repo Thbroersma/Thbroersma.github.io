@@ -399,6 +399,14 @@ nav a {
 	right: 1%;
 	top: 3vw;
 }
+.pacmanCheck {
+	background-image: url('../Games/Pacman/img/pacman.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 6vw;
+	height: 6vw;
+}
 .pacman-new {
 	height: 6vw;
 	width: 6vw;
@@ -468,7 +476,7 @@ span:hover {
 }
 /* Pacman blocks for the home page*/
 .newBlock {
-	width: 6vw;
+	width: 6.2vw;
 	height: 6vw;
 	top: 9.61vw;
 	position: absolute;
