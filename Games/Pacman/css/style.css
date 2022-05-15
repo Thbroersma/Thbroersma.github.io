@@ -307,7 +307,7 @@ img {
 .blinky {
     height: 4vw;
     width: 4vw;
-    background-image: url('../img/winky.png');
+    background-image: url('../img/blinky.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -315,13 +315,15 @@ img {
 .crispy {
     height: 4vw;
     width: 4vw;
-    background-color: rgb(201, 12, 169);
-    border: solid rgb(201, 12, 169) 0.4vw;
+    background-image: url('../img/crispy.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .pinky {
     height: 4vw;
     width: 4vw;
-    background-image: url('../img/pinky.gif');
+    background-image: url('../img/scared.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -329,25 +331,33 @@ img {
 .winky {
     height: 4vw;
     width: 4vw;
-    background-color: rgb(4, 0, 255);
-    border: solid rgb(4, 0, 255) 0.4vw;
+    background-image: url('../img/winky.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .flinky {
     height: 4vw;
     width: 4vw;
-    background-color: blueviolet;
-    border: solid transparent 0.4vw;
+    background-image: url('../img/flinky.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .drinky {
     height: 4vw;
     width: 4vw;
-    background-color: rgb(248, 127, 46);
-    border: solid transparent 0.4vw;
+    background-image: url('../img/drinky.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .scared-ghost {
     height: 4vw;
     width: 4vw;
-    background-color: aquamarine;
-    border: solid aquamarine 0.4vw;
+    background-image: url('../img/scared-ghost.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 /* einde ghosts */
