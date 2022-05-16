@@ -10,7 +10,7 @@ let powerPellets = 2;
 let pacmanCurrentIndex = 163;
 const endImage = document.querySelector('.the-end');
 const reload = document.querySelector('.reload');
-
+const playings = document.querySelector('.music');
 // The layout of the playing field
 const layout = [
   17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
@@ -88,7 +88,9 @@ function movePacman(e) {
   switch (e.keyCode) {
     
     case 37:
-      // The move for a div backwards
+      // The move for a div backwardsefe
+      // For the audio sound of pacman moving
+     // playings.play();
       if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')

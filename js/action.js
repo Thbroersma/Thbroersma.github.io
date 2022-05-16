@@ -233,9 +233,12 @@ if (switchButton) {
             }, 3000)
             k++;
         }*/
+        
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
                 case 37:
+                    
+
                     movingWidth = pacmanRight + ((l + 1) * 6);
                     let newElement = document.createElement('div');
                     let leftPacman = document.createElement('div');
