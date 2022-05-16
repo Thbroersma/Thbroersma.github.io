@@ -246,7 +246,7 @@ img {
 
 }
 .pac-man {
-    background-image: url('../img/pacmans.png');
+    background-image: url('../img/pacmans.gif');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
