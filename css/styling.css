@@ -457,7 +457,10 @@ span:hover {
 	margin-left: 2vw;
 	font-family: bold;
 }
-
+.top {
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+}
 .row-calculator {
 	margin: 0;
 	padding: 0;
