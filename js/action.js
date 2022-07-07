@@ -562,7 +562,10 @@ if (gameButton) {
         nextButton.innerHTML = 'Next question';
     })
 }
+if (scoreButton.addEventListener('click', function () {
 
+    window.location.href = "thbroersma.github.io/mot.html";
+}))
 // Function for checking the answer correctly
 if (checkButton) {
     checkButton.addEventListener('click', function() {
