@@ -224,7 +224,9 @@ img {
     width: 3vw;
     height: 3vw;
 }
-
+.index-button {
+    width: 8vh;
+}
 .left {
     transform: rotate(180deg);
 }
