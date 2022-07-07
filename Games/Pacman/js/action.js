@@ -221,7 +221,6 @@ function movingOnThePhone () {
   checkForGameOver();
   chechForWin();
 }
-moving.addEventListener('click', movingOnThePhone);
   
 
 
