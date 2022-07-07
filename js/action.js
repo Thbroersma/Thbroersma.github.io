@@ -7,7 +7,7 @@ const switchButton = document.querySelector('.switchButton');
 const motivationButton = document.querySelector('.motivation-button');
 const nextButton = document.querySelector('.nextButton');
 const scoreButton = document.querySelector('.score-button');
-
+const answerfield = document.querySelector('answers');
 let motivationQuotes = [ 
     'You can do it, you just have to believe in yourself!', 
     'Education is the most powerful weapon which you can use to change the world',
@@ -579,7 +579,7 @@ if (checkButton) {
 
             else {
                 clearTimeout(timer);
-                youLostTheGame();
+                answerfield.innerHTML = "You got it wrong, the answer is: addEventListener";
             }
 
         }
@@ -593,7 +593,8 @@ if (checkButton) {
 
             else {
                 clearTimeout(timer);
-                youLostTheGame();
+                answerfield.innerHTML = "You got it wrong, the answer is: 150 km";
+
             }
 
         }
@@ -607,7 +608,8 @@ if (checkButton) {
 
             else {
                 clearTimeout(timer);
-                youLostTheGame();
+                answerfield.innerHTML = "You got it wrong, the answer is: querySelectorAll";
+
             }
 
         }
