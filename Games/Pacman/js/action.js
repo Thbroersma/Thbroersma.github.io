@@ -150,6 +150,74 @@ function movePacman(e) {
 }
 document.addEventListener('keyup', movePacman);
 
+// movement voor pacman but than for an a phone
+const moveLeft = document.querySelector(".moveLeft");
+const moveUp = document.querySelector(".moveUp");
+const moveright = document.querySelector(".moveRight");
+const movedown = document.querySelector(".moveDown");
+const moving = [ moveLeft, moveUp, moveright, movedown];
+
+
+  squares[pacmanCurrentIndex].classList.remove('pac-man');
+  if (moveLeft.addEventListener('click', function () {
+    // The move for a div backwardsefe
+          // For the audio sound of pacman moving
+        // playings.play();
+        if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
+        && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
+        && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
+        && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
+        && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
+        pacmanCurrentIndex -= 1;
+
+      if ((pacmanCurrentIndex) === 111) {
+        pacmanCurrentIndex = 130;
+      }
+      console.log(pacmanCurrentIndex);
+    }))
+    if (moveUp.addEventListener('click', function () {
+        // The move for a div upwards   
+        if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
+        && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
+        && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
+        && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
+        pacmanCurrentIndex -= 22;
+        console.log(pacmanCurrentIndex);
+    }))
+    if (moveright.addEventListener('click', function () {
+        // The move for a div forward 
+        if (pacmanCurrentIndex % width < width - 1 && !squares[pacmanCurrentIndex + 1].classList.contains('field-box')
+          && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
+          && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
+          && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-left')
+          && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right'))
+          pacmanCurrentIndex += 1;
+
+        if ((pacmanCurrentIndex) === 130) {
+          pacmanCurrentIndex = 111;
+        }
+        console.log(pacmanCurrentIndex);
+  }))  
+  if (moveright.addEventListener('click', function () {
+    // The move for a div down 
+    if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
+    && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
+    && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
+    && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
+    && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
+    pacmanCurrentIndex += 22;
+    console.log(pacmanCurrentIndex);
+  }))  
+   
+  squares[pacmanCurrentIndex].classList.add('pac-man');
+  // the function of the game
+  pacDotEaten();
+  powerPelletEaten();
+  checkForGameOver();
+  chechForWin();
+
+
+
 // How the pac-dots are eaten and how that works with the score
 function pacDotEaten() {
   

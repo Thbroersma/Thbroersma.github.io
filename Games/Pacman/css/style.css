@@ -71,6 +71,9 @@ body {
     font-size: 1.5vw;
     font-weight: bold;
 }
+.buttons {
+    text-align: center;
+}
 .clear {
     background-color: rgb(117, 62, 119);
     width: 4vw;
@@ -226,6 +229,8 @@ img {
 }
 .index-button {
     width: 8vh;
+    font-size: bold;
+    background-color: yellow;
 }
 .left {
     transform: rotate(180deg);
