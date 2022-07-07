@@ -547,14 +547,14 @@ if (nextButton) {
 
         const randomNumber = Math.floor(Math.random() * gameQuestions.length);
         gameQuest.innerHTML = gameQuestions[randomNumber];
-        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
+        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 30000);
     })
 }
 
 if (gameButton) {
     gameButton.addEventListener('click', function () {
 
-        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 15000);
+        timer = setTimeout(function(){ alert("You ran out of time, try again"); }, 30000);
         gameQuest.innerHTML = gameQuestions[0];
         checkButton.classList.add('gameButton');
         nextButton.classList.add('gameButton');
