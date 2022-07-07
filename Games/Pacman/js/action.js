@@ -155,7 +155,6 @@ const moveLeft = document.querySelector(".moveLeft");
 const moveUp = document.querySelector(".moveUp");
 const moveright = document.querySelector(".moveRight");
 const movedown = document.querySelector(".moveDown");
-const moving = [ moveLeft, moveUp, moveright, movedown];
 
 
   squares[pacmanCurrentIndex].classList.remove('pac-man');
@@ -198,7 +197,7 @@ const moving = [ moveLeft, moveUp, moveright, movedown];
         }
         console.log(pacmanCurrentIndex);
   }))  
-  if (moveright.addEventListener('click', function () {
+  if (movedown.addEventListener('click', function () {
     // The move for a div down 
     if (pacmanCurrentIndex + width < width * width && !squares[pacmanCurrentIndex + 22].classList.contains('field-box')
     && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
