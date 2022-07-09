@@ -570,7 +570,7 @@ if (scoreButton.addEventListener('click', function () {
 if (checkButton) {
     checkButton.addEventListener('click', function() {
 
-        if (gameQuest.innerHTML.includes('button')) {
+        if (gameQuest.innerHTML('What do you must have in Javascript to make a button do something?')) {
             if (inputAnswer.value.includes('addEventListener')) {
                 clearTimeout(timer);
                 scoreButtonSwitch();
