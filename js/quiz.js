@@ -62,7 +62,7 @@ if (gameButton) {
 }
 if (scoreButton.addEventListener('click', function () {
 
-    window.location.href = "thbroersma.github.io/mot.html";
+    window.location.href = "coding.html";
 }))
 
     checkButton.addEventListener('click', function() {
