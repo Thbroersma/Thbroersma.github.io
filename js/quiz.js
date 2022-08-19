@@ -24,7 +24,6 @@ let gameQuestions = [
 if (codeButton) {
     codeButton.addEventListener('click', function() {
         coding.innerHTML = codeText.value;
-        coding
     })
 }
 // Function for the quiz
@@ -34,6 +33,7 @@ function scoreButtonSwitch() {
     scorePoints = scorePoints + 10;
     scoreButton.innerHTML = 'You got ' + scorePoints + ' points!';
 }
+
 
 function youLostTheGame() {
 
@@ -68,6 +68,12 @@ if (gameButton) {
         nextButton.classList.add('gameButton');
         checkButton.innerHTML = 'Check your answer';
         nextButton.innerHTML = 'Next question';
+    })
+}
+// not know page 
+if (scoreButton) {
+    scoreButton.addEventListener('click', function(){
+     scoreButton.innerHTML = "<a href='coding.html'></a>"
     })
 }
 // Function for checking the answer correctly
