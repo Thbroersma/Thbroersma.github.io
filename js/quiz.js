@@ -5,6 +5,9 @@ const inputAnswer = document.querySelector('.answers');
 const nextButton = document.querySelector('.nextButton');
 const scoreButton = document.querySelector('.score-button');
 const answerfield = document.querySelector('.answers');
+const codeButton = document.querySelector('.code');
+const codeText = document.querySelector('.codes');
+const coding = document.querySelector('.codeAlinea');
 let gameQuestions = [ 
     'What do you must have in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had cycled?',
@@ -17,6 +20,13 @@ let gameQuestions = [
     'How can you make something disappear on a website?',
     'What is something you should never you on an element?'
 ];
+// Running the code
+if (codeButton) {
+    codeButton.addEventListener('click', function() {
+        coding.innerHTML = codeText.value;
+        coding
+    })
+}
 // Function for the quiz
 function scoreButtonSwitch() {
 
@@ -60,15 +70,6 @@ if (gameButton) {
         nextButton.innerHTML = 'Next question';
     })
 }
-if (scoreButton.addEventListener('click', function () {
-
-    window.location.href = "coding.html";
-}))
-
-    checkButton.addEventListener('click', function() {
-        alert("De checkbutton werkt");
-    })
-
 // Function for checking the answer correctly
 if (checkButton) {
     checkButton.addEventListener('click', function() {

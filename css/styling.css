@@ -213,6 +213,9 @@ footer {
 .intro {
 	margin-left: 2vw;
 }
+.intro-extra {
+	margin: 2vh;
+}
 .intro-info {
 	margin: 0!important;
 	padding: 2vh!important;
