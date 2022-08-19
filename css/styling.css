@@ -12,6 +12,7 @@ h6 {
 }
 .about {
 	font-size: 1.04vw;
+	
 }
 @media only screen and (max-width: 600px) {
 	body {
@@ -176,6 +177,18 @@ footer {
 	margin-left: 10%;
 	font-size: 2.6vw;
 	margin-top: 2vh;
+	width: 70vw;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: control-width 3s 2s both;
+}
+@keyframes control-width {
+	from {
+		width: 0;
+	}
+	to {
+		width: 70vw;
+	}
 }
 .heading-projects {
 	display: flex;
@@ -184,6 +197,19 @@ footer {
 }
 .headingThree {
 	font-size: 1.9vw;
+	width: 10vw;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: controls-width 2s 4s both;
+
+}
+@keyframes controls-width {
+	from {
+		width: 0;
+	}
+	to {
+		width: 10vw;
+	}
 }
 .headingTwo {
 	margin-left: 10vh;
