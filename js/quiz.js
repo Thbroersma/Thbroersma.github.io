@@ -82,7 +82,9 @@ function run() {
     let cssCode = document.querySelector(".editor #css-code").value;
     let jsCode = document.querySelector(".editor #js-code").value;
     let output = document.querySelector(".editor #output ");
-    console.log(htmlCode, cssCode, jsCode, output);
+    //console.log(htmlCode, cssCode, jsCode, output);
+
+    output.contentDocument.body.innerHTML = htmlCode;
 }
 
 // Function for checking the answer correctly
