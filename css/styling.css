@@ -458,6 +458,11 @@ span:hover {
 	margin-top: 5%;
 	margin-left: 40%;
 }
+.stardust-info {
+	width: 50%;
+	height: 100%;
+	margin-right: 0vw;
+}
 .switchButton {
 	background-color: #A8DADC;
 	border-color: #A8DADC;
