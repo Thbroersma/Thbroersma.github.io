@@ -8,6 +8,7 @@ const answerfield = document.querySelector('.answers');
 const codeButton = document.querySelector('.code');
 const codeText = document.querySelector('.codes');
 const coding = document.querySelector('.codeAlinea');
+const runcode = document.querySelector('.runCode');
 let gameQuestions = [ 
     'What do you must have in Javascript to make a button do something?', 
     'What is the longest distance that the web-developer had cycled?',
@@ -87,9 +88,14 @@ function run() {
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
     output.contentWindow.eval(jsCode);
 }
-document.querySelector(".editor #html-code").addEventListener("keyup", run);
-document.querySelector(".editor #css-code").addEventListener("keyup", run);
-document.querySelector(".editor #js-code").addEventListener("keyup", run);
+if (runcode) {
+    runcode.addEventListener('click', function() {
+        run();
+    })
+}
+/*document.querySelector(".editor #html-code").addEventListener("keyup", run);
+        document.querySelector(".editor #css-code").addEventListener("keyup", run);
+        document.querySelector(".editor #js-code").addEventListener("keyup", run);*/
 
 // Function for checking the answer correctly
 if (checkButton) {

@@ -73,6 +73,7 @@ h6 {
 .coding {
 	background-color: #1d1e22;
 	color: white;
+	margin-bottom: 5vw;
 }
 .col-calculator {
 	flex-shrink: 2;
@@ -441,6 +442,12 @@ p {
 }
 .quiz {
 	margin-right: 17%;
+}
+.runCode {
+	position: absolute;
+	left: 22vw;
+	bottom: 2vw;
+	background-color: orange;
 }
 .score-button {
 	display: none;
