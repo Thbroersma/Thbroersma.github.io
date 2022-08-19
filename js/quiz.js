@@ -76,6 +76,15 @@ if (scoreButton) {
      scoreButton.innerHTML = "<a href='coding.html'></a>"
     })
 }
+// the website editor 
+function run() {
+    let htmlCode = document.querySelector(".editor #html-code").value;
+    let cssCode = document.querySelector(".editor #css-code").value;
+    let jsCode = document.querySelector(".editor #js-code").value;
+    let output = document.querySelector(".editor #output ");
+    console.log(htmlCode, cssCode, jsCode, output);
+}
+
 // Function for checking the answer correctly
 if (checkButton) {
     checkButton.addEventListener('click', function() {
