@@ -180,7 +180,7 @@ footer {
 	width: 70vw;
 	overflow: hidden;
 	white-space: nowrap;
-	animation: control-width 3s 2s both;
+	animation: control-width 3s 1s both;
 }
 @keyframes control-width {
 	from {
@@ -200,7 +200,7 @@ footer {
 	width: 10vw;
 	overflow: hidden;
 	white-space: nowrap;
-	animation: controls-width 2s 4s both;
+	animation: controls-width 2s 3s both;
 
 }
 @keyframes controls-width {
@@ -449,6 +449,73 @@ nav a {
 	width: 6vw;
 	position: absolute;
 
+}
+/*
+.head {
+	margin-left: 10%;
+	font-size: 2.6vw;
+	margin-top: 2vh;
+	width: 70vw;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: control-width 3s 1s both;
+}
+@keyframes control-width {
+	from {
+		width: 0;
+	}
+	to {
+		width: 70vw;
+	}
+}
+*/
+.p1 {
+	width: 50vw;
+	overflow: hidden;
+	margin: 0vw;
+	padding: 0vw;
+	white-space: nowrap;
+	animation: control-width1 3s 4s both;
+}
+.p2 {
+	width: 50vw;
+	overflow: hidden;
+	margin: 0vw;
+	padding: 0vw;
+	white-space: nowrap;
+	animation: control-width1 3s 6s both;
+}
+.p3 {
+	width: 50vw;
+	overflow: hidden;
+	margin: 0vw;
+	padding: 0vw;
+	white-space: nowrap;
+	animation: control-width1 3s 8s both;
+}
+.p4 {
+	width: 50vw;
+	overflow: hidden;
+	margin: 0vw;
+	padding: 0vw;
+	white-space: nowrap;
+	animation: control-width1 3s 10s both;
+}
+.p5 {
+	width: 50vw;
+	overflow: hidden;
+	margin: 0vw;
+	padding: 0vw;
+	white-space: nowrap;
+	animation: control-width1 2s 12s both;
+}
+@keyframes control-width1 {
+	from {
+		width: 0;
+	}
+	to {
+		width: 50vw;
+	}
 }
 p {
 	font-size: 1.1vw;
