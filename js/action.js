@@ -14,7 +14,7 @@ let motivationQuotes = [
     'Today is a good day to try something new',
     ''
 ];
-
+let check = true;
 const display = document.querySelector('.displayValue');
 let chosenNumberOne = null;
 let chosenNumberTwo = null;
@@ -58,6 +58,7 @@ if (switchButton) {
         let movingWidth = 0;
         let movingUp = 0;
         let k = 0;
+        if (check) {
         function goPacman () {
             switch(randomNumber[k]) {
                 case 0:
@@ -83,7 +84,10 @@ if (switchButton) {
                             leftPacman.style.transform = "scaleX(-1)";
                             leftPacman.style.right = movingWidth + 'vw';
                             i++;
-                            
+                            k++;
+                            if (k == 12) {
+                                check = false;
+                            }                         
                         }
                         l++;
                     } 
@@ -91,13 +95,13 @@ if (switchButton) {
                     body.appendChild(leftPacman);                 
                     break;
             }
-            k++;
+            
         }
-        
+    }
         function Go() {
             alert("de timing moet goed zijn!");
         }
-        const timerId = setInterval(goPacman, 2000);
+        const timerId = setInterval(goPacman, 500);
         
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
