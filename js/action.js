@@ -77,7 +77,7 @@ if (switchButton) {
                         else {
                             newElement.style.right = movingWidth - 6 + "vw";
                             newElement.style.top = pacmanUp + (h * 6) + "vw";
-                            newElement.style.backgroundColor = "red";
+                            newElement.style.backgroundColor = "black";
                             leftPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                             leftPacman.style.top = pacmanUp + (h * 6) + "vw";
     
@@ -123,8 +123,8 @@ if (switchButton) {
                         else {
                             newElement.style.right = movingWidth - 6 + "vw";
                             newElement.style.top = pacmanUp + (h * 6) + "vw";
-                            newElement.style.backgroundColor = "red";
-                            newElement.style.color = "red";
+                            newElement.style.backgroundColor = "black";
+                            newElement.style.color = "black";
                             leftPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                             leftPacman.style.top = pacmanUp + (h * 6) + "vw";
 
@@ -157,8 +157,8 @@ if (switchButton) {
                             h = 0;
                         } else {
                             newUp.style.top = movingUp + 2.6  + "vw";
-                            newUp.style.backgroundColor = "red";
-                            newUp.style.color = "red";
+                            newUp.style.backgroundColor = "black";
+                            newUp.style.color = "black";
                             newUp.style.right = ((l) * 6) + 1 + "vw";
                             UpPacman.style.right = ((l) * 6) + 1 + "vw";
 
@@ -186,8 +186,8 @@ if (switchButton) {
                             l = 1;
                         } else {
                             newRight.style.right = movingWidth - 6 + "vw";
-                            newRight.style.backgroundColor = "red";
-                            newRight.style.color = "red";
+                            newRight.style.backgroundColor = "black";
+                            newRight.style.color = "black";
                             newRight.style.top = pacmanUp + (h * 6) + "vw";
                             newPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
                             newPacman.style.right = movingWidth - 12 + 'vw';
@@ -215,15 +215,15 @@ if (switchButton) {
                         newDown.classList.add('new', 'newBlock', i);
                         downPacman.classList.add('pacman-new');
                         if (h > 15) {
-                            newDown.style.top = 98 + "vw";3
+                            newDown.style.top = 98 + "vw";
                             newDown.style.right = 91 + "vw";
                             pacman.style.top = 98 + "vw";
                             downPacman.style.transform = "rotate(90deg)";
 
                             h = 15;
                         } else {
-                            newDown.style.backgroundColor = "red";
-                            newDown.style.color = "red";
+                            newDown.style.backgroundColor = "black";
+                            newDown.style.color = "black";
                             newDown.style.top = movingUp + "vw";
                             newDown.style.right = ((l) * 6) + 1 + "vw";
                             downPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
