@@ -58,6 +58,7 @@ if (switchButton) {
         let movingWidth = 0;
         let movingUp = 0;
         let k = 0;
+        let time = 10000;
         if (check) {
         function goPacman () {
             switch(randomNumber[k]) {
@@ -83,6 +84,9 @@ if (switchButton) {
     
                             leftPacman.style.transform = "scaleX(-1)";
                             leftPacman.style.right = movingWidth + 'vw';
+                            if(k == 0) {
+                                alert("You pressed the action button of my page, now act right on what it asks");
+                            }
                             i++;
                             k++;
                             if (k == 12) {
@@ -95,19 +99,16 @@ if (switchButton) {
                     body.appendChild(leftPacman);                 
                     break;
             }
-            
         }
     }
-        function Go() {
-            alert("de timing moet goed zijn!");
-        }
+       function alertMe() {
+        alert("You pressed the destroy button of my page, now I will do my work");
+       }
         const timerId = setInterval(goPacman, 500);
         
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
                 case 37:
-                    
-
                     movingWidth = pacmanRight + ((l + 1) * 6);
                     let newElement = document.createElement('div');
                     let leftPacman = document.createElement('div');
