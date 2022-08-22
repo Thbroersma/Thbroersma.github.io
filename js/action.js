@@ -49,7 +49,7 @@ if (switchButton) {
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
         let randomNumber = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        let pacmanUp = 9.61;
+        let pacmanUp = 9.8;
         pacmanRight = 1;
         let l = 0;
         let h = 0;
