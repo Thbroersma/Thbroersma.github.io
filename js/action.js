@@ -48,7 +48,7 @@ if (switchButton) {
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
-        let randomNumber = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let randomNumber = [0, 0, 0, 0, 0, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 0, 0, 0, 0, 0];
         let pacmanUp = 9.8;
         pacmanRight = 1;
         let l = 0;
@@ -58,7 +58,6 @@ if (switchButton) {
         let movingWidth = 0;
         let movingUp = 0;
         let k = 0;
-        let time = 10000;
         if (check) {
         function goPacman () {
             switch(randomNumber[k]) {
@@ -89,6 +88,7 @@ if (switchButton) {
                             }
                             i++;
                             k++;
+                            console.log(k);
                             if (k == 12) {
                                 check = false;
                             }                         
@@ -97,6 +97,107 @@ if (switchButton) {
                     } 
                     body.appendChild(newElement);
                     body.appendChild(leftPacman);                 
+                    break;
+                case 1:
+                    movingUp = pacmanRight + h * 6 + 6;
+                    let newUp = document.createElement('div');
+                    let UpPacman = document.createElement('div');
+                    if (j >= h) {
+                        newUp.classList.add('new', 'newBlock', i);
+                        UpPacman.classList.add('pacman-new');
+                        UpPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
+    
+                        if (h <= 0) {
+                            newUp.style.top = 9.6 + "vw";
+                            UpPacman.style.top = 3.8 + 'vw';
+                            newUp.style.right = ((l) * 6) + 1 + "vw";
+                            UpPacman.style.right = ((l) * 6) + 1 + "vw";
+                            UpPacman.style.transform = "rotate(270deg)";
+                            k++;
+                            console.log(k);
+                            h = 0;
+                        } else {
+                            newUp.style.top = movingUp + 2.6 + 'vw';
+                            newUp.style.backgroundColor = "black";
+                            newUp.style.right = ((l) * 6) + 1 + "vw";
+                            UpPacman.style.right = ((l) * 6) + 1 + "vw";
+    
+                            UpPacman.style.transform = "rotate(270deg)";
+                            UpPacman.style.top = (movingUp - 3) + 'vw';
+                            k++;
+                            console.log(k);
+                            j--
+                        }
+                        h--;
+                    }
+                    body.appendChild(newUp);
+                    body.appendChild(UpPacman);
+          
+                    break;
+                case 2:
+                    movingWidth = pacmanRight + ((l + 1) * 6);
+    
+                    let newRight = document.createElement('div');
+                    let newPacman = document.createElement('div');
+                    
+                    if (i >= l) {
+                        newRight.classList.add('new', 'newBlock', i);
+                        newPacman.classList.add('pacman-new');
+                        if (l < 1) {
+                            newRight.style.right = 1 + "vw";
+                            pacman.style.right = 1 + 'vw';
+                            l = 1;
+                        } else {
+                            newRight.style.right = movingWidth - 6 + "vw";
+                            newRight.style.backgroundColor = "black";
+                            newRight.style.top = pacmanUp + (h * 6) + "vw";
+                            newPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
+                            newPacman.style.right = movingWidth - 12 + 'vw';
+                            newPacman.style.top = pacmanUp + (h * 6) + "vw";
+                           
+                            k++;
+                            console.log(k);
+                            i--;
+                        }
+                        l--;
+                    }
+                    body.appendChild(newPacman);
+                    body.appendChild(newRight);
+                    console.log(newPacman);
+     
+                    break;
+                case 3:
+                    
+                    movingUp = pacmanUp + h * 6;
+                    let newDown = document.createElement('div');
+                    let downPacman = document.createElement('div');
+                    if (j >= h) {
+                        newDown.classList.add('new', 'newBlock', i);
+                        downPacman.classList.add('pacman-new');
+                        if (h > 15) {
+                            newDown.style.top = 98 + "vw";
+                            newDown.style.right = 91 + "vw";
+                            pacman.style.top = 98 + "vw";
+                            downPacman.style.transform = "rotate(90deg)";
+    
+                            h = 15;
+                        } else {
+                            newDown.style.backgroundColor = "black";
+                            newDown.style.top = movingUp + "vw";
+                            newDown.style.right = ((l) * 6) + 1 + "vw";
+                            downPacman.innerHTML = '<img src="Games/Pacman/img/pacman.gif" class="pacman-new"  alt="">';
+                            downPacman.style.right = ((l) * 6) + 1 + "vw";
+    
+                            downPacman.style.transform = "rotate(90deg)";
+                            downPacman.style.top = (movingUp) + 6 + 'vw';
+                            j++;
+                            k++;
+                            console.log(k);
+                        }   
+                        h++;
+                    }
+                    body.appendChild(newDown);
+                    body.appendChild(downPacman);
                     break;
             }
         }

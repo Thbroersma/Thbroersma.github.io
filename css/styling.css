@@ -441,12 +441,12 @@ nav a {
 	width: 6vw;
 	position: absolute;
 	right: 1%;
-	top: 4.4vw;
+	top: 4.7vw;
 } 
 
 .pacman-new {
-	height: 6vw;
-	width: 6vw;
+	height: 6.1vw;
+	width: 6.2vw;
 	position: absolute;
 
 }
@@ -595,9 +595,72 @@ span:hover {
 /* Pacman blocks for the home page*/
 .newBlock {
 	width: 6.2vw;
-	height: 6vw;
+	height: 6.1vw;
 	top: 9.61vw;
 	position: absolute;
 	right: 9vw;
 	transform: scaleX(-1);
+}
+h1 {
+	/* for chrome and safari*/
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: slidein;
+
+	/*for firefox*/
+	-moz-animation-duration: 1s;
+	-moz-animation-name: slidein;
+
+	  /* for opera*/
+	-o-animation-duration: 1s;
+	-o-animation-name: slidein;
+
+	  /* Standard syntax*/
+	animation-duration: 1s;
+	animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@-moz-keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+ @-o-keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+  @keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
 }
