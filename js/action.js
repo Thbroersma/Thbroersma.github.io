@@ -49,9 +49,8 @@ if (switchButton) {
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
-        info.classList.toggle('hide');
-        info.classList.add('extra-info');
-        let randomNumber = [0, 0, 0, 0, 0, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 0, 0, 0, 0, 0];
+        
+        let randomNumber = [0, 0, 0, 0, 0, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 0, 0, 0, 0, 4, 0];
         let pacmanUp = 9.8;
         pacmanRight = 1;
         let l = 0;
@@ -96,8 +95,9 @@ if (switchButton) {
                             k++;
                             pacman.classList.add('hide');
                             console.log(k);
-                            if (k == 12) {
+                            if (k == 23) {
                                 check = false;
+                                
                             }                         
                         }
                         l++;
@@ -206,13 +206,18 @@ if (switchButton) {
                     body.appendChild(newDown);
                     body.appendChild(downPacman);
                     break;
+                case 4:
+                    info.classList.toggle('hide');
+                    info.classList.add('extra-info');
+                    k++;
+                    break;
             }
         }
     }
        function alertMe() {
         alert("You pressed the destroy button of my page, now I will do my work");
        }
-        const timerId = setInterval(goPacman, 700);
+        const timerId = setInterval(goPacman, 400);
         
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
