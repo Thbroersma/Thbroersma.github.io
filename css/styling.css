@@ -85,6 +85,72 @@ h6 {
 .contact {	
 	background-color: #F3C678;
 }
+.contactMe {
+	position: absolute;
+    top: 5vw;
+    left: 10vw;
+
+	/* for chrome and safari*/
+	-webkit-animation-duration: 4s;
+	-webkit-animation-name: slideing;
+
+	/*for firefox*/
+	-moz-animation-duration: 4s;
+	-moz-animation-name: slideing;
+
+	/* for opera*/
+	-o-animation-duration: 4s;
+	-o-animation-name: slideing;
+
+	/* Standard syntax*/
+	animation-duration: 4s;
+	animation-name: slideing;
+}
+	@-webkit-keyframes slideing {
+		from {
+			margin-left: 50%;
+			width: 15.6%;
+		}
+	
+		to {
+			margin-left: 8.35%;
+			width: 15.6%;
+		}
+	}
+	
+	@-moz-keyframes slideing {
+		from {
+			margin-left: 50%;
+			width: 15.6%;
+		}
+	
+		to {
+			margin-left: 8.35%;
+			width: 15.6%;
+		}
+	}
+	 @-o-keyframes slideing {
+		from {
+			margin-left: 50%;
+			width: 15.56%;
+		}
+	
+		to {
+			margin-left: 8.35%;
+			width: 15.6%;
+		}
+	}
+	  @keyframes slideing {
+		from {
+			margin-left: 50%;
+			width: 15.6%;
+		}
+	
+		to {
+			margin-left: 8.35%;
+			width: 15.6%;
+		}
+	}
 .contact a {
 	color: black;
 }
