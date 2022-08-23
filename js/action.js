@@ -45,12 +45,13 @@ if (switchButton) {
         const body = document.querySelector('.myBody');
         const pacman = document.querySelector('.pacman');
         const info = document.querySelector('.info');
+        const message = document.querySelector('.message');
 
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
-        
-        let randomNumber = [0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 0, 0, 4];
+
+        let randomnumers = [0, 3, 0, 1, 0, 3, 0, 1, 0, 3, 0, 1, 0, 3, 0, 1, 0, 3, 0, 1, 0, 3, 0, 1, 0, 3, 0, 0, 4 ];
         let pacmanUp = 9.8;
         pacmanRight = 1;
         let l = 0;
@@ -64,7 +65,7 @@ if (switchButton) {
         if (check) {
             
         function goPacman () {
-            switch(randomNumber[k]) {
+            switch(randomnumers[k]) {
                 case 0:
                     
                     movingWidth = pacmanRight + ((l + 1) * 6);
@@ -95,9 +96,10 @@ if (switchButton) {
                             k++;
                             pacman.classList.add('hide');
                             console.log(k);
-                            if (k == 23) {
+                            if (k == 28) {
                                 check = false;
-                                
+                                message.classList.toggle('hide');
+
                             }                         
                         }
                         l++;
@@ -217,7 +219,7 @@ if (switchButton) {
        function alertMe() {
         prompt("You pressed the destroy button of my page, now I will do my work");
        }
-        const timerId = setInterval(goPacman, 400);
+        const timerId = setInterval(goPacman, 300);
         
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {

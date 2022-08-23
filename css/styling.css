@@ -259,6 +259,10 @@ h6 {
 		width: 100%;
 	}
 }
+.extra-quest {
+    top: 20vw;
+	font-size: 2vw;
+}
 .first-image {
 	margin-left: 8%;
 	margin-top: 2vh;
