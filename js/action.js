@@ -44,10 +44,13 @@ if (switchButton) {
         const navbar = document.querySelector('.navbar-style');
         const body = document.querySelector('.myBody');
         const pacman = document.querySelector('.pacman');
-        
+        const info = document.querySelector('.info');
+
         navbar.classList.toggle('nav-switch');
         body.classList.toggle('myBody-switch');
         pacman.classList.toggle('hide');
+        info.classList.toggle('hide');
+        info.classList.add('extra-info');
         let randomNumber = [0, 0, 0, 0, 0, 0, 3, 3, 0, 1, 1, 0, 3, 3, 0, 1, 1, 0, 0, 0, 0, 0, 0];
         let pacmanUp = 9.8;
         pacmanRight = 1;
@@ -58,10 +61,13 @@ if (switchButton) {
         let movingWidth = 0;
         let movingUp = 0;
         let k = 0;
+        
         if (check) {
+            
         function goPacman () {
             switch(randomNumber[k]) {
                 case 0:
+                    
                     movingWidth = pacmanRight + ((l + 1) * 6);
                     let newElement = document.createElement('div');
                     let leftPacman = document.createElement('div');
@@ -88,6 +94,7 @@ if (switchButton) {
                             }
                             i++;
                             k++;
+                            pacman.classList.add('hide');
                             console.log(k);
                             if (k == 12) {
                                 check = false;
@@ -205,7 +212,7 @@ if (switchButton) {
        function alertMe() {
         alert("You pressed the destroy button of my page, now I will do my work");
        }
-        const timerId = setInterval(goPacman, 500);
+        const timerId = setInterval(goPacman, 700);
         
         window.addEventListener('keydown', (e)=> {
             switch(e.keyCode) {
