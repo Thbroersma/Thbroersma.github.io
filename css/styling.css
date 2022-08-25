@@ -84,10 +84,11 @@ h6 {
 
 .contact {	
 	background-color: #F3C678;
+	position: relative;
 }
 .contactMe {
 	position: absolute;
-    top: 5vw;
+    top: 7vw;
     left: 10vw;
 
 	/* for chrome and safari*/
@@ -197,6 +198,7 @@ h6 {
 	position: absolute;
 	color: white;
 	font-size: 2vw;
+	top: 3vw;
 	/* for chrome and safari*/
 	-webkit-animation-duration: 4s;
 	-webkit-animation-name: slidein;
