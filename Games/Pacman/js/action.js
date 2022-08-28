@@ -155,6 +155,26 @@ const moveLeft = document.querySelector(".moveLeft");
 const moveUp = document.querySelector(".moveUp");
 const moveright = document.querySelector(".moveRight");
 const movedown = document.querySelector(".moveDown");
+
+// movement voor pacman but than for an a phone take II
+
+if (moveLeft) {
+  moveLeft.addEventListener("click", function() {
+    if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
+    && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
+    && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
+    && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
+    && !squares[pacmanCurrentIndex - 1].classList.contains('clear')){
+      pacmanCurrentIndex -= 1;
+
+    }
+
+  if ((pacmanCurrentIndex) === 111) {
+    pacmanCurrentIndex = 130;
+  }
+  console.log(pacmanCurrentIndex);
+  })
+}
 const moving = [ moveLeft, moveUp, moveright, movedown];
 function movingOnThePhone () {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
@@ -168,8 +188,10 @@ function movingOnThePhone () {
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
         && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
-        && !squares[pacmanCurrentIndex - 1].classList.contains('clear'))
-        pacmanCurrentIndex -= 1;
+        && !squares[pacmanCurrentIndex - 1].classList.contains('clear')){
+          pacmanCurrentIndex -= 1;
+
+        }
 
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
