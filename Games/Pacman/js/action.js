@@ -158,47 +158,29 @@ const movedown = document.querySelector(".moveDown");
 
 // movement voor pacman but than for an a phone take II
 
-if (moveLeft) {
-  moveLeft.addEventListener("click", function() {
-    if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
-    && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
-    && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
-    && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
-    && !squares[pacmanCurrentIndex - 1].classList.contains('clear')){
-      pacmanCurrentIndex -= 1;
-
-    }
-
-  if ((pacmanCurrentIndex) === 111) {
-    pacmanCurrentIndex = 130;
-  }
-  console.log(pacmanCurrentIndex);
-  })
-}
 const moving = [ moveLeft, moveUp, moveright, movedown];
 function movingOnThePhone () {
   squares[pacmanCurrentIndex].classList.remove('pac-man');
-  switch (moving) {
+  
     
-    case moveLeft:
-      // The move for a div backwardsefe
-      // For the audio sound of pacman moving
-     // playings.play();
-      if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
+    if (moveLeft) {
+      moveLeft.addEventListener("click", function() {
+        if (pacmanCurrentIndex % width !== 0 && !squares[pacmanCurrentIndex - 1].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex - 1].classList.contains('border-right')
         && !squares[pacmanCurrentIndex].classList.contains('border-left') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-left')
         && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-top') && !squares[pacmanCurrentIndex - 1].classList.contains('field-box-bottom')
         && !squares[pacmanCurrentIndex - 1].classList.contains('clear')){
           pacmanCurrentIndex -= 1;
-
+    
         }
-
+    
       if ((pacmanCurrentIndex) === 111) {
         pacmanCurrentIndex = 130;
       }
       console.log(pacmanCurrentIndex);
-
-      break;
+      })
+    }
+    switch (moving) {
     case moveUp:
       // The move for a div upwards   
       if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
@@ -243,7 +225,9 @@ function movingOnThePhone () {
   checkForGameOver();
   chechForWin();
 }
-  
+if (moveLeft) {
+  movingOnThePhone();
+}
 
 
 // How the pac-dots are eaten and how that works with the score
