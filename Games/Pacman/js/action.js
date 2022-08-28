@@ -227,6 +227,7 @@ function movingOnThePhone () {
 }
 if (moveLeft) {
   movingOnThePhone();
+  console.log("Move pacman");
 }
 
 
