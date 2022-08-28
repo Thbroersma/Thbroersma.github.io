@@ -182,13 +182,18 @@ function movingOnThePhone () {
     }
     switch (moving) {
     case moveUp:
-      // The move for a div upwards   
-      if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
+      // The move for a div upwards 
+      moveUp.addEventListener("click", function() {
+        if (pacmanCurrentIndex - width >= 0 && !squares[pacmanCurrentIndex - 22].classList.contains('field-box')
         && !squares[pacmanCurrentIndex - 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-top')
         && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-left') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-top')
-        && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right'))
-        pacmanCurrentIndex -= 22;
-        console.log(pacmanCurrentIndex);
+        && !squares[pacmanCurrentIndex - 22].classList.contains('clear') && !squares[pacmanCurrentIndex - 22].classList.contains('field-box-right')) {
+          pacmanCurrentIndex -= 22;
+          console.log(pacmanCurrentIndex);
+        }
+        
+      })  
+      
         break;
     case moveright:
       // The move for a div forward 
@@ -196,8 +201,10 @@ function movingOnThePhone () {
         && !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex + 1].classList.contains('border-left')
         && !squares[pacmanCurrentIndex].classList.contains('border-right') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-top')
         && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-left')
-        && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right'))
-        pacmanCurrentIndex += 1;
+        && !squares[pacmanCurrentIndex + 1].classList.contains('clear') && !squares[pacmanCurrentIndex + 1].classList.contains('field-box-right')) {
+          pacmanCurrentIndex += 1;
+
+        }
 
       if ((pacmanCurrentIndex) === 130) {
         pacmanCurrentIndex = 111;
@@ -211,11 +218,10 @@ function movingOnThePhone () {
         && !squares[pacmanCurrentIndex + 22].classList.contains('ghost-lair') && !squares[pacmanCurrentIndex].classList.contains('border-bottom')
         && !squares[pacmanCurrentIndex + 22].classList.contains('border-top') && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-left')
         && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-bottom') && !squares[pacmanCurrentIndex + 22].classList.contains('clear')
-        && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right'))
-        pacmanCurrentIndex += 22;
-        console.log(pacmanCurrentIndex);
-
-
+        && !squares[pacmanCurrentIndex + 22].classList.contains('field-box-right')) {
+          pacmanCurrentIndex += 22;
+          console.log(pacmanCurrentIndex);
+        }
       break;
   }
   squares[pacmanCurrentIndex].classList.add('pac-man');
