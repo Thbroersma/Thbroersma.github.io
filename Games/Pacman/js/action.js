@@ -231,7 +231,7 @@ function movingOnThePhone () {
   checkForGameOver();
   chechForWin();
 }
-if (moveLeft) {
+if (moving) {
   movingOnThePhone();
   console.log("Move pacman");
 }
