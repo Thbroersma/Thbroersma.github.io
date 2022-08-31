@@ -621,7 +621,7 @@ nav a {
 	margin: 0vw;
 	padding: 0vw;
 	white-space: nowrap;
-	animation: control-width1 2s 4s both;
+	animation: control-width1 2.5s 4s both;
 }
 .p2 {
 	width: 50vw;
@@ -629,7 +629,7 @@ nav a {
 	margin: 0vw;
 	padding: 0vw;
 	white-space: nowrap;
-	animation: control-width1 2s 6s both;
+	animation: control-width1 2.5s 6s both;
 }
 .p3 {
 	width: 50vw;
@@ -637,7 +637,7 @@ nav a {
 	margin: 0vw;
 	padding: 0vw;
 	white-space: nowrap;
-	animation: control-width1 2s 8s both;
+	animation: control-width1 2.5s 8s both;
 }
 .p4 {
 	width: 50vw;
@@ -645,7 +645,7 @@ nav a {
 	margin: 0vw;
 	padding: 0vw;
 	white-space: nowrap;
-	animation: control-width1 2s 10s both;
+	animation: control-width1 2.5s 10s both;
 }
 .p5 {
 	width: 50vw;
@@ -653,7 +653,7 @@ nav a {
 	margin: 0vw;
 	padding: 0vw;
 	white-space: nowrap;
-	animation: control-width1 1s 12s both;
+	animation: control-width1 2.5s 12s both;
 }
 @keyframes control-width1 {
 	from {
