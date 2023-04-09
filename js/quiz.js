@@ -256,3 +256,31 @@ if (checkButton) {
     })
 
 }
+// Het verplaatsen van de images van links en rechts
+function scrolll() {
+    var left = document.querySelector(".scroll-images");
+    left.scrollBy(350, 0)
+}
+function scrollr() {
+    var right = document.querySelector(".scroll-images");
+    right.scrollBy(-350, 0)
+}
+const grid = document.querySelector('.grid');
+const squares = [];
+
+function createBoard() {
+
+    for (let i = 0; i < layout.length; i++) {
+        const square = document.createElement('div');
+        // Here is the grid filed with div how get after there own styling
+        grid.appendChild(square);
+        squares.push(square);
+        if (layout[i] === 0) {
+            squares[i].classList.add('field', 'pac-dot');
+        } else if (layout[i] === 1) {
+            squares[i].classList.add('border-right');
+        }
+    }
+}
+
+createBoard();

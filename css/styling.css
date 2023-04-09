@@ -71,9 +71,17 @@ h6 {
 	padding-right: 3vh;
 	padding-top: 3vh;
 }
+.child {
+	min-width: 600px;
+	height: 450px;
+	margin: 1px 10px;
+	cursor: pointer;
+	border: 1px solid white;
+	overflow: hidden;
+}
 .child-img {
-	height: 100%;
-	width: 100%;
+	height: 20vw;
+	width: 20vw;
 }
 .coding {
 	background-color: #1d1e22;
@@ -717,6 +725,18 @@ p {
 	width: 32%;
 	height: 7vh;
 	font-size: 1.3vw;
+}
+.scroll-images {
+	height: auto;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	overflow: auto;
+	position: relative;
+	scroll-behavior: smooth;
+}
+.scroll-images::-webkit-scrollbar {
+	-webkit-appearance: none;
 }
 .slide {
 	background-color: #413b86;
