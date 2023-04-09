@@ -77,17 +77,22 @@ if (scoreButton) {
      scoreButton.innerHTML = "<a href='coding.html'></a>"
     })
 }
-// the website editor 
+// the website editr
 function run() {
+    let output = document.querySelector(".editor #output");
+    let oDoc = output.contentWindow.document;
     let htmlCode = document.querySelector(".editor #html-code").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code").value+"</style>";
     let jsCode = document.querySelector(".editor #js-code").value;
-    let output = document.querySelector(".editor #output ");
     //console.log(htmlCode, cssCode, jsCode, output);
+    oDoc.open();
+    oDoc.write('<html><body><script type=\"javascript\"><\/script><\/body><\/html>');
+    oDoc.close();
 
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
-    output.contentWindow.eval(jsCode);
+    output.contentDocument.body.innerHTML = (jsCode);
 }
+
 if (runcode) {
     runcode.addEventListener('click', function() {
         run();

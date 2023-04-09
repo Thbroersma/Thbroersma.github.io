@@ -71,6 +71,10 @@ h6 {
 	padding-right: 3vh;
 	padding-top: 3vh;
 }
+.child-img {
+	height: 100%;
+	width: 100%;
+}
 .coding {
 	background-color: #1d1e22;
 	color: white;
@@ -167,6 +171,12 @@ h6 {
 	margin-left: 5vh;
     width: 22.5vw;
     float: left;
+}
+.cover {
+	position: relative;
+	height: 50%;
+	margin-left: 4vw;
+	margin-right: 4vw;
 }
 .difference {
 	width: 40%;
@@ -463,6 +473,14 @@ footer {
 main {
 	margin-left: 5vh;
 	padding-bottom: 5vh;
+}
+.main-scroll-div {
+	height: 50%;
+	align-items: center;
+	justify-content: space-between;
+	border: solid 2px lightgreen;
+	margin: 3vw;
+
 }
 .mains {
 	padding-bottom: 11vh;

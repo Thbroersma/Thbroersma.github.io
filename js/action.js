@@ -79,6 +79,7 @@ if (switchButton) {
                             newElement.style.top = pacmanUp + (h * 6) + "vw";
                             pacman.style.right = 91 + 'vw';
                             l = 14;
+
                         } 
                         else {
                             newElement.style.right = movingWidth - 6 + "vw";
