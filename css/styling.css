@@ -72,13 +72,27 @@ h6 {
 	padding-top: 3vh;
 }
 .child {
-	min-width: 600px;
-	height: 450px;
 	margin: 1px 10px;
 	cursor: pointer;
-	border: 1px solid white;
 	overflow: hidden;
+	width: 4vw;
+	height: 4vw;
+	background-color: darkgreen;
+	border-color: darkgreen;
+	border-width: 0.4vw;
+	border-style: solid;
 }
+.childs {
+	cursor: pointer;
+	overflow: hidden;
+	width: 8vw;
+	height: 8vw;
+	background-color: darkgreen;
+	border-color: darkgreen;
+	border-width: 0.4vw;
+	border-style: solid;
+}
+
 .child-img {
 	height: 20vw;
 	width: 20vw;
@@ -284,6 +298,15 @@ h6 {
     top: 20vw;
 	font-size: 2vw;
 }
+.field {
+	width: 4vw;
+	height: 4vw;
+	background-color: black;
+	border-color: black;
+	border-width: 0.4vw;
+	border-style: solid;
+
+}
 .first-image {
 	margin-left: 8%;
 	margin-top: 2vh;
@@ -335,6 +358,10 @@ footer {
 }
 .game-heading {
 	text-align: center;
+}
+.grid {
+	display: flex;
+	flex-wrap: wrap;
 }
 .head {
 	margin-left: 10%;
@@ -525,7 +552,6 @@ main {
 	color: rgb(255, 255, 255);
 	font-size: 1vw;
 	height: 100%;
-	padding-bottom: 8vh;
 	margin: 0;
 	padding: 0;
 }
@@ -727,17 +753,22 @@ p {
 	font-size: 1.3vw;
 }
 .scroll-images {
-	height: auto;
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	overflow: auto;
 	position: relative;
 	scroll-behavior: smooth;
+	width: auto;
+	height: auto;
+	background-color: black;
+	border-color: black;
+	border-width: 0.4vw;
+	border-style: solid;
 }
-.scroll-images::-webkit-scrollbar {
+/*.scroll-images::-webkit-scrollbar {
 	-webkit-appearance: none;
-}
+}*/
 .slide {
 	background-color: #413b86;
 }

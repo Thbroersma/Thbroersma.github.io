@@ -79,18 +79,16 @@ if (scoreButton) {
 }
 // the website editr
 function run() {
-    let output = document.querySelector(".editor #output");
-    let oDoc = output.contentWindow.document;
     let htmlCode = document.querySelector(".editor #html-code").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code").value+"</style>";
     let jsCode = document.querySelector(".editor #js-code").value;
+    let output = document.querySelector(".editor #output");
+
     //console.log(htmlCode, cssCode, jsCode, output);
-    oDoc.open();
-    oDoc.write('<html><body><script type=\"javascript\"><\/script><\/body><\/html>');
-    oDoc.close();
+
 
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
-    output.contentDocument.body.innerHTML = (jsCode);
+    output.contentWindow.eval(jsCode);
 }
 
 if (runcode) {
@@ -100,7 +98,7 @@ if (runcode) {
 }
 /*document.querySelector(".editor #html-code").addEventListener("keyup", run);
         document.querySelector(".editor #css-code").addEventListener("keyup", run);
-        document.querySelector(".editor #js-code").addEventListener("keyup", run);*/
+       */
 
 // Function for checking the answer correctly
 if (checkButton) {
@@ -267,7 +265,10 @@ function scrollr() {
 }
 const grid = document.querySelector('.grid');
 const squares = [];
-
+const layout = [ 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1 ];
 function createBoard() {
 
     for (let i = 0; i < layout.length; i++) {
@@ -275,12 +276,12 @@ function createBoard() {
         // Here is the grid filed with div how get after there own styling
         grid.appendChild(square);
         squares.push(square);
-        if (layout[i] === 0) {
-            squares[i].classList.add('field', 'pac-dot');
-        } else if (layout[i] === 1) {
-            squares[i].classList.add('border-right');
+        if (layout[i] === 1) {
+            squares[i].classList.add('child');
+        } else if (layout[i] === 2) {
+            squares[i].classList.add('pacman');
         }
     }
 }
 
-createBoard();
+//createBoard();

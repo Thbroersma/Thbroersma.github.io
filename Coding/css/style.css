@@ -1,0 +1,23 @@
+.myBody {
+    position: relative;
+    background-color: #413b86;
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    background-color: #3b3a3a;
+    color: white;
+    font-weight: bold;
+    margin: 1vh;
+    font-size: 1.5vh;
+    height: 70vh;
+}
+iframe {
+    margin-left: 10vh;
+    width: 45vw;
+    height: 70vh;
+    margin-right: 4px;
+}
