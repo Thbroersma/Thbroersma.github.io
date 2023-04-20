@@ -14,15 +14,35 @@
 </nav>
 <h2>Let the games begin</h2>
 <div class="editor intro-extra row">
+    <div class="col-lg-2 col-md-3 col-sm-10">
+        <h6>HTML</h6>
+        <textarea name="" id="html-code" class="coding " cols="30" rows="23"><h1>Here is live coding</h1><button class="checkButton">Action</button>
+		</textarea>
+    </div>
+    <div class=" col-lg-2 col-md-4 col-sm-10">
+        <h6>CSS</h6>
+        <textarea name="" id="css-code" class="coding" cols="35" rows="23">body {background-color:#413b90;} button {background-color:green; color:black;}
+		</textarea>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-10">
+        <h6>Javascript</h6>
+        <textarea name="" id="js-code" class="coding " cols="30" rows="23">
+        const checkButton = document.querySelector('.checkButton');
+if (checkButton) {
+    checkButton.addEventListener("click", function () {
+            alert("Goedzo");
 
-		<textarea name="" id="html-code" class="coding col-lg-2 col-md-3 col-sm-10" cols="30" rows="23"><h1>Here is live coding</h1><button>Action</button>
-		</textarea>
-    <textarea name="" id="css-code" class="coding col-lg-2 col-md-3 col-sm-10" cols="35" rows="23">body {background-color:#413b90;} button {background-color:green; color:black;}
-		</textarea>
-    <textarea name="" id="js-code" class="coding col-lg-2 col-md-3 col-sm-10" cols="30" rows="23">
+    })
+}
+        </textarea>
+    </div>
 
-		</textarea>
-    <iframe src="" id="output" class="col-lg-4 col-md-10" frameborder="0"></iframe>
+
+    <div class="col-lg-4 col-md-10">
+        <h4>Result</h4>
+        <iframe src="" id="output" class="" frameborder="0"></iframe>
+    </div>
+
     <br>
 </div>
 <button class="runCode">Run the code</button>
