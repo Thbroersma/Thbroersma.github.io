@@ -3,6 +3,8 @@ const Thebody = document.querySelector('.myBody');
 const startFade = document.querySelector('.first');
 const middleFade = document.querySelector('.last');
 const firstview = document.querySelector('.first-view');
+const learningview = document.querySelector('.learning-view');
+
 const secondview = document.querySelector('.second-view');
 function run() {
     let htmlCode = document.querySelector(".editor #html-code").value;
@@ -21,6 +23,7 @@ function addClass() {
     firstview.style.display = "none";
     secondview.style.display = "block";
     middleFade.style.display = "block";
+    learningview.style.display = "block";
 }
 sleep();
 if (runcode) {
