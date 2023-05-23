@@ -12,31 +12,40 @@
 <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" href="../index.html">Home</a>
 </nav>
-<div class="row">
-    <p class="first">Can you make from this</p>
-    <div class="col-lg-12 first-view">
-        <div class="scene">
-            <h1>Look at my Puppy!</h1>
-            <p>This is my little Puppy Laika! Laika makes me go naaawwww!</p>
-            <img src="../img/bush.jpeg" alt="" width="30%">
-        </div>
-    </div>
-    <p class="last">To something like this</p>
 
-    <div class="col-lg-12 second-view">
-        <div class="scene">
-            <h1>Look at my Puppy!</h1>
-            <p>This is my dog Laika over the years! Laika makes me go naaawwww!</p>
-            <img src="../img/bush.jpeg" alt="" width="33%">
-            <img src="../img/stick.jpg" alt="" width="33%">
+<div class="editor intro-extra row">
+    <div class="col-lg-2 col-md-3 col-sm-10">
+        <h6>HTML</h6>
+        <textarea name="" id="html-code" class="coding " cols="30" rows="23"><h1>Here is live coding</h1><button class="checkButton">Action</button>
+		</textarea>
+    </div>
+    <div class=" col-lg-2 col-md-4 col-sm-10">
+        <h6>CSS</h6>
+        <textarea name="" id="css-code" class="coding" cols="35" rows="23">body {background-color:#413b90;} button {background-color:green; color:black;}
+		</textarea>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-10 js-view">
+        <h6>Javascript</h6>
+        <textarea name="" id="js-code" class="coding " cols="30" rows="23">
+        const checkButton = document.querySelector('.checkButton');
+if (checkButton) {
+    checkButton.addEventListener("click", function () {
+            alert("Goedzo");
 
-            <img src="../img/cute.jpg" alt="" width="33%">
-        </div>
+    })
+}
+        </textarea>
     </div>
-    <div>
-        <a href="start copy.html">Probeer het maar</a>
+
+
+        <div >
+        <h4>Result</h4>
+        <iframe src="" id="output" class="col-lg-12 col-md-12 col-sm-12" frameborder="0"></iframe>
     </div>
+
+    <br>
 </div>
+<button class="runCode">Run the code</button>
 
 <script src="js/coding.js"> </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
