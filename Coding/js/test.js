@@ -1,8 +1,7 @@
 const opdrachtEen = document.querySelector('.answerOne');
-
 const opdrachtTwo = document.querySelector('.opTwo');
 const opdrachtThree = document.querySelector('.answerThree');
-
+const actionButton = document.querySelector('.activeCode')
 const opdrachtVier = document.querySelector('.opFour');
 const checkEen= document.querySelector('.checkTwo');
 if (checkEen) {
@@ -33,7 +32,22 @@ if (checkEen) {
         }
     })
 }
+function run() {
+    let htmlCode = document.querySelector(".lastBlock #html-code").value;
+  
+    let output = document.querySelector(".block #output");
 
+    //console.log(htmlCode, cssCode, jsCode, output);
+
+
+    output.contentDocument.body.innerHTML = htmlCode;
+}
+
+if (actionButton) {
+    actionButton.addEventListener('click', function() {
+        run();
+    })
+}
 /*
 if(checkEen) {
     alert("button")
