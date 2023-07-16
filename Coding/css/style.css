@@ -94,6 +94,9 @@ h6 {
 .no-display {
     display: none;
 }
+pre {
+    color: white;
+}
 .second-view {
     display: none;
     text-align: center;
