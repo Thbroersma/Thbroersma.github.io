@@ -32,29 +32,36 @@
     </p>
     <h3>HTML</h3>
     <p>
-        De basis onderdelen zullen we hieronder bespreken, hier beginnen we met een basis principe. Alle onderdelen werken met een begin tag <br>
-        en eindigen met een eind tag. Hetzelfde idee van een zin begint met een hoofdletter en eindigd met een punt, alleen net op een andere manier <br>
-        Binnen HTML werk je met tags, dit zijn stukjes code die elk iets anders weergeven of op een andere manier. Het werkt met <> (begin tag) en </> (eind tag)<br>
-    </p>
-    
+        De basis onderdelen zullen we hieronder bespreken, hier beginnen we met een basis principe. Veel onderdelen werken met een begin tag &lt&gt<br>
+        en eindigen met een eind tag &lt/&gt. Hetzelfde idee van een zin begint met een hoofdletter en eindigd met een punt, alleen net op een andere manier.<br>
+        Binnen HTML werk je met tags, dit zijn stukjes code die elk iets anders weergeven of op een andere manier. Het werkt met &lt&gt (begin tag) en &lt/&gt (eind tag)<br>
+        en afhankelijk van wat je wilt krijg je iets binnen de tag &ltp&gt&lt/p&gt. Er zijn enkele tags &lt&gt waarbij je maar een tag &ltimg   &gt gebruikt. <br>
+        Hier bij zit geen eind tag.
+    </p>    
     <h5>Titels</h4>
     <p>
         Titels zijn bekende dingen die je ziet op elke pagina die je bezoekt en zegt vaak iets over wat je kunt vinden op zo'n pagina. <br>
         Binnen HTML heb je 6 soorten titels/kopjes die je kunt gebruiken. Ze verschillen in grote en hoe vaak je ze kunt gebruiken op een pagina. <br>
-        <h1>Dieren - H1</h1>
-        <h2>Huisdieren - H2</h2>
-        <h3>Honden - H3</h3>
-        <h4>Golden Retriever - H4</h4>
-        <h5>Leuke dingen over Golden Retrievers - H5</h5>
-    <h6>Mijn Golden Retriever Laika - H6</h6>
+        <h1>Dieren - &lth1&gt&lt/h1&gt</h1>
+        <h2>Huisdieren - &lth2&gt&lt/h2&gt</h2>
+        <h3>Honden - &lth3&gt&lt/h3&gt</h3>
+        <h4>Golden Retriever - &lth4&gt&lt/h4&gt</h4>
+        <h5>Leuke dingen over Golden Retrievers - &lth5&gt&lt/h5&gt</h5>
+        <h6>Mijn Golden Retriever Laika - &lth6&gt&lt/h6&gt</h6>
         Dit zijn de verschillende titels/kopjes die er zijn. Het getal bij elke titel die er staat, is er voor het aantal keer dat die titel<br>
         op een pagina mag. Het werken met de titels opvolgende is ook zoals hierboven aangegeven. Bij ieder H2 zal een H3 verder gaan. Verder <br>
         in op het betreffende onderwerp.
     </p>
     <h5>Alinea</h4>
     <p>
-        Als je tekst onder een titel wilt zetten, kan dat eenvoudig. Dat doe je door de p tag te gebruiken. Je hebt hier ook een begin <br>
-        en eind tag, daartussen kun je tekst zetten die zich dan zal weergeven op je website.
+        Als je tekst onder een titel wilt zetten, kan dat eenvoudig. Dat doe je door de &ltp&gt&lt/p&gt tag te gebruiken. Je hebt hier ook een begin &ltp&gt<br>
+        en eind tag &lt/p&gt, daartussen kun je tekst zetten die zich dan zal weergeven op je website. Als je meerdere regels schrijft, is het handig het alsvolgt <br>
+        te doen: <br>
+        &ltp&gt <br>
+            Dit is mijn verhaal over mijn lieve kat Sky.<br>
+            Sky is een lieve kat die heel erg zacht en aaibaar is. <br>
+            Helaas is Sky erg op haar eigen moment. <br>
+        &ltp&gt
     </p>
     <button><a href="questions/test1.html">Test je kennis hier!</a></button> 
     <br>
@@ -63,17 +70,27 @@
         Op een pagina hoort een afbeelding natuurlijk (tenminste op een vrolijke pagina). De afbeelding tag is redelijk eenvoudig, je gebruikt <br>
         de img tag, het enige is, het heeft geen eind tag. Als je de img tag gebruikt krijg je het volgende: <br>
         &lt;img src="" alt=""&gt; <br>
-        In de tag moet je informatie toevoegen anders krijg je geen afbeelding. In de src, tussen de "" vul je de locatie in van de afbeelding <br>
-        die je wilt hebben. Het is dus handig dat je de afbeelding opslaat in hetzelfde mapje waar je bestand staat waar je code schrijft. <br>
-        Om het overzichtelijk te houden in je mapje kun je een mapje <i>img</i> toevoegen waarin je de afbeeldingen stopt, zoals hier: <br>
-        <img src="img/map.png" alt="" class="map">
-        Als je afbeelding hebt van een kat, dan zou je die bijvoorbeeld in het mapje opslaan met de naam kat.jpg (jpg staat voor het type afbeelding). <br>
+        Om een afbeelding te selecteren die je je wilt moet je die noemen in binnen de "" van src. <br>
+        Als je afbeelding hebt van een kat, dan sla je de afbeelding op als <i>kat.jpg</i> (jpg staat voor het type afbeelding) in je houdige map. <br>
         Dan vul je de tag alsvolgt in: <br>
-        &lt;img src="img/kat.jpg" alt="">
+        &lt;img src="kat.jpg" alt=""> <br>
+        <img src="img/kat.jpg" alt="" style="width: 50vh;">
     </p>
     <h5>Opsommingen</h5>
     <p>
-        Opsommingen zijn handig als je een aantal dingen over een onderwerp wilt opschrijven.
+        Opsommingen zijn handig als je een aantal dingen over een onderwerp wilt opschrijven. Je kunt dit ook makkelijk doen op een website. <br>
+        Hiervoor heb je alleen 2 soorten tags nodig. De eerste tag is &ltul&gt &lt/ul&gt, die geeft aan dat je een lijstje met losse punten <br>
+        wilt gaan maken. Daarbinnen gebruik je &ltli&gt &lt/li&gt, hier binnen schrijf je steeds een punt in de opsomming wilt hebben. <br>
+        Het zal er zo uit zien: <br>
+        &ltul&gt <br>   
+        &ltli&gtFilms kijken&lt/li&gt <br>
+        &ltli&gtComputerspelletjes spelen&lt/li&gt <br>
+        &lt/ul&gt <br>
+        Met dit als resultaat:
+        <ul>
+            <li>Films kijken</li>
+            <li>Computerspelletjes spelen</li>
+        </ul>
     </p>
     <button><a href="questions/img.html">Test je kennis hier!</a></button> 
 

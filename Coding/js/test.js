@@ -55,11 +55,8 @@ if (checkTwo) {
         if((pThree === "<h1></h1>" || pThree === "<H1></H1>")) {
             alert("Je hebt vraag 3 goed!")
         }
-        if (pThree === "<h1></h1>" || pThree === "<H1></H1>"){
+        if (pTree === "<p></p>" || pTree === "<P></P>"){
             alert("Je hebt vraag 3, regel 5 goed! Regel 4 moet je nog verbeteren")
-        }
-        else if (pTree === "<p></p>" || pTree === "<P></P>"){
-            alert("Je hebt vraag 3, regel 4 goed! Regel 5 moet je nog verbeteren")
         }
         else {
             alert("Je hebt vraag 3 nog niet goed, probeer het opnieuw")
