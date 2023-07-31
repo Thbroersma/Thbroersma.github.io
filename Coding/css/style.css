@@ -41,13 +41,32 @@ footer {
     height: 25vh;
     text-align: left;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: NVGM,Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    
+}
+.heading {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff!important;
+    line-height: 1.3em;
+    text-shadow: 0 0.08em 0 rgba(255,255,255,.2);
+}
+h1 {
+    font-size: 50px!important;
+}
 h6 {
     margin-left: 1vh;
 }
 .HTML-body {
     position: relative;
-    background-color: #413b86;
-    color: rgb(255, 255, 255);
+    background-color: #0a151c!important;
+    color: #fff;
+    font-family: 'Open Sans',Arial,sans-serif;
     font-size: 1vw;
     height: 100%;
     margin: 0;
@@ -90,6 +109,10 @@ h6 {
     position: absolute;
     right: 5vh;
     bottom: 15vh;
+}
+.navbar {
+    background-color: #000;
+    color: #fff;
 }
 .no-display {
     display: none;

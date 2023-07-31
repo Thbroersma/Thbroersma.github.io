@@ -15,6 +15,15 @@ const IThree = document.querySelector('.IThree');
 const ITree = document.querySelector('.ITree');
 const IThee = document.querySelector('.IThee');
 const Icheck= document.querySelector('.Icheck');
+const ULOne = document.querySelector('.ulOne');
+const ULTwo = document.querySelector('.ulTwo');
+const ULThree = document.querySelector('.ulThree');
+const ULFour = document.querySelector('.ulFour');
+const ULFive = document.querySelector('.ulFive');
+const ULSix = document.querySelector('.ulSix');
+const ULSeven = document.querySelector('.ulSeven');
+const ULEight = document.querySelector('.ulEight')
+const UlCheck= document.querySelector('.ulCheck');
 if (checkEen) {
     checkEen.addEventListener('click', function () {
         if(opdrachtEen.checked) {
@@ -94,6 +103,29 @@ if (Icheck) {
         } 
         else {
             alert("Je hebt vraag 3 nog niet goed, probeer het opnieuw")
+        }
+
+    })
+}
+if (UlCheck) {
+    UlCheck.addEventListener('click', function () {
+        if(ULOne.checked) {
+            alert("Je hebt vraag 1 goed!")
+        }
+        else {
+            alert("Je hebt vraag 1 nog niet goed, probeer het opnieuw")
+        }
+        if(ULTwo.value === "<li></li>" || ULTwo.value === '<LI></LI>') {
+            alert("Je hebt vraag 2 goed!")
+        }
+        else {
+            alert("Je hebt vraag 2 nog niet goed, probeer het opnieuw")
+        }
+        if((ULThree.value === "<ul>" || ULThree.value === "<UL>") && (ULFour.value === "<li></li>" || ULFour.value === "<li>Olaf</li>") && (ULFive.value === "<li></li>" || ULFive.value === "<li>Anna</li>") && (ULSix.value === "<li></li>" || ULSix.value === "<li>Elsa</li>") && (ULSeven.value === "<li></li>" || ULSeven.value === "<li>Sven</li>") && (ULEight.value === "</ul>" || ULEight.value === "</UL>")) {
+            alert("Je hebt vraag 3 goed!")
+        } 
+        else {
+            alert("Je hebt vraag 3 nog niet goed, ga je antwoorden na")
         }
 
     })
