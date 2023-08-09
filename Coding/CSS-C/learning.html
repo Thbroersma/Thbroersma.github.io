@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Werken met HTML en CSS</title>
+    <title>Werken met CSS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -19,8 +19,8 @@
 
     <h3>Introductie</h3>
     <p>
-        Het werken met CSS is erg leuk en ook best makkelijk. Bij HTML werken we met tags &ltp&gt&lt/p&gt, met CSS werken we met styling types. <br>
-        Daarvoor kies je het element wat je een bepaalde style wilt geven, dan welk styling type en kies je er een. Klinkt weer als een heleboel. <br>
+        Het werken met CSS is erg leuk en ook best makkelijk. Bij HTML werken we met tags &ltp&gt&lt/p&gt, met CSS werken we met stijlingtypes. <br>
+        Daarvoor kies je het element wat je een bepaalde stijl, wilt geven, dan welk styling type en kies je er een. Klinkt weer als een heleboel. <br>
         Geen paniek, we gaan er weer stap voor stap doorheen. We gaan de volgende styling types doen:
         <ul>
             <li>Lettertype - Font-family</li>
@@ -28,73 +28,78 @@
             <li>Kleur - Color</li>
             <li>Uitlijning - Text-align</li>
         </ul>
-        
     </p>
     <h3>CSS</h3>
     <p>
-        Voordat we er mee beginnen, geef ik vast een voorbeeld met een styling en wat meer over selecteren van een element. <br>
+        Voordat we er mee beginnen, geef ik vast een voorbeeld met een styling en wat meer info over het selecteren van een element. <br>
         Bij CSS kies je een element (h1, h2, p, img) waarna je iets met de styling gaat doen. Dat doe je bijvoorbeeld zo: <br>
-        p       {
-                    color:green;
-        }
+        p       { <br>
+                    color:green; <br>
+        } 
         <p class="green">
 
-        En dan wordt de tekst groen
+        En dan wordt de tekst groen. Bij programmeren werk je in het Engels, dus denk hiervast over na voor een aantal kleuren.
         </p>
+        Let er op dat je na het genoemde stylingstype eerst : doet en eindigd met een ; . Hiermee sluit je het stylingselement. <br>
     </p>    
     <h5>Lettertype</h4>
-    <p>
-        Titels zijn bekende dingen die je ziet op elke pagina die je bezoekt en zegt vaak iets over wat je kunt vinden op zo'n pagina. <br>
-        Binnen HTML heb je 6 soorten titels/kopjes die je kunt gebruiken. Ze verschillen in grote en hoe vaak je ze kunt gebruiken op een pagina. <br>
-        <h1>Dieren - &lth1&gt&lt/h1&gt</h1>
-        <h2>Huisdieren - &lth2&gt&lt/h2&gt</h2>
-        <h3>Honden - &lth3&gt&lt/h3&gt</h3>
-        <h4>Golden Retriever - &lth4&gt&lt/h4&gt</h4>
-        <h5>Leuke dingen over Golden Retrievers - &lth5&gt&lt/h5&gt</h5>
-        <h6>Mijn Golden Retriever Laika - &lth6&gt&lt/h6&gt</h6>
-        Dit zijn de verschillende titels/kopjes die er zijn. Het getal bij elke titel die er staat, is er voor het aantal keer dat die titel<br>
-        op een pagina mag. Het werken met de titels opvolgende is ook zoals hierboven aangegeven. Bij ieder H2 zal een H3 verder gaan. Verder <br>
-        in op het betreffende onderwerp.
+    <p class="family">
+        Na het maken van een tekst is het leuk om er een twist aan te geven. Met 'Font-family' krijg de tekst een andere <br>
+        manier van schrijven. Er zijn heel veel verschillende types. We zullen met een paar beginnen en zo doorgaan naar wat andere. <br>
+        Bij het echte programmeren krijg je ook meerdere opties weergegeven, dus dat scheelt. Plus, je kunt altijd wat opzoeken. <br>
+        Het werken met 'Font-family' gaat het alsvolgt:
+        <br>
+        p { <br>
+            font-family: Arial; <br>
+        }
     </p>
     <h5>Breedte/hoogte</h4>
     <p>
-        Als je tekst onder een titel wilt zetten, kan dat eenvoudig. Dat doe je door de &ltp&gt&lt/p&gt tag te gebruiken. Je hebt hier ook een begin &ltp&gt<br>
-        en eind tag &lt/p&gt, daartussen kun je tekst zetten die zich dan zal weergeven op je website. Als je meerdere regels schrijft, is het handig het alsvolgt <br>
-        te doen: <br>
-        &ltp&gt <br>
-            Dit is mijn verhaal over mijn lieve kat Sky.<br>
-            Sky is een lieve kat die heel erg zacht en aaibaar is. <br>
-            Helaas is Sky erg op haar eigen moment. <br>
-        &ltp&gt
+        Breedte en hoogte is begrijpelijk wat het doet op een pagina. Wanneer gebruik je het alleen? Het aanpassen hiervan is <br> 
+        bijvoorbeeld handig bij afbeeldingen. Zo kun je ermee meerdere afbeeldingen naast elkaar krijgen of naast de tekst krijgen. <br>
+        Het stellen van een breedte/hoogte doe je met px (pixels), zo is een gemiddelde afbeelding 300px a 400px.
+        Zoals hieronder: <br>
+        img { <br>
+            width: 400px <br>
+        } <br>
+        <img src="img/bospad.jpg" alt="" style="width: 400px;">
+        <img src="img/pad.jpg" alt="" style="width: 400px;"> <br>
+        De afbeeldingen hebben zo dezelfde breedte en zie je dat er qua breedte nog een afbeelding bij zo kunnen.
     </p>
     <button><a href="questions/test1.html">Test je kennis hier!</a></button> 
     <br>
     <h5>Kleur</h5>
     <p>
-        Op een pagina hoort een afbeelding natuurlijk (tenminste op een vrolijke pagina). De afbeelding tag is redelijk eenvoudig, je gebruikt <br>
-        de img tag, het enige is, het heeft geen eind tag. Als je de img tag gebruikt krijg je het volgende: <br>
-        &lt;img src="" alt=""&gt; <br>
-        Om een afbeelding te selecteren die je je wilt moet je die noemen in binnen de "" van src. <br>
-        Als je afbeelding hebt van een kat, dan sla je de afbeelding op als <i>kat.jpg</i> (jpg staat voor het type afbeelding) in je houdige map. <br>
-        Dan vul je de tag alsvolgt in: <br>
-        &lt;img src="kat.jpg" alt=""> <br>
-        <img src="img/kat.jpg" alt="" style="width: 50vh;">
+        Het werken met kleur op een website is erg leuk. Je kunt heel gevarieerd hiermee aan de gang gaan. Er zijn alleen een paar <br>
+        dingen om rekening mee te houden:
+        <ul>
+            <li>Dat de tekst in een kleur wel goed leesbaar moet zijn</li>
+            <li style="color: darkblue;">Zo werkt dit bijvoorbeeld niet</li>
+            <li style="color: red;">En dat het past binnen de achtergrond kleur</li>
+            <li>Dat het je de kleur goed spelt in het Engels. Bij twijfel zoek het op (of vraag het)</li>
+        </ul>
+        <p style="color: orange;">Dit is een goed passende kleur:</p>
+        p { <br>
+            color: orange;     <br>    
+        } <br>
     </p>
     <h5>Uitlijning</h5>
     <p>
-        Opsommingen zijn handig als je een aantal dingen over een onderwerp wilt opschrijven. Je kunt dit ook makkelijk doen op een website. <br>
-        Hiervoor heb je alleen 2 soorten tags nodig. De eerste tag is &ltul&gt &lt/ul&gt, die geeft aan dat je een lijstje met losse punten <br>
-        wilt gaan maken. Daarbinnen gebruik je &ltli&gt &lt/li&gt, hier binnen schrijf je steeds een punt in de opsomming wilt hebben. <br>
-        Het zal er zo uit zien: <br>
-        &ltul&gt <br>   
-        &ltli&gtFilms kijken&lt/li&gt <br>
-        &ltli&gtComputerspelletjes spelen&lt/li&gt <br>
-        &lt/ul&gt <br>
-        Met dit als resultaat:
-        <ul>
-            <li>Films kijken</li>
-            <li>Computerspelletjes spelen</li>
-        </ul>
+        Uitlijnen van de tekst of een onderdeel is handig als je het graag op een bepaalde plek wilt hebben. Alleen wanneer is <br>
+        dat nou handig? Het kan gebruikt worden wanneer je de tekst in het midden wilt hebben of het ene onderdeel links <br>
+        en het andere rechts. Dit zijn een aantal voorbeelden van hoe het eruit kan zien: <br>
+        <div class="row">
+            <div class="col-7 block">
+                p { <br>
+                    text-align: right; <br>
+                } <br>
+                <p style="text-align: right;">Ik bleef graag aan de rechterkant</p>
+                p { <br>
+                    text-align:center <br>
+                } <br>
+                <p style="text-align: center;">Maar kies geen kant en blijf in het midden</p>
+            </div>
+        </div>
     </p>
     <button><a href="questions/img.html">Test je kennis hier!</a></button> 
 
