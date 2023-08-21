@@ -1,11 +1,19 @@
 const runcode = document.querySelector('.runCode');
+const runningHW = document.querySelector(".runningHW");
 const checkCode = document.querySelector('.checkFont');
 let cssCode = document.querySelector('#css-code');
 const fontOne = document.querySelector('.fontOne');
 const fontTwo = document.querySelector('.fontTwo');
+const heightOne = document.querySelector('.hwOne');
+const heightTwo = document.querySelector('.hwTwo');
+const heightThree = document.querySelector('.hwThree');
+const heightTree = document.querySelector('.hwTree');
 const runningcode = document.querySelector('.runningCode');
 const htmlFour = document.querySelector('#html-code-4');
 const cssFour = document.querySelector('#css-code-4');
+const checkHW = document.querySelector('.checkHW');
+const htmlHW = document.querySelector('#html-code-hw');
+const cssHW = document.querySelector('#css-code-hw');
 
 // blokken HTML en CSS een resultaat van hun code laten zien
 function run() {
@@ -38,6 +46,27 @@ function running() {
 if (runningcode) {
     runningcode.addEventListener('click', function() {
         running();
+    })
+}
+if (runcode) {
+    runcode.addEventListener('click', function() {
+        run();
+    })
+}
+function runningHw() {
+    let htmlCode = document.querySelector(".editor #html-code-hw").value;
+    let cssCode = "<style>" + document.querySelector(".editor #css-code-hw").value+"</style>";
+    let output = document.querySelector(".editor #output-hw");
+
+    //console.log(htmlCode, cssCode, jsCode, output);
+
+
+    output.contentDocument.body.innerHTML = htmlCode+cssCode;
+}
+
+if (runningHW) {
+    runningHW.addEventListener('click', function() {
+        runningHw();
     })
 }
 if(checkCode) {

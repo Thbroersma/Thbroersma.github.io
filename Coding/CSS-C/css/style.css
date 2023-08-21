@@ -20,6 +20,11 @@ button {
     width: 20vw;
     height: 30vh;
 }
+.coding-hw {
+    margin: 0px;
+
+    height: 50vh;
+}
 .family {
     font-family: cursive;
 }
@@ -167,7 +172,9 @@ iframe {
     margin-left: auto;
     margin-right: auto;
 }
-
+.resultaat-hw {
+    height: 70vh;
+}
 .row {
     margin:0;
 }
