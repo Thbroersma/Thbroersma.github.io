@@ -42,7 +42,7 @@ if (runningcode) {
 }
 if(checkCode) {
     checkCode.addEventListener('click', function() {
-        if (fontOne.value === "font-family") {
+        if (fontOne.checked) {
             alert("Je hebt vraag 1 goed!")
         } else {
             alert("Je hebt vraag 1 nog niet goed, probeer het nog een keer")
@@ -52,7 +52,7 @@ if(checkCode) {
         } else {
             alert("Je hebt vraag 2 nog niet goed, probeer het nog een keer")
         }
-        if (cssCode.value.includes("fantasy") && cssCode.value.includes("font-family")) {
+        if (cssCode.value.includes("font-family") && cssCode.value.includes("font-fantasy")) {
             alert("vraag 3 is goed");
         } else {
             alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
