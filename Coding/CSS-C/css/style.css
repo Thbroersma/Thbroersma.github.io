@@ -25,6 +25,9 @@ button {
 
     height: 50vh;
 }
+.editor {
+    margin: 0px;
+}
 .family {
     font-family: cursive;
 }
