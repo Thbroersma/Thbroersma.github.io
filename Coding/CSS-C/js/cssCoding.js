@@ -1,39 +1,45 @@
 const runcode = document.querySelector('.runCode');
-const runningHW = document.querySelector(".runningHW");
 const checkCode = document.querySelector('.checkFont');
 let cssCode = document.querySelector('#css-code');
 const fontOne = document.querySelector('.fontOne');
 const fontTwo = document.querySelector('.fontTwo');
+const runningcode = document.querySelector('.runningCode');
+const htmlFour = document.querySelector('#html-code-4');
+const cssFour = document.querySelector('#css-code-4');
+// hoogte en breedte onderdelen
 const heightOne = document.querySelector('.hwOne');
 const heightTwo = document.querySelector('.hwTwo');
 const heightThree = document.querySelector('.hwThree');
 const heightTree = document.querySelector('.hwTree');
-const runningcode = document.querySelector('.runningCode');
-const htmlFour = document.querySelector('#html-code-4');
-const cssFour = document.querySelector('#css-code-4');
 const checkHW = document.querySelector('.checkHW');
+const runningHW = document.querySelector(".runningHW");
 const htmlHW = document.querySelector('#html-code-hw');
 const cssHW = document.querySelector('#css-code-hw');
+// kleuren onderdelen
+const colorOne = document.querySelector('.cOne');
+const colorTwo = document.querySelector('.cTwo');
+const colorThree = document.querySelector('.cThree');
+const colorTree = document.querySelector('.cTree');
+const colorThee = document.querySelector('.cThee');
+const checkColor = document.querySelector('.checkColor');
+const runningColor = document.querySelector(".runningC");
+const htmlColor = document.querySelector('#html-code-c');
+const cssColor = document.querySelector('#css-code-c');
+
 
 // blokken HTML en CSS een resultaat van hun code laten zien
+// de blokken voor het resultaat bij lettertype pagina opdracht 3
 function run() {
     let htmlCode = document.querySelector(".editor #html-code").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code").value+"</style>";
     let output = document.querySelector(".editor #output");
-    //console.log(htmlCode, cssCode, jsCode, output);
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
-
-if (runcode) {
-    runcode.addEventListener('click', function() {
-        run();
-    })
-}
+// de blokken voor het resultaat bij lettertype pagina opdracht 4
 function running() {
     let htmlCode = document.querySelector(".editor #html-code-4").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code-4").value+"</style>";
     let output = document.querySelector(".editor #output-4");
-    //console.log(htmlCode, cssCode, jsCode, output);
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
 if (runningcode) {
@@ -46,11 +52,12 @@ if (runcode) {
         run();
     })
 }
+// de blokken voor het resultaat bij hoogte en breedte
+
 function runningHw() {
     let htmlCode = document.querySelector(".editor #html-code-hw").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code-hw").value+"</style>";
     let output = document.querySelector(".editor #output-hw");
-    //console.log(htmlCode, cssCode, jsCode, output);
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
 
@@ -59,6 +66,33 @@ if (runningHW) {
         runningHw();
     })
 }
+
+// Controle op de lettertype vragen
+if(checkCode) {
+    checkCode.addEventListener('click', function() {
+        if (fontOne.checked) {
+            alert("Je hebt vraag 1 goed!")
+        } else {
+            alert("Je hebt vraag 1 nog niet goed, probeer het nog een keer")
+        }
+        if (fontTwo.value === "font-family: cursive;") {
+            alert("Je hebt vraag 2 goed")
+        } else {
+            alert("Je hebt vraag 2 nog niet goed, probeer het nog een keer")
+        }
+        if (cssCode.value.includes("font-family") && cssCode.value.includes("font-fantasy")) {
+            alert("vraag 3 is goed");
+        } else {
+            alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
+        }
+        if ((cssFour.value.includes("Papyrus") && cssFour.value.includes("Courier New")) && (htmlFour.value.includes("<h1>") && htmlFour.value.includes("<p>"))) {
+            alert("Je hebt vraag 4 goed");
+        } else {
+            alert("Kijk nog naar je code van vraag 4");
+        }
+    })
+}
+// Controle op de hoogte en breedte vragen
 if(checkHW) {
     checkHW.addEventListener('click', function() {
         if (heightOne.checked) {
@@ -83,24 +117,30 @@ if(checkHW) {
         }
     })
 }
-if(checkCode) {
-    checkCode.addEventListener('click', function() {
-        if (fontOne.checked) {
+// Controle op de hoogte en breedte vragen
+if(checkColor) {
+    checkColor.addEventListener('click', function() {
+        if (colorOne.checked) {
             alert("Je hebt vraag 1 goed!")
         } else {
             alert("Je hebt vraag 1 nog niet goed, probeer het nog een keer")
         }
-        if (fontTwo.value === "font-family: cursive;") {
+        if (colorTwo.value.includes("h1 { color: blue; }")) {
             alert("Je hebt vraag 2 goed")
-        } else {
+        } else if (colorTwo.value.includes("color: blue;")) {
+            alert("Je hebt vraag 2 goed qua de styling, je bent alleen vergeten te noemen welk onderdeel je styling geeft");
+        }
+        else {
             alert("Je hebt vraag 2 nog niet goed, probeer het nog een keer")
         }
-        if (cssCode.value.includes("font-family") && cssCode.value.includes("font-fantasy")) {
+        if (colorThree.value === "p { font-family: Garamond; }" && colorTree.value ==="img { width: 500px; }" && colorThee.value ==="h1 { color: green; }") {
             alert("vraag 3 is goed");
+        } else if (colorThree.value === "font-family: Garamond;" && colorTree.value ==="width: 500px" && colorThee.value ==="color: green;") {
+            alert("Je hebt vraag 3 goed op het punt styling, alleen je bent de onderdelen vergeten te noemen die je stylt");
         } else {
             alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
         }
-        if ((cssFour.value.includes("Papyrus") && cssFour.value.includes("Courier New")) && (htmlFour.value.includes("<h1>") && htmlFour.value.includes("<p>"))) {
+        if ((cssColor.value.includes("font-family: Copperplate") && cssColor.value.includes("height: 500px;")) && cssColor.value.includes("color: yellow;")) {
             alert("Je hebt vraag 4 goed");
         } else {
             alert("Kijk nog naar je code van vraag 4");
