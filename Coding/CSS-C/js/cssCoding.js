@@ -20,10 +20,7 @@ function run() {
     let htmlCode = document.querySelector(".editor #html-code").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code").value+"</style>";
     let output = document.querySelector(".editor #output");
-
     //console.log(htmlCode, cssCode, jsCode, output);
-
-
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
 
@@ -36,13 +33,9 @@ function running() {
     let htmlCode = document.querySelector(".editor #html-code-4").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code-4").value+"</style>";
     let output = document.querySelector(".editor #output-4");
-
     //console.log(htmlCode, cssCode, jsCode, output);
-
-
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
-
 if (runningcode) {
     runningcode.addEventListener('click', function() {
         running();
@@ -57,16 +50,37 @@ function runningHw() {
     let htmlCode = document.querySelector(".editor #html-code-hw").value;
     let cssCode = "<style>" + document.querySelector(".editor #css-code-hw").value+"</style>";
     let output = document.querySelector(".editor #output-hw");
-
     //console.log(htmlCode, cssCode, jsCode, output);
-
-
     output.contentDocument.body.innerHTML = htmlCode+cssCode;
 }
 
 if (runningHW) {
     runningHW.addEventListener('click', function() {
         runningHw();
+    })
+}
+if(checkHW) {
+    checkHW.addEventListener('click', function() {
+        if (heightOne.checked) {
+            alert("Je hebt vraag 1 goed!")
+        } else {
+            alert("Je hebt vraag 1 nog niet goed, probeer het nog een keer")
+        }
+        if (heightTwo.value === "width: 300px;") {
+            alert("Je hebt vraag 2 goed")
+        } else {
+            alert("Je hebt vraag 2 nog niet goed, probeer het nog een keer")
+        }
+        if (heightThree.value === "height: 400px;" && heightTree.value ==="width: 200px;") {
+            alert("vraag 3 is goed");
+        } else {
+            alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
+        }
+        if ((cssHW.value.includes("fantasy") && cssHW.value.includes("height: 400px;"))) {
+            alert("Je hebt vraag 4 goed");
+        } else {
+            alert("Kijk nog naar je code van vraag 4");
+        }
     })
 }
 if(checkCode) {
