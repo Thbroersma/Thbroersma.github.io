@@ -25,7 +25,17 @@ const checkColor = document.querySelector('.checkColor');
 const runningColor = document.querySelector(".runningC");
 const htmlColor = document.querySelector('#html-code-c');
 const cssColor = document.querySelector('#css-code-c');
-
+// Uitlijning onderdelen
+const aOne = document.querySelector('.aOne');
+const aTwo = document.querySelector('.aTwo');
+const aThree = document.querySelector('.aThree');
+const aTree = document.querySelector('.aTree');
+const aThee = document.querySelector('.aThee');
+const aThea = document.querySelector('.aThea');
+const checkA = document.querySelector('.checkA');
+const runningAlign = document.querySelector(".runningA");
+const htmlA = document.querySelector('#html-code-a');
+const cssA = document.querySelector('#css-code-a');
 
 // blokken HTML en CSS een resultaat van hun code laten zien
 // de blokken voor het resultaat bij lettertype pagina opdracht 3
@@ -66,6 +76,39 @@ if (runningHW) {
         runningHw();
     })
 }
+// de blokken voor het resultaat bij kleur
+
+function runningC() {
+    let htmlCode = document.querySelector(".editor #html-code-c").value;
+    let cssCode = "<style>" + document.querySelector(".editor #css-code-c").value+"</style>";
+    let output = document.querySelector(".editor #output-c");
+    output.contentDocument.body.innerHTML = htmlCode+cssCode;
+}
+
+if (runningColor) {
+    console.log("running");
+
+    runningColor.addEventListener('click', function() {
+        runningC();
+    })
+}
+// de blokken voor het resultaat bij uitlijnen
+
+function runningAg() {
+    let htmlCode = document.querySelector(".editor #html-code-a").value;
+    let cssCode = "<style>" + document.querySelector(".editor #css-code-a").value+"</style>";
+    let output = document.querySelector(".editor #output-a");
+    output.contentDocument.body.innerHTML = htmlCode+cssCode;
+}
+
+if (runningAlign) {
+    console.log("running");
+
+    runningAlign.addEventListener('click', function() {
+        runningAg();
+    })
+}
+
 
 // Controle op de lettertype vragen
 if(checkCode) {
