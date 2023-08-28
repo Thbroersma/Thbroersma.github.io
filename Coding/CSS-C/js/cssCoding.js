@@ -32,7 +32,7 @@ const aThree = document.querySelector('.aThree');
 const aTree = document.querySelector('.aTree');
 const aThee = document.querySelector('.aThee');
 const aThea = document.querySelector('.aThea');
-const checkA = document.querySelector('.checkA');
+const checkA = document.querySelector('.checkAlign');
 const runningAlign = document.querySelector(".runningA");
 const htmlA = document.querySelector('#html-code-a');
 const cssA = document.querySelector('#css-code-a');
@@ -160,7 +160,7 @@ if(checkHW) {
         }
     })
 }
-// Controle op de hoogte en breedte vragen
+// Controle op de kleur vragen
 if(checkColor) {
     checkColor.addEventListener('click', function() {
         if (colorOne.checked) {
@@ -178,12 +178,44 @@ if(checkColor) {
         }
         if (colorThree.value === "p { font-family: Garamond; }" && colorTree.value ==="img { width: 500px; }" && colorThee.value ==="h1 { color: green; }") {
             alert("vraag 3 is goed");
-        } else if (colorThree.value === "font-family: Garamond;" && colorTree.value ==="width: 500px" && colorThee.value ==="color: green;") {
+        } else if (colorThree.value === "font-family: Garamond;" && colorTree.value ==="width: 500px;" && colorThee.value ==="color: green;") {
             alert("Je hebt vraag 3 goed op het punt styling, alleen je bent de onderdelen vergeten te noemen die je stylt");
         } else {
             alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
         }
         if ((cssColor.value.includes("font-family: Copperplate") && cssColor.value.includes("height: 500px;")) && cssColor.value.includes("color: yellow;")) {
+            alert("Je hebt vraag 4 goed");
+        } else {
+            alert("Kijk nog naar je code van vraag 4");
+        }
+    })
+}
+// Controle op de uitlijn vragen
+if(checkA) {
+    checkA.addEventListener('click', function() {
+        if (aOne.checked) {
+            alert("Je hebt vraag 1 goed!")
+        } else {
+            alert("Je hebt vraag 1 nog niet goed, probeer het nog een keer")
+        }
+        if (aTwo.value.includes("p { align: right; }")) {
+            alert("Je hebt vraag 2 goed")
+        } else if (aTwo.value.includes("align: right;")) {
+            alert("Je hebt vraag 2 goed qua de styling, je bent alleen vergeten te noemen welk onderdeel je styling geeft");
+        }
+        else {
+            alert("Je hebt vraag 2 nog niet goed, probeer het nog een keer")
+        }
+        if (aThree.value === "p { font-family: Lucida Handwriting; }" && aTree.value ==="img { height: 350px; }" && aThee.value ==="h3 { color: orange; }" && aThea.value ==="p { align: left; }") {
+            alert("vraag 3 is goed");
+        } else if (aThree.value === "font-family: Lucida Handwriting;" && aTree.value ==="height: 350px;" && aThee.value ==="color: orange;" && aThea.value ==="align: left;") {
+            alert("Je hebt vraag 3 goed op het punt styling, alleen je bent de onderdelen vergeten te noemen die je stylt");
+        } else {
+            alert("Je hebt vraag 3 nog niet goed, kijk nog een keer naar je code")
+        }
+        if ((cssA.value.includes("font-family: Georigia") && cssA.value.includes("height: 450;")) && cssA.value.includes("width: 550;") && 
+        (cssA.value.includes("color: orange;") || cssA.value.includes("color: red;") || cssA.value.includes("color: purple;") || cssA.value.includes("color: green;"))
+         && cssA.value.includes("img { align: bottom;") && cssA.value.includes("p { align: right;")) {
             alert("Je hebt vraag 4 goed");
         } else {
             alert("Kijk nog naar je code van vraag 4");
