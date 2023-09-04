@@ -10,7 +10,7 @@ a:hover {
     color: #e44990!important;
 }
 .block {
-    border: white 1px solid;
+    margin-top: 10vh;
 }
 button {
     background-color: black;

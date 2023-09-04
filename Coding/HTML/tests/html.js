@@ -8,9 +8,10 @@ function run() {
     let style = "<style> img { width:60vw; } </style>"
     output.contentDocument.body.innerHTML = htmlCode + style;
 }
+/*
 if(htmlCode) {
     htmlCode.addEventListener("click", function() {
-        if (htmlCode.value.includes("<h1></h1>")) {
+        if (htmlCode.value.includes("<h1></h1>") || htmlCode.value.includes("<h1> </h1>")) {
             nextCSS.href = "../../CSS-C/cssIntro.html";
             check.classList.remove("next");
         } else {
@@ -19,7 +20,6 @@ if(htmlCode) {
     })
 }
 
-/*
 if (check) {
     check.addEventListener("click", function() {
        
