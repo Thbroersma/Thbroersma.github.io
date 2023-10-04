@@ -45,6 +45,22 @@ button {
     -webkit-animation: fadeinout 4s linear forwards;
     animation: fadeinout 8s linear forwards;
 }
+.field {
+    width: 6vw;
+    height: 6vw;
+    background-color: black;
+    border-color: black;
+    border-width: 0.4vw;
+    border-style: solid;
+}
+.field-box {
+    width: 6vw;
+    height: 6vw;
+    background-color: rgb(22, 142, 197);
+    border-width: 0.4vw;
+    border-style: solid;
+    border-color:rgb(22, 142, 197);
+}
 footer {
     display: table;    
     text-align: center;
@@ -60,6 +76,12 @@ footer {
 }
 .green {
     color: green;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 37vw;
+    margin: 2vw;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: NVGM,Helvetica,Arial,Lucida,sans-serif;
@@ -174,6 +196,21 @@ h6 {
 }
 .no-display {
     display: none;
+}
+.pac-man {
+    background-image: url('../img/pacman.gif');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 6vw;
+    width: 6vw;
+}
+.pac-dot {
+    background-image: url('../img/coin.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 pre {
     color: white;
