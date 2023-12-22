@@ -28,6 +28,41 @@ let year = new Date();
 console.log(year.getFullYear() - birthyear);
 let timer;
 let scorePoints = 0;
+// Variabelen voor de slide-show
+function addOne() {
+    position++;
+    if (position>=6) {
+        position = 0;
+    }
+}
+setInterval(addOne, 5000)
+let titles = [
+    "Higher or lower game", "Interaction design", "Bootstrap project/Snackbar site", "Zuzu", "Healthone", "Hotel Stardust"
+];
+let images = [
+    "img/high.jpg", "img/site.png", "img/snack.png", "img/zuzu.png", "img/healthone.png", "img/stardust.png"
+];
+let descriptions = [
+    "This was my first project. It is the higher lower game, made in C#. It was a basic school project, where I made a few extra options in the game to see what I was capable of at that moment",
+    "This is was a design project, where we had to look at problems that students encountered during the COVID-19 pandemic. We thought of the motivation of the students, so we created a version of Instagram. Where you can swipe through and click on pictures. Also, a page with a several forms of motivation so you can get out of your situation for a bit and get motivated to do stuff again.",
+    "Sometimes it is good to test your speed in your work. This was a test that we had to take, to see how good you are making a website in only 2 hours with only a little but of information.",
+    "This a php project. It somewhat resembles the snack bar website. We needed to make a order form for a website with the right styling, but also the function of the forms. The customer information will follow on the next pages and you will get the total of your order.",
+    "As a project in our second year, we made a website for a gym called Healthone. We needed a to make it as whole as possible, with a registration and login system. Further this project is done with PHP so it is not hard code, but loaded in from a database. This project I did together with <a href='https://jamiedemooij.github.io/'>Jamie de Mooij</a>.",
+    "As a exam training project, we made a hotel website with Symfony. We made a website for a hotel called Stardust. We needed a to make it with a login and reservation system. It's made with 3 different ways you can go when you login, like a customer, administrator and receptionist. It depends what you can do on the level that you login. This project I did together with <a href='https://jamiedemooij.github.io/'>Jamie de Mooij</a>."
+];
+const slide_head = document.querySelector(".slide-head");
+const slide_img = document.querySelector(".slide-img");
+const slide_text = document.querySelector(".slide-text");
+let position = 0;
+for (let i = 0; i <= titles.length; i++) {
+    setInterval (function() {
+        slide_head.innerHTML = titles[position];
+        slide_img.src = images[position];
+        slide_text.innerHTML = descriptions[position];
+    }, 15000);
+}
+//slide_head.innerHTML = titles[1];
+
 
 // Motivation quote button and switchbutton
 if (motivationButton) {
