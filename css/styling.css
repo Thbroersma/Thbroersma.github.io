@@ -1,3 +1,13 @@
+div.scrollmenu {
+	display: flex;
+	overflow: auto;
+	white-space: nowrap;
+  }
+div.scrollmenu div.card {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
 h3 {
 	font-size: 1.8vw;
 }
@@ -41,6 +51,16 @@ h6 {
 
 .calculator_item {
 	font-weight: bold;
+}
+.card {
+	height: 80vh;
+	width: 24%;
+	color: black !important;
+	margin: 0.5vh ;
+}
+.cards {
+	width: 20vw;
+	margin: 1vh;
 }
 .card-link {
 	color: blue;
@@ -773,6 +793,13 @@ p {
 }*/
 .slide {
 	background-color: #413b86;
+}
+.slide-img {
+	width: 40vw;
+	margin: 2vh;
+}
+.slide-text {
+	width: 40vw;
 }
 span {
 	margin-left: 6vw;

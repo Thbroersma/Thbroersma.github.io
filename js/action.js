@@ -23,7 +23,9 @@ let operator = null;
 const calcButtons = document.querySelectorAll('.calculator_item');
 const operators = { 'count' : '+', 'minus' : '-', 'multiply': 'x', 'divide': ':', 'BMI' : '-', 
 'BTW' : ' BTW percentage ', 'N-BTW' : ' BTW percentage '};
-
+let birthyear = 1996;
+let year = new Date();
+console.log(year.getFullYear() - birthyear);
 let timer;
 let scorePoints = 0;
 
