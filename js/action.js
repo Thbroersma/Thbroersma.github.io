@@ -31,7 +31,7 @@ let scorePoints = 0;
 // Variabelen voor de slide-show
 function addOne() {
     position++;
-    if (position>=6) {
+    if (position>=5) {
         position = 0;
     }
 }
@@ -67,7 +67,7 @@ for (let i = 0; i <= titles.length; i++) {
         slide_head.innerHTML = titles[position];
         slide_img.src = images[position];
         slide_text.innerHTML = descriptions[position];
-        slide_link.src = links[position];
+        slide_link.href = links[position];
     }, 15000);
 }
 //slide_head.innerHTML = titles[1];
