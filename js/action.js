@@ -37,24 +37,26 @@ function addOne() {
 }
 setInterval(addOne, 5000)
 let titles = [
-    "Interaction design", "Bootstrap project/Snackbar site", "Zuzu", "Healthone", "Hotel Stardust"
+    "Interaction design", "Bootstrap project/Snackbar site", "Zuzu", "Healthone", "Hotel Stardust", "Nick's Bakery"
 ];
 let images = [
-    "img/site.png", "img/snack.png", "img/zuzu.png", "img/healthone.png", "img/stardust.png"
+    "img/site.png", "img/snack.png", "img/zuzu.png", "img/healthone.png", "img/stardust.png", "Nicksbakery/img/tartel.img"
 ];
 let descriptions = [
     "This is was a design project, where we had to look at problems that students encountered during the COVID-19 pandemic. We thought of the motivation of the students, so we created a version of Instagram. Where you can swipe through and click on pictures. Also, a page with a several forms of motivation so you can get out of your situation for a bit and get motivated to do stuff again.",
     "Sometimes it is good to test your speed in your work. This was a test that we had to take, to see how good you are making a website in only 2 hours with only a little but of information.",
     "This a php project. It somewhat resembles the snack bar website. We needed to make a order form for a website with the right styling, but also the function of the forms. The customer information will follow on the next pages and you will get the total of your order.",
     "As a project in our second year, we made a website for a gym called Healthone. We needed a to make it as whole as possible, with a registration and login system. Further this project is done with PHP so it is not hard code, but loaded in from a database. This project I did together with <a href='https://jamiedemooij.github.io/'>Jamie de Mooij</a>.",
-    "As a exam training project, we made a hotel website with Symfony. We made a website for a hotel called Stardust. We needed a to make it with a login and reservation system. It's made with 3 different ways you can go when you login, like a customer, administrator and receptionist. It depends what you can do on the level that you login. This project I did together with <a href='https://jamiedemooij.github.io/'>Jamie de Mooij</a>."
+    "As a exam training project, we made a hotel website with Symfony. We made a website for a hotel called Stardust. We needed a to make it with a login and reservation system. It's made with 3 different ways you can go when you login, like a customer, administrator and receptionist. It depends what you can do on the level that you login. This project I did together with <a href='https://jamiedemooij.github.io/'>Jamie de Mooij</a>.",
+    "This is a website from my finance, who besides there study, they enjoy to bake stuff!"
 ];
 let links = [
     "https://github.com/ROCMondriaanTIN/sd20-kd5029-interactiondesign-w-o-r-c'>Github</a>",
     "https://github.com/ROCMondriaanTIN/sd20-bootstrap-toets-snackbarlekker-Thbroersma",
     "https://github.com/Thbroersma/zuzu",
     "https://github.com/jamiedemooij1/HealthOne-Team-FLEX",
-    "https://github.com/ROCMondriaanTIN/sd20-pofo-p8-hotel-w-m-i-w"
+    "https://github.com/ROCMondriaanTIN/sd20-pofo-p8-hotel-w-m-i-w",
+    "Nicksbakery/home.html"
 
 ]
 const slide_head = document.querySelector(".slide-head");
