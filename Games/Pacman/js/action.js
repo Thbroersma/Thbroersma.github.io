@@ -257,8 +257,8 @@ function powerPelletEaten() {
     score = score + 40;
     powerPellets--;
     scoreDisplay.innerHTML = score;
-    ghosts.forEach(ghost => ghost.isScared = true)
-
+    ghost.forEach(ghost => ghost.isScared = true)
+    ghost.isScared  = true
     setTimeout(unScaredGhosts, 10000);
     squares[pacmanCurrentIndex].classList.remove('power-pellet');
   }
@@ -271,24 +271,33 @@ function unScaredGhosts() {
 }
 
 // The startposition of the ghost and the speed
+
+let ghost = [
+  new Ghost('twinky', 96, 300)
+];
+
+
+let winky_moves = [ 3, 3, 3, 2, 2, 2, 2, 3, 2, 2, 3, 2, 2, 3, 2, 1, 1, 1, 4, 4, 1, 1, 1, 4, 1, 4, 4 , 4, 3, 4, 4, 4];
 let ghosts = [
   new Ghost('blinky', 96, 300),
   new Ghost('pinky', 99, 300),
   new Ghost('crispy', 101, 300),
   new Ghost('winky', 94, 300),
-]
-
+];
 ghosts.forEach(ghost => {
   squares[ghost.currentIndex].classList.add(ghost.className);
   squares[ghost.currentIndex].classList.add('ghost');
 })
-
+let winky_ghost = document.querySelector(".winky");
 // moving the ghost randomly
 ghosts.forEach(ghost => moveGhost(ghost))
 function moveGhost(ghost) {
   const directions = [-1, +1, +22, -22];
   let direction = directions[Math.floor(Math.random() * directions.length)];
   ghost.timerId = setInterval(function () {
+    
+      
+
     //if the next squre your ghost is going to go to does not have a ghost and does not have a wall
     if (direction == +1 &&
       !squares[ghost.currentIndex + 1].classList.contains('clear') &&
@@ -347,6 +356,7 @@ function moveGhost(ghost) {
       ghost.currentIndex -= 22
       squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
     } else direction = directions[Math.floor(Math.random() * directions.length)]
+    
     if (ghost.isScared) {
       squares[ghost.currentIndex].classList.add('scared-ghost');
     }
@@ -369,7 +379,34 @@ function moveGhost(ghost) {
   }, 300)
   
 }
-
+/*let positions = 0;
+    while (positions <= winky_moves.length) {
+      if (winky_moves[positions] == 1) {
+        squares[ghost.currentIndex].classList.remove(ghost.className);
+        squares[ghost.currentIndex].classList.remove('winky', 'scared-ghost');
+        ghost.currentIndex -= 22;
+        squares[ghost.currentIndex].classList.add(ghost.className, 'winky');
+        console.log("moving up");
+      } else if (winky_moves[positions] == 2) {
+        squares[ghost.currentIndex].classList.remove(ghost.className);
+        squares[ghost.currentIndex].classList.remove('winky', 'scared-ghost');
+        ghost.currentIndex += 1;
+        squares[ghost.currentIndex].classList.add(ghost.className, 'winky');
+        console.log("moving right");
+      } else if (winky_moves[positions] == 3) {
+        squares[ghost.currentIndex].classList.remove(ghost.className);
+        squares[ghost.currentIndex].classList.remove('winky', 'scared-ghost');
+        ghost.currentIndex += 22;
+        squares[ghost.currentIndex].classList.add(ghost.className, 'winky');
+        console.log("moving down");
+      } else if (winky_moves[positions] == 4) {
+        squares[ghost.currentIndex].classList.remove(ghost.className);
+        squares[ghost.currentIndex].classList.remove('winky', 'scared-ghost');
+        ghost.currentIndex -= 1;
+        squares[ghost.currentIndex].classList.add(ghost.className, 'winky');
+        console.log("moving left");
+      }
+    }*/
 // Game over function when it is and when it is not
 function checkForGameOver() {
 
