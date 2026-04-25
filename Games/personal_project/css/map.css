@@ -1,0 +1,43 @@
+body {
+      font-family: sans-serif;
+      background-color: rgb(144, 178, 228);
+}
+.coordinates {
+      font-size: 0.9rem;
+}
+.header {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+}
+.header h1 {
+      font-size: 2.9rem;
+      margin: 0px;
+}
+#map {
+      background-color: #ddd;
+      height: 90vh;
+      width: 90vw;
+      margin: auto;
+      box-shadow: 0 5px 10px #ddd;
+}
+.test {
+      background-color: blue;
+      width: 40px;
+      height: 40px;
+}
+@media only screen and (min-width:350px) and (max-width:  450px) {
+      #map {
+            width: 100%;
+      }
+}
+input {
+      margin: 10px;
+      margin-top: 15px;
+}
+.type-box {
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}

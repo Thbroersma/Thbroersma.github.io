@@ -1,0 +1,346 @@
+b {
+    color: rgb(95, 95, 95);
+}
+body {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    background-color: rgb(179, 202, 227);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bug {
+    background-color: yellowgreen;
+    color: white;
+}
+.box-hp{
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+
+}
+.box-name{
+    margin: 8px;
+    margin-bottom: -15px;
+}
+.box-level {
+    position: relative;
+    margin: 8px;
+}
+.box-type {
+    position: relative;
+    margin: 8px;
+}
+.container {
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-align: center;
+    display: grid;
+    row-gap: 2%;
+    border: solid 2px lightblue;
+}
+#content-box {
+    width: 90vw;
+    border: 3px solid rgb(122, 122, 122);
+    border-radius: 10px;
+    background-color: rgb(189, 235, 250);
+    display: none !important;
+    position: fixed;
+    z-index: 1;
+    margin: 10% auto;
+    left: 5vw;
+    top: 0;
+}
+.dark {
+    background-color: darkgray;
+    color: white;
+}
+.dragon {
+    background-color: teal;
+    color: white;
+}
+div button {
+    background-color: transparent;
+    border: transparent;
+}
+.electric {
+    background-color: gold;
+    color: black;
+}
+.fairy {
+    background-color: pink;
+    color: black;
+}
+.fighting {
+    background-color: darkred;
+    color: white;
+}
+
+.flying {
+    background-color: skyblue;
+    color: black;
+}
+.fire {
+    background-color: orange;
+    color: white;
+}
+.ghost {
+    background-color: purple;
+    color: white;
+}
+.grass {
+    background-color: green;
+    color: white;
+}
+.ground {
+    background-color: burlywood;
+    color: black;
+}
+.header {
+    height: 8%;
+    width: 100%;
+}
+.hp-element {
+    width: 70%;
+    border: black 2px solid;
+    border-radius: 8px;
+    background-color: green;
+    height: 10px;
+    margin-left: 25%;
+}
+.index-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.inlog_form {
+    display: grid;
+    place-items: center;
+    height: 400px;
+}
+.ice {
+    background-color: lightblue;
+    color: black;
+}
+.normal {
+    background-color: beige;
+    color: black;
+}
+.pokemon-block {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 95vw;
+    z-index: 1;
+}
+#pokemon-box {
+    width: 90vw;
+    height: 85%;
+    border: 3px solid rgb(122, 122, 122);
+    border-radius: 10px;
+    background-color: rgb(189, 235, 250);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin: 10% auto;
+    left: 4vw;
+    top: 0;
+    text-align: center;
+}
+#pokemon-box span {
+    margin: 15px;
+    font-size: 1.3rem;
+}
+.pokemon-boxing {
+    display: block !important;
+}
+#pokemon-info {
+     width: 100%;
+    height:  100%;
+    background-color: aqua;
+}
+#pokemon-info-single {
+    width: 220px;
+    height:  250px;
+    background-color: rgb(202, 228, 250);
+    border: 2px solid rgb(129, 215, 255);
+    border-radius: 10px;
+}
+#pokemon-list {
+    width: 250px;
+    height: 500px;
+    background-color: yellow;
+    font-size: 18px;
+    overflow-y: auto;
+
+}
+.pokedex-description {
+    margin: 10px;
+}
+.pokedex-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height:  188vw;
+}
+.pokemon-name {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+.pokemon-name-single {
+    background-color: transparent;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 340px;
+    text-align: center;
+}
+.pokemon-img {
+    width: 300px;
+    height: 300px;
+}
+.pokemon-link img {
+    width: 250px;
+    height: 250px;
+}
+
+
+
+#pokemon-img-single {
+    width: 250px;
+    height: 250px;
+    margin: -40px !important;
+    padding-left: 30px
+}
+#pokemon-info img {
+    width: 160px;
+    height: 160px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+}
+#pokemon-description {
+    width: 230px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 18px;
+    overflow-y: auto;
+}
+#pokemon-types {
+    margin-top: 10px;
+}
+.pokedex-pokemon { 
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgb(73, 73, 247);
+    background-color: rgb(179, 202, 227);
+    display: none;
+    position:absolute;
+}
+.pokemon-show {
+    display: block;
+}
+.poison {
+    background-color: darkviolet;
+    color: white;
+}
+.psychic {
+    background-color: palevioletred;
+    color: white;
+}
+.rock {
+    background-color: sienna;
+    color: white;
+}
+.row {
+    display: grid;
+    gap: 2%;
+    grid-template-columns: auto auto auto auto;
+}
+.row a {
+    text-decoration: none;
+}
+.testing {
+    background-color: transparent;
+    border: transparent;
+}
+.type-box {
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+#select-pokemon {
+    display: none;
+}
+.steel {
+    background-color: silver;
+    color: black;
+}
+.water {
+    background-color: blue;
+    color: white;
+}
+@media all and (min-width:569px) and (max-width: 768px) {
+  /* put your css styles in here */
+}
+@media only screen and (min-width:350px) and (max-width:  450px) {
+  /* put your css styles in here */
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-item {
+        width: 46vw;
+    }
+    .number {
+        color: grey;
+        margin: 0px;
+        text-align: left;
+    }
+    .pokemon-img {
+        width: 30vw;
+        height: auto;
+    }
+    .pokemon-name-phone {
+        color: black;
+        font-family: "Flexo-Demi", arial, sans-serif;
+        margin: 0px;
+        text-align: left;
+    
+    }
+    .pokemon-name-single {
+        background-color: transparent;
+        margin: 1px;
+        padding: 1px;
+        width: 105px;
+        height: 170px;
+        text-align: center;
+    }
+    
+    .menu-back {
+        background-color: transparent;
+    }
+    #pokemon-box {
+        width: 90vw;
+        border: 3px solid rgb(122, 122, 122);
+        border-radius: 10px;
+        background-color: rgb(189, 235, 250);
+        display: none;
+        position: fixed;
+        z-index: 1;
+        margin: 10% auto;
+        left: 7.5vw;
+        top: 0;
+        height: 87%;
+    }
+
+}
