@@ -78,6 +78,8 @@ window.onload = async function() {
             // van je huidige locatie
             var lat = position.coords.latitude + 0.01575908932086;
             var lon = position.coords.longitude - 0.01575908932086;
+            var latCookie = position.coords.latitude;
+            var lonCookie = position.coords.longitude;
             setInterval(getLocation, 5000);
 
             document.getElementById('coordinates').textContent = 'Amersfoort';
