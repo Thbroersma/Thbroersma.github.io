@@ -7,6 +7,7 @@ const pokemonTypes = [
     "fighting", "ground", "rock", "bug", "psychic", "ice", 
     "ghost", "steel", "fairy"
 ]
+var infotest = document.getElementById('coordinates');
 var pokedex = {};
 var avatarImg = "../";
 var starters = [1, 4, 7];
@@ -30,7 +31,21 @@ var waterPointRandom = Math.floor(Math.random() * 3);
 var waterPointRandom2 = Math.floor(Math.random() * 3);
 console.log(waterPointRandom);
 console.log(waterPointRandom2);
+function getLocation() {
+    console.log("functie 1");
+    navigator.geolocation.getCurrentPosition(success, error)
+}
+function success(position) {
+    infotest.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    console.log("functie 2");
 
+}
+
+function error() {
+  alert("Sorry, no position available.");
+    console.log("functie 3");
+
+}
 window.onload = async function() {
     for(let i = 1; i <= pokemonCount; i++) {
         await getPokemon(i);
@@ -91,7 +106,7 @@ window.onload = async function() {
             });
             // Zorg nog voor het juist laden van de afbeelding
             // Kijk naar een setInterval voor get coordinaten
-            var avatar = L.marker([latCookie, lonCookie], {icon: avatarIcon}).addTo(map);
+            var avatar = L.marker([latCookie, lonCookie]).addTo(map);
             // Tile layers 
             var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
                 maxZoom: 17,
@@ -247,7 +262,5 @@ async function getPokemon(num) {
     pokedex[num] = {"id": pokemonId,"name" : pokemonName, "img" : pokemonImg, "types" : pokemonType};
 
 }
-function getLocation() {
-    var latCookie = position.coords.latitude;
-    var lonCookie = position.coords.longitude;
-}
+setInterval(getLocation, 10000)
+
