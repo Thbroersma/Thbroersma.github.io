@@ -78,8 +78,8 @@ window.onload = async function() {
             // van je huidige locatie
             var lat = position.coords.latitude + 0.01575908932086;
             var lon = position.coords.longitude - 0.01575908932086;
-            var latCookie = position.coords.latitude;
-            var lonCookie = position.coords.longitude;
+            setInterval(getLocation, 5000);
+
             document.getElementById('coordinates').textContent = 'Amersfoort';
             // functie voor het open van de openstreetmap op je huidige locatie
             var map = L.map('map').setView({lat, lon},15);
@@ -244,4 +244,8 @@ async function getPokemon(num) {
     
     pokedex[num] = {"id": pokemonId,"name" : pokemonName, "img" : pokemonImg, "types" : pokemonType};
 
+}
+function getLocation() {
+    var latCookie = position.coords.latitude;
+    var lonCookie = position.coords.longitude;
 }
