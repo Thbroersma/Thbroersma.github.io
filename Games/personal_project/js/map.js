@@ -1,5 +1,6 @@
 import * as object from "./pokemons/water/generalPoints.js";
 import * as general from "./pokemons/general/generalNormal.js";
+import image from "../img/avatar.png"
 const pokemonCount = 151;
 const pokemonTypes = [
     "water", "fire", "grass", "normal", "poison", "flying", 
@@ -7,7 +8,7 @@ const pokemonTypes = [
     "ghost", "steel", "fairy"
 ]
 var pokedex = {};
-var avatarImg = "../img/avatar.png";
+var avatarImg = "../";
 var starters = [1, 4, 7];
 var grassGeneral = [10, 13, 16, 19, 21];
 var grassBugLessCommon = [43, 46, 48, 69, 102];
@@ -83,7 +84,7 @@ window.onload = async function() {
             // functie voor het open van de openstreetmap op je huidige locatie
             var map = L.map('map').setView({lat, lon},15);
             var avatarIcon = L.icon({
-                iconUrl: avatarImg,
+                icon: image,
                 iconSize: [60, 60],
             });
             // Zorg nog voor het juist laden van de afbeelding
