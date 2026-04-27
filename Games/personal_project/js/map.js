@@ -1,6 +1,5 @@
 import * as object from "./pokemons/water/generalPoints.js";
 import * as general from "./pokemons/general/generalNormal.js";
-import image from "../img/avatar.png"
 const pokemonCount = 151;
 const pokemonTypes = [
     "water", "fire", "grass", "normal", "poison", "flying", 
@@ -127,7 +126,7 @@ window.onload = async function() {
 
             // pokemonIcon object aanamken
             var pokemonIcon = L.icon({
-                iconUrl: pokemonImage,
+                iconUrl: "../img/avatar.png",
                 iconSize: [80, 80],
             });
 
