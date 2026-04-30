@@ -9,14 +9,28 @@ const pokemonTypes = [
 var infoLat = document.getElementById('latitude');
 var infoLon = document.getElementById('longitude');
 var pokedex = {};
-var starters = [1, 4, 7];
+var starters = [1, 4, 7, 25];
 var grassGeneral = [10, 13, 16, 19, 21];
 var grassBugLessCommon = [43, 46, 48, 69, 102];
 var waterGeneral = [60, 118, 120];
 var waterWater = [72, 86, 116, 129];
 var waterBeach = [90, 98, 138];
+var waterRare = [54];
 var waterRare = [131];
 var underWaterFull = 147;
+var poisonMiddle = [23, 29, 32, 109];
+var posionRare = [88];
+var electricLessRare = [81, 100];
+var electricRare = [125, 145];
+var groundMiddle = [27, 50, 74];
+var groundRare = [95, 104, 111];
+var fireMiddle = [37, 58];
+var fireRare = [ 77, 126];
+var fairyMiddle = [35, 39];
+var middleAirMix = [41];
+var rareAirMix = [123, 149];
+var superRareAirMix = [142, 144, 145, 146];
+
 let waterTypeNames = [];
 let waterTypeImg = [];
 let waterTypeID = [];
@@ -32,7 +46,6 @@ console.log(waterPointRandom);
 console.log(waterPointRandom2);
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 function getLocation() {
-    console.log("functie 1");
     navigator.geolocation.getCurrentPosition(success, error)
 }
 function success(position) {
@@ -43,7 +56,6 @@ function success(position) {
     infoLat.innerHTML = latCookie;
     infoLon.innerHTML = lonCookie;
 
-    console.log("functie 2 " + lonCookie);
 
 }
 
@@ -115,7 +127,6 @@ window.onload = async function() {
             // Kijk naar een setInterval voor get coordinaten
            
             L.marker([latitude, longitude], {icon:avatarIcon}).addTo(map);
-            console.log(avatarIcon);
 
             // Tile layers 
             var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
