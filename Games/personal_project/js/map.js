@@ -54,33 +54,24 @@ let waterPoints2 = [object.waterGeneral5, object.waterGeneral6, object.waterGene
 var waterRandom = Math.floor(Math.random() * 3);
 var waterPointRandom = Math.floor(Math.random() * 3);
 var waterPointRandom2 = Math.floor(Math.random() * 3);
-console.log(waterPointRandom);
-console.log(waterPointRandom2);
+var map = L.map('map').setView([52.15550, 5.38892],15);
+var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    maxZoom: 17,
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
+OpenTopoMap.addTo(map);
+
+var baseMaps = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+
+});
+baseMaps.addTo(map);
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
-function getLocation() {
-    navigator.geolocation.getCurrentPosition(success, error)
-}
-function success(position) {
-    
-    var latCookie = position.coords.latitude;
-    var lonCookie = position.coords.longitude;
-    
-    infoLat.innerHTML = latCookie;
-    infoLon.innerHTML = lonCookie;
-
-
-}
-
-function error() {
-  alert("Sorry, no position available.");
-    console.log("functie 3");
-
-}
-
-
 window.onload = async function() {
     for(let i = 1; i <= pokemonCount; i++) {
+
         await getPokemon(i);
+
         let pokemonID = pokedex[i]["id"];
         let pokemonType = pokedex[i]["types"];
         let pokemonName = pokedex[i]["name"];
@@ -113,168 +104,53 @@ window.onload = async function() {
 
             }
         }
+        for (let x = 0; x < 16; x++) {
+            var lessRandom = Math.floor(Math.random() * 10);
+            if(i == grassBugLessCommon[lessRandom]) {
+                grassTypeLessNames.push(pokemonName);
+                grassTypeLessImg.push(pokemonImg);
+                grassTypeLessID.push(pokemonID);
+
+            }
+        }
         
     }
-    console.log(waterTypeNames);
-    console.log(grassTypeNames);
-
-    // Check of locatie navigator werkt (dat je locatie opgevraagd mag worden)
-    if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position){
-            // De functie voor het krijgen van je latitude en longitude locatie
-            // van je huidige locatie
-            var lat = position.coords.latitude + 0.01575908932086;
-            var lon = position.coords.longitude - 0.01575908932086;
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            document.getElementById('coordinates').textContent = 'Amersfoort';
-            // functie voor het open van de openstreetmap op je huidige locatie
-            var map = L.map('map').setView({lat, lon},15);
-            var avatarIcon = L.icon({
-                iconUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
-                iconSize: [60, 60],
-                className: "avatar-icon",
-            });
-            // Zorg nog voor het juist laden van de afbeelding
-            // Kijk naar een setInterval voor get coordinaten
-           
-            L.marker([latitude, longitude], {icon:avatarIcon}).addTo(map);
-
-            // Tile layers 
-            var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-                maxZoom: 17,
-                attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-            });
-            OpenTopoMap.addTo(map);
-
-            var baseMaps = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-
-            });
-            baseMaps.addTo(map);
-
-            // test om pokemon-image als marker toe te voegen
-            var pokemonObject = document.getElementById("pokemon-string").innerHTML;
-            var pokemon = document.getElementById("test-name").innerHTML
-            var pokemonImage = document.getElementById("test-img").innerHTML;
-
-            // pokemonIcon object aanamken
-            var pokemonIcon = L.icon({
-                iconUrl: pokemonImage,
-                iconSize: [80, 80],
-            });
-
-            // functie marker toevoegen - met het pokemonIcon object
-            var singleMarker = L.marker([52.71939137460275, 6.557718544639846], {icon: pokemonIcon}).bindPopup(pokemon).addTo(map);
-            
-            
-            // Hiermee wordt een layer object aangemaakt waarbinnen je kunt kiezen 
-            // in het soort openstreetmap type
-            var baseLayers = {
-                "OpenTopoMap": OpenTopoMap,
-                "OpenStreetMap": baseMaps
-
-            };
-            // Hier wordt binnen het layer object ook een checkbox toegevoegd
-            // voor de markers die je wel of niet wilt zien
-            // Een filter hierin volgt nader
-            var overlays = {
-                "Fire": singleMarker,
-            };
-
-        L.control.layers(baseLayers, overlays).addTo(map);        
-        
-        // getPokemonSelected
-        let randomWater = Math.floor(Math.random() * waterTypeNames.length);
-        let randomWater2 = Math.floor(Math.random() * waterTypeNames.length);
-        var grassRandom = Math.floor(Math.random() * grassTypeNames.length);
-
-        let randomTwo = Math.floor(Math.random() * grassTypeNames.length);
-
-        var objectWaterIcon = [];
-        for (var i = 0; i < waterTypeImg.length; i++) {
-            objectWaterIcon[i] = L.icon({
-                iconUrl: waterTypeImg[i],
-                iconSize: [60, 60],
-            });
-        }
-        var objectGeneralIcon = [];
-        for (var i = 0; i < grassTypeImg.length; i++) {
-            objectGeneralIcon[i] = L.icon({
-                iconUrl: grassTypeImg[i],
-                iconSize: [60, 60],
-            });
-        }
-        console.log(objectGeneralIcon);
-        // GEOJSON
-        // Water pokemon
-        L.geoJSON(waterPoints1[waterPointRandom], {
-            // hier wordt een marker toegevoegd aan de geoJson gemaakte locatie
-            pointToLayer: function (feature, latIng) {
-                return L.marker(latIng, {icon:objectWaterIcon[randomWater] });
-            },
-        onEachFeature: function (feature, layer) {
-            const name = feature.properties.name || waterTypeNames[randomWater];
-            const info = feature.properties.popupContent || "fight"
-
-            layer.bindPopup(`<strong>${name}</strong><br><a href="/fight/${waterTypeID[randomWater]}">${info}</a>`);
-        }
-        }).addTo(map);
-        // water pokemon 2
-        L.geoJSON(waterPoints2[waterPointRandom2], {
-            // hier wordt een marker toegevoegd aan de geoJson gemaakte locatie
-            pointToLayer: function (feature, latIng) {
-                return L.marker(latIng, {icon:objectWaterIcon[randomWater2] });
-            },
-        onEachFeature: function (feature, layer) {
-            const name = feature.properties.name || waterTypeNames[randomWater2];
-            const info = feature.properties.popupContent || "fight"
-
-            layer.bindPopup(`<strong>${name}</strong><br><a href="/fight/${waterTypeID[randomWater2]}">${info}</a>`);
-        }
-        }).addTo(map);
-        // Grass pokemon
-        for (let w = 0; w < 3; w++) {
-            L.geoJSON(general.listOne[waterRandom], {
-            // hier wordt een marker toegevoegd aan de geoJson gemaakte locatie
-            pointToLayer: function (feature, latIng) {
-                return L.marker(latIng, {icon:objectGeneralIcon[randomTwo] });
-            },
-            onEachFeature: function (feature, layer) {
-                const name = feature.properties.name || grassTypeNames[randomTwo];
-                const info = feature.properties.popupContent || "fight"
-                layer.bindPopup(`<strong>${name}</strong><br><a href="/fight/${grassTypeID[randomTwo]}">${info}</a>`);
-            }
-            }).addTo(map);
-            L.geoJSON(general.listTwo[waterRandom], {
-            // hier wordt een marker toegevoegd aan de geoJson gemaakte locatie
-            pointToLayer: function (feature, latIng) {
-                return L.marker(latIng, {icon:objectGeneralIcon[grassRandom] });
-            },
-            onEachFeature: function (feature, layer) {
-                const name = feature.properties.name || grassTypeNames[grassRandom];
-                const info = feature.properties.popupContent || "fight"
-                layer.bindPopup(`<strong>${name}</strong><br><a href="/fight/${grassTypeID[grassRandom]}">${info}</a>`);
-            }
-            }).addTo(map);
-        }
-        // L.geoJSON(object.waterGeneral2, {
-        //     // hier wordt een marker toegevoegd aan de geoJson gemaakte locatie
-        //     pointToLayer: function (feature, latIng) {
-        //         return L.marker(latIng, {icon:objectGeneralIcon[randomTwo] });
-        //     },
-        // onEachFeature: function (feature, layer) {
-        //     const name = feature.properties.name || grassTypeNames[randomTwo];
-        //     const info = feature.properties.popupContent || "fight"
-        //     layer.bindPopup(`<strong>${name}</strong><br><a href="/fight">${info}</a>`);
-        // }
-        // }).addTo(map);
     
-    })    
-    } else {
-        alert("Geolocatiion not supported by this browser")
-    }
+    
+    // Check of locatie navigator werkt (dat je locatie opgevraagd mag worden)
 }
+
+function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
+  const lat = document.querySelector("#latitude");
+  const lon = document.querySelector("#longitude");
+  mapLink.href = "";
+  mapLink.textContent = "";
+
+  function success(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    status.textContent = "";
+    lat.textContent = latitude;
+    lon.textContent = longitude;
+  }
+
+  function error() {
+    status.textContent = "Unable to retrieve your location";
+  }
+
+  if (!navigator.geolocation) {
+    status.textContent = "Geolocation is not supported by your browser";
+  } else {
+    status.textContent = "Locating…";
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+}
+
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
+
 async function getPokemon(num) {
     let url = "https://pokeapi.co/api/v2/pokemon/" + num.toString();
 
@@ -295,4 +171,32 @@ async function getPokemon(num) {
     pokedex[num] = {"id": pokemonId,"name" : pokemonName, "img" : pokemonImg, "types" : pokemonType};
 
 }
-setInterval(getLocation, 10000)
+setInterval(getPosition, 10000)
+// Haalt je locatie op en geeft locatie een icon
+function getPosition() {
+    var oldMarker = document.querySelector(".leaflet-marker-icon");
+    // Hier wordt de oude icon verwijderd van de kaart
+    if (oldMarker) {
+        oldMarker.remove();
+        const lat = document.querySelector("#latitude").innerHTML;
+        const lon = document.querySelector("#longitude").innerHTML;
+        var avatarIcon = L.icon({
+        iconUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
+        iconSize: [60, 60],
+        className: "avatar-icon",
+    });
+    var marker = L.marker([lat, lon], {icon:avatarIcon});
+    marker.addTo(map);
+    }
+    else {
+    const lat = document.querySelector("#latitude").innerHTML;
+    const lon = document.querySelector("#longitude").innerHTML;
+    var avatarIcon = L.icon({
+        iconUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
+        iconSize: [60, 60],
+        className: "avatar-icon",
+    });
+    var marker = L.marker([lat, lon], {icon:avatarIcon});
+    marker.addTo(map);
+}
+}
