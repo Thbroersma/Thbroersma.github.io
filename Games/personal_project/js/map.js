@@ -68,6 +68,7 @@ var baseMaps = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 baseMaps.addTo(map);
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 window.onload = async function() {
+    geoFindMe();
     for(let i = 1; i <= pokemonCount; i++) {
 
         await getPokemon(i);
@@ -119,6 +120,7 @@ window.onload = async function() {
     
     // Check of locatie navigator werkt (dat je locatie opgevraagd mag worden)
 }
+setInterval(getPosition, 10000);
 
 function geoFindMe() {
   const status = document.querySelector("#status");
