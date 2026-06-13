@@ -120,9 +120,6 @@ div button {
     background-color: lightblue;
     color: black;
 }
-.menu-item {
-    color: blue;
-}
 .normal {
     background-color: beige;
     color: black;
@@ -173,6 +170,9 @@ div button {
     font-size: 18px;
     overflow-y: auto;
 
+}
+#pokemon-list-display {
+    display: grid;
 }
 .pokedex-description {
     margin: 10px;

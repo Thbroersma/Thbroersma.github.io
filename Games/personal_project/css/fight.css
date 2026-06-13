@@ -1,0 +1,150 @@
+.actions {
+    display: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(144, 178, 228);
+}
+.box-hp{
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+
+}
+.box-name{
+    margin: 8px;
+    margin-bottom: -15px;
+}
+.box-level {
+    position: relative;
+    margin: 8px;
+}
+.box-type {
+    position: relative;
+    margin: 8px;
+}
+.container {
+    display: block;
+
+}
+.container .row-pokemon .info {
+    grid-area: head;
+}
+
+.container .row-pokemon .pokemon {
+    text-align: right;
+    grid-area: header;
+
+}
+.container .player {
+    grid-area: menu;
+    text-align: right;
+}
+.container .row {
+    width: 100%;
+    overflow: hidden;
+}
+.container .row .row-pokemon {
+    display: grid;
+    grid-template-areas: 
+    "head header";
+    grid-template-columns: 2fr 2fr;
+    animation: slide-right 1.5s;
+    margin-top: 0%;
+}
+.container .second-row {
+    width: 100%;
+    overflow: hidden;
+
+}
+.container .second-row .test {
+    display: grid;
+    grid-template-areas: 
+    "content menu";
+    grid-template-columns: 2fr 2fr;
+    animation: slide-left 1.5s;
+    margin-top: 0%;
+    position: relative;
+
+}
+.hp-element {
+    width: 70%;
+    border: black 2px solid;
+    border-radius: 8px;
+    background-color: green;
+    height: 10px;
+    margin-left: 25%;
+}
+@media only screen and (min-width:350px) and (max-width:  750px) {
+    @page {
+        page-orientation: rotate-right;
+    }
+    .playingboard {
+        max-height: 195px;
+        min-height: 190px;
+    }
+}
+@page {
+        page-orientation: rotate-right;
+    }
+    
+.pokemon img {
+    width: 40vh;
+}
+.pokemon-block {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 45vw;
+    z-index: 1;
+}
+.player-pokemon {
+    grid-area: content;
+}
+.playingboard {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+.playingboard div {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5vh;
+    font-weight: bold;
+
+}
+.playingboard div a {
+    color: black;
+    text-decoration: none;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+@keyframes slide-right {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.player-pokemon img {
+    width: 40vh;
+}
+.test .pokemon-block {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 82px;
+}
+

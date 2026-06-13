@@ -1,3 +1,9 @@
+.avatar-icon {
+      background-color: none;
+}
+.background {
+    display: none;
+}
 body {
       font-family: sans-serif;
       background-color: rgb(144, 178, 228);
@@ -28,7 +34,7 @@ body {
 }
 @media only screen and (min-width:350px) and (max-width:  450px) {
       #map {
-            margin: 15px;
+            width: 100%;
       }
 }
 input {
@@ -40,4 +46,10 @@ input {
     margin: 5px;
     border: 1px solid white;
     border-radius: 10px;
+}
+#find-me {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+
 }
