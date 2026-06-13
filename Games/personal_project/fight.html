@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon battle</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fight.css') }}">
+
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          
+            
+</head>
+<body>
+ <div class="container">
+    <div class="row">
+        <div class="row-pokemon">
+            <div class="info">
+                <div class="pokemon-block">
+                    <div class="box-level" align="right" valign="top">Lv. <span id="level-title"></span></div>
+                    <div class="box-name pokemon-name" id="name-title"></div>
+                    <div id="pokemon-info" style="display: none;"></div>
+                    <div class="hp-element"></div>
+                    <div class="box-hp" id="hp-title">58</div>
+                    <div class="box-type" id="type-title" align="right" valign="bottom"></div>
+                </div>
+            </div>
+        <div class="pokemon">
+            <img src="{{pokemon[1]}}" alt="">
+        </div>
+        </div>
+        
+        
+    </div>
+   
+    <div class="second-row">
+        <div class="test">
+            <div class="player-pokemon">
+                <img class="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
+            </div>
+            <div class="pokemon-block">
+                    <divs class="box-level" align="right" valign="top">Lv. 12</divs>
+                    <div class="box-name">Charmander</div>
+                    <div class="hp-element"></div>
+                    <div class="box-hp">45</div>
+                    <div class="box-type" align="right" valign="bottom"></div>
+                </div>
+        </div>
+    </div>
+    <div class="third-row">
+        <div class="player">
+                <div class="playingboard">
+                    <div class="boardItem">
+                        <div><p class="action">Actie</p>
+
+                    </div>
+
+                    </div>
+                        <div class="actions">
+                            <p class="action-one" onclick="addPokemon()">Gooi pokébal</p>
+                            <p class="action-two" onclick="getPokemon()">Pokemon</p>
+                            <p id="action-three"></p>
+                            <p class="action-four">Exit</p>
+                        </div>
+                    <div class="boardItem2"><p>Opties</p></div>
+                    <div class="boardItem3">
+                        <p class="list">Pokemons</p>
+                        <div style="display: none;" class="pokemon-list"></div>
+                    </div>
+                    <div class="boardItem4"><p><a href="/map">Exit</a></p></div>
+
+                </div>
+            </div>
+    </div>
+    
+ </div>
+
+</body>
+    
+<script src="../../static/js/fight.js" type="module">  
+</script>
+<script>
+let parameters = window.location.pathname
+let ID = parameters.replace("/fight/", '');
+document.getElementById("pokemon-info").innerText = ID;
+let IDPokemon = localStorage.pokemonID;
+let capturedPokemon = localStorage.pokemonName;
+let levelsPokemon = localStorage.levelPokemon;
+let hpPokemon = localStorage.hpPokemon;
+let pokemonType = localStorage.typesPokmeons;
+let pokemonNumber = localStorage.pokemonNumber;
+
+
+function addPokemon() {
+    const pokemonID = document.getElementById("name-title"); 
+    const pokemon = pokemonID.innerHTML;
+    const levelPokemon = document.getElementById("level-title").innerHTML
+    const arrayPokemon = [{id:ID}];
+    const type = document.getElementById("type-title").innerHTML;
+    localStorage.pokemonName = String(localStorage.pokemonName) + " " + pokemon;
+    localStorage.pokemonID = String(localStorage.pokemonID) + " " + ID;
+    localStorage.levelPokemon = String(localStorage.levelPokemon) + " " + levelPokemon;
+    localStorage.hpPokemon = String(localStorage.hpPokemon) + " " + 15;
+    localStorage.typesPokmeons = String(localStorage.typesPokmeons) + " " + type;
+    localStorage.pokemonNumber = String(localStorage.pokemonNumber) + "a";
+
+    alert("You got " + pokemon);
+    window.location.replace("/map"
+);
+}
+if (localStorage.pokemonName != null) {
+    localStorage.setItem("pokemonName", localStorage.pokemonName);
+}
+if (localStorage.pokemonID != null) {
+    localStorage.setItem("pokemonID", localStorage.pokemonID);
+}
+if (localStorage.levelPokemon != null) {
+    localStorage.setItem("levelPokemon", localStorage.levelPokemon);
+}
+if (localStorage.hpPokemon != null) {
+    localStorage.setItem("hpPokemon", localStorage.hpPokemon);
+}
+if (localStorage.typesPokmeons != null) {
+    localStorage.setItem("typesPokmeons", localStorage.typesPokmeons);
+}
+if (localStorage.pokemonNumber != null) {
+    localStorage.setItem("pokemonNumber", localStorage.pokemonNumber);
+}
+function getPokemon() {
+    const localStorageItem = localStorage.getItem("pokemon");
+    const pokemonObject = JSON.parse(localStorageItem);
+    console.log(pokemonObject);
+}
+
+
+
+</script>
+</html>

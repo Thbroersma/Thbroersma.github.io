@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+ <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+</head>
+<body>
+  <header>
+    <H1>Profile</H1>
+    <a href="/menu">Terug naar menu</a>
+</header>
+
+    <div class="header">
+        <h2>{{ current_user.username }}</h2>
+    </div>
+    <div class="profile-body">
+      <img src="" />
+      <h3>Your life quote:</h3>
+      <options>
+        <select></select>
+      </options>
+      <button>Wijzig pokemon</button>
+    </div>
+    <div>
+      <button id="clearStorage" onclick="clearStorageAction()">Clear</button>
+      <p id="demos"></p>
+      <p id="result"></p>
+      
+      <button type="submit" id="testing" onclick="test()" >Data</button>
+
+      <p id="id"></p>
+      <p id="names"></p>
+      <p id="levels"></p>
+      <p id="hp"></p>
+      <p id="type"></p>
+
+      <p id="object"></p>
+    </div>
+   
+    <script>
+     
+     
+    const lists = document.getElementById("listTest");
+    
+    function clearStorageAction() {
+      localStorage.clear()
+      location.reload();
+    }
+    const testButton = document.getElementById("testing");
+      // array to localstorage
+      
+      let lijstNames = JSON.parse(localStorage.getItem("lijst"));
+      function test() {
+       
+        data['pokemon'].push(lastname.value);
+        const tableRow = document.createElement("tr");
+
+        const testDiv = document.createElement("td");
+        localStorage.pokemonTest = String(localStorage.pokemonTest) + " " +  lastname.value;
+
+        var testData = localStorage.pokemonTest;
+        console.log(testData);
+        
+        const tableElement = document.getElementById("tableBody");
+        document.body.appendChild(tableElement);
+      }
+      
+    </script>
+
+</body>
+</html>

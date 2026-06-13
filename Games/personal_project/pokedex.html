@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag</title>
+ <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+</head>>
+<header>
+    <H1>Pokedex</H1>
+    <a href="/menu">Terug naar menu</a>
+</header>
+<body>
+<div id="pokemon-box">
+    <br>
+        <span id="close-pokemon">X</span>
+        <h1 id="pokemon-title">Pokemon</h1>
+        <img id="pokedex-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png">
+        <div class="pokedex-types" id="pokedex-types">
+<span class="type-box grass">GRASS</span><span class="type-box poison">POISON</span>        </div>
+        <div class="pokedex-description"></div>
+        <div id="evolution"></div>
+</div>
+<div class="pokedex-list" id="pokedex-list">
+    
+</div> 
+
+
+
+<div id="content-box"> 
+<!-- Left side, display pokemon info-->
+    <div id="pokemon-info">
+        <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"/>
+        <div id="pokemon-types">
+            <span class="type-box grass">GRASS</span><span class="type-box poison">POISON</span>
+        </div>
+        <div id="pokemon-description"></div>
+    </div>
+    <!--Right side, display pokemon list -->
+    <div id="pokemon-list">
+
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/pokedex.js') }}"></script>
+</body>
+</html>
+

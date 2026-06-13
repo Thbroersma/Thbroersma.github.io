@@ -120,6 +120,9 @@ div button {
     background-color: lightblue;
     color: black;
 }
+.menu-item {
+    color: blue;
+}
 .normal {
     background-color: beige;
     color: black;
