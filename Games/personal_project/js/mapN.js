@@ -141,7 +141,7 @@ function geoFindMe() {
   const lat = document.querySelector("#latitude");
   const lon = document.querySelector("#longitude");
   mapLink.textContent = "";
-
+    console.log("Go Find Me")
   function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -193,6 +193,8 @@ setInterval(removePokemons, 9900)
 // setInterval(showPokemon, 10000);
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
+    console.log("Get position")
+
     // Het ophalen van de html elementen voor de coordinaten plek
     const status = document.querySelector("#status");
     const lat = document.querySelector("#latitude");
@@ -252,6 +254,8 @@ function getPosition() {
 }
 
 function addPokemon() {
+    console.log("Add pokemon")
+
     let randomWater = Math.floor(Math.random() * waterTypeNames.length);
     let randomWater2 = Math.floor(Math.random() * waterTypeNames.length);
     var grassRandom = Math.floor(Math.random() * grassTypeNames.length);
@@ -372,6 +376,8 @@ function addPokemon() {
 }
 
 function removePokemons() {
+    console.log("Remove pokemons")
+
     const oldPokemons = document.querySelectorAll(".pokemon-GL");
     const oldWater = document.querySelectorAll(".water-g");
     const oldGrass = document.querySelectorAll(".grass-g");
