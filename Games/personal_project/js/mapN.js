@@ -223,6 +223,7 @@ function getPosition() {
     var oldMarker = document.querySelector(".avatar-icon");
     // Hier wordt de oude icon verwijderd van de kaart en een nieuwe
     // toegevoegd op de nieuwe coordinaten
+    console.loog(oldMarker);
     if (oldMarker) {
         oldMarker.remove();
         const lat = document.querySelector("#latitude").innerHTML;
@@ -244,6 +245,7 @@ function getPosition() {
         iconSize: [60, 60],
         className: "avatar-icon",
     });
+    console.log(lat + ", " + lon);
     var marker = L.marker([lat, lon], {icon:avatarIcon});
     marker.addTo(map);
     }
