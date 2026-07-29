@@ -81,9 +81,8 @@ function getPosition() {
     // Hier wordt de locatie opgehaald en in de html objecten gezet
     // Deze worden niet weergegeven. Gezien coordinaten zien raar is
     function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-
+    const latitude = 52.142351;
+    const longitude = 5.399352;
         status.textContent = "";
         lat.textContent = latitude;
         lon.textContent = longitude;
@@ -104,24 +103,11 @@ function getPosition() {
     // Hier wordt de oude icon verwijderd van de kaart en een nieuwe
     // toegevoegd op de nieuwe coordinaten
     console.log(oldMarker);
-    if (oldMarker) {
-        oldMarker.remove();
-        const lat = document.querySelector("#latitude").innerHTML;
-        const lon = document.querySelector("#longitude").innerHTML;
-        var avatarIcon = L.icon({
-        iconUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
-        iconSize: [60, 60],
-        className: "avatar-icon",
-    });
-    var marker = L.marker([lat, lon], {icon:avatarIcon});
-    marker.addTo(map);
-    }
-    // Hier wordt een nieuwe icon toegevoegd
-    else {
-    const lat = document.querySelector("#latitude").innerHTML;
-    const lon = document.querySelector("#longitude").innerHTML;
+  
+    const lat = 52.142351;
+    const lon = 5.399352
     var avatarIcon = L.icon({
-        iconUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
+        iconUrl: "./img/footstep.gif",
         iconSize: [60, 60],
         className: "avatar-icon",
     });
@@ -129,4 +115,3 @@ function getPosition() {
     var marker = L.marker([lat, lon], {icon:avatarIcon});
     marker.addTo(map);
     }
-}
