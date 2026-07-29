@@ -109,7 +109,7 @@ function getPosition() {
         iconSize: [60, 60],
         className: "avatar-icon",
     });
-    console.log(lat + ", " + lon);
-    var marker = L.marker([lat, lon], {icon:avatarIcon});
+    console.log(latitude + ", " + longitude);
+    var marker = L.marker([latitude, longitude], {icon:avatarIcon});
     marker.addTo(map);
     }
