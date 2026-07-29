@@ -74,29 +74,8 @@ function getPosition() {
 
     // Het ophalen van de html elementen voor de coordinaten plek
     const status = document.querySelector("#status");
-
-    
-    // Hier wordt de locatie opgehaald en in de html objecten gezet
-    // Deze worden niet weergegeven. Gezien coordinaten zien raar is
-    function success(position) {
     const latitude = 52.142351;
     const longitude = 5.399352;
-
-    }
-    // Mocht er iets fout gaat met het ophalen van je locatie komt er 
-    // De juister soort error 
-    function error() {
-        status.textContent = "Unable to retrieve your location";
-    }
-    if (!navigator.geolocation) {
-        status.textContent = "Geolocation is not supported by your browser";
-    } else {
-        navigator.geolocation.getCurrentPosition(success, error);
-    }
-    var oldMarker = document.querySelector(".avatar-icon");
-    // Hier wordt de oude icon verwijderd van de kaart en een nieuwe
-    // toegevoegd op de nieuwe coordinaten
-    console.log(oldMarker);
  
     var avatarIcon = L.icon({
         iconUrl: "footstep.gif",
