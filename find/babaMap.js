@@ -64,7 +64,7 @@ function geoFindMe() {
 
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 
-var imageUrl = "footstep.gif";
+var imageUrl = "footstep.png";
 var coordinates = L.latLngBounds([52.142351, 5.399347], [52.142460, 5.399577])
 var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
 // getPosition();
