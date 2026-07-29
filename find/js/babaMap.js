@@ -100,7 +100,7 @@ function getPosition() {
     console.log(oldMarker);
  
     var avatarIcon = L.icon({
-        iconUrl: "./img/footstep.gif",
+        iconUrl: "../img/footstep.gif",
         iconSize: [60, 60],
         className: "avatar-icon",
     });
