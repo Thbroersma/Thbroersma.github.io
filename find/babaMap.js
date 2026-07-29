@@ -64,9 +64,10 @@ function geoFindMe() {
 
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 
-
-
-getPosition();
+var imageUrl = "footstep.gif";
+var coordinates = L.latLngBounds([52.142351, 5.399347], [52.142460, 5.399577])
+var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
+// getPosition();
 // setInterval(showPokemon, 10000);
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
@@ -74,8 +75,7 @@ function getPosition() {
 
     // Het ophalen van de html elementen voor de coordinaten plek
     const status = document.querySelector("#status");
-    const latitude = 52.142351;
-    const longitude = 5.399352;
+
  
     var avatarIcon = L.icon({
         iconUrl: "footstep.gif",
