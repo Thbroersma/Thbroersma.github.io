@@ -75,19 +75,14 @@ function getPosition() {
 
     // Het ophalen van de html elementen voor de coordinaten plek
     const status = document.querySelector("#status");
-    const lat = document.querySelector("#latitude");
-    const lon = document.querySelector("#longitude");
+
     
     // Hier wordt de locatie opgehaald en in de html objecten gezet
     // Deze worden niet weergegeven. Gezien coordinaten zien raar is
     function success(position) {
     const latitude = 52.142351;
     const longitude = 5.399352;
-        status.textContent = "";
-        lat.textContent = latitude;
-        lon.textContent = longitude;
-        lat.classList.add("background");
-        lon.classList.add("background");
+
     }
     // Mocht er iets fout gaat met het ophalen van je locatie komt er 
     // De juister soort error 
