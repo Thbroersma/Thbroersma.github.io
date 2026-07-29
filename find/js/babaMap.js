@@ -103,9 +103,7 @@ function getPosition() {
     // Hier wordt de oude icon verwijderd van de kaart en een nieuwe
     // toegevoegd op de nieuwe coordinaten
     console.log(oldMarker);
-  
-    const lat = 52.142351;
-    const lon = 5.399352
+ 
     var avatarIcon = L.icon({
         iconUrl: "./img/footstep.gif",
         iconSize: [60, 60],
