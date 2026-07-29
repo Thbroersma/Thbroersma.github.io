@@ -66,8 +66,7 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 
 
 
-setInterval(getPosition, 10000);
-
+getPosition();
 // setInterval(showPokemon, 10000);
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
