@@ -78,7 +78,7 @@ function getPosition() {
 
  
     var avatarIcon = L.icon({
-        iconUrl: "footstep.gif",
+        iconUrl: "footstep.png",
         iconSize: [60, 60],
         className: "avatar-icon",
     });
