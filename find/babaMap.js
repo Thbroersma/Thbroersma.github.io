@@ -65,7 +65,7 @@ function geoFindMe() {
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 
 var imageUrl = "footstep.png";
-var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.142351817117344, 5.399355573896003])
+var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624])
 var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
 // getPosition();
 // setInterval(showPokemon, 10000);
