@@ -71,9 +71,12 @@ var imageUrlRight = "footstepRight.png";
 var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624])
 var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413])
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight).addTo(map)
-var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
-// getPosition();
-// setInterval(showPokemon, 10000);
+var imageOverlay = L.imageOverlay(optioimageUrl, coordinates).addTo(map)
+
+imageOverlay.getElement().classList.add('left-foot');
+imageOverlay2.getElement().classList.add('right-foot');
+
+
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
     console.log("Get position")
@@ -96,3 +99,11 @@ function getPosition() {
     var marker = L.marker([latitude, longitude], {icon:avatarIcon});
     marker.addTo(map);
     }
+  /*
+  setInterval()	Runs a function repeatedly.
+clearTimeout()	Cancels a timeout.
+*/
+setInterval(move(), 2000);
+function move() {
+
+}
