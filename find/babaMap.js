@@ -68,15 +68,16 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 var imageUrl = "footstep.png";
 var imageUrlRight = "footstepRight.png";
 
-var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624])
-var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413])
-var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight).addTo(map)
-var imageOverlay = L.imageOverlay(optioimageUrl, coordinates).addTo(map)
+var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624]);
+var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413]);
+var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight);
+var imageOverlay = L.imageOverlay(optioimageUrl, coordinates);
 
 imageOverlay.getElement().classList.add('left-foot');
 imageOverlay2.getElement().classList.add('right-foot');
 
-
+imageOverlay.addTo(map);
+imageOverlay2.addTo(map);
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
     console.log("Get position")
