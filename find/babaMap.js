@@ -84,7 +84,9 @@ function getPosition() {
     });
     var greenIcon = L.icon({
         iconUrl: 'footstep.png',
-        iconSize:     [60, 40], // size of the icon
+        iconSize: [60, 40], // size of the icon
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+
         className: "avatar-icon-test",
 
     });
