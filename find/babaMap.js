@@ -85,6 +85,8 @@ function getPosition() {
     var greenIcon = L.icon({
         iconUrl: 'footstep.png',
         iconSize:     [60, 40], // size of the icon
+        className: "avatar-icon-test",
+
     });
 
     L.marker([latitude, longitude], {icon: greenIcon}).addTo(map);
