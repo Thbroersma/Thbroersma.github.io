@@ -73,8 +73,8 @@ var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight);
 var imageOverlay = L.imageOverlay(imageUrl, coordinates);
 
-imageOverlay.classList.add('left-foot');
-imageOverlay2.classList.add('right-foot');
+imageOverlay.getElement().classList.add('left-foot');
+imageOverlay2.getElement().classList.add('right-foot');
 
 imageOverlay.addTo(map);
 imageOverlay2.addTo(map);
