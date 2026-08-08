@@ -32,7 +32,7 @@ var baseLayers = {
 
 
 L.control.layers(baseLayers).addTo(map);
-getPosition();
+
 
 function geoFindMe() {
   const status = document.querySelector("#status");
@@ -66,7 +66,7 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 
 var imageUrl = "footstep.png";
 var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624])
-// var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
+var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
 // getPosition();
 // setInterval(showPokemon, 10000);
 // Haalt je locatie op en geeft locatie een icon
@@ -83,14 +83,11 @@ function getPosition() {
         className: "avatar-icon",
     });
     var greenIcon = L.icon({
-        iconUrl: 'footstep.png',
-        iconSize: [60, 40], // size of the icon
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-
-        className: "avatar-icon-test",
-
+        iconUrl: 'leaf-green.png',
+        iconSize:     [60, 40], // size of the icon
     });
 
-    L.marker([latitude, longitude], {icon: greenIcon}).addTo(map);
+    L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
     var marker = L.marker([latitude, longitude], {icon:avatarIcon});
+    marker.addTo(map);
     }
