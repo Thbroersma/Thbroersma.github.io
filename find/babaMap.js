@@ -82,7 +82,11 @@ function getPosition() {
         iconSize: [60, 60],
         className: "avatar-icon",
     });
-    console.log(latitude + ", " + longitude);
+    var greenIcon = L.icon({
+        iconUrl: 'leaf-green.png',
+        iconSize:     [60, 40], // size of the icon
+    });
+
+    L.marker([latitude, longitude], {icon: greenIcon}).addTo(map);
     var marker = L.marker([latitude, longitude], {icon:avatarIcon});
-    marker.addTo(map);
     }
