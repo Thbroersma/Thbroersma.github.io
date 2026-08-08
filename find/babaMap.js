@@ -63,9 +63,14 @@ function geoFindMe() {
 }
 
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
+// Latitude : 52.142311 | Longitude : 5.39929
 
 var imageUrl = "footstep.png";
+var imageUrlRight = "footstep2.png";
+
 var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624])
+var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142298 ,  5.399341])
+var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight).addTo(map)
 var imageOverlay = L.imageOverlay(imageUrl, coordinates).addTo(map)
 // getPosition();
 // setInterval(showPokemon, 10000);
