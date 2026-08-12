@@ -70,11 +70,13 @@ var imageUrlRight = "footstepRight.png";
 
 var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624]);
 var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413]);
-var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight);
-var imageOverlay = L.imageOverlay(imageUrl, coordinates);
+var imageOverlay2 = L.imageOverlay([imageUrlRight, coordinatesRight], {
+  className: "right-foot",
+});
+var imageOverlay = L.imageOverlay([imageUrl, coordinates], {
+  className: "left-foot",
+});
 
-imageOverlay.getElement().classList.add('left-foot');
-imageOverlay2.getElement().classList.add('right-foot');
 
 imageOverlay.addTo(map);
 imageOverlay2.addTo(map);
