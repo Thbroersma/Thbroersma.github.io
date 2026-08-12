@@ -106,7 +106,13 @@ function getPosition() {
   setInterval()	Runs a function repeatedly.
 clearTimeout()	Cancels a timeout.
 */
+document.getElementByClassName("right-foot");
+document.getElementByClassName("left-foot");
 setInterval(move(), 2000);
 function move() {
+  document.getElementByClassName("right-foot").style.marginLeft = 2;
+  document.getElementByClassName("left-foot").style.marginLeft = 2;
+
 
 }
+clearInterval();
