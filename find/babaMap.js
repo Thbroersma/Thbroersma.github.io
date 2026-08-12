@@ -65,7 +65,7 @@ function geoFindMe() {
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 // Latitude : 52.142311 | Longitude : 5.39929
 
-var imageUrl = "footstep.png";
+// var imageUrl = "footstep.png";
 var imageUrlRight = "footstepRight.png";
 
 var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624]);
@@ -73,12 +73,12 @@ var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
-var imageOverlay = L.imageOverlay(imageUrl, coordinates, {
-  className: "left-foot",
-});
+// var imageOverlay = L.imageOverlay(imageUrl, coordinates, {
+//   className: "left-foot",
+// });
 
 
-imageOverlay.addTo(map);
+// imageOverlay.addTo(map);
 imageOverlay2.addTo(map);
 // Haalt je locatie op en geeft locatie een icon
 function getPosition() {
