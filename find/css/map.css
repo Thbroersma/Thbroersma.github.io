@@ -54,12 +54,12 @@ input {
 
 }
 .right-foot {
-      animation: fadeInAnimation ease 3s;
+      animation: myfirst ease 3s;
       animation-iteration-count: 5;
       animation-fill-mode: forwards;
 }
 .left-foot {
-      animation: fadeInAnimation ease 3s;
+      animation: myfirst ease 3s;
       animation-iteration-count: 5;
       animation-fill-mode: forwards;
 }
@@ -74,4 +74,19 @@ input {
       100% {
             opacity: 1;
       }
+}
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: myfirst 5s 2;
+}
+
+@keyframes myfirst {
+  0%   { left: 0px; top: 0px;}
+  25%  { left: 2vw; top: 0px;}
+  50%  { left: 4vw; top: 0px;}
+  75%  { left: 6vw; top: 0px;}
+  100% { left: 8vw; top: 0px;}
 }
