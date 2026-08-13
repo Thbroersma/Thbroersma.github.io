@@ -112,8 +112,8 @@ let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
 setInterval(move(), 5000);
 function move() {
-  leftFoot.style.marginLeft = margin * loop;
-  rightFoot.style.marginLeft = margin * loop;
+  leftFoot.style.marginLeft = (margin * loop) + "px";
+  rightFoot.style.marginLeft = (margin * loop) + "px";
 
   loop++;
 
