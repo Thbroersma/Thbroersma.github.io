@@ -55,13 +55,16 @@ input {
 }
 .right-foot {
       animation: fadeInAnimation ease 3s;
-      animation-iteration-count: 1;
+      animation-iteration-count: 5;
       animation-fill-mode: forwards;
 }
 .left-foot {
       animation: fadeInAnimation ease 3s;
-      animation-iteration-count: 1;
+      animation-iteration-count: 5;
       animation-fill-mode: forwards;
+}
+.foot-moving {
+      margin-left: 2px;
 }
 @keyframes fadeInAnimation {
       0% {
