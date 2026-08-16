@@ -112,15 +112,18 @@ let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
 let movingFoot = setInterval(move(), 5000);
 const myTimeout = setTimeout(stopMoving(), 30000);
-
+rightFoot.id = "right-foot";
+leftFoot.id = "left-foot";
+let right = document.getElementById("right-foot");
+let left = document.getElementById("left-foot");
 
 function move() {
-  leftFoot.style.marginLeft = (margin * loop) + "vw";
-  rightFoot.style.marginLeft = (margin * loop) + "vw";
+  right.style.marginLeft = (margin * loop) + "vw";
+  left.style.marginLeft = (margin * loop) + "vw";
 
   loop++;
 
 }
 function stopMoving() {
-  clearInterval(movingFunction);
+  clearInterval(movingFoot);
 }
