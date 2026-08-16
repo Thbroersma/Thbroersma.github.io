@@ -75,13 +75,7 @@ input {
             opacity: 1;
       }
 }
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  position: relative;
-  animation: myfirst 5s 2;
-}
+
 
 @keyframes myfirst {
   0%   { left: 0px; top: 0px;}
