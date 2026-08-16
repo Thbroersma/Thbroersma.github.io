@@ -111,10 +111,10 @@ let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
 
-rightFoot.id = "right-foot";
-leftFoot.id = "left-foot";
-let right = document.getElementById("right-foot");
-let left = document.getElementById("left-foot");
+rightFoot.id = "right";
+leftFoot.id = "left";
+let right = document.getElementById("right");
+let left = document.getElementById("left");
 let movingRight = setInterval(move(), 3000);
 let movingLeft = setInterval(move2(), 3000);
 const myTimeout = setTimeout(stopMoving(), 30000);
