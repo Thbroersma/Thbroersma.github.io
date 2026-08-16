@@ -128,6 +128,6 @@ function move2() {
     loop++;
 }
 function stopMoving() {
-  clearInterval(movingFoot);
+  clearInterval(movingRight);
   clearInterval(movingLeft)
 }
