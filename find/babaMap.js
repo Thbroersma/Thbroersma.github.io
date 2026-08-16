@@ -110,14 +110,14 @@ let margin = 2;
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
-let movingRight = setInterval(move(), 3000);
-let movingLeft = setInterval(move2(), 3000);
+
 const myTimeout = setTimeout(stopMoving(), 30000);
 rightFoot.id = "right-foot";
 leftFoot.id = "left-foot";
 let right = document.getElementById("right-foot");
 let left = document.getElementById("left-foot");
-
+let movingRight = setInterval(move(), 3000);
+let movingLeft = setInterval(move2(), 3000);
 function move() {
   right.style.marginLeft = (margin * loop) + "vw";
   loop++;
