@@ -66,7 +66,8 @@ input {
       animation-iteration-count: 5;
       animation-fill-mode: forwards;
 }
-.foot-moving {
+.foot-moving {-
+
       margin-left: 2px;
 }
 @keyframes fadeInAnimation {

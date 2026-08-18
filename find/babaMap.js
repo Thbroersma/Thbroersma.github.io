@@ -106,28 +106,31 @@ function getPosition() {
   setInterval()	Runs a function repeatedly.
 clearTimeout()	Cancels a timeout.
 */
-let margin = 2;
+let margin = 25;
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
+console.log(loop);
 
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
-let movingRight = setInterval(move(), 3000);
-let movingLeft = setInterval(move2(), 3000);
-const myTimeout = setTimeout(stopMoving(), 30000);
+var i = setInterval(move, 750);
+var k = setInterval(move2, 1250);
+setTimeout(function() { clearInterval(i); }, 18750);
+setTimeout(function() { clearInterval(k); }, 18750);
 
 function move() {
-  right.style.marginLeft = (margin * loop) + "vw";
-  loop++;
+  right.style.marginLeft = (margin * loop) + "px";
+  console.log(loop);
+
 }
 function move2() {
-    left.style.marginLeft = (margin * loop) + "vw";
+    left.style.marginLeft = (margin * loop) + "px";
     loop++;
+    console.log(loop);
+
 }
-function stopMoving() {
-  clearInterval(movingRight);
-  clearInterval(movingLeft)
-}
+
+
