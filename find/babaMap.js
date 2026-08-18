@@ -1,11 +1,12 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-var map = L.map('map').setView([52.15550, 5.38892],16);
+var map = L.map('map').setView([52.15550, 5.38892],16.294718618810897,);
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16.294718618810897,
-    minZoom:16,
-    zoom: 16,
+    minZoom:16.294718618810897,
+    zoom: 16.294718618810897,
     zoomControl: false,
+    
     scrollWheelZoom: false,
     attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
