@@ -32,6 +32,8 @@ var baseLayers = {
 
 
 L.control.layers(baseLayers).addTo(map);
+map.setZoom(16.294718618810897);
+
 
 
 function geoFindMe() {
