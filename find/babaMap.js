@@ -134,11 +134,15 @@ setTimeout(function() { clearInterval(k); }, 18750);
 
 function move() {
   right.style.marginLeft = (margin * loop) + "px";
+  right.style.rotate = (-0.2 * loop) + "deg";
+
   console.log(loop);
 
 }
 function move2() {
     left.style.marginLeft = (margin * loop) + "px";
+    left.style.rotate = (-0.2 * loop) + "deg";
+
     loop++;
     console.log(loop);
 
