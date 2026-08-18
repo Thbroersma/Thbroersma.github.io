@@ -117,7 +117,7 @@ function getPosition() {
   setInterval()	Runs a function repeatedly.
 clearTimeout()	Cancels a timeout.
 */
-let margin = 25;
+let margin = 5;
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
@@ -134,14 +134,14 @@ setTimeout(function() { clearInterval(k); }, 18750);
 
 function move() {
   right.style.marginLeft = (margin * loop) + "px";
-  right.style.rotate = (-0.2 * loop) + "deg";
+  right.style.rotate = (-0.366 * loop) + "deg";
 
   console.log(loop);
 
 }
 function move2() {
     left.style.marginLeft = (margin * loop) + "px";
-    left.style.rotate = (-0.2 * loop) + "deg";
+    left.style.rotate = (-0.366 * loop) + "deg";
 
     loop++;
     console.log(loop);
@@ -149,3 +149,5 @@ function move2() {
 }
 
 
+    // margin-left: 75px;
+    // rotate: -5.4deg;
