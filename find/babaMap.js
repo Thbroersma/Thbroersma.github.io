@@ -1,6 +1,6 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-var map = L.map('map').setView([52.15550, 5.38892], 17);
+var map = L.map('map').setView([52.15550, 5.38892], 17,);
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 17,
     minZoom:17,
