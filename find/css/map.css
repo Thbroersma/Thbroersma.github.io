@@ -88,24 +88,24 @@ input {
 */
 @keyframes myfirst {
   0%   { margin-bottom: 0px; margin-left: 0px;}
-  5%  { margin-bottom: 42px; margin-left: 16px;}
-  10%  { margin-bottom: 84px; margin-left: 32px;}
-  15%  { margin-bottom: 126px; margin-left: 48px;}
-  20% { margin-bottom: 168px; margin-left: 64px;}
-  25%   { margin-bottom: 210px; margin-left: 80px;}
-  30%  { margin-bottom: 252px; margin-left: 96px;}
-  35%  { margin-bottom: 294px; margin-left: 112px;}
-  40%  { margin-bottom: 336px; margin-left: 128px;}
-  45% { margin-bottom: 378px; margin-left: 144px;}
-  50% { margin-bottom: 420px; margin-left: 160px;}
-  55%   { margin-bottom: 0px; margin-left: 0px;}
-  60%  { margin-bottom: 42px; margin-left: 16px;}
-  65%  { margin-bottom: 84px; margin-left: 32px;}
-  70%  { margin-bottom: 126px; margin-left: 48px;}
-  75% { margin-bottom: 168px; margin-left: 64px;}
-  80%   { margin-bottom: 210px; margin-left: 80px;}
-  85%  { margin-bottom: 252px; margin-left: 96px;}
-  90%  { margin-bottom: 294px; margin-left: 112px;}
-  95%  { margin-bottom: 336px; margin-left: 128px;}
+  5%  { margin-bottom: 21px; margin-left: 8px;}
+  10%  { margin-bottom: 42px; margin-left: 16px;}
+  15%  { margin-bottom: 63px; margin-left: 24px;}
+  20% { margin-bottom: 84px; margin-left: 32px;}
+  25%   { margin-bottom: 105px; margin-left: 40px;}
+  30%  { margin-bottom: 126px; margin-left: 48px;}
+  35%  { margin-bottom: 147px; margin-left: 56px;}
+  40%  { margin-bottom: 168px; margin-left: 64px;}
+  45% { margin-bottom: 189px; margin-left: 72px;}
+  50% { margin-bottom: 210px; margin-left: 80px;}
+  55%   { margin-bottom: 231px; margin-left: 88px;}
+  60%  { margin-bottom: 252px; margin-left: 96px;}
+  65%  { margin-bottom: 273px; margin-left: 104px;}
+  70%  { margin-bottom: 294px; margin-left: 112px;}
+  75% { margin-bottom: 325px; margin-left: 120px;}
+  80%   { margin-bottom: 346px; margin-left: 128px;}
+  85%  { margin-bottom: 367px; margin-left: 136px;}
+  90%  { margin-bottom: 388px; margin-left: 144px;}
+  95%  { margin-bottom: 409px; margin-left: 152px;}
   100% { margin-bottom: 420px; margin-left: 160px;}
 } 
