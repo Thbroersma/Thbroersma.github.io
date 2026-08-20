@@ -123,21 +123,12 @@ var popup = L.popup()
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
-const buttonQuest = document.getElementsByClassName("quest");
-buttonQuest.addEventListener("click", startMoving);
+
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
-function startMoving() {
-  console.log("start moving")
-  var i = setInterval(move, 750);
-  var k = setInterval(move2, 1250);
-  setTimeout(function() { clearInterval(i); }, 18750);
-  setTimeout(function() { clearInterval(k); }, 18750);
-  setTimeout(function() { hide() }, 18750);
 
-}
 
 function hide() {
   left.style.display = "none";
@@ -158,7 +149,17 @@ function move2() {
     console.log(loop);
 
 }
+function startMoving() {
+  console.log("start moving")
+  var i = setInterval(move, 750);
+  var k = setInterval(move2, 1250);
+  setTimeout(function() { clearInterval(i); }, 18750);
+  setTimeout(function() { clearInterval(k); }, 18750);
+  setTimeout(function() { hide() }, 18750);
 
+}
+const buttonQuest = document.getElementsByClassName("quest");
+buttonQuest.addEventListener("click", startMoving);
 
     // margin-left: 75px;
     // rotate: -5.4deg;
