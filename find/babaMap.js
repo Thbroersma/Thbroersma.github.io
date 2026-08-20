@@ -132,6 +132,7 @@ leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
 function startMoving() {
+  console.log("start moving")
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
   setTimeout(function() { clearInterval(i); }, 18750);
