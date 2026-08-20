@@ -120,7 +120,6 @@ var popup = L.popup()
     .openOn(map);
 
     
-let margin = -0.5
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
@@ -146,14 +145,14 @@ function hide() {
   right.style.display = "none";
 }
 function move() {
-  right.style.marginLeft = (margin * loop) + "px";
+  right.style.marginLeft = (-0.333 * loop) + "px";
   right.style.rotate = (-0.366 * loop) + "deg";
 
   console.log(loop);
 
 }
 function move2() {
-    left.style.marginLeft = (margin * loop) + "px";
+    left.style.marginLeft = (-0.333 * loop) + "px";
     left.style.rotate = (-0.366 * loop) + "deg";
 
     loop++;
