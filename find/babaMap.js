@@ -152,7 +152,7 @@ function startMoving() {
   var k = setInterval(move2, 1250);
   setTimeout(function() { clearInterval(i); }, 18750);
   setTimeout(function() { clearInterval(k); }, 18750);
-  setTimeout(function() { hide() }, 18750);
+  setTimeout(function() { hide() }, 17750);
 
 }
 const buttonQuest = document.getElementById("quest");
