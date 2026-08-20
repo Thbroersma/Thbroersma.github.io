@@ -56,6 +56,11 @@ input {
 #left-foot {
       margin-left: 2vw;
 }
+.niffler {
+      animation: myfirst ease 3s;
+      animation-fill-mode: forwards;
+
+}
 /* .right-foot {
       animation: myfirst ease 3s;
       animation-iteration-count: 5;
@@ -80,11 +85,17 @@ input {
       }
 }
 
-
+*/
 @keyframes myfirst {
-  0%   { left: 0px; top: 0px;}
-  25%  { left: 2vw; top: 0px;}
-  50%  { left: 4vw; top: 0px;}
-  75%  { left: 6vw; top: 0px;}
-  100% { left: 8vw; top: 0px;}
-} */
+  0%   { margin-bottom: 0px; margin-left: 0px;}
+  10%  { margin-bottom: 42px; margin-left: 16px;}
+  20%  { margin-bottom: 84px; margin-left: 32px;}
+  30%  { margin-bottom: 126px; margin-left: 48px;}
+  40% { margin-bottom: 168px; margin-left: 64px;}
+  50%   { margin-bottom: 210px; margin-left: 80px;}
+  60%  { margin-bottom: 252px; margin-left: 96px;}
+  70%  { margin-bottom: 294px; margin-left: 112px;}
+  80%  { margin-bottom: 336px; margin-left: 128px;}
+  90% { margin-bottom: 378px; margin-left: 144px;}
+  100% { margin-bottom: 420px; margin-left: 160px;}
+} 

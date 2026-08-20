@@ -80,7 +80,7 @@ var imageUrl = "footstepLUp.png";
 var imageUrlRight = "footstepRightUp.png";
 
 var coordinates = L.latLngBounds([52.140728 , 5.39975], [52.140821 , 5.39966]);
-var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140806 , 5.399912]);
+var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140856 , 5.399912]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
@@ -114,7 +114,9 @@ function getPosition() {
     marker.addTo(map);
     }
 
-var popup = L.popup()
+var popup = L.popup({
+      className: "niffler",
+    })
     .setLatLng([52.140859 ,5.399664])
     .setContent("Niffler")
     .openOn(map);
@@ -135,18 +137,13 @@ function hide() {
   right.style.display = "none";
 }
 function move() {
-  right.style.marginLeft = (-0.333 * loop) + "px";
-  right.style.rotate = (-0.366 * loop) + "deg";
-
-  console.log(loop);
-
+  right.style.marginLeft = (-0.333 *  loop) + "px";
+  right.style.rotate = (-3 * loop) + "deg";
 }
 function move2() {
     left.style.marginLeft = (-0.333 * loop) + "px";
-    left.style.rotate = (-0.366 * loop) + "deg";
-
+    left.style.rotate = (-3 * loop) + "deg";
     loop++;
-    console.log(loop);
 
 }
 function startMoving() {
