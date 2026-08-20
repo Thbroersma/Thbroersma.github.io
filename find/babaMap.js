@@ -76,11 +76,11 @@ function geoFindMe() {
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 // Latitude : 52.142311 | Longitude : 5.39929
 
-var imageUrl = "footstep.png";
-var imageUrlRight = "footstepRight.png";
+var imageUrl = "footstepLUpp.png";
+var imageUrlRight = "footstepRightUp.png";
 
-var coordinates = L.latLngBounds([52.14233006663446, 5.399290711598951], [52.14236883812015, 5.399411445488624]);
-var coordinatesRight = L.latLngBounds([52.142311, 5.39929], [52.142264, 5.399413]);
+var coordinates = L.latLngBounds([52.140728 , 5.39975], [52.140821 , 5.39966]);
+var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140806 , 5.399842]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
