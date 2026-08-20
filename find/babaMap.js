@@ -113,10 +113,13 @@ function getPosition() {
     var marker = L.marker([latitude, longitude], {icon:avatarIcon});
     marker.addTo(map);
     }
-  /*
-  setInterval()	Runs a function repeatedly.
-clearTimeout()	Cancels a timeout.
-*/
+
+var popup = L.popup()
+    .setLatLng([52.142585 ,5.399387])
+    .setContent("Niffler")
+    .openOn(map);
+
+    
 let margin = -0.5
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
