@@ -138,11 +138,11 @@ function hide() {
 }
 function move() {
   right.style.marginLeft = (-0.333 *  loop) + "px";
-  right.style.rotate = (-3 * loop) + "deg";
+  right.style.rotate = (-1.5 * loop) + "deg";
 }
 function move2() {
     left.style.marginLeft = (-0.333 * loop) + "px";
-    left.style.rotate = (-3 * loop) + "deg";
+    left.style.rotate = (-1.5 * loop) + "deg";
     loop++;
 
 }
