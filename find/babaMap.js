@@ -124,9 +124,7 @@ let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
 const buttonQuest = document.getElementsByClassName("quest");
-if (buttonQuest) {
-  buttonQuest.addEventListener("click", startMoving());
-}
+buttonQuest.addEventListener("click", startMoving);
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
