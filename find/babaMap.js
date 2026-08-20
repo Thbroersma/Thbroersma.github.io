@@ -1,6 +1,6 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-var map = L.map('map').setView([52.15550, 5.38892], 16 );
+var map = L.map('map').setView([52.141484, 5.394788], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16.9,
     minZoom:16.9,
@@ -117,21 +117,31 @@ function getPosition() {
   setInterval()	Runs a function repeatedly.
 clearTimeout()	Cancels a timeout.
 */
-let margin = 5;
+let margin = -0.5
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
-console.log(loop);
-
+const buttonQuest = document.getElementsByClassName("quest");
+if (buttonQuest) {
+  buttonQuest.addEventListener("click", startMoving());
+}
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
-var i = setInterval(move, 750);
-var k = setInterval(move2, 1250);
-setTimeout(function() { clearInterval(i); }, 18750);
-setTimeout(function() { clearInterval(k); }, 18750);
+function startMoving() {
+  var i = setInterval(move, 750);
+  var k = setInterval(move2, 1250);
+  setTimeout(function() { clearInterval(i); }, 18750);
+  setTimeout(function() { clearInterval(k); }, 18750);
+  setTimeout(function() { hide() }, 18750);
 
+}
+
+function hide() {
+  left.style.display = "none";
+  right.style.display = "none";
+}
 function move() {
   right.style.marginLeft = (margin * loop) + "px";
   right.style.rotate = (-0.366 * loop) + "deg";
