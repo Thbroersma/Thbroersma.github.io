@@ -158,7 +158,7 @@ function startMoving() {
   setTimeout(function() { hide() }, 18750);
 
 }
-const buttonQuest = document.getElementsByClassName("quest");
+const buttonQuest = document.getElementById("quest");
 buttonQuest.addEventListener("click", startMoving);
 
     // margin-left: 75px;
