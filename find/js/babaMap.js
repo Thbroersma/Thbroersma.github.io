@@ -125,13 +125,13 @@ var popup = L.popup({
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
-
+let objectNiffler = document.querySelector(".niffler");
+objectNiffler.id = "niffler"
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
-
-const objectNiffler = document.querySelector(".niffler");
+let niffler = document.getElementById("niffler")
 
 function hide() {
   left.style.display = "none";
@@ -145,17 +145,22 @@ function move() {
 function move2() {
     left.style.marginLeft = (-0.333 * loop) + "px";
     left.style.rotate = (-1.5 * loop) + "deg";
+}
+function move3() {
+    niffler.style.marginLeft = (-0.333 * loop) + "px";
+    niffler.style.rotate = (-1.5 * loop) + "deg";
     loop++;
-
 }
 function startMoving() {
   console.log("start moving")
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
+  var j = setInterval(move3, 1250);
   setTimeout(function() { clearInterval(i); }, 18750);
+  setTimeout(function() { clearInterval(j); }, 18750);
   setTimeout(function() { clearInterval(k); }, 18750);
   setTimeout(function() { hide() }, 17750);
-  objectNiffler.classList.toggle("niffler-action");
+  // objectNiffler.classList.toggle("niffler-action");
 
 }
 const buttonQuest = document.getElementById("quest");
