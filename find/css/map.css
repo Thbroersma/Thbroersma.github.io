@@ -20,6 +20,9 @@ body {
       font-size: 2.9rem;
       margin: 0px;
 }
+.hide {
+      display: none;
+}
 #map {
       background-color: #ddd;
       height: 90vh;

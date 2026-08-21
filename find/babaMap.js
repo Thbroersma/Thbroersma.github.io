@@ -136,6 +136,7 @@ let left = document.getElementById("left");
 function hide() {
   left.style.display = "none";
   right.style.display = "none";
+  objectNiffler.classList.add("hide");
 }
 function move() {
   right.style.marginLeft = (-0.333 *  loop) + "px";
