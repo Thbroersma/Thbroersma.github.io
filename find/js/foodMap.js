@@ -1,6 +1,6 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-var map = L.map('map').setView([52.141484, 5.394788], 16 );
+var map = L.map('map').setView([52.144768 , 5.39575], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16.9,
     minZoom:16.9,
@@ -79,8 +79,8 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 var imageUrl = "footstepLUp.png";
 var imageUrlRight = "footstepRightUp.png";
 
-var coordinates = L.latLngBounds([52.140728 , 5.39975], [52.140821 , 5.39966]);
-var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140856 , 5.399912]);
+var coordinates = L.latLngBounds([52.144403 , 5.401366], [52.144551, 5.401005]);
+var coordinatesRight = L.latLngBounds([52.144685, 5.401645], [52.144855, 5.401221]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
@@ -117,7 +117,7 @@ function getPosition() {
 var popup = L.popup({
       className: "niffler",
     })
-    .setLatLng([52.140859 ,5.399664])
+    .setLatLng([52.145068, 5.401591])
     .setContent("Niffler")
     .openOn(map);
 
