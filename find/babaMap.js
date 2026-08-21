@@ -121,7 +121,6 @@ var popup = L.popup({
     .setContent("Niffler")
     .openOn(map);
 
-const objectNiffler = document.getElementsByClassName("niffler");
 
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
@@ -132,6 +131,7 @@ leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
 
+const objectNiffler = document.querySelector(".niffler");
 
 function hide() {
   left.style.display = "none";
