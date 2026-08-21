@@ -63,6 +63,7 @@ input {
       animation-duration: 15s;
       animation-name: myfirst;
       animation-fill-mode: forwards;
+      font-weight: bold;
 
 }
 /* .right-foot {
