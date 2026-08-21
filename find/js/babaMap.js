@@ -136,7 +136,7 @@ const objectNiffler = document.querySelector(".niffler");
 function hide() {
   left.style.display = "none";
   right.style.display = "none";
-  objectNiffler.classList.add("hide");
+  objectNiffler.classList.toggle("hide");
 }
 function move() {
   right.style.marginLeft = (-0.333 *  loop) + "px";
@@ -155,7 +155,7 @@ function startMoving() {
   setTimeout(function() { clearInterval(i); }, 18750);
   setTimeout(function() { clearInterval(k); }, 18750);
   setTimeout(function() { hide() }, 17750);
-  objectNiffler.classList.add("niffler-action");
+  objectNiffler.classList.toggle("niffler-action");
 
 }
 const buttonQuest = document.getElementById("quest");
