@@ -56,8 +56,9 @@ input {
 #left-foot {
       margin-left: 2vw;
 }
-.niffler {
-      animation: myfirst ease 3s;
+.niffler-action {
+      animation-duration: 15s;
+      animation-name: myfirst;
       animation-fill-mode: forwards;
 
 }

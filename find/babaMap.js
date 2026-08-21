@@ -121,7 +121,8 @@ var popup = L.popup({
     .setContent("Niffler")
     .openOn(map);
 
-    
+const objectNiffler = document.getElementsByClassName("niffler");
+
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
@@ -153,6 +154,7 @@ function startMoving() {
   setTimeout(function() { clearInterval(i); }, 18750);
   setTimeout(function() { clearInterval(k); }, 18750);
   setTimeout(function() { hide() }, 17750);
+  objectNiffler.classList.add("niffler-action");
 
 }
 const buttonQuest = document.getElementById("quest");
