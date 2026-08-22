@@ -80,7 +80,7 @@ var imageUrl = "footstepLToLeft.png";
 var imageUrlRight = "footstepRToLeft.png";
 
 var coordinates = L.latLngBounds([52.144403 , 5.401366], [52.144551, 5.401005]);
-var coordinatesRight = L.latLngBounds([52.144285, 5.401645], [52.144455, 5.401221]);
+var coordinatesRight = L.latLngBounds([52.144585, 5.401445], [52.144755, 5.401021]);
 // 52.144489  -  5.401076/ Latitude : 52.144605 | Longitude : 5.401605
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
@@ -133,6 +133,8 @@ let right = document.getElementById("right");
 let left = document.getElementById("left");
 
 const objectNiffler = document.querySelector(".niffler");
+objectNiffler.id = "niffler"
+let niffler = document.getElementById("niffler")
 
 function hide() {
   left.style.display = "none";
@@ -145,16 +147,23 @@ function move() {
 }
 function move2() {
     left.style.marginLeft = (-57.5 * loop) + "px";
-    left.style.marginTop = (-8.5 * loop) + "px"
+    left.style.marginBottom = (7.5 * loop) + "px"
+}
+function move3() {
+    niffler.style.marginLeft = (-0.333 * loop) + "px";
+    niffler.style.marginBottom = (-1.5 * loop) + "deg";
     loop++;
-
 }
 function startMoving() {
   console.log("start moving")
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
+  var j = setInterval(move2, 1250);
+
   setTimeout(function() { clearInterval(i); }, 25000);
   setTimeout(function() { clearInterval(k); }, 25000);
+  setTimeout(function() { clearInterval(j); }, 25000);
+
   setTimeout(function() { hide() }, 25000);
   objectNiffler.classList.add("niffler-action");
 
