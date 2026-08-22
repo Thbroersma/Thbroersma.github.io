@@ -139,12 +139,12 @@ function hide() {
   objectNiffler.classList.add("hide");
 }
 function move() {
-  right.style.marginLeft = (-0.333 *  loop) + "px";
-  right.style.rotate = (-1.5 * loop) + "deg";
+  right.style.marginLeft = (-57.5 *  loop) + "px";
+  right.style.marginRight = (-8.5 * loop) + "px"
 }
 function move2() {
-    left.style.marginLeft = (-0.333 * loop) + "px";
-    left.style.rotate = (-1.5 * loop) + "deg";
+    left.style.marginLeft = (-57.5 * loop) + "px";
+    left.style.marginRight = (-8.5 * loop) + "px"
     loop++;
 
 }
@@ -152,9 +152,9 @@ function startMoving() {
   console.log("start moving")
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
-  setTimeout(function() { clearInterval(i); }, 18750);
-  setTimeout(function() { clearInterval(k); }, 18750);
-  setTimeout(function() { hide() }, 17750);
+  setTimeout(function() { clearInterval(i); }, 25000);
+  setTimeout(function() { clearInterval(k); }, 25000);
+  setTimeout(function() { hide() }, 25000);
   objectNiffler.classList.add("niffler-action");
 
 }
