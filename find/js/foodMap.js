@@ -80,7 +80,7 @@ var imageUrl = "footstepLToLeft.png";
 var imageUrlRight = "footstepRToLeft.png";
 
 var coordinates = L.latLngBounds([52.144403 , 5.401366], [52.144551, 5.401005]);
-var coordinatesRight = L.latLngBounds([52.144685, 5.401645], [52.144855, 5.401221]);
+var coordinatesRight = L.latLngBounds([52.144885, 5.401645], [52.145055, 5.401221]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
