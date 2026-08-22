@@ -126,14 +126,12 @@ var popup = L.popup({
 let loop = 1;
 let rightFoot = document.querySelector(".right-foot");
 let leftFoot = document.querySelector(".left-foot");
-
+let objectNiffler = document.querySelector(".niffler");
+objectNiffler.id = "niffler"
 rightFoot.id = "right";
 leftFoot.id = "left";
 let right = document.getElementById("right");
 let left = document.getElementById("left");
-
-const objectNiffler = document.querySelector(".niffler");
-objectNiffler.id = "niffler"
 let niffler = document.getElementById("niffler")
 
 function hide() {
@@ -150,8 +148,8 @@ function move2() {
     left.style.marginBottom = (7.5 * loop) + "px"
 }
 function move3() {
-    niffler.style.marginLeft = (-0.333 * loop) + "px";
-    niffler.style.marginBottom = (-1.5 * loop) + "deg";
+    niffler.style.marginLeft = (-57.5 * loop) + "px";
+    niffler.style.marginBottom = (7.5 * loop) + "px";
     loop++;
 }
 function startMoving() {
