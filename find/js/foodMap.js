@@ -141,11 +141,11 @@ function hide() {
 }
 function move() {
   right.style.marginLeft = (-57.5 *  loop) + "px";
-  right.style.marginRight = (-8.5 * loop) + "px"
+  right.style.marginTop = (-8.5 * loop) + "px"
 }
 function move2() {
     left.style.marginLeft = (-57.5 * loop) + "px";
-    left.style.marginRight = (-8.5 * loop) + "px"
+    left.style.marginTop = (-8.5 * loop) + "px"
     loop++;
 
 }
