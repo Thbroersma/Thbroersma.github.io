@@ -81,6 +81,7 @@ var imageUrlRight = "footstepRToLeft.png";
 
 var coordinates = L.latLngBounds([52.144403 , 5.401366], [52.144551, 5.401005]);
 var coordinatesRight = L.latLngBounds([52.144885, 5.401645], [52.145055, 5.401221]);
+// 52.144489  -  5.401076/ Latitude : 52.144605 | Longitude : 5.401605
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
