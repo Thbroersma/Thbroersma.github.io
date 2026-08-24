@@ -153,9 +153,9 @@ function move3() {
 }
 function startMoving() {
   console.log("start moving")
-  var j = setInterval(move3, 1250);
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
+  var j = setInterval(move3, 1250);
   setTimeout(function() { clearInterval(i); }, 18750);
   setTimeout(function() { clearInterval(j); }, 18750);
   setTimeout(function() { clearInterval(k); }, 18750);

@@ -79,8 +79,8 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 var imageUrl = "footstepLUp.png";
 var imageUrlRight = "footstepRightUp.png";
 
-var coordinates = L.latLngBounds([52.140728 , 5.39975], [52.140821 , 5.39966]);
-var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140956 , 5.399912]);
+var coordinates = L.latLngBounds([52.145275  , 5.38813], [52.144735  , 5.388883]);
+var coordinatesRight = L.latLngBounds([52.145557, 5.387154], [52.144912  , 5.386555]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });

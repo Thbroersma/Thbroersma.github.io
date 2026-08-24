@@ -145,7 +145,7 @@ function move() {
 }
 function move2() {
     left.style.marginLeft = (-57.5 * loop) + "px";
-    left.style.marginBottom = (7.5 * loop) + "px"
+    left.style.marginTop = (-8.5 * loop) + "px"
 }
 function move3() {
     niffler.style.marginLeft = (-57.5 * loop) + "px";
