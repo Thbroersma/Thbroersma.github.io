@@ -76,7 +76,7 @@ function geoFindMe() {
 document.querySelector("#find-me").addEventListener("click", geoFindMe);
 // Latitude : 52.142311 | Longitude : 5.39929
 
-var imageUrl = "footstepLDown.png";
+var imageUrl = "footstepDown.png";
 var imageUrlRight = "footstepRightDown.png";
 
 var coordinates = L.latLngBounds([52.144735  , 5.388883], [52.145275  , 5.38813]);
