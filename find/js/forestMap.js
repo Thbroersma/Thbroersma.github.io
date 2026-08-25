@@ -79,8 +79,8 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 var imageUrl = "footstepLUp.png";
 var imageUrlRight = "footstepRightUp.png";
 
-var coordinates = L.latLngBounds([52.145275  , 5.38813], [52.144735  , 5.388883]);
-var coordinatesRight = L.latLngBounds([52.145557, 5.387154], [52.144912  , 5.386555]);
+var coordinates = L.latLngBounds([52.144735  , 5.388883], [52.145275  , 5.38813]);
+var coordinatesRight = L.latLngBounds([52.144912  , 5.386555], [52.145557, 5.387154]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
 });
@@ -139,16 +139,16 @@ function hide() {
   objectNiffler.classList.toggle("hide");
 }
 function move() {
-  right.style.marginLeft = (-0.333 *  loop) + "px";
-  right.style.rotate = (-1.5 * loop) + "deg";
+  right.style.marginTop = (85 *  loop) + "px";
+  right.style.marginLeft = (-3.5 * loop) + "deg";
 }
 function move2() {
-    left.style.marginLeft = (-0.333 * loop) + "px";
-    left.style.rotate = (-1.5 * loop) + "deg";
+    left.style.marginTop = (85 * loop) + "px";
+    left.style.marginLeft = (-3.5  * loop) + "deg";
 }
 function move3() {
-    niffler.style.marginLeft = (-0.333 * loop) + "px";
-    niffler.style.rotate = (-1.5 * loop) + "deg";
+    niffler.style.marginTop = (85 -0.333 * loop) + "px";
+    niffler.style.marginLeft = (-3.5  * loop) + "deg";
     loop++;
 }
 function startMoving() {
@@ -156,9 +156,9 @@ function startMoving() {
   var i = setInterval(move, 750);
   var k = setInterval(move2, 1250);
   var j = setInterval(move3, 1250);
-  setTimeout(function() { clearInterval(i); }, 18750);
-  setTimeout(function() { clearInterval(j); }, 18750);
-  setTimeout(function() { clearInterval(k); }, 18750);
+  setTimeout(function() { clearInterval(i); }, 25000);
+  setTimeout(function() { clearInterval(j); }, 25000);
+  setTimeout(function() { clearInterval(k); }, 25000);
   setTimeout(function() { hide() }, 17750);
   // objectNiffler.classList.toggle("niffler-action");
 
