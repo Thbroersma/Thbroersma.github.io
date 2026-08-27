@@ -38,7 +38,14 @@ var baseLayers = {
 // Hier wordt binnen het layer object ook een checkbox toegevoegd
 // voor de markers die je wel of niet wilt zien
 // Een filter hierin volgt nader
-
+// const buttonQuest = document.getElementById("quest");
+// buttonQuest.addEventListener("click", startMoving);
+let answerOne = document.getElementById("one");
+const answer = document.getElementById("answer");
+answer.addEventListener("click", function() {
+  answerOne.innerText == "Baba";
+  alert("correct");
+})
 
 L.control.layers(baseLayers).addTo(map);
 map.setZoom(16.294718618810897);
