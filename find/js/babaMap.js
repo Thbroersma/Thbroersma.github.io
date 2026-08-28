@@ -40,12 +40,7 @@ var baseLayers = {
 // Een filter hierin volgt nader
 // const buttonQuest = document.getElementById("quest");
 // buttonQuest.addEventListener("click", startMoving);
-let answerOne = document.getElementById("one");
-const answer = document.getElementById("answer");
-answer.addEventListener("click", function() {
-  answerOne.innerText == "Baba";
-  alert("correct");
-})
+
 
 L.control.layers(baseLayers).addTo(map);
 map.setZoom(16.294718618810897);
@@ -173,6 +168,29 @@ function startMoving() {
 }
 const buttonQuest = document.getElementById("quest");
 buttonQuest.addEventListener("click", startMoving);
-
+const mapElement = document.getElementById("map");
     // margin-left: 75px;
     // rotate: -5.4deg;
+let answerOne = document.getElementById("one");
+const answer = document.getElementById("answer");
+answer.addEventListener("click", function() {
+  if(answerOne.innerText == "Baba") {
+    alert("Correct");
+    answerOne.id = "two";
+  }
+  else {
+      alert("Wrong, try again")
+  }
+})
+let answerTwo = document.getElementById("two");
+if(answerTwo) {
+  answer.addEventListener("click", function() {
+    if(answerTwo.innerText == "Parijs" || answerTwo.innerText == "Paris") {
+      alert("Correct");
+      mapElement.style.display = "block";
+    }
+    else {
+      alert("Wrong, try again")
+    }
+  })
+}
