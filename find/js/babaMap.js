@@ -174,7 +174,7 @@ const mapElement = document.getElementById("map");
 let answerOne = document.getElementById("one");
 const answer = document.getElementById("answer");
 answer.addEventListener("click", function() {
-  if(answerOne.innerText == "Baba") {
+  if(answerOne.innerHTML == "Baba") {
     alert("Correct");
     answerOne.id = "two";
   }
@@ -185,7 +185,7 @@ answer.addEventListener("click", function() {
 let answerTwo = document.getElementById("two");
 if(answerTwo) {
   answer.addEventListener("click", function() {
-    if(answerTwo.innerText == "Parijs" || answerTwo.innerText == "Paris") {
+    if(answerTwo.innerHTML == "Parijs" || answerTwo.innerText == "Paris") {
       alert("Correct");
       mapElement.style.display = "block";
     }
