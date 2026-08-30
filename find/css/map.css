@@ -29,6 +29,7 @@ body {
       width: 90vw;
       margin: auto;
       box-shadow: 0 5px 10px #ddd;
+      display: none;
 }
 .test {
       background-color: blue;

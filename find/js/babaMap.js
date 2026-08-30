@@ -155,13 +155,13 @@ function move3() {
 }
 function startMoving() {
   console.log("start moving")
-  var j = setInterval(move3, 650);
+  var j = setInterval(move3, 1100);
 
-  var i = setInterval(move, 750);
-  var k = setInterval(move2, 1250);
-  setTimeout(function() { clearInterval(i); }, 12150);
-  setTimeout(function() { clearInterval(j); }, 12150);
-  setTimeout(function() { clearInterval(k); }, 12150);
+  var i = setInterval(move, 1250);
+  var k = setInterval(move2, 1500);
+  setTimeout(function() { clearInterval(i); }, 15000);
+  setTimeout(function() { clearInterval(j); }, 15000);
+  setTimeout(function() { clearInterval(k); }, 15000);
   setTimeout(function() { hide() }, 17750);
   // objectNiffler.classList.toggle("niffler-action");
 
@@ -174,7 +174,7 @@ const mapElement = document.getElementById("map");
 let answerOne = document.getElementById("one");
 const answer = document.getElementById("answer");
 answer.addEventListener("click", function() {
-  if(answerOne.innerHTML == "Baba") {
+  if(answerOne.value == "Baba") {
     alert("Correct");
     answerOne.id = "two";
   }
@@ -185,7 +185,7 @@ answer.addEventListener("click", function() {
 let answerTwo = document.getElementById("two");
 if(answerTwo) {
   answer.addEventListener("click", function() {
-    if(answerTwo.innerHTML == "Parijs" || answerTwo.innerText == "Paris") {
+    if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
       alert("Correct");
       mapElement.style.display = "block";
     }
