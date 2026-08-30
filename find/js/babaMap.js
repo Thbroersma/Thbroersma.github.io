@@ -188,6 +188,7 @@ if(answerTwo) {
     if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
       alert("Correct");
       mapElement.style.display = "block";
+      buttonQuest.style.display ="block";
     }
     else {
       alert("Wrong, try again")
