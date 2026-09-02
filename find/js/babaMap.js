@@ -188,8 +188,8 @@ answer.addEventListener("click", function() {
   }
 })
 
-if(answerTwo) {
-  answer.addEventListener("click", function() {
+if(buttonTwo) {
+  buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
       alert("Correct");
       mapElement.style.display = "block";
