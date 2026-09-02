@@ -193,7 +193,7 @@ answer.addEventListener("click", function() {
 
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
-    if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
+    if(answerTwo.value == "Puppy" || answerTwo.value == "puppy") {
       alert("Correct");
       mapElement.style.display = "block";
       buttonQuest.style.display ="block";

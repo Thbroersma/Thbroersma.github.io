@@ -15,6 +15,13 @@ body {
       padding: 5px;
       margin-bottom: 10px;
 }
+#answerEight, #eight, #eightL {
+      display: none;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+}
 .coordinates {
       font-size: 0.9rem;
 }
