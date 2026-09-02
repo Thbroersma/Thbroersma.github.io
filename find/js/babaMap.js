@@ -129,7 +129,8 @@ let leftFoot = document.querySelector(".left-foot");
 let objectNiffler = document.querySelector(".niffler");
 objectNiffler.id = "niffler"
 rightFoot.id = "right";
-15let right = document.getElementById("right");
+leftFoot.id = "left";
+let right = document.getElementById("right");
 let left = document.getElementById("left");
 let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
