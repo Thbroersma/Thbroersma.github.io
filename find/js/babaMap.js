@@ -17,7 +17,6 @@ map.boxZoom.disable();
 map.keyboard.disable();
 
 var baseMaps = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
 
 });
 baseMaps.addTo(map);
