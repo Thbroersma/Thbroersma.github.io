@@ -168,6 +168,8 @@ function startMoving() {
 }
 const buttonQuest = document.getElementById("quest");
 buttonQuest.addEventListener("click", startMoving);
+const mapElement = document.getElementById("map");
+
 let answerOne = document.getElementById("third");
 let answer = document.getElementById("answerThird");
 let answerTwo = document.getElementById("forth");
