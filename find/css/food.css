@@ -8,7 +8,7 @@ body {
       font-family: sans-serif;
       background-color: rgb(144, 178, 228);
 }
-#answerForth, #forth, #forthL, #quest {
+#answerSixth, #sixth, #sixthL, #quest {
       display: none;
       text-align: center;
       margin: auto;
