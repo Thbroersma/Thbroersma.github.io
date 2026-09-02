@@ -140,16 +140,16 @@ function hide() {
   objectNiffler.classList.toggle("hide");
 }
 function move() {
-  right.style.marginLeft = (-0.333 *  loop) + "px";
-  right.style.rotate = (-1.5 * loop) + "deg";
+  right.style.marginLeft = (6.667  *  loop) + "px";
+  right.style.marginTop = (-40 * loop) + "deg";
 }
 function move2() {
-    left.style.marginLeft = (-0.333 * loop) + "px";
-    left.style.rotate = (-1.5 * loop) + "deg";
+    left.style.marginLeft = (6.667  * loop) + "px";
+    left.style.marginTop = (-40 * loop) + "deg";
 }
 function move3() {
-    niffler.style.marginLeft = (-0.333 * loop) + "px";
-    niffler.style.rotate = (-1.5 * loop) + "deg";
+    niffler.style.marginLeft = (6.667 * loop) + "px";
+    niffler.style.marginTop = (-40 * loop) + "deg";
     loop++;
 }
 function startMoving() {

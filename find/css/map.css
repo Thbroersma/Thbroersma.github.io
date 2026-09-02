@@ -1,5 +1,9 @@
-#answerTwo, #two, #secondL {
+#answerTwo, #two, #secondL, #quest {
       display: none;
+      text-align: center;
+}
+#quest {
+      margin: auto;
 }
 .avatar-icon {
       background-color: none;
