@@ -8,6 +8,13 @@ body {
       font-family: sans-serif;
       background-color: rgb(144, 178, 228);
 }
+#answerForth, #forth, #forth {
+      display: none;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+}
 #answerSixth, #sixth, #sixthL, #quest {
       display: none;
       text-align: center;
