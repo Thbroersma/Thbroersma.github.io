@@ -73,6 +73,9 @@ input {
 .question {
       text-align: center;
 }
+.leaflet-control-zoom {
+      display: none;
+}
 /* .right-foot {
       animation: myfirst ease 3s;
       animation-iteration-count: 5;
