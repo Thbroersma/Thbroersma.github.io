@@ -174,12 +174,16 @@ const mapElement = document.getElementById("map");
 let answerOne = document.getElementById("one");
 let answer = document.getElementById("answer");
 let answerTwo = document.getElementById("two");
+let label = document.getElementById("firstL");
+let labelTwo = document.getElementById("secondL");
 let buttonTwo = document.getElementById("answerTwo")
 answer.addEventListener("click", function() {
   if(answerOne.value == "Baba") {
     alert("Correct");
     answer.style.display = "none";
     answerOne.style.display = "none";
+    label.style.display = "none";
+    labelTwo.style.display = "block";
     answerTwo.style.display = "block";
     buttonTwo.style.display = "block";
   }
@@ -196,6 +200,8 @@ if(buttonTwo) {
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
       buttonTwo.style.display = "none";
+      labelTwo.style.display = "none";
+
     }
     else {
       alert("Wrong, try again")
