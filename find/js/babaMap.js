@@ -141,15 +141,15 @@ function hide() {
 }
 function move() {
   right.style.marginLeft = (6.667  *  loop) + "px";
-  right.style.marginTop = (-40 * loop) + "deg";
+  right.style.marginTop = (-40 * loop) + "px";
 }
 function move2() {
     left.style.marginLeft = (6.667  * loop) + "px";
-    left.style.marginTop = (-40 * loop) + "deg";
+    left.style.marginTop = (-40 * loop) + "px";
 }
 function move3() {
     niffler.style.marginLeft = (6.667 * loop) + "px";
-    niffler.style.marginTop = (-40 * loop) + "deg";
+    niffler.style.marginTop = (-40 * loop) + "px";
     loop++;
 }
 function startMoving() {
