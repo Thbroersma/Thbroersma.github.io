@@ -174,3 +174,40 @@ buttonQuest.addEventListener("click", startMoving);
 const mapElement = document.getElementById("map");
     // margin-left: 75px;
     // rotate: -5.4deg;
+let answerOne = document.getElementById("fifth");
+let answer = document.getElementById("answerFifth");
+let answerTwo = document.getElementById("sixth");
+let label = document.getElementById("fifthL");
+let labelTwo = document.getElementById("sixthL");
+let buttonTwo = document.getElementById("answerSixth")
+answer.addEventListener("click", function() {
+  if(answerOne.value == "Baba") {
+    alert("Correct");
+    answer.style.display = "none";
+    answerOne.style.display = "none";
+    label.style.display = "none";
+    labelTwo.style.display = "block";
+    answerTwo.style.display = "block";
+    buttonTwo.style.display = "block";
+  }
+  else {
+      alert("Wrong, try again")
+  }
+})
+
+if(buttonTwo) {
+  buttonTwo.addEventListener("click", function() {
+    if(answerTwo.value == "New-Sealand" || answerTwo.value == "Nieuw-Zeeland") {
+      alert("Correct");
+      mapElement.style.display = "block";
+      buttonQuest.style.display ="block";
+      answerTwo.style.display = "none";
+      buttonTwo.style.display = "none";
+      labelTwo.style.display = "none";
+
+    }
+    else {
+      alert("Wrong, try again")
+    }
+  })
+}
