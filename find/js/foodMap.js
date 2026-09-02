@@ -168,6 +168,42 @@ function startMoving() {
 }
 const buttonQuest = document.getElementById("quest");
 buttonQuest.addEventListener("click", startMoving);
+let answerOne = document.getElementById("third");
+let answer = document.getElementById("answerThird");
+let answerTwo = document.getElementById("forth");
+let label = document.getElementById("thirdL");
+let labelTwo = document.getElementById("forthL");
+let buttonTwo = document.getElementById("answerForth")
+answer.addEventListener("click", function() {
+  if(answerOne.value == "Baba") {
+    alert("Correct");
+    answer.style.display = "none";
+    answerOne.style.display = "none";
+    label.style.display = "none";
+    labelTwo.style.display = "block";
+    answerTwo.style.display = "block";
+    buttonTwo.style.display = "block";
+  }
+  else {
+      alert("Wrong, try again")
+  }
+})
 
+if(buttonTwo) {
+  buttonTwo.addEventListener("click", function() {
+    if(answerTwo.value == "Amerika" || answerTwo.value == "America") {
+      alert("Correct");
+      mapElement.style.display = "block";
+      buttonQuest.style.display ="block";
+      answerTwo.style.display = "none";
+      buttonTwo.style.display = "none";
+      labelTwo.style.display = "none";
+
+    }
+    else {
+      alert("Wrong, try again")
+    }
+  })
+}
     // margin-left: 75px;
     // rotate: -5.4deg;
