@@ -187,8 +187,7 @@ answer.addEventListener("click", function() {
       alert("Wrong, try again")
   }
 })
-let answerTwo = document.getElementById("two");
-let buttonTwo = document.getElementById("answerTwo")
+
 if(answerTwo) {
   answer.addEventListener("click", function() {
     if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
