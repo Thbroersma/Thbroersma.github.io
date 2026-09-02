@@ -8,7 +8,7 @@ body {
       font-family: sans-serif;
       background-color: rgb(144, 178, 228);
 }
-#answerForth, #forth, #forth {
+#answerForth, #forth, #forthL {
       display: none;
       text-align: center;
       margin: auto;
