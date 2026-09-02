@@ -1,6 +1,9 @@
 #answerTwo, #two, #secondL, #quest {
       display: none;
       text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
 }
 #quest {
       margin: auto;
