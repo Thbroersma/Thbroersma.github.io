@@ -60,6 +60,9 @@ input {
 #left-foot {
       margin-left: 2vw;
 }
+.leaflet-control-zoom {
+      display: none;
+}
 /* .niffler-action {
       animation-duration: 15s;
       animation-name: myfirst;
