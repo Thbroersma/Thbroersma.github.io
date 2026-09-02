@@ -170,12 +170,12 @@ buttonQuest.addEventListener("click", startMoving);
 const mapElement = document.getElementById("map");
     // margin-left: 75px;
     // rotate: -5.4deg;
-let answerOne = document.getElementById("one");
-let answer = document.getElementById("answer");
-let answerTwo = document.getElementById("two");
-let label = document.getElementById("firstL");
-let labelTwo = document.getElementById("secondL");
-let buttonTwo = document.getElementById("answerTwo")
+let answerOne = document.getElementById("seven");
+let answer = document.getElementById("answerSeven");
+let answerTwo = document.getElementById("eight");
+let label = document.getElementById("sevenL");
+let labelTwo = document.getElementById("eightL");
+let buttonTwo = document.getElementById("answerEight")
 answer.addEventListener("click", function() {
   if(answerOne.value == "Baba") {
     alert("Correct");
