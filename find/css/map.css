@@ -1,4 +1,4 @@
-#answerTwo, #two {
+#answerTwo, #two, #secondL {
       display: none;
 }
 .avatar-icon {
@@ -76,6 +76,7 @@ input {
 .leaflet-control-zoom {
       display: none;
 }
+
 /* .right-foot {
       animation: myfirst ease 3s;
       animation-iteration-count: 5;
