@@ -129,8 +129,7 @@ let leftFoot = document.querySelector(".left-foot");
 let objectNiffler = document.querySelector(".niffler");
 objectNiffler.id = "niffler"
 rightFoot.id = "right";
-leftFoot.id = "left";
-let right = document.getElementById("right");
+15let right = document.getElementById("right");
 let left = document.getElementById("left");
 let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
@@ -158,10 +157,10 @@ function startMoving() {
 
   var i = setInterval(move, 1250);
   var k = setInterval(move2, 1500);
-  setTimeout(function() { clearInterval(i); }, 15000);
-  setTimeout(function() { clearInterval(j); }, 15000);
-  setTimeout(function() { clearInterval(k); }, 15000);
-  setTimeout(function() { hide() }, 17750);
+  setTimeout(function() { clearInterval(i); }, 22500);
+  setTimeout(function() { clearInterval(j); }, 22500);
+  setTimeout(function() { clearInterval(k); }, 22500);
+  setTimeout(function() { hide() }, 22500);
   // objectNiffler.classList.toggle("niffler-action");
 
 }
