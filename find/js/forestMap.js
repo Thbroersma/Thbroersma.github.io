@@ -141,26 +141,26 @@ function hide() {
   objectNiffler.classList.toggle("hide");
 }
 function move() {
-  right.style.marginTop = (85 *  loop) + "px";
+  right.style.marginTop = (40 *  loop) + "px";
   right.style.marginLeft = (-3.5 * loop) + "deg";
 }
 function move2() {
-    left.style.marginTop = (85 * loop) + "px";
+    left.style.marginTop = (40* loop) + "px";
     left.style.marginLeft = (-3.5  * loop) + "deg";
 }
 function move3() {
-    niffler.style.marginTop = (85 -0.333 * loop) + "px";
+    niffler.style.marginTop = ( 40 * loop) + "px";
     niffler.style.marginLeft = (-3.5  * loop) + "deg";
     loop++;
 }
 function startMoving() {
   console.log("start moving")
-  var i = setInterval(move, 750);
+  var i = setInterval(move, 950);
   var k = setInterval(move2, 1250);
   var j = setInterval(move3, 1250);
-  setTimeout(function() { clearInterval(i); }, 25000);
-  setTimeout(function() { clearInterval(j); }, 25000);
-  setTimeout(function() { clearInterval(k); }, 25000);
+  setTimeout(function() { clearInterval(i); }, 63750);
+  setTimeout(function() { clearInterval(j); }, 63750);
+  setTimeout(function() { clearInterval(k); }, 63750);
   setTimeout(function() { hide() }, 17750);
   // objectNiffler.classList.toggle("niffler-action");
 
