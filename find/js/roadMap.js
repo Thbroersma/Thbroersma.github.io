@@ -140,24 +140,24 @@ function hide() {
   objectNiffler.classList.toggle("hide");
 }
 function move() {
-  right.style.marginLeft = (6.667  *  loop) + "px";
-  right.style.marginTop = (-30 * loop) + "px";
+  right.style.marginLeft = (-89.46  *  loop) + "px";
+  right.style.marginTop = (-65.6  * loop) + "px";
 }
 function move2() {
-    left.style.marginLeft = (6.667  * loop) + "px";
-    left.style.marginTop = (-30 * loop) + "px";
+    left.style.marginLeft = (-89.46  * loop) + "px";
+    left.style.marginTop = (-65.6 * loop) + "px";
 }
 function move3() {
-    niffler.style.marginLeft = (6.667 * loop) + "px";
-    niffler.style.marginTop = (-30 * loop) + "px";
+    niffler.style.marginLeft = (-89.46 * loop) + "px";
+    niffler.style.marginBottom = (65.6  * loop) + "px";
     loop++;
 }
 function startMoving() {
   console.log("start moving")
-  var j = setInterval(move3, 1100);
+  var j = setInterval(move3, 650);
 
-  var i = setInterval(move, 1250);
-  var k = setInterval(move2, 1500);
+  var i = setInterval(move, 500);
+  var k = setInterval(move2, 600);
   setTimeout(function() { clearInterval(i); }, 22500);
   setTimeout(function() { clearInterval(j); }, 22500);
   setTimeout(function() { clearInterval(k); }, 22500);
