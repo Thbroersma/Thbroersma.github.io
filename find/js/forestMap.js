@@ -1,4 +1,6 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
+alert("You got another 50 golden coins, you have now 100 golden coins!")
+
 var startDistance = 0.00595219899384;
 var map = L.map('map').setView([52.144006, 5.38479], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {

@@ -1,5 +1,7 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
+alert("You got another 50 golden coins, you have now 150 golden coins!")
+
 var map = L.map('map').setView([52.134761, 5.382848], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16.9,
@@ -157,10 +159,10 @@ function startMoving() {
 
   var i = setInterval(move, 500);
   var k = setInterval(move2, 600);
-  setTimeout(function() { clearInterval(i); }, 22500);
-  setTimeout(function() { clearInterval(j); }, 22500);
-  setTimeout(function() { clearInterval(k); }, 22500);
-  setTimeout(function() { hide() }, 22500);
+  setTimeout(function() { clearInterval(i); }, 90000);
+  setTimeout(function() { clearInterval(j); }, 92000);
+  setTimeout(function() { clearInterval(k); }, 90000);
+  setTimeout(function() { hide() }, 93000);
   // objectNiffler.classList.toggle("niffler-action");
 
 }

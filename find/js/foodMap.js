@@ -41,7 +41,7 @@ var baseLayers = {
 
 L.control.layers(baseLayers).addTo(map);
 map.setZoom(16.294718618810897);
-
+alert("You got 50 golden coins!")
 
 
 function geoFindMe() {
