@@ -72,7 +72,6 @@ function geoFindMe() {
   }
 }
 
-document.querySelector("#find-me").addEventListener("click", geoFindMe);
 // Latitude : 52.142311 | Longitude : 5.39929
 
 var imageUrl = "footstepDownp.png";
