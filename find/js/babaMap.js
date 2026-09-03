@@ -195,7 +195,6 @@ if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
       alert("Correct");
-      mapElement.style.display = "block";
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
       buttonTwo.style.display = "none";
