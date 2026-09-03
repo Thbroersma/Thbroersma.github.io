@@ -193,7 +193,7 @@ answer.addEventListener("click", function() {
 
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
-    if(answerTwo.value == "Parijs" || answerTwo.value == "Paris") {
+    if(answerTwo.value == "Italië" || answerTwo.value == "Italie"  || answerTwo.value == "Italy") {
       alert("Correct");
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
