@@ -81,7 +81,7 @@ var imageUrlRight = "footstepRightDown.png";
 
 // var coordinates = L.latLngBounds([52.140728 , 5.39975], [52.140821 , 5.39966]);
 // var coordinatesRight = L.latLngBounds([52.140722 ,  5.399809], [52.140856 , 5.399912]);
-var coordinates = L.latLngBounds([52.145662, 5.387135], [52.145342, 5.38696]);
+var coordinates = L.latLngBounds([52.145597, 5.387135], [52.145342, 5.38696]);
 var coordinatesRight = L.latLngBounds([52.145689, 5.386949], [52.145322, 5.386619]);
 var imageOverlay2 = L.imageOverlay(imageUrlRight, coordinatesRight, {
   className: "right-foot",
