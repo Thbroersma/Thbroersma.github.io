@@ -1,0 +1,139 @@
+.avatar-icon {
+      background-color: none;
+}
+.background {
+    display: none;
+}
+body {
+      font-family: sans-serif;
+      background-color: rgb(144, 178, 228);
+}
+#answerForth, #forth, #forthL {
+      display: none;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+}
+#answerSixth, #sixth, #sixthL, #quest {
+      display: none;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+}
+#answerEight, #eight, #eightL {
+      display: none;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+}
+.coordinates {
+      font-size: 0.9rem;
+}
+.header {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+}
+.header h1 {
+      font-size: 2.9rem;
+      margin: 0px;
+}
+.hide {
+      display: none;
+}
+#map {
+      background-color: #ddd;
+      height: 90vh;
+      width: 90vw;
+      margin: auto;
+      box-shadow: 0 5px 10px #ddd;
+}
+.test {
+      background-color: blue;
+      width: 40px;
+      height: 40px;
+}
+@media only screen and (min-width:350px) and (max-width:  450px) {
+      #map {
+            width: 100%;
+      }
+}
+input {
+      margin: 10px;
+      margin-top: 15px;
+}
+.type-box {
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+#find-me {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+
+}
+#left-foot {
+      margin-left: 2vw;
+}
+.leaflet-control-zoom {
+      display: none;
+}
+/* .niffler-action {
+      animation-duration: 15s;
+      animation-name: myfirst;
+      animation-fill-mode: forwards;
+
+}
+/* .right-foot {
+      animation: myfirst ease 3s;
+      animation-iteration-count: 5;
+      animation-fill-mode: forwards;
+}
+.left-foot {
+      animation: myfirst ease 3s;
+      animation-iteration-count: 5;
+      animation-fill-mode: forwards;
+}
+.foot-moving {-
+
+      margin-left: 2px;
+}
+@keyframes fadeInAnimation {
+      0% {
+            opacity: 0;
+      }
+
+      100% {
+            opacity: 1;
+      }
+}
+
+*/
+/* @keyframes myfirst {
+  0%   { margin-bottom: 0px; margin-left: 0px;}
+  5%  { margin-bottom: 21px; margin-left: 8px;}
+  10%  { margin-bottom: 42px; margin-left: 16px;}
+  15%  { margin-bottom: 63px; margin-left: 24px;}
+  20% { margin-bottom: 84px; margin-left: 32px;}
+  25%   { margin-bottom: 105px; margin-left: 40px;}
+  30%  { margin-bottom: 126px; margin-left: 48px;}
+  35%  { margin-bottom: 147px; margin-left: 56px;}
+  40%  { margin-bottom: 168px; margin-left: 64px;}
+  45% { margin-bottom: 189px; margin-left: 72px;}
+  50% { margin-bottom: 210px; margin-left: 80px;}
+  55%   { margin-bottom: 231px; margin-left: 88px;}
+  60%  { margin-bottom: 252px; margin-left: 96px;}
+  65%  { margin-bottom: 273px; margin-left: 104px;}
+  70%  { margin-bottom: 294px; margin-left: 112px;}
+  75% { margin-bottom: 325px; margin-left: 120px;}
+  80%   { margin-bottom: 346px; margin-left: 128px;}
+  85%  { margin-bottom: 367px; margin-left: 136px;}
+  90%  { margin-bottom: 388px; margin-left: 144px;}
+  95%  { margin-bottom: 409px; margin-left: 152px;}
+  100% { margin-bottom: 420px; margin-left: 160px;}
+}  */ 
