@@ -119,7 +119,7 @@ function getPosition() {
 var popup = L.popup({
       className: "niffler",
     })
-    .setLatLng([52.140749  ,5.399297])
+    .setLatLng([52.140699   ,5.399152])
     .setContent("Niffler")
     .openOn(map);
 
