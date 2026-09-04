@@ -136,7 +136,7 @@ let left = document.getElementById("left");
 let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
 let test = 0;
-if(test = 0) {
+if(test == 0) {
   for(let up=0; up < 5; up++) {
       right.style.marginTop = (-10 * loop) + "px";
       left.style.marginTop = (-10 * loop) + "px";
