@@ -134,18 +134,16 @@ let right = document.getElementById("right");
 let left = document.getElementById("left");
 let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
-let up = 0
-while(up < 5) {
+for(let up=0; up < 5; up++) {
     right.style.marginTop = (-10 * loop) + "px";
     left.style.marginTop = (-10 * loop) + "px";
     niffler.style.marginBottom = (10 * loop) + "px";
-    up++;
 }
 if (up == 5) {
   right.src = "footstepRightDown.png";
   left.src = "footstepDownp.png";
 }
-while(up > 5 && up < 10) {
+for(let up=0; up < 10 && up > 5; up++) {
     right.style.marginTop = (10 * loop) + "px";
     left.style.marginTop = (10 * loop) + "px";
     niffler.style.marginBottom = (-10 * loop) + "px";
@@ -154,6 +152,8 @@ while(up > 5 && up < 10) {
 }
 if (up == 10) {
   up = 0;
+  right.src = "footstepRightUp.png";
+  left.src = "footstepLUp.png";
 }
 function hide() {
   left.style.display = "none";
