@@ -1,6 +1,5 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-alert("You got to the hide outspot, you have found another 150 golden coins, you have now 300 golden coins!\nYou can  collect all the coins you find today by your husband in three options. Lego card, honeymoon money or emergency fund/saving money.\nYou have these options given it is almost time for your honeymoon, more Lego is always better and having savings is also not bad, given you never know.\n So place tell your husband what you want.")
 
 var map = L.map('map').setView([52.141484, 5.394788], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -219,6 +218,7 @@ answer.addEventListener("click", function() {
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Italië" || answerTwo.value == "Italie"  || answerTwo.value == "Italy") {
+      alert("You got to the hide outspot, you have found another 150 golden coins, you have now 300 golden coins!\nYou can  collect all the coins you find today by your husband in three options. Lego card, honeymoon money or emergency fund/saving money.\nYou have these options given it is almost time for your honeymoon, more Lego is always better and having savings is also not bad, given you never know.\n So place tell your husband what you want.")
 
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
