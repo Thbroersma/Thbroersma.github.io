@@ -41,7 +41,6 @@ var baseLayers = {
 
 L.control.layers(baseLayers).addTo(map);
 map.setZoom(16.294718618810897);
-alert("You got 50 golden coins!")
 
 
 function geoFindMe() {
@@ -193,7 +192,8 @@ answer.addEventListener("click", function() {
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Amerika" || answerTwo.value == "America") {
-      alert("Correct");
+      alert("Correct! You got 50 golden coins!")
+
       mapElement.style.display = "block";
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";

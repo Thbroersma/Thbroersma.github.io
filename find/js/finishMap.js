@@ -1,6 +1,5 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-alert("You the hide outspot, you have found 150 golden coins, you have now 300 golden coins!")
 
 var map = L.map('map').setView([52.141484, 5.394788], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -195,7 +194,8 @@ answer.addEventListener("click", function() {
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Italië" || answerTwo.value == "Italie"  || answerTwo.value == "Italy") {
-      alert("Correct");
+      alert("Correct!! You got the hide outspot, you have found another 150 golden coins, you have now 300 golden coins!")
+
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
       buttonTwo.style.display = "none";

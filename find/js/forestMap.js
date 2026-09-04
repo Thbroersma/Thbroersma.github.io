@@ -1,5 +1,4 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
-alert("You got another 50 golden coins, you have now 100 golden coins!")
 
 var startDistance = 0.00595219899384;
 var map = L.map('map').setView([52.144006, 5.38479], 16 );
@@ -199,7 +198,7 @@ answer.addEventListener("click", function() {
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "New-Sealand" || answerTwo.value == "Nieuw-Zeeland") {
-      alert("Correct");
+      alert("Correct! You got another 50 golden coins, you have now 100 golden coins!")
       mapElement.style.display = "block";
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";

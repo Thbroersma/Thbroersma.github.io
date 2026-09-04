@@ -1,6 +1,5 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-alert("You got another 50 golden coins, you have now 150 golden coins!")
 
 var map = L.map('map').setView([52.134761, 5.382848], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -195,7 +194,7 @@ answer.addEventListener("click", function() {
 if(buttonTwo) {
   buttonTwo.addEventListener("click", function() {
     if(answerTwo.value == "Puppy" || answerTwo.value == "puppy") {
-      alert("Correct");
+      alert("Correct! You got another 50 golden coins, you have now 150 golden coins!")
       mapElement.style.display = "block";
       buttonQuest.style.display ="block";
       answerTwo.style.display = "none";
