@@ -138,6 +138,7 @@ for(let up=0; up < 5; up++) {
     right.style.marginTop = (-10 * loop) + "px";
     left.style.marginTop = (-10 * loop) + "px";
     niffler.style.marginBottom = (10 * loop) + "px";
+    console.log(up);
 }
 if (up == 5) {
   right.src = "footstepRightDown.png";
@@ -147,7 +148,7 @@ for(let up=0; up < 10 && up > 5; up++) {
     right.style.marginTop = (10 * loop) + "px";
     left.style.marginTop = (10 * loop) + "px";
     niffler.style.marginBottom = (-10 * loop) + "px";
-    up++;
+    console.log(up);
 
 }
 if (up == 10) {
