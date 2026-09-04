@@ -1,6 +1,6 @@
 //leaflet-marker-icon leaflet-zoom-animated leaflet-interactive
 var startDistance = 0.00595219899384;
-alert("Dear Baba, \nNow your getting to the moving part, or better said, the following part.\nYou will follow the Niffler to there spots of treasure, follow them all and the reward will be high.\nGood luck!")
+alert("Dear Baba, \nNow your getting to the moving part, or better said, the following part.\nYou will follow the Niffler to there spots of treasure, follow them all, take what you can find and the reward will be high.\nGood luck!")
 
 var map = L.map('map').setView([52.141484, 5.394788], 16 );
 var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
