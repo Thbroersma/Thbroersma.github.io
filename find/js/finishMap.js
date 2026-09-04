@@ -137,7 +137,7 @@ let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
 let test = 0;
 if(test == 0) {
-  for(let up=0; up < 5; up++) {
+  for(let up=0; up <= 5; up++) {
       right.style.marginTop = (-10 * loop) + "px";
       left.style.marginTop = (-10 * loop) + "px";
       niffler.style.marginBottom = (10 * loop) + "px";
@@ -150,7 +150,7 @@ if (test == 5) {
   right.src = "footstepRightDown.png";
   left.src = "footstepDownp.png";
 }
-for(let up=0; up < 10 && up > 5; up++) {
+for(let up=0; up <= 10 && up > 5; up++) {
     right.style.marginTop = (10 * loop) + "px";
     left.style.marginTop = (10 * loop) + "px";
     niffler.style.marginBottom = (-10 * loop) + "px";
