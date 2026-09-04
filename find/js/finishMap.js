@@ -134,22 +134,40 @@ let right = document.getElementById("right");
 let left = document.getElementById("left");
 let niffler = document.getElementById("niffler")
 // objectNiffler.classList.toggle("niffler-action");
+let up = 0
+while(up < 5) {
+    right.style.marginTop = (-10 * loop) + "px";
+    left.style.marginTop = (-10 * loop) + "px";
+    niffler.style.marginBottom = (10 * loop) + "px";
+    up++;
+}
+if (up == 5) {
+  right.src = "footstepRightDown.png";
+  left.src = "footstepDownp.png";
+}
+while(up > 5 && up < 10) {
+    right.style.marginTop = (10 * loop) + "px";
+    left.style.marginTop = (10 * loop) + "px";
+    niffler.style.marginBottom = (-10 * loop) + "px";
+    up++;
+
+}
+if (up == 10) {
+  up = 0;
+}
 function hide() {
   left.style.display = "none";
   right.style.display = "none";
   objectNiffler.classList.toggle("hide");
 }
 function move() {
-  right.style.marginLeft = (11.667  *  loop) + "px";
-  right.style.marginTop = (-30 * loop) + "px";
+  right.style.marginTop = (-10 * loop) + "px";
 }
 function move2() {
-    left.style.marginLeft = (11.667  * loop) + "px";
-    left.style.marginTop = (-30 * loop) + "px";
+    left.style.marginTop = (-10 * loop) + "px";
 }
 function move3() {
-    niffler.style.marginLeft = (11.667 * loop) + "px";
-    niffler.style.marginBottom = (30 * loop) + "px";
+    niffler.style.marginBottom = (10 * loop) + "px";
     loop++;
 }
 function startMoving() {
@@ -158,10 +176,9 @@ function startMoving() {
 
   var i = setInterval(move, 1250);
   var k = setInterval(move2, 1500);
-  setTimeout(function() { clearInterval(i); }, 16500);
-  setTimeout(function() { clearInterval(j); }, 16500);
-  setTimeout(function() { clearInterval(k); }, 16500);
-  setTimeout(function() { hide() }, 16500);
+  // setTimeout(function() { clearInterval(i); }, 16500);
+  // setTimeout(function() { clearInterval(j); }, 16500);
+  // setTimeout(function() { clearInterval(k); }, 16500);
   // objectNiffler.classList.toggle("niffler-action");
 
 }
