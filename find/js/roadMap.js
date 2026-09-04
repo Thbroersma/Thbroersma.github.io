@@ -158,9 +158,9 @@ function startMoving() {
 
   var i = setInterval(move, 500);
   var k = setInterval(move2, 600);
-  setTimeout(function() { clearInterval(i); }, 96600);
-  setTimeout(function() { clearInterval(j); }, 96600);
-  setTimeout(function() { clearInterval(k); }, 96600);
+  setTimeout(function() { clearInterval(i); }, 98400);
+  setTimeout(function() { clearInterval(j); }, 98400);
+  setTimeout(function() { clearInterval(k); }, 98400);
   // objectNiffler.classList.toggle("niffler-action");
 
 }
